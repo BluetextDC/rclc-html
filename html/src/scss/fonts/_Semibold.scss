@@ -1,0 +1,16 @@
+/* BEGIN SemiBold */
+@font-face {
+	font-family: ProximaNova;
+	@include fontdef-woff($FontPath, $ProximaNovaFont, $FontVersion, "Semibold");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: ACaslonPro;
+	@include fontdef-woff($FontPath, $ACaslonPro_fonts, $FontVersion, "Semibold");
+	font-weight: 600;
+	font-style: normal;
+}
+
+/* END SemiBold */

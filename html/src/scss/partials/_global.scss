@@ -105,6 +105,9 @@ p {
   }
 }
 
+.wd-100{
+  width: 100%;
+}
 // Padding classes
 
 // Flex classess
@@ -143,6 +146,21 @@ p {
 // Button css
 .link-btn {
   color: $black;
+}
+.btn-default{
+  height: 53px;
+  border: 1px solid $black;
+  text-transform: $uppercase;
+  padding: 14px 15px;
+  font-size: $font-md;
+  color:$black;
+  min-width: 250px;
+  &:hover,
+  &:focus,
+  &.actiev:focus{
+    background-color:$black;
+    color:$white; 
+  }
 }
 
 // Button css

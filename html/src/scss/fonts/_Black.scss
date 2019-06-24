@@ -1,0 +1,9 @@
+/* BEGIN Bold */
+@font-face {
+	font-family: ProximaNova;
+	@include fontdef-woff($FontPath, $ProximaNovaFont, $FontVersion, "Black");
+	font-weight: 900;
+	font-style: normal;
+}
+
+/* END Bold */

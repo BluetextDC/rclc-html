@@ -8,6 +8,80 @@
  */
 
 @charset "UTF-8";
+/* BEGIN Thin */
+@font-face {
+  font-family: ProximaNova;
+  src: url("../fonts/Thin/ProximaNova-Thin.woff2?v=1.1.0") format("woff2"), url("../fonts/Thin/ProximaNova-Thin.woff?v=1.1.0") format("woff"), url("../fonts/Thin/ProximaNova-Thin.ttf?v=1.1.0") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+/* END Bold */
+/* BEGIN Light */
+@font-face {
+  font-family: ProximaNova;
+  src: url("../fonts/Light/ProximaNova-Light.woff2?v=1.1.0") format("woff2"), url("../fonts/Light/ProximaNova-Light.woff?v=1.1.0") format("woff"), url("../fonts/Light/ProximaNova-Light.ttf?v=1.1.0") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+/* END Light */
+/* BEGIN Regular */
+@font-face {
+  font-family: ProximaNova;
+  src: url("../fonts/Regular/ProximaNova-Regular.woff2?v=1.1.0") format("woff2"), url("../fonts/Regular/ProximaNova-Regular.woff?v=1.1.0") format("woff"), url("../fonts/Regular/ProximaNova-Regular.ttf?v=1.1.0") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: ACaslonPro;
+  src: url("../fonts/Regular/ACaslonPro-Regular.woff2?v=1.1.0") format("woff2"), url("../fonts/Regular/ACaslonPro-Regular.woff?v=1.1.0") format("woff"), url("../fonts/Regular/ACaslonPro-Regular.ttf?v=1.1.0") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/* END Regular */
+/* BEGIN Medium */
+@font-face {
+  font-family: BigCaslon;
+  src: url("../fonts/Medium/BigCaslon-Medium.woff2?v=1.1.0") format("woff2"), url("../fonts/Medium/BigCaslon-Medium.woff?v=1.1.0") format("woff"), url("../fonts/Medium/BigCaslon-Medium.ttf?v=1.1.0") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+/* END Medium */
+/* BEGIN SemiBold */
+@font-face {
+  font-family: ProximaNova;
+  src: url("../fonts/Semibold/ProximaNova-Semibold.woff2?v=1.1.0") format("woff2"), url("../fonts/Semibold/ProximaNova-Semibold.woff?v=1.1.0") format("woff"), url("../fonts/Semibold/ProximaNova-Semibold.ttf?v=1.1.0") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: ACaslonPro;
+  src: url("../fonts/Semibold/ACaslonPro-Semibold.woff2?v=1.1.0") format("woff2"), url("../fonts/Semibold/ACaslonPro-Semibold.woff?v=1.1.0") format("woff"), url("../fonts/Semibold/ACaslonPro-Semibold.ttf?v=1.1.0") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+/* END SemiBold */
+/* BEGIN Bold */
+@font-face {
+  font-family: ProximaNova;
+  src: url("../fonts/Bold/ProximaNova-Bold.woff2?v=1.1.0") format("woff2"), url("../fonts/Bold/ProximaNova-Bold.woff?v=1.1.0") format("woff"), url("../fonts/Bold/ProximaNova-Bold.ttf?v=1.1.0") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: ACaslonPro;
+  src: url("../fonts/Bold/ACaslonPro-Bold.woff2?v=1.1.0") format("woff2"), url("../fonts/Bold/ACaslonPro-Bold.woff?v=1.1.0") format("woff"), url("../fonts/Bold/ACaslonPro-Bold.ttf?v=1.1.0") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+/* END Bold */
+/* BEGIN Bold */
+@font-face {
+  font-family: ProximaNova;
+  src: url("../fonts/Black/ProximaNova-Black.woff2?v=1.1.0") format("woff2"), url("../fonts/Black/ProximaNova-Black.woff?v=1.1.0") format("woff"), url("../fonts/Black/ProximaNova-Black.ttf?v=1.1.0") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+/* END Bold */
 * {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -6573,6 +6647,10 @@ p {
   }
 }
 
+.wd-100 {
+  width: 100%;
+}
+
 .d-flex {
   display: -ms-flexbox !important;
   display: flex !important;
@@ -6605,6 +6683,20 @@ p {
 
 .link-btn {
   color: #000000;
+}
+
+.btn-default {
+  height: 53px;
+  border: 1px solid #000000;
+  text-transform: uppercase;
+  padding: 14px 15px;
+  font-size: 18px;
+  color: #000000;
+  min-width: 250px;
+}
+.btn-default:hover, .btn-default:focus, .btn-default.actiev:focus {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 ul {
@@ -6876,34 +6968,50 @@ a:hover {
   height: 100%;
   left: 0;
   top: 0;
-  background-image: url("../img/gradient.jpg");
+  background-image: url("../img/hero-banner.png");
 }
 .hero-zone .container {
   height: 100vh;
   position: relative;
 }
 .hero-zone h1 {
+  padding-right: 37%;
+}
+.hero-zone h1, .hero-zone .h1 {
   text-transform: uppercase;
   color: #ffffff;
   font-size: 65px;
-}
-.hero-zone .first {
+  display: block;
   text-align: right;
 }
-.hero-zone .secoend {
-  text-align: left;
+.hero-zone .upper-content {
+  width: 100%;
 }
-.hero-zone .text-right-outer {
-  margin-left: -80px;
+.hero-zone .upper-content .bottom {
+  position: relative;
+  padding-right: 235px;
+}
+.hero-zone .upper-content .bottom .content {
+  max-width: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.hero-zone .upper-content .bottom .content p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 31px;
+  font-weight: 300;
 }
 .hero-zone .bottom-stripe {
   position: absolute;
   bottom: 30px;
-  border: 1px solid #7e797f;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   width: 100%;
 }
 .hero-zone .bottom-stripe .col-sm-4 {
   position: relative;
+  padding: 0;
 }
 .hero-zone .bottom-stripe .col-sm-4:before {
   content: '';
@@ -6911,17 +7019,21 @@ a:hover {
   width: 1px;
   height: calc(100% - 10px);
   right: 0;
-  background-color: #7e797f;
+  background-color: rgba(255, 255, 255, 0.4);
   top: 5px;
 }
 .hero-zone .bottom-stripe .col-sm-4:last-child:before {
   display: none;
 }
-.hero-zone .bottom-stripe span {
+.hero-zone .bottom-stripe a {
   text-align: center;
-  font-size: 20px;
-  padding: 15px 20px;
+  font-size: 18px;
+  padding: 20px 20px;
   display: block;
+  color: #ffffff;
+  font-family: "ProximaNova";
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .custom-tab {
@@ -6942,6 +7054,8 @@ a:hover {
   border-radius: 0;
   color: #000000;
   text-transform: uppercase;
+  font-family: "ProximaNova";
+  font-size: 16px;
 }
 .custom-tab ul.nav-tabs li a:before {
   content: '\e906';
@@ -6965,8 +7079,8 @@ a:hover {
 }
 .custom-tab ul.nav-tabs li a:hover, .custom-tab ul.nav-tabs li a:focus {
   border: none;
-  -webkit-box-shadow: 0px 0px 20px rgba(35, 39, 65, 0.1);
-  box-shadow: 0px 0px 20px rgba(35, 39, 65, 0.1);
+  -webkit-box-shadow: 7px 7px 14px rgba(103, 103, 130, 0.1);
+  box-shadow: 7px 7px 14px rgba(103, 103, 130, 0.1);
   background-color: #ffffff;
   text-shadow: 0 0 0 #000000;
 }
@@ -6978,8 +7092,8 @@ a:hover {
 }
 .custom-tab ul.nav-tabs li.active a {
   border: none;
-  -webkit-box-shadow: 0px 0px 20px rgba(35, 39, 65, 0.1);
-  box-shadow: 0px 0px 20px rgba(35, 39, 65, 0.1);
+  -webkit-box-shadow: 7px 7px 14px rgba(103, 103, 130, 0.1);
+  box-shadow: 7px 7px 14px rgba(103, 103, 130, 0.1);
   background-color: #ffffff;
   text-shadow: 0 0 0 #000000;
 }
@@ -6999,10 +7113,26 @@ a:hover {
 .custom-tab .content p {
   line-height: 1.4;
   margin-bottom: 15px;
+  font-family: "ProximaNova";
+  font-size: 18px;
+}
+.custom-tab .content span {
+  font-family: "ProximaNova";
+  font-size: 18px;
 }
 .custom-tab .content a.btn {
   text-transform: uppercase;
   font-size: 16px;
+  font-family: "ProximaNova";
+}
+.custom-tab .content h1,
+.custom-tab .content h2,
+.custom-tab .content h3,
+.custom-tab .content h4,
+.custom-tab .content h5,
+.custom-tab .content h6 {
+  font-family: "ACaslonPro";
+  font-weight: 600;
 }
 
 .custom-accordian {
@@ -7026,6 +7156,16 @@ a:hover {
   padding: 15px 20px 15px 0;
   position: relative;
   text-transform: uppercase;
+  font-family: "ProximaNova";
+  font-size: 18px;
+  text-shadow: 0 0 0 #000000;
+}
+.custom-accordian .panel .panel-heading .panel-title a:hover, .custom-accordian .panel .panel-heading .panel-title a:focus {
+  color: #000000;
+  text-shadow: 0 0 0 #000000;
+}
+.custom-accordian .panel .panel-heading .panel-title a.collapsed {
+  text-shadow: none;
 }
 .custom-accordian .panel .panel-heading .panel-title a:before {
   content: '\e906';
@@ -7058,17 +7198,30 @@ a:hover {
 }
 .custom-accordian .panel .panel-body p {
   margin-bottom: 20px;
+  font-family: "ProximaNova";
+  font-size: 18px;
 }
 .custom-accordian .panel .panel-body span {
-  font-size: 22px;
+  font-size: 16px;
   display: block;
   text-transform: uppercase;
   margin-bottom: 15px;
+  font-family: "ProximaNova";
+  font-weight: 600;
+  color: #000000;
 }
 .custom-accordian .panel .panel-body a.btn {
-  padding: 10px 15px;
+  height: 53px;
   border: 1px solid #000000;
   text-transform: uppercase;
+  padding: 14px 15px;
+  font-size: 18px;
+  color: #000000;
+  min-width: 250px;
+}
+.custom-accordian .panel .panel-body a.btn:hover, .custom-accordian .panel .panel-body a.btn:focus, .custom-accordian .panel .panel-body a.btn.actiev:focus {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .cta-section {
@@ -7092,7 +7245,7 @@ a:hover {
 }
 
 .banner-cta {
-  min-height: 650px;
+  min-height: 700px;
 }
 @media (max-width: 768px) {
   .banner-cta {
@@ -7105,6 +7258,10 @@ a:hover {
   height: 100%;
   left: 0;
   top: 0;
+}
+.banner-cta h3 {
+  font-family: "ProximaNova";
+  font-weight: 500;
 }
 .banner-cta .row {
   min-height: 650px;

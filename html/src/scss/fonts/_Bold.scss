@@ -6,4 +6,11 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: ACaslonPro;
+	@include fontdef-woff($FontPath, $ACaslonPro_fonts, $FontVersion, "Bold");
+	font-weight: 700;
+	font-style: normal;
+}
+
 /* END Bold */

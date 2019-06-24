@@ -1,0 +1,9 @@
+/* BEGIN Thin */
+@font-face {
+	font-family: ProximaNova;
+	@include fontdef-woff($FontPath, $ProximaNovaFont, $FontVersion, "Thin");
+	font-weight: 100;
+	font-style: normal;
+}
+
+/* END Bold */

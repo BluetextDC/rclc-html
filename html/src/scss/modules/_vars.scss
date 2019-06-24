@@ -29,20 +29,24 @@ $heading4: 22px;
 $heading5: 20px;
 $heading6: 18px;
 
+// Font size
 $font-xs:12px;
 $primary-fs: 14px;
 $font-sm: 16px;
 $font-md: 18px;
 $font-lg: 20px;
 
+// text-transform
 $capitalize:capitalize;
 $uppercase:uppercase;
 $lowercase:lowercase;
 
+// font-family 
 $ft-icomoon:'icomoon';
-$proxinma_font: 'ProximaNova';
+$proxima_font: 'ProximaNova';
 $bigCaslon_font: 'BigCaslon';
 $helvetica_fonts:'Helvetica';
+$ACaslonPro_fonts:'ACaslonPro';
 
 // spacer
 $ht-lg : 100px;
@@ -50,5 +54,14 @@ $ht-md : 80px;
 $ht-sm : 60px;
 $ht-xs : 50px;
 $global-pd : 75px;
+
+// font-weight
+$thin:100; 
+$light:300; 
+$regular:400; 
+$medium:500; 
+$semibold:600; 
+$bold:700; 
+$wtblack:900; 
 
 
