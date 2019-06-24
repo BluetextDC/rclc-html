@@ -1,0 +1,8 @@
+/* BEGIN Regular */
+@font-face {
+	font-family: ProximaNova;
+	@include fontdef-woff($FontPath, $ProximaNovaFont, $FontVersion, "Regular");
+	font-weight: 400;
+	font-style: normal;
+}
+/* END Regular */

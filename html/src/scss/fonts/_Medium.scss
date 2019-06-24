@@ -1,0 +1,8 @@
+/* BEGIN Medium */
+@font-face {
+	font-family: BigCaslon;
+	@include fontdef-woff($FontPath, $BigCaslonFont, $FontVersion, "Medium");
+	font-weight: 500;
+	font-style: normal;
+}
+/* END Medium */

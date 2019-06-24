@@ -1,0 +1,90 @@
+.reg-wrapper {
+    width: 100%;
+    max-width: 485px;
+    margin: 0 auto;
+    .panel-body {
+        padding: 40px 15px;
+    }
+    .panel-footer {
+        text-align: center;
+        padding: 25px 15px;
+        .social-icons > li {
+            float: none;
+            display: inline-block;
+            margin: 0 2px;
+        }
+        > p {
+            margin: 0;
+            padding: 0 0 15px;
+            font-weight: 500;
+            color: $labelColor;
+        }
+    }
+    &.signup {
+    	max-width: 650px;
+    	.reg-inner {
+    		max-width: 485px;
+    	}
+    }
+}
+
+.not-member {
+    display: block;
+    color: #fff;
+    padding: 0 15px 0 0;
+}
+
+.reg-inner {
+    max-width: 315px;
+    margin: 0 auto;
+}
+
+.error-msz {
+    position: absolute;
+    right: 8px;
+    top: -8px;
+    color: $state-danger-text;
+    font-size: $font-size-small;
+    background: #fff;
+    padding: 0 4px;
+    display: none;
+}
+
+.has-error {
+    > .error-msz {
+        display: block;
+    }
+}
+
+.text-field {
+    position: relative;
+}
+
+.form-footer {
+    @include clearfix;
+    padding: 5px 0 0;
+    > .backto {
+        margin: 5px 0 0;
+        span {
+        	font-weight: 500;
+        	color:  $labelColor;
+        }
+    }
+    > .btn {
+        padding: 6px 20px;
+    }
+}
+
+.create-acc {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ECECEC;
+    > span {
+    	color: $labelColor;
+    	font-weight: 500;
+    }
+}
+.label-title {
+	color: $brand-primary;
+	margin: 0; padding: 0 0 15px;
+} 

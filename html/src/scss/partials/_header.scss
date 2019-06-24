@@ -1,0 +1,176 @@
+.header-wrap {
+    width: 100%;
+    height: $navbar-height;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: $navbar-height;
+    background: $header;
+    z-index: $zindex-navbar-fixed;
+}
+
+.main-nav {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    @media (min-width: $screen-sm-min) {
+        width: calc(100% - 137px);
+        float: right;
+    }
+}
+
+.header-right {
+    @media (min-width: $screen-sm-min) {
+        float: right;
+    }
+}
+
+.navigation {
+    padding: 0;
+    margin: 0; 
+    > li {
+        @include user-select(none);
+        > a {
+            display: block;
+            color: #c7d1d8;
+            text-shadow: 0 0 0 #c7d1d8;
+            padding: 6px 0;
+            &:hover,
+            &.active {
+                color: #fff;
+            }
+        }
+    }
+    @media (min-width: $screen-sm-min) {
+        float: left;
+        padding: 11px 0;
+        > li {
+            float: left;
+            height: 37px;
+            line-height: 37px;
+            > a {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+.global-search {
+    width: 100%;
+    padding: 12px 0;
+    @media (min-width: $screen-sm-min) {
+        max-width: 300px;
+        float: left;
+    }
+    > .form-group {
+        margin: 0;
+        background-color: #555;
+        border-radius: 4px;
+        @include clearfix;
+        > .form-control {
+            background-color: transparent;
+            border: 0;
+            color: #fff;
+            float: left;
+            height: 36px;
+            width: calc(100% - 34px);
+        }
+        > .btn {
+            float: right;
+            padding: 9px 10px;
+            height: 36px;
+            background-color: transparent;
+            border: 0;
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+.user-nav {
+    height: 60px;
+    padding: 12px 0;
+    position: relative;
+    @media (min-width: $screen-sm-min) {
+        float: left;
+        margin: 0;
+    }
+    > a {
+        float: left;
+    }
+    @media (max-width: 767px) { 
+        .dropdown-menu {
+            display: block;
+            position: inherit;
+            width: 100%;
+            max-width: none;
+            box-shadow: none;
+            top: auto;
+            background: transparent;
+            > li {
+                > a {
+                    color: #868686;
+                    padding: 6px 0;
+                    &:hover {
+                        background: transparent;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.user-dropdown {
+    @include square(30px);
+    margin: 3px 0;
+    display: block;
+    > .icon {
+        @include square(30px);
+        line-height: normal;
+        svg {
+            fill: #fff;
+        }
+    }
+}
+ 
+ 
+
+@media (max-width: $screen-sm-min) {
+    .header.beforelogin {
+        .navigation {
+            float: right;
+            li {
+                display: inline-block;
+                .not-member {
+                    padding: 0 6px 0 0;
+                }
+            }
+        }
+        .navbar-brand {
+            width: 90%;
+        }
+        .navbar-header {
+            float: left;
+        }
+        .header-right {
+            float: right;
+            width: 60%;
+        }
+    }
+}
+
+@media only screen and (min-width:700px) and (max-width: 930px) {
+    .navigation > li > a {
+        padding: 0 10px;
+    }
+    .global-search {
+        max-width: 200px;
+    }
+}
