@@ -1,4 +1,3 @@
-
 // custom-tab section
 .custom-tab {
   position: relative;
@@ -344,3 +343,116 @@
 }
 
 // Banner cta
+
+// wysiwyg-block
+.wysiwyg-block {
+  background-color: $white;
+
+  .content {
+    max-width: 750px;
+    margin: 0 auto;
+
+    h2 {
+      font-family: ACaslonPro_fonts;
+      line-height: 41px;
+      color: $light_black;
+      font-weight: $medium;
+    }
+
+    p {
+      color: $mid_gray;
+      line-height: 24px;
+      font-size: $font-sm;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      color: $light_black;
+      font-weight: $medium;
+      font-family: $proxima_font;
+      margin-top: 28px;
+    }
+
+    @media(max-width: $screen-sm-min) {
+      h2 {
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+// wysiwyg-block
+.slider-sec {
+  .slider {
+    position: relative;
+
+    .bg-img {
+      min-height: 570px;
+    }
+
+    .slick-arrow {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 570px;
+      z-index: 1;
+      width: 18%;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.4);
+      @include opacity(0);
+      visibility: hidden;
+      @include transition(all 0.25s ease);
+      span {
+        font-size: $font-md;
+        font-weight: $bold;
+        text-transform: $uppercase;
+        color: $white;
+        @include center(vertical, absolute);
+        left: 50px;
+      }
+
+      &.prev {
+        display: none !important;
+      }
+    }
+
+    &:hover {
+      .slick-arrow {
+        @include opacity(1);
+        visibility: visible;
+      }
+    }
+  }
+}
+
+// blog-cards
+.blog-cards{
+  position: relative;
+  padding: 120px 0;
+  .row{
+    margin-left: 7px;
+    margin-right: 7px;
+    .col-sm-4{
+      padding: 0 7px;
+    }
+  }
+  .card{
+    background-color:$white;
+    @include box-shadow(6px 6px 26px rgba(0,0,0,0.08));
+    padding: 65px 40px; 
+    .category{
+      font-size: $heading5;
+      font-family: $proxima_font;
+      text-transform: $capitalize;
+      font-weight: $light;
+      display: block;
+      margin-bottom: 50px;
+    }
+    h3{
+      font-family: $proxima_font;
+      font-weight: $medium;
+      min-height: 180px;
+      line-height: 36px;
+    }
+  } 
+}
