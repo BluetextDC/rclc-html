@@ -1,0 +1,174 @@
+// Home Hero Zone 
+.hero-zone {
+  min-height: 650px;
+  position: relative;
+
+  .bg-img {
+    position: absolute;
+    @include square(100%);
+    left: 0;
+    top: 0;
+    background-image: url('../img/home-hero.jpg');
+  }
+
+  .container {
+    height: 100vh;
+    position: relative;
+
+    @media(max-width: $screen-sm-min) {
+      height: auto;
+    }
+  }
+
+  h1 {
+    padding-right: 37%;
+
+    @media(max-width: $screen-sm-min) {
+      padding-right: 20%;
+    }
+  }
+
+  h1,
+  .h1 {
+    text-transform: $uppercase;
+    color: $white;
+    font-size: 65px;
+    display: block;
+    text-align: right;
+
+    @media(max-width: $screen-sm-min) {
+      font-size: 44px;
+    }
+  }
+
+  .upper-content {
+    width: 100%;
+
+    @media(max-width: $screen-sm-min) {
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    .bottom {
+      position: relative;
+      padding-right: 235px;
+
+      .content {
+        max-width: 200px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        p {
+          color: $white;
+          font-size: $font-sm;
+          line-height: 31px;
+          font-weight: $light;
+        }
+
+        @media(max-width: $screen-sm-min) {
+          position: inherit;
+          top: 0;
+          right: inherit;
+          max-width: 100%;
+          text-align: center;
+          padding-top: 50px;
+        }
+      }
+
+      @media(max-width: $screen-sm-min) {
+        padding-right: 0;
+      }
+    }
+  }
+
+
+  .bottom-stripe {
+    position: absolute;
+    bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    width: 100%;
+
+    .col-sm-4 {
+      position: relative;
+      padding: 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        @include size(1px, calc(100% - 10px));
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.4);
+        top: 5px;
+      }
+
+      &:last-child:before {
+        display: none;
+      }
+
+      @media(max-width: $screen-sm-min) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+        &:before {
+          display: none;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    a {
+      text-align: center;
+      font-size: $font-md;
+      padding: 20px 20px;
+      display: block;
+      color: $white;
+      font-family: $proxima_font;
+      text-transform: $uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    @media(max-width: $screen-sm-min) {
+      position: inherit;
+      bottom: inherit;
+      margin: 0;
+      margin-top: 40px;
+    }
+  }
+
+  @media(max-width: $screen-sm-min) {
+    min-height: auto;
+    padding: 100px 20px 75px;
+
+    .v-center {
+      position: inherit;
+      top: 0;
+      transform: none;
+    }
+  }
+}
+
+// Home Hero Zone 
+
+// Generic Hero Zone
+.generic-landing{
+  min-height: 100%;
+  .container{
+    height: auto;
+    min-height: 600px;
+  }
+  h1{
+    padding: 0;
+    text-align: left;
+    font-size: 45px;
+    font-family: $ACaslonPro_fonts;
+    text-transform: none;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    line-height: 58px;
+  }
+}
