@@ -214,12 +214,12 @@
   position: relative;
   margin-bottom: 10px;
 
-  @media(min-width: $screen-sm-min) {
+  @media(min-width: $screen-sm-max) {
     min-height: 600px;
   }
 
   .blog-item {
-    @media(min-width: $screen-sm-min) {
+    @media(min-width: $screen-sm-max) {
       position: absolute;
       @include size(50%, 100%);
       right: 0;
@@ -266,14 +266,19 @@
         .blog-content {
           position: absolute;
           bottom: 0;
-          padding: 30px 60px 60px;
         }
       }
     }
-
+    .blog-content {
+      padding: 30px 60px 60px;
+      @media(max-width: $screen-md-min){
+        padding: 30px 20px;
+      }
+    }
     .outer_link {
       z-index: 3;
     }
+
   }
   .hero-content{
     padding:190px 0 10px;

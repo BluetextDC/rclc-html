@@ -6754,7 +6754,7 @@ h2,
 .h2 {
   font-size: 30px;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   h2,
   .h2 {
     font-size: 22px;
@@ -6765,7 +6765,7 @@ h3,
 .h3 {
   font-size: 26px;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   h3,
   .h3 {
     font-size: 22px;
@@ -6776,7 +6776,7 @@ h4,
 .h4 {
   font-size: 22px;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   h4,
   .h4 {
     font-size: 20px;
@@ -6804,7 +6804,7 @@ p {
   color: #000000;
   margin-bottom: 15px;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .heading {
     font-size: 26px;
     margin-bottom: 10px;
@@ -7762,12 +7762,12 @@ a:hover {
   position: relative;
   margin-bottom: 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .blog-listing-hero {
     min-height: 600px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .blog-listing-hero .blog-item {
     position: absolute;
     width: 50%;
@@ -7821,7 +7821,14 @@ a:hover {
   .blog-listing-hero .blog-item .blog-item-inner .blog-content {
     position: absolute;
     bottom: 0;
-    padding: 30px 60px 60px;
+  }
+}
+.blog-listing-hero .blog-item .blog-content {
+  padding: 30px 60px 60px;
+}
+@media (max-width: 992px) {
+  .blog-listing-hero .blog-item .blog-content {
+    padding: 30px 20px;
   }
 }
 .blog-listing-hero .blog-item .outer_link {
@@ -8531,7 +8538,7 @@ a:hover {
 .blog-listing li {
   position: relative;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .blog-listing li {
     width: 50%;
     float: left;
@@ -8552,7 +8559,7 @@ a:hover {
 .blog-listing li .item-inner .outer_link {
   z-index: 3;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .blog-listing li .item-inner:before {
     content: '';
     position: absolute;
@@ -8598,7 +8605,7 @@ a:hover {
     top: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .blog-listing li .item-inner:hover .bg-img {
     -webkit-transition: transform 800ms;
     -o-transition: transform 800ms;

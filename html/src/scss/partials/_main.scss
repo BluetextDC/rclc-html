@@ -745,7 +745,7 @@
   position: relative;
 
   li {
-    @media(min-width: $screen-sm) {
+    @media(min-width: $screen-sm-max) {
       width: 50%;
       float: left;
       padding: 4px;
@@ -766,7 +766,7 @@
       .outer_link {
         z-index: 3;
       }
-      @media(min-width: $screen-sm-min) {
+      @media(min-width: $screen-sm-max) {
 
         &:before {
           content: '';
@@ -809,7 +809,7 @@
       }
 
 
-      @media(min-width:$screen-sm-min) {
+      @media(min-width:$screen-sm-max) {
         &:hover {
           .bg-img {
             @include transition(transform 800ms);
