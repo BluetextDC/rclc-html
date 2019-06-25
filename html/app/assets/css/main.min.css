@@ -7450,6 +7450,24 @@ a:hover {
 
 .generic-landing {
   min-height: 100%;
+  position: relative;
+}
+.generic-landing:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: rgba(9, 2, 1, 0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(9, 2, 1, 0) 0%, rgba(9, 2, 1, 0.06) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.38) 51%, rgba(0, 0, 0, 0.41) 54%, rgba(0, 0, 0, 0.54) 70%, rgba(0, 0, 0, 0.69) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(9, 2, 1, 0)), color-stop(0%, rgba(9, 2, 1, 0.06)), color-stop(30%, rgba(0, 0, 0, 0)), color-stop(51%, rgba(0, 0, 0, 0.38)), color-stop(54%, rgba(0, 0, 0, 0.41)), color-stop(70%, rgba(0, 0, 0, 0.54)), color-stop(85%, rgba(0, 0, 0, 0.69)), color-stop(100%, rgba(0, 0, 0, 0.83)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(9, 2, 1, 0) 0%, rgba(9, 2, 1, 0.06) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.38) 51%, rgba(0, 0, 0, 0.41) 54%, rgba(0, 0, 0, 0.54) 70%, rgba(0, 0, 0, 0.69) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(9, 2, 1, 0) 0%, rgba(9, 2, 1, 0.06) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.38) 51%, rgba(0, 0, 0, 0.41) 54%, rgba(0, 0, 0, 0.54) 70%, rgba(0, 0, 0, 0.69) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(9, 2, 1, 0) 0%, rgba(9, 2, 1, 0.06) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.38) 51%, rgba(0, 0, 0, 0.41) 54%, rgba(0, 0, 0, 0.54) 70%, rgba(0, 0, 0, 0.69) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: radial-gradient(ellipse at center, rgba(9, 2, 1, 0) 0%, rgba(9, 2, 1, 0.06) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.38) 51%, rgba(0, 0, 0, 0.41) 54%, rgba(0, 0, 0, 0.54) 70%, rgba(0, 0, 0, 0.69) 85%, rgba(0, 0, 0, 0.83) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090201', endColorstr='#000000', GradientType=1 );
 }
 .generic-landing .container {
   height: auto;
@@ -7466,6 +7484,7 @@ a:hover {
   left: 0;
   bottom: 50px;
   line-height: 58px;
+  z-index: 2;
 }
 @media (max-width: 768px) {
   .generic-landing {
@@ -8040,6 +8059,124 @@ a:hover {
 @media (max-width: 768px) {
   .newslatter-form .form-control {
     text-align: center;
+  }
+}
+
+.course-listing {
+  padding-bottom: 40px;
+}
+.course-listing h2.heading {
+  margin-bottom: 20px;
+}
+.course-listing .media.course-item {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 7px 7px 16px rgba(82, 33, 33, 0.12);
+  box-shadow: 7px 7px 16px rgba(82, 33, 33, 0.12);
+}
+.course-listing .media.course-item .media-left {
+  position: relative;
+  min-width: 160px;
+  padding: 30px 20px;
+}
+.course-listing .media.course-item .media-left .course-info {
+  width: 100%;
+  padding: 0 20px;
+}
+.course-listing .media.course-item .media-left .course-info span {
+  font-size: 11px;
+  font-weight: 300;
+  display: block;
+}
+.course-listing .media.course-item .media-left .course-info b {
+  font-family: "ACaslonPro";
+  color: #292929;
+  font-size: 40px;
+  display: block;
+}
+.course-listing .media.course-item .media-left .course-info .full-date {
+  display: none;
+}
+@media (max-width: 768px) {
+  .course-listing .media.course-item .media-left {
+    display: block;
+    min-width: 100%;
+    padding: 20px 30px 0;
+  }
+  .course-listing .media.course-item .media-left .course-info {
+    position: relative;
+    transform: none;
+    left: 0;
+    top: 0;
+    padding: 0;
+  }
+  .course-listing .media.course-item .media-left .course-info .full-date {
+    font-size: 17px;
+    text-transform: uppercase;
+    display: block;
+  }
+  .course-listing .media.course-item .media-left .course-info span, .course-listing .media.course-item .media-left .course-info b {
+    display: none;
+  }
+}
+.course-listing .media.course-item .media-body {
+  padding: 30px 200px 30px 20px;
+  position: relative;
+}
+.course-listing .media.course-item .media-body h4 {
+  font-family: "ProximaNova";
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.course-listing .media.course-item .media-body p {
+  font-size: 16px;
+  color: #3C3C3C;
+  line-height: 23px;
+  margin-bottom: 10px;
+}
+.course-listing .media.course-item .media-body span {
+  font-size: 18px;
+  text-transform: capitalize;
+  line-height: 23px;
+  font-weight: 400;
+  color: #292929;
+  display: block;
+}
+.course-listing .media.course-item .media-body .btn-outer {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.course-listing .media.course-item .media-body a.submit-btn {
+  font-size: 18px;
+}
+.course-listing .media.course-item .media-body a.submit-btn:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .course-listing .media.course-item .media-body {
+    padding: 10px 30px 30px;
+  }
+  .course-listing .media.course-item .media-body span {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  .course-listing .media.course-item .media-body .btn-outer {
+    position: relative;
+    width: 100%;
+    text-align: left;
+  }
+  .course-listing .media.course-item .media-body .btn-outer a.submit-btn {
+    position: inherit;
+    transform: none;
+    left: 0;
+    top: 0;
   }
 }
 

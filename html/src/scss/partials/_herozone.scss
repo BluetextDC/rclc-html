@@ -156,6 +156,24 @@
 // Generic Hero Zone
 .generic-landing {
   min-height: 100%;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    @include square(100%);
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: rgba(9,2,1,0);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(9,2,1,0) 0%, rgba(9,2,1,0.06) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.38) 51%, rgba(0,0,0,0.41) 54%, rgba(0,0,0,0.54) 70%, rgba(0,0,0,0.69) 85%, rgba(0,0,0,0.83) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(9,2,1,0)), color-stop(0%, rgba(9,2,1,0.06)), color-stop(30%, rgba(0,0,0,0)), color-stop(51%, rgba(0,0,0,0.38)), color-stop(54%, rgba(0,0,0,0.41)), color-stop(70%, rgba(0,0,0,0.54)), color-stop(85%, rgba(0,0,0,0.69)), color-stop(100%, rgba(0,0,0,0.83)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(9,2,1,0) 0%, rgba(9,2,1,0.06) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.38) 51%, rgba(0,0,0,0.41) 54%, rgba(0,0,0,0.54) 70%, rgba(0,0,0,0.69) 85%, rgba(0,0,0,0.83) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(9,2,1,0) 0%, rgba(9,2,1,0.06) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.38) 51%, rgba(0,0,0,0.41) 54%, rgba(0,0,0,0.54) 70%, rgba(0,0,0,0.69) 85%, rgba(0,0,0,0.83) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(9,2,1,0) 0%, rgba(9,2,1,0.06) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.38) 51%, rgba(0,0,0,0.41) 54%, rgba(0,0,0,0.54) 70%, rgba(0,0,0,0.69) 85%, rgba(0,0,0,0.83) 100%);
+    background: radial-gradient(ellipse at center, rgba(9,2,1,0) 0%, rgba(9,2,1,0.06) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.38) 51%, rgba(0,0,0,0.41) 54%, rgba(0,0,0,0.54) 70%, rgba(0,0,0,0.69) 85%, rgba(0,0,0,0.83) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090201', endColorstr='#000000', GradientType=1 );
+  }
 
   .container {
     height: auto;
@@ -173,14 +191,17 @@
     left: 0;
     bottom: 50px;
     line-height: 58px;
+    z-index: 2;
   }
 
   @media(max-width: $screen-sm-min) {
     min-height: 100%;
     padding: 0 20px;
-    .container{
+
+    .container {
       min-height: 580px;
-      h1{
+
+      h1 {
         font-size: $heading2;
         line-height: 42px;
       }
