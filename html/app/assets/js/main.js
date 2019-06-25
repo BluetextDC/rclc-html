@@ -40,4 +40,9 @@
     }
   });
 
+  // Filter system js
+  $('.dropdown-menu').click(function(e) {
+    e.stopPropagation();
+  });
+
 })(jQuery);

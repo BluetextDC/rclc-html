@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-check-symbol:before {
+  content: "\e907";
+}
+.icon-close:before {
+  content: "\e908";
+}
+.icon-tick:before {
+  content: "\e909";
+}
 .icon-downwards-pointer:before {
   content: "\e900";
 }

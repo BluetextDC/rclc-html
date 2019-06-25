@@ -1,6 +1,10 @@
-body{
+*{
+  transition: none;
+}
+body {
   font-family: $proxima_font;
 }
+
 // Backgrounf-colors
 .white-bg {
   background-color: $white;
@@ -86,11 +90,13 @@ p {
   color: $black;
   margin: 0;
 }
-.heading{
+
+.heading {
   font-weight: $semibold;
-  color:$black;
+  color: $black;
   margin-bottom: 15px;
-  @media(max-width: $screen-sm-min){
+
+  @media(max-width: $screen-sm-min) {
     font-size: $heading3;
     margin-bottom: 10px;
   }
@@ -193,23 +199,34 @@ p {
     color: $white;
   }
 }
-.submit-btn{
- color:$gray;
- font-size: $font-sm;
- font-weight: $bold;
- background-color:transparent;
- padding: 0;
- letter-spacing: 2px; 
- text-transform: $uppercase;
- &:hover,
- &:focus,
- &.actiev:focus {
-  background-color:transparent;
-  color: $black;
-  outline: none;
-  box-shadow: none;
+
+.submit-btn {
+  color: $gray;
+  font-size: $font-sm;
+  font-weight: $bold;
+  background-color: transparent;
+  padding: 0;
+  letter-spacing: 2px;
+  text-transform: $uppercase;
+
+  &:hover,
+  &:focus,
+  &.actiev:focus {
+    background-color: transparent;
+    color: $black;
+    outline: none;
+    box-shadow: none;
+  }
 }
+
+.outer_link {
+  position: absolute;
+  @include square(100%);
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
+
 // Button css
 
 // othre elements
@@ -327,70 +344,327 @@ a {
 .h-center {
   @include center(horizontal, absolute);
 }
+
 // center clasess
 
 // small container
 .container-sm {
   max-width: 780px;
 }
+
 // small container
 
 // form
-.form-control{
+.form-control {
   font-size: $font-md;
-  color:$black;
-  border:none;
-  background-color:transparent;
+  color: $black;
+  border: none;
+  background-color: transparent;
   box-shadow: none;
   outline: none;
   height: $input_field_height;
   padding-left: 0;
   font-weight: $regular;
-  &:focus{
+
+  &:focus {
     box-shadow: none;
     outline: none;
   }
 }
-.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   color: $black;
   font-size: $font-md;
   font-weight: $light;
 }
-.form-control::-moz-placeholder { /* Firefox 19+ */
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
   color: $black;
   font-size: $font-md;
   font-weight: $light;
 }
-.form-control:-ms-input-placeholder { /* IE 10+ */
+
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
   color: $black;
   font-size: $font-md;
   font-weight: $light;
 }
-.form-control:-moz-placeholder { /* Firefox 18- */
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
   color: $black;
   font-size: $font-md;
   font-weight: $light;
 }
-.field-outer{
+
+.field-outer {
   position: relative;
-  &:before,&:after{
-    content:'';
+
+  &:before,
+  &:after {
+    content: '';
     position: absolute;
-    height:2px;
-    bottom:0;
+    height: 2px;
+    bottom: 0;
     left: 0;
     @include transition(all 0.25s ease-in-out);
   }
-  &:before{
-    background-color:#b8b8b8;
+
+  &:before {
+    background-color: #b8b8b8;
     width: 100%;
   }
-  &:after{
+
+  &:after {
     width: 0;
-    background-color:$black; 
+    background-color: $black;
   }
-  &.label-float:after{
+
+  &.label-float:after {
     width: 100%;
   }
 }
+
+.dropdown {
+  padding: 0 15px;
+  margin-bottom: 25px;
+  max-width: 400px;
+}
+
+.dropdown .dropdown-trigger {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  display: block;
+  border-bottom: 1px solid #BCBCBC;
+  padding: 8px 20px 8px 0;
+  position: relative;
+  font-size: 27px;
+  color:rgba(142, 142, 142,0.27);
+  font-weight: $light;
+}
+
+.dropdown .dropdown-trigger:before {
+  content: '\e900';
+  font-family: 'icomoon';
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: $black;
+  @include opacity(0.5);
+  font-size: $font-sm;
+  font-weight: $regular;
+  display: block;
+  @include transition(all 0.25s ease-in-out); 
+}
+
+.dropdown .dropdown-style {
+  background-color: #f3f3f3 !important;
+  width: 100%;
+  max-height: 180px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  background: 0 0;
+  border: none;
+  border-radius: 0;
+  @include transition(all 0.25s);
+  box-shadow: none;
+  z-index: 99;
+}
+
+.dropdown .dropdown-style li {
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown .dropdown-style li:before {
+  display: none;
+}
+
+.dropdown.open {
+  background-color: #f3f3f3;
+}
+
+.dropdown.open .dropdown-trigger {
+  border-bottom: 0;
+}
+
+.dropdown.open .dropdown-trigger:before {
+  @include transform(rotate(-180deg));
+}
+
+@media (max-width: 992px) {
+  .dropdown {
+    padding: 0;
+  }
+
+  .dropdown .dropdown-trigger {
+    padding-left: 15px;
+  }
+
+  .dropdown .dropdown-trigger:before {
+    right: 15px;
+  }
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding: 8px 15px;
+  margin: 0;
+  padding-left: 40px;
+  cursor: pointer;
+  font-size: $font-md;
+  color: $black;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  @include transition(all 0.20s ease);
+  /* Create a custom checkbox */
+  &.active {
+    color: #be0b0c;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkmark {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    @include square(14px);
+    border: 1px solid $black;
+    background-color: transparent;
+  }
+  &:hover {
+    background-color: $dark_gray;
+    color: $white;
+    .checkmark {
+      border-color: $white;
+      background-color: transparent;
+    }
+  }
+}
+
+.dropdown-style::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dropdown-style::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+}
+
+.dropdown-style::-webkit-scrollbar-thumb {
+  background-color: $dark_gray;
+  outline: 1px solid $dark_gray;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input~.checkmark {
+  background-color: transparent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked~.checkmark {
+  background-color: transparent;
+  border-color: $black;
+}
+.checkbox-container:hover input:checked~.checkmark {
+  background-color: transparent;
+  border-color: $white;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container{
+  .checkmark{
+    &:after {
+      content: "\e907";
+      font-family: $ft-icomoon;
+      position: absolute;
+      display: none;
+      left: 2px;
+      top: 1px;
+      font-size: 9px;
+      font-weight: $semibold;
+      @include transform(rotate(0deg));
+    }
+  }
+}
+
+.checkbox-container.active:hover input:checked~.checkmark {
+  background-color: transparent;
+  border-color: $white;
+}
+
+.checkbox-container.active:hover input:checked~.checkmark:after {
+  border: solid #ffffff;
+  border-width: 0 1px 2px 0;
+}
+
+/*Filter Tag List css*/
+.taglist-outer {
+  padding: 10px 0 0 15px;
+  .tag-list {
+    margin: 0;
+    float: left;
+    li {
+      display: inline-block;
+      padding: 6px 15px 6px 0;
+      position: relative;
+      cursor: pointer;
+      background-color: transparent;
+      color: $black;
+      border-radius: 0;
+      margin-right: 10px;
+      text-transform: $capitalize;
+      &:after {
+        font-family: 'icomoon' !important;
+        content: "\e908";
+        font-size: 9px;
+        position: absolute;
+        right: 0;
+        text-shadow: none;
+        font-weight: $light;
+        top: 12px;
+      }
+      &:before {
+        display: none;
+      }
+      &.clear-all{
+        padding-left:5px;
+        &:after{
+          display: none;
+        }
+        a{
+          text-transform: $capitalize;
+          color:$black;
+          &:hover{
+            text-decoration: underline;
+          }
+        } 
+      }
+    }
+  }
+}
+
 // form
+
+// Extra
+// .padding-none{
+//   padding: 0;
+// }
