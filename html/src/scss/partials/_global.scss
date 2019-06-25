@@ -1,3 +1,6 @@
+body{
+  font-family: $proxima_font;
+}
 // Backgrounf-colors
 .white-bg {
   background-color: $white;
@@ -17,7 +20,11 @@
 
 // Typography
 h1,
-.h1,
+.h1 {
+  color: $black;
+  font-family: $bigCaslon_font;
+}
+
 h2,
 .h2,
 h3,
@@ -29,7 +36,7 @@ h5,
 h6,
 .h6 {
   color: $black;
-  font-family: $bigCaslon_font;
+  font-family: $ACaslonPro_fonts;
 }
 
 h1,
@@ -40,7 +47,8 @@ h1,
 h2,
 .h2 {
   font-size: $heading2;
-  @media(max-width: $screen-sm-min){
+
+  @media(max-width: $screen-sm-min) {
     font-size: $heading4;
   }
 }
@@ -48,7 +56,8 @@ h2,
 h3,
 .h3 {
   font-size: $heading3;
-  @media(max-width: $screen-sm-min){
+
+  @media(max-width: $screen-sm-min) {
     font-size: $heading4;
   }
 }
@@ -56,7 +65,8 @@ h3,
 h4,
 .h4 {
   font-size: $heading4;
-  @media(max-width: $screen-sm-min){
+
+  @media(max-width: $screen-sm-min) {
     font-size: $heading5;
   }
 }
@@ -75,6 +85,15 @@ p {
   font-size: $primary-fs;
   color: $black;
   margin: 0;
+}
+.heading{
+  font-weight: $semibold;
+  color:$black;
+  margin-bottom: 15px;
+  @media(max-width: $screen-sm-min){
+    font-size: $heading3;
+    margin-bottom: 10px;
+  }
 }
 
 // Padding classes
@@ -174,7 +193,23 @@ p {
     color: $white;
   }
 }
-
+.submit-btn{
+ color:$gray;
+ font-size: $font-sm;
+ font-weight: $bold;
+ background-color:transparent;
+ padding: 0;
+ letter-spacing: 2px; 
+ text-transform: $uppercase;
+ &:hover,
+ &:focus,
+ &.actiev:focus {
+  background-color:transparent;
+  color: $black;
+  outline: none;
+  box-shadow: none;
+}
+}
 // Button css
 
 // othre elements
@@ -280,6 +315,7 @@ a {
   }
 }
 
+// center clasess
 .vh-center {
   @include center(both, absolute);
 }
@@ -291,3 +327,70 @@ a {
 .h-center {
   @include center(horizontal, absolute);
 }
+// center clasess
+
+// small container
+.container-sm {
+  max-width: 780px;
+}
+// small container
+
+// form
+.form-control{
+  font-size: $font-md;
+  color:$black;
+  border:none;
+  background-color:transparent;
+  box-shadow: none;
+  outline: none;
+  height: $input_field_height;
+  padding-left: 0;
+  font-weight: $regular;
+  &:focus{
+    box-shadow: none;
+    outline: none;
+  }
+}
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $black;
+  font-size: $font-md;
+  font-weight: $light;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: $black;
+  font-size: $font-md;
+  font-weight: $light;
+}
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  color: $black;
+  font-size: $font-md;
+  font-weight: $light;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: $black;
+  font-size: $font-md;
+  font-weight: $light;
+}
+.field-outer{
+  position: relative;
+  &:before,&:after{
+    content:'';
+    position: absolute;
+    height:2px;
+    bottom:0;
+    left: 0;
+    @include transition(all 0.25s ease-in-out);
+  }
+  &:before{
+    background-color:#b8b8b8;
+    width: 100%;
+  }
+  &:after{
+    width: 0;
+    background-color:$black; 
+  }
+  &.label-float:after{
+    width: 100%;
+  }
+}
+// form

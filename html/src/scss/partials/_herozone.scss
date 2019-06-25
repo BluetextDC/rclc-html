@@ -64,6 +64,7 @@
           font-size: $font-sm;
           line-height: 31px;
           font-weight: $light;
+          font-family: $helvetica_fonts;
         }
 
         @media(max-width: $screen-sm-min) {
@@ -153,13 +154,15 @@
 // Home Hero Zone 
 
 // Generic Hero Zone
-.generic-landing{
+.generic-landing {
   min-height: 100%;
-  .container{
+
+  .container {
     height: auto;
     min-height: 600px;
   }
-  h1{
+
+  h1 {
     padding: 0;
     text-align: left;
     font-size: 45px;
@@ -170,5 +173,17 @@
     left: 0;
     bottom: 50px;
     line-height: 58px;
+  }
+
+  @media(max-width: $screen-sm-min) {
+    min-height: 100%;
+    padding: 0 20px;
+    .container{
+      min-height: 580px;
+      h1{
+        font-size: $heading2;
+        line-height: 42px;
+      }
+    }
   }
 }

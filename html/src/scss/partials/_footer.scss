@@ -1,5 +1,6 @@
 .footer {
   background-color: $light_gray;
+  padding-top:50px;
 
   @media(max-width: $screen-md-min) {
     .d-flex {
@@ -86,6 +87,7 @@
 
     a {
       color: $black;
+      font-family: $helvetica_fonts;
 
       @media(max-width: $screen-md-min) {
         font-size: $font-lg;
@@ -94,6 +96,8 @@
     }
 
     p {
+      font-family: $helvetica_fonts;
+
       @media(max-width: $screen-md-min) {
         font-size: $font-lg;
         color: $gray;
@@ -139,6 +143,7 @@ ul.footer-menu {
       color: $black;
       font-size: $font-md;
       text-transform: $capitalize;
+      font-family: $helvetica_fonts;
 
       @media(max-width: $screen-md-min) {
         color: $gray;
@@ -198,6 +203,7 @@ ul.footer-menu {
 
       p {
         font-size: $font-xs;
+        font-family: $helvetica_fonts;
 
         @media(max-width: $screen-md-min) {
           color: $gray;
@@ -205,6 +211,8 @@ ul.footer-menu {
       }
 
       a {
+        font-family: $helvetica_fonts;
+
         @media(max-width: $screen-md-min) {
           color: $gray;
         }
@@ -217,6 +225,7 @@ ul.footer-menu {
 
     p {
       font-size: $font-xs;
+      font-family: $helvetica_fonts;
 
       @media(max-width: $screen-md-min) {
         color: $gray;
