@@ -81,10 +81,21 @@ if ($(window).width() > 768) {
 
 // Navigation js
 $('.trigger-outer').on('click', function(){
-    $('.navigation-outer').addClass('active');
+  $('.navigation-outer').addClass('active');
 });
 $('.close-btn').on('click', function(){
-    $(this).parent().removeClass('active');
+  $(this).parent().removeClass('active');
+});
+
+$('.main-menu .menu-item-has-children').on('click', function(){
+  $(this).find('ul.sub-menu').fadeIn();
+  $(this).parent().prev('.back-btn').fadeIn();
+});
+
+// Back to main menu trigger
+$('.back-btn').on('click', function(){
+  $(this).fadeOut();
+  $('.main-menu .menu-item-has-children ul.sub-menu').fadeOut();
 });
 
 })(jQuery);
