@@ -7784,7 +7784,7 @@ a:hover {
 }
 .generic-landing .content.details-page h1 {
   text-transform: capitalize;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   line-height: 51px;
 }
 .generic-landing .content.details-page ul.blog-info {
@@ -8391,6 +8391,12 @@ ul.social-links li a:hover i {
   font-weight: 400;
   text-shadow: 0 0 0 #313131;
   margin-bottom: 20px;
+}
+.wysiwyg-block .content.blog-detail .taglist p {
+  color: #000000;
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 500;
 }
 .wysiwyg-block .content.blog-detail ul,
 .wysiwyg-block .content.blog-detail ol {
