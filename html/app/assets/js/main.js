@@ -12,19 +12,19 @@
     slidesToShow: 1.1,
     slidesToScroll: 1,
     responsive: [{
-      breakpoint: 993,
-      settings: {
-        arrows: true,
-        dots: true,
+        breakpoint: 993,
+        settings: {
+          arrows: true,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: 'unslick'
       }
-    },
-    {
-      breakpoint: 768,
-      settings: 'unslick'
-    }
     ]
   });
-  
+
   // refresh slider on browser resize
   // $(window).resize(function() {
   //   $('.slider').slick('refresh');
@@ -43,6 +43,27 @@
   // Filter system js
   $('.dropdown-menu').click(function(e) {
     e.stopPropagation();
+  });
+
+  // REad more less 
+  $(document).ready(function() {
+    $('.show-content-block button').on('click', function() {
+      if ($(this).hasClass("less")) {
+        $(this).parent().parent().addClass('content-limit-block');
+        $(this).removeClass("less");
+        $(this).text("Read More");
+      } else {
+        $(this).parent().parent().removeClass('content-limit-block');
+        $(this).addClass("less");
+        $(this).text("Read Less");
+      }
+    });
+    // var content_bk_height = $('.content-limit-block').height();
+    
+    // if (content_bk_height == 400) {
+    //   $('.show-content-block').addClass('block');
+    // }
+
   });
 
 })(jQuery);

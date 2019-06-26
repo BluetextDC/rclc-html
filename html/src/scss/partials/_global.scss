@@ -1,6 +1,7 @@
-*{
+* {
   transition: none;
 }
+
 body {
   font-family: $proxima_font;
 }
@@ -353,6 +354,12 @@ a {
 }
 
 // small container
+// medium container
+.container-md {
+  max-width: 950px;
+}
+
+// medium container
 
 // form
 .form-control {
@@ -432,9 +439,11 @@ a {
   padding: 0 15px;
   margin-bottom: 25px;
   max-width: 400px;
-  @media(max-width: $screen-sm-min){
+
+  @media(max-width: $screen-sm-min) {
     max-width: 100%;
   }
+
   .dropdown-trigger {
     position: relative;
     width: 100%;
@@ -444,11 +453,13 @@ a {
     padding: 8px 20px 8px 0;
     position: relative;
     font-size: 27px;
-    color:rgba(142, 142, 142,0.27);
+    color: rgba(142, 142, 142, 0.27);
     font-weight: $light;
-    @media(max-width: $screen-sm-min){
-      color:rgba(142, 142, 142,1);
+
+    @media(max-width: $screen-sm-min) {
+      color: rgba(142, 142, 142, 1);
     }
+
     &:before {
       content: '\e900';
       font-family: 'icomoon';
@@ -460,7 +471,7 @@ a {
       font-size: $font-sm;
       font-weight: $regular;
       display: block;
-      @include transition(all 0.25s ease-in-out); 
+      @include transition(all 0.25s ease-in-out);
     }
   }
 }
@@ -530,10 +541,12 @@ a {
   -ms-user-select: none;
   user-select: none;
   @include transition(all 0.20s ease);
+
   /* Create a custom checkbox */
   &.active {
     color: #be0b0c;
   }
+
   input {
     position: absolute;
     opacity: 0;
@@ -541,6 +554,7 @@ a {
     height: 0;
     width: 0;
   }
+
   .checkmark {
     position: absolute;
     top: 14px;
@@ -549,9 +563,11 @@ a {
     border: 1px solid $black;
     background-color: transparent;
   }
+
   &:hover {
     background-color: $dark_gray;
     color: $white;
+
     .checkmark {
       border-color: $white;
       background-color: transparent;
@@ -582,6 +598,7 @@ a {
   background-color: transparent;
   border-color: $black;
 }
+
 .checkbox-container:hover input:checked~.checkmark {
   background-color: transparent;
   border-color: $white;
@@ -595,8 +612,8 @@ a {
 }
 
 /* Style the checkmark/indicator */
-.checkbox-container{
-  .checkmark{
+.checkbox-container {
+  .checkmark {
     &:after {
       content: "\e907";
       font-family: $ft-icomoon;
@@ -624,9 +641,11 @@ a {
 /*Filter Tag List css*/
 .taglist-outer {
   padding: 10px 0 0 15px;
+
   .tag-list {
     margin: 0;
     float: left;
+
     li {
       display: inline-block;
       padding: 6px 15px 6px 0;
@@ -637,6 +656,7 @@ a {
       border-radius: 0;
       margin-right: 10px;
       text-transform: $capitalize;
+
       &:after {
         font-family: 'icomoon' !important;
         content: "\e908";
@@ -647,21 +667,26 @@ a {
         font-weight: $light;
         top: 12px;
       }
+
       &:before {
         display: none;
       }
-      &.clear-all{
-        padding-left:5px;
-        &:after{
+
+      &.clear-all {
+        padding-left: 5px;
+
+        &:after {
           display: none;
         }
-        a{
+
+        a {
           text-transform: $capitalize;
-          color:$black;
-          &:hover{
+          color: $black;
+
+          &:hover {
             text-decoration: underline;
           }
-        } 
+        }
       }
     }
   }
@@ -673,3 +698,27 @@ a {
 // .padding-none{
 //   padding: 0;
 // }
+@media(max-width: $screen-sm-min) {
+  .content-limit-block {
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    .show-content-block {
+      position: absolute;
+      bottom: 0;
+      padding-top: 90px;
+      text-align: left;
+      display: block;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(56%, white));
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 56%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+      width: 100%;
+      cursor: pointer;
+
+      .btn {
+        color: $gray;
+      }
+    }
+  }
+}
