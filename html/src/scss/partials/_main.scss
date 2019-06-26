@@ -745,11 +745,11 @@
   position: relative;
 
   li {
-    @media(min-width: $screen-sm-max) {
+    @media(min-width: $screen-sm-min) {
       width: 50%;
       float: left;
       padding: 4px;
-      background-color:$white; 
+      background-color: $white;
     }
 
     position: relative;
@@ -766,7 +766,8 @@
       .outer_link {
         z-index: 3;
       }
-      @media(min-width: $screen-sm-max) {
+
+      @media(min-width: $screen-sm-min) {
 
         &:before {
           content: '';
@@ -798,10 +799,12 @@
           height: 255px;
         }
       }
+
       .blog-content {
         position: absolute;
         z-index: 2;
         bottom: 0;
+
         @media(max-width: $screen-sm-min) {
           position: inherit;
           top: 0;
@@ -809,7 +812,7 @@
       }
 
 
-      @media(min-width:$screen-sm-max) {
+      @media(min-width: $screen-sm-min) {
         &:hover {
           .bg-img {
             @include transition(transform 800ms);
@@ -857,7 +860,8 @@
     span {
       color: $black;
     }
-    h4{
+
+    h4 {
       text-shadow: 0 0 0 $black;
     }
 
@@ -866,4 +870,95 @@
       text-shadow: 0 0 0 $black;
     }
   }
+}
+
+// Pagination
+.pagination-outer {
+  padding: 15px 0 10px;
+  border-top: 1px solid $pagination_border;
+  margin-top: 35px;
+
+  p {
+    b {
+      font-weight: $semibold;
+    }
+  }
+  .center{
+    @media(max-width: $screen-sm-min){
+      text-align: center;
+    }
+  }
+
+  .pagination {
+    margin: 0;
+
+    .page-numbers {
+      color: $light_black;
+      font-size: $font-sm;
+      font-weight: $semibold;
+      @include square(24px);
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      padding: 1px 0px;
+      border-radius: 50%;
+
+      &.next,
+      &.prev {
+        @media(min-width: $screen-sm-min) {
+          display: none;
+        }
+
+        padding:4px;
+
+        i {
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+
+      &.next {
+        i {
+          display: block;
+          @include transform(rotate(180deg));
+        }
+      }
+
+      &.current {
+        color: $white;
+        background-color: $light_black;
+      }
+    }
+    &.pagination-mobile{
+      padding-top:30px;
+      .page-numbers{
+        border-radius: 0;
+        background-color:transparent; 
+        font-size: $font-md;
+        &.current{
+          color: $light_black;
+          border:0.5px solid #B4B4B4;
+          @include square(26px);
+        }
+        i{
+          font-size: 22px;
+        }
+        &.prev{
+         position: relative;
+         top: 3px;
+         left: -5px;
+         padding: 0;
+       }
+       &.next{
+        position: relative;
+        top: 2px;
+        left: -3px;
+        padding: 0;
+      }
+    }
+    b{
+      font-size: 22px;
+      padding: 0 5px;
+    }
+  }
+}
 }
