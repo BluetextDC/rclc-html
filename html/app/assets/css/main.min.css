@@ -8040,7 +8040,7 @@ ul.social-links li a:hover i {
 }
 .custom-tab ul.nav-tabs li a {
   border: none;
-  padding: 15px 20px;
+  padding: 17px 20px;
   padding-left: 40px;
   position: relative;
   border-radius: 0;
@@ -8354,6 +8354,7 @@ ul.social-links li a:hover i {
   line-height: 41px;
   color: #292929;
   font-weight: 500;
+  text-shadow: 0 0 0 #292929;
 }
 .wysiwyg-block .content p {
   color: #646464;
@@ -8366,6 +8367,7 @@ ul.social-links li a:hover i {
   font-weight: 500;
   font-family: "ProximaNova";
   margin-top: 28px;
+  text-shadow: 0 0 0 #292929;
 }
 @media (max-width: 767px) {
   .wysiwyg-block .content h2 {
@@ -8397,6 +8399,7 @@ ul.social-links li a:hover i {
   font-size: 16px;
   text-transform: none;
   font-weight: 500;
+  text-shadow: 0 0 0 #000000;
 }
 .wysiwyg-block .content.blog-detail ul,
 .wysiwyg-block .content.blog-detail ol {
@@ -8492,6 +8495,8 @@ ul.social-links li a:hover i {
   font-weight: 300;
   display: block;
   margin-bottom: 50px;
+  color: #292929;
+  text-shadow: 0 0 0 #292929;
 }
 .blog-cards .card h3 {
   font-family: "ProximaNova";
@@ -8499,6 +8504,7 @@ ul.social-links li a:hover i {
   min-height: 170px;
   line-height: 36px;
   margin-bottom: 20px;
+  color: #292929;
 }
 @media (max-width: 767px) {
   .blog-cards .card h3 {
@@ -8604,6 +8610,8 @@ ul.social-links li a:hover i {
   line-height: 26px;
   font-weight: 300;
   margin-bottom: 10px;
+  color: #363636;
+  font-weight: 400;
 }
 
 .newslatter-form {
@@ -8652,6 +8660,7 @@ ul.social-links li a:hover i {
   font-size: 11px;
   font-weight: 300;
   display: block;
+  color: #292929;
 }
 .course-listing .media.course-item .media-left .course-info b {
   font-family: "ACaslonPro";
@@ -8980,7 +8989,6 @@ ul.social-links li a:hover i {
 
 .footer {
   background-color: #f5f5f5;
-  padding-top: 50px;
 }
 @media (max-width: 992px) {
   .footer .d-flex {
