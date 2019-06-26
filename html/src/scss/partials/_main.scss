@@ -394,18 +394,21 @@
         text-shadow: 0 0 0 $details_para;
         margin-bottom: 20px;
       }
-      .taglist{
-        p{
-          color:$black;
+
+      .taglist {
+        p {
+          color: $black;
           font-size: $font-sm;
           text-transform: none;
           font-weight: $medium;
           text-shadow: 0 0 0 $black;
         }
       }
+
       ul,
       ol {
         margin-bottom: 15px;
+
         li {
           font-weight: $regular;
           color: $bullet_color;
@@ -500,7 +503,7 @@
       font-weight: $light;
       display: block;
       margin-bottom: 50px;
-      color:$light_black;
+      color: $light_black;
       text-shadow: 0 0 0 $light_black;
     }
 
@@ -510,7 +513,7 @@
       min-height: 170px;
       line-height: 36px;
       margin-bottom: 20px;
-      color:$light_black;
+      color: $light_black;
 
       @media(max-width: $screen-sm-min) {
         min-height: 100px;
@@ -618,7 +621,7 @@
       line-height: 26px;
       font-weight: $light;
       margin-bottom: 10px;
-      color:#363636;
+      color: #363636;
       font-weight: $regular;
     }
   }

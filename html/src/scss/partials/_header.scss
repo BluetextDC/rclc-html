@@ -1,176 +1,156 @@
-.header-wrap {
-    width: 100%;
-    height: $navbar-height;
-}
-
 .header {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    height: $navbar-height;
-    background: $header;
-    z-index: $zindex-navbar-fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 30px 0;
+  @include transition(all 0.25s ease);
+
+  &.dark-bg {
+    background-color: rgba(0, 0, 0, 0.8);
+    @include transition(all 0.25s ease);
 }
 
-.main-nav {
-    width: 100%;
-    margin: 0 auto;
+.trigger-outer {
+    @include size(40px, 32px);
     position: relative;
-    @media (min-width: $screen-sm-min) {
-        width: calc(100% - 137px);
-        float: right;
+    margin-left: auto;
+    cursor: pointer;
+
+    .trigger-btn {
+      display: block;
+      @include size(40px, 3px);
+      background-color: $white;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        @include size(60%, 3px);
+        background-color: $white;
+        right: 0;
+    }
+
+    &:before {
+        top: -12px;
+    }
+
+    &:after {
+        bottom: -12px;
     }
 }
-
-.header-right {
-    @media (min-width: $screen-sm-min) {
-        float: right;
-    }
+}
 }
 
-.navigation {
+// navigation-outer
+.navigation-outer {
+  position: fixed;
+  @include square(100%);
+  max-width: 655px;
+  background-color: $white;
+  z-index: 999;
+  padding: 90px 50px 50px 85px;
+  @include box-shadow(-12px 3px 59px rgba(0, 0, 0, 0.10));
+  @include transition(all 0.40s ease-in-out); 
+  right: -51%;
+  visibility: hidden;
+  &.active{
+    right: 0;
+    visibility: visible;
+}
+.close-btn {
+    position: absolute;
+    right: 50px;
+    top: 55px;
+
+    i {
+      color: #201B20;
+      font-size: 32px;
+      font-weight: $semibold;
+  }
+}
+
+ul {
+    padding: 50px 0;
+
+    li {
+      display: block;
+
+      a {
+        font-size: 50px;
+        color: $black;
+        text-transform: capitalize;
+        font-weight: $light;
+        line-height: 76px;
+        padding: 10px 0;
+        position: relative;
+        display: block;
+        text-shadow: 0 0 0 $black;
+        cursor: pointer;
+
+        &:before {
+          content: '\e906';
+          position: absolute;
+          font-family: $ft-icomoon;
+          display: block;
+          top: 9px;
+          right: 0;
+          color: #BEBEBE;
+          @include transform(rotate(180deg));
+          font-size: 26px;
+      }
+  }
+}
+}
+}
+
+.search-outer {
+  position: absolute;
+  bottom: 70px;
+  padding: 0 50px 0 85px;
+  width: 100%;
+  left: 0;
+
+  form {
+    width: 100%;
+
+    .search-field {
+      position: relative;
+
+      .search-input {
+        @include size(100%, 54px);
+        border: 1px solid #D3D3D3;
+        padding: 10px 60px 10px 30px;
+        position: relative;
+        color: #525252;
+        font-size: 21px;
+        border-radius: 27px;
+        display: block;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+      }
+  }
+
+  .search-action {
+    right: 30px;
+    @include square(20px);
     padding: 0;
-    margin: 0; 
-    > li {
-        @include user-select(none);
-        > a {
-            display: block;
-            color: #c7d1d8;
-            text-shadow: 0 0 0 #c7d1d8;
-            padding: 6px 0;
-            &:hover,
-            &.active {
-                color: #fff;
-            }
-        }
-    }
-    @media (min-width: $screen-sm-min) {
-        float: left;
-        padding: 11px 0;
-        > li {
-            float: left;
-            height: 37px;
-            line-height: 37px;
-            > a {
-                padding: 0 20px;
-            }
-        }
-    }
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+
+    i {
+      color: $black;
+      font-size: 20px;
+      @include square(20px);
+  }
 }
-
-.global-search {
-    width: 100%;
-    padding: 12px 0;
-    @media (min-width: $screen-sm-min) {
-        max-width: 300px;
-        float: left;
-    }
-    > .form-group {
-        margin: 0;
-        background-color: #555;
-        border-radius: 4px;
-        @include clearfix;
-        > .form-control {
-            background-color: transparent;
-            border: 0;
-            color: #fff;
-            float: left;
-            height: 36px;
-            width: calc(100% - 34px);
-        }
-        > .btn {
-            float: right;
-            padding: 9px 10px;
-            height: 36px;
-            background-color: transparent;
-            border: 0;
-            svg {
-                fill: #fff;
-            }
-        }
-    }
 }
-
-.user-nav {
-    height: 60px;
-    padding: 12px 0;
-    position: relative;
-    @media (min-width: $screen-sm-min) {
-        float: left;
-        margin: 0;
-    }
-    > a {
-        float: left;
-    }
-    @media (max-width: 767px) { 
-        .dropdown-menu {
-            display: block;
-            position: inherit;
-            width: 100%;
-            max-width: none;
-            box-shadow: none;
-            top: auto;
-            background: transparent;
-            > li {
-                > a {
-                    color: #868686;
-                    padding: 6px 0;
-                    &:hover {
-                        background: transparent;
-                        color: #fff;
-                    }
-                }
-            }
-        }
-    }
-
 }
-
-.user-dropdown {
-    @include square(30px);
-    margin: 3px 0;
-    display: block;
-    > .icon {
-        @include square(30px);
-        line-height: normal;
-        svg {
-            fill: #fff;
-        }
-    }
-}
- 
- 
-
-@media (max-width: $screen-sm-min) {
-    .header.beforelogin {
-        .navigation {
-            float: right;
-            li {
-                display: inline-block;
-                .not-member {
-                    padding: 0 6px 0 0;
-                }
-            }
-        }
-        .navbar-brand {
-            width: 90%;
-        }
-        .navbar-header {
-            float: left;
-        }
-        .header-right {
-            float: right;
-            width: 60%;
-        }
-    }
-}
-
-@media only screen and (min-width:700px) and (max-width: 930px) {
-    .navigation > li > a {
-        padding: 0 10px;
-    }
-    .global-search {
-        max-width: 200px;
-    }
 }
