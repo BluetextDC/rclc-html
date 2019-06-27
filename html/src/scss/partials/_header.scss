@@ -217,7 +217,7 @@
     }
 
     @media(max-width: $screen-xs-min) {
-      min-height: 300px;
+      min-height: 350px;
       overflow: hidden;
       overflow-y: auto;
     }
@@ -337,7 +337,7 @@
             font-weight: $regular;
 
             @media(max-width: $screen-sm-min) {
-              text-shadow: none;
+              // text-shadow: none;
               font-weight: $light;
             }
 

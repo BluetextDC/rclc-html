@@ -73,19 +73,31 @@
   $('.trigger-outer').on('click', function() {
     $('.navigation-outer').addClass('active');
   });
+
+  // when user click on close btn menu closed
   $('.close-btn').on('click', function() {
     $(this).parent().removeClass('active');
+    $('.main-menu .menu-item-has-children ul.sub-menu').removeClass('slide-to-right');
+    $('.back-btn').removeClass('slide-to-left');
   });
 
+  // when user click anywhere on body 
+  $('body').click(function(evt) {
+    if ($(evt.target).closest('.navigation-outer, .trigger-outer').length)
+      return;
+    $('.navigation-outer').removeClass('active');
+    $('.main-menu .menu-item-has-children ul.sub-menu').removeClass('slide-to-right');
+    $('.back-btn').removeClass('slide-to-left');
+  });
+
+  // Click for show submenu
   $('.main-menu .menu-item-has-children').on('click', function() {
-    // $(this).parent().find('li').fadeOut();
     $(this).find('ul.sub-menu').addClass('slide-to-right');
     $(this).parent().prev('.back-btn').addClass('slide-to-left');
   });
 
   // Back to main menu trigger
   $('.back-btn').on('click', function() {
-    // $('.main-menu .menu-item-has-children').fadeIn();
     $(this).removeClass('slide-to-left');
     $('.main-menu .menu-item-has-children ul.sub-menu').removeClass('slide-to-right');
   });
