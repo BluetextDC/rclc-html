@@ -428,8 +428,7 @@
 
   @media(max-width: $screen-xs-min) {
     padding: 20px;
-    position: inherit;
-    bottom: inherit;
+    bottom: 10px;
     background-color: $white;
   }
 

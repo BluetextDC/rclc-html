@@ -7824,8 +7824,7 @@ a:hover {
 @media (max-width: 480px) {
   .search-outer {
     padding: 20px;
-    position: inherit;
-    bottom: inherit;
+    bottom: 10px;
     background-color: #ffffff;
   }
 }
