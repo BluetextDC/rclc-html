@@ -7749,11 +7749,6 @@ a:hover {
   text-shadow: 0 0 0 #000000;
   font-weight: 400;
 }
-@media (max-width: 767px) {
-  .navigation-outer ul li ul.sub-menu li a {
-    font-weight: 300;
-  }
-}
 .navigation-outer ul li ul.sub-menu li a:before, .navigation-outer ul li ul.sub-menu li a:after {
   display: none;
 }
@@ -8014,22 +8009,20 @@ a:hover {
   letter-spacing: 1.5px;
   position: relative;
 }
-@media (min-width: 767px) {
-  .hero-zone .bottom-stripe a:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0;
-    background-color: #ffffff;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    visibility: hidden;
-    bottom: 0;
-    left: 0;
-    -webkit-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-  }
+.hero-zone .bottom-stripe a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: #ffffff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: hidden;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .hero-zone .bottom-stripe a:hover:before {
   opacity: 1;
