@@ -7565,14 +7565,9 @@ a:hover {
   opacity: 0;
   filter: alpha(opacity=0);
   visibility: hidden;
-  -webkit-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  opacity: 0;
 }
 .navigation-outer .back-btn.slide-to-left {
-  -webkit-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
   visibility: visible;
   left: 85px;
   opacity: 1;
