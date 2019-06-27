@@ -7819,14 +7819,14 @@ a:hover {
 }
 @media (max-width: 767px) {
   .search-outer {
-    padding: 0 30px 0 50px;
-  }
-}
-@media (max-width: 480px) {
-  .search-outer {
-    padding: 20px;
+    padding: 80px 20px 20px;
     bottom: 10px;
     background-color: #ffffff;
+  }
+}
+@media (max-width: 767px) {
+  .search-outer {
+    padding: 20px;
   }
 }
 .search-outer form {
