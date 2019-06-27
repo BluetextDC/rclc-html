@@ -5,6 +5,11 @@
 body {
   font-family: $proxima_font;
 }
+.main-wrapper{
+  @media(max-width: $screen-sm-min){
+    padding-top: 95px;
+  }
+}
 
 // Backgrounf-colors
 .white-bg {
