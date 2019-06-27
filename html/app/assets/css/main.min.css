@@ -7415,6 +7415,7 @@ a:hover {
   position: relative;
   height: 91px;
   display: block;
+  outline: none;
 }
 .header a.brand-logo img {
   -webkit-transition: all 0.25s ease;
