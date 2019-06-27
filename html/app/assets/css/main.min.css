@@ -7898,16 +7898,17 @@ a:hover {
   height: 20px;
 }
 
-.navigation-outer ul li ul.sub-menu li:first-child a:before,
-.navigation-outer ul li ul.sub-menu li.menu-item-has-children a:before {
-  display: none;
-}
+@media (min-width: 767px) {
+  .navigation-outer ul li ul.sub-menu li:first-child a:before,
+  .navigation-outer ul li ul.sub-menu li.menu-item-has-children a:before {
+    display: none;
+  }
 
-.navigation-outer ul li ul.sub-menu li.menu-item-has-children .sub-menu li a:before,
-.navigation-outer ul li ul.sub-menu li a:before {
-  display: block;
+  .navigation-outer ul li ul.sub-menu li.menu-item-has-children .sub-menu li a:before,
+  .navigation-outer ul li ul.sub-menu li a:before {
+    display: block;
+  }
 }
-
 @-webkit-keyframes fadeInRight {
   0% {
     opacity: 0;
