@@ -148,7 +148,7 @@
             font-family: $ft-icomoon;
             right: 10px;
             top: 15px;
-            @include transform(rotate(-90deg));
+            @include transform(rotate(90deg));
             color: $black;
             font-weight: bold;
             font-size: $font-xs;
@@ -156,7 +156,7 @@
           }
 
           &.collapsed:before {
-            @include transform(rotate(90deg));
+            @include transform(rotate(-90deg));
           }
         }
       }

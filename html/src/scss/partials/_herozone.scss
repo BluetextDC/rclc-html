@@ -39,6 +39,7 @@
     @media(max-width: $screen-sm-min) {
       font-size: 44px;
     }
+
     @media(max-width: $screen-xs-min) {
       font-size: 36px;
     }
@@ -132,6 +133,30 @@
       font-family: $proxima_font;
       text-transform: $uppercase;
       letter-spacing: 1.5px;
+      position: relative;
+
+      @media(min-width: $screen-sm-min) {
+        &:before {
+          content: '';
+          position: absolute;
+          @include size(100%, 0);
+          background-color: $white;
+          @include opacity(0);
+          visibility: hidden;
+          bottom: 0;
+          left: 0;
+          @include transition(all 0.25s ease-in-out);
+        }
+      }
+
+      &:hover {
+        &:before {
+          @include opacity(1);
+          visibility: visible;
+          height: 4px;
+          @include transition(all 0.25s ease-in-out);
+        }
+      }
     }
 
     @media(max-width: $screen-sm-min) {
@@ -152,10 +177,12 @@
       transform: none;
     }
   }
-  &.home{
-    @media(max-width: $screen-sm-min){
-      background-color:$hero_bg; 
-      .bg-img{
+
+  &.home {
+    @media(max-width: $screen-sm-min) {
+      background-color: $hero_bg;
+
+      .bg-img {
         height: 300px;
       }
     }
@@ -235,45 +262,47 @@
             right: 0;
             top: 3px;
             background-color: $white;
-            @media(max-width: $screen-sm-min){
-             background-color:$light_black;
-           }
-         }
 
-         &:last-child {
-          padding-right: 0;
-
-          &:before {
-            display: none;
+            @media(max-width: $screen-sm-min) {
+              background-color: $light_black;
+            }
           }
-        }
 
-        p {
-          color: $white;
-          text-transform: capitalize;
-          font-size: $font-sm;
-          @media(max-width: $screen-sm-min){
-            color:$light_black;
+          &:last-child {
+            padding-right: 0;
+
+            &:before {
+              display: none;
+            }
+          }
+
+          p {
+            color: $white;
+            text-transform: capitalize;
+            font-size: $font-sm;
+
+            @media(max-width: $screen-sm-min) {
+              color: $light_black;
+            }
           }
         }
       }
     }
   }
-}
 
-@media(max-width: $screen-sm-min) {
-  min-height: 100%;
-  padding: 0 20px;
+  @media(max-width: $screen-sm-min) {
+    min-height: 100%;
+    padding: 0 20px;
 
-  .container {
-    min-height: 580px;
+    .container {
+      min-height: 580px;
 
-    h1 {
-      font-size: $heading2;
-      line-height: 42px;
+      h1 {
+        font-size: $heading2;
+        line-height: 42px;
+      }
     }
   }
-}
 }
 
 ul.social-links {
@@ -295,19 +324,23 @@ ul.social-links {
       @include square(16px);
       vertical-align: top;
       display: block;
+
       i {
         @include square(16px);
         color: $white;
         font-size: $font-sm;
-        @include transition(all 0.25s ease-in-out); 
+        @include transition(all 0.25s ease-in-out);
       }
-      &:hover{
-        i{
-          color:$red;
+
+      &:hover {
+        i {
+          color: $red;
         }
       }
-      @media(max-width: $screen-sm-min){
+
+      @media(max-width: $screen-sm-min) {
         @include square(18px);
+
         i {
           @include square(18px);
           color: $headr_social;
@@ -432,25 +465,31 @@ ul.social-links {
     }
   }
 }
+
 // blog-details
-.blog-details{
-  @media(max-width: $screen-sm-min){
+.blog-details {
+  @media(max-width: $screen-sm-min) {
     padding: 0;
-    &:before{
+
+    &:before {
       display: none;
     }
-    .bg-img{
+
+    .bg-img {
       position: inherit;
-      min-height:215px;
-      top:0;
+      min-height: 215px;
+      top: 0;
     }
-    .container{
+
+    .container {
       min-height: 100%;
-      .content{
+
+      .content {
         position: inherit;
-        padding:20px 15px 0;
-        h1{
-          color:$light_black;
+        padding: 20px 15px 0;
+
+        h1 {
+          color: $light_black;
           line-height: 41px;
           padding-bottom: 0;
           text-shadow: 0 0 0 #292929;
