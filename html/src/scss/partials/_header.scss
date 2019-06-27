@@ -164,10 +164,10 @@
     @include opacity(0);
     visibility: hidden;
     opacity: 0;
-    // @include transition(all 0.25s ease-in-out);
+    @include transition(all 0.25s ease-in-out);
 
     &.slide-to-left {
-      // @include transition(all 0.25s ease-in-out);
+      @include transition(all 0.25s ease-in-out);
       visibility: visible;
       left: 85px;
       @include opacity(1);
@@ -326,14 +326,14 @@
         top: 0;
         right: -100%;
         visibility: hidden;
-        @include transition(all 0.25s ease-in-out);
+        @include transition(all 0.25s ease-out);
 
         @media(max-width: $screen-xs-min) {
           min-height: auto;
         }
 
         &.slide-to-right {
-          @include transition(all 0.25s ease-in-out);
+          @include transition(all 0.25s ease-out);
           right: 0;
           visibility: visible;
           z-index: 1;

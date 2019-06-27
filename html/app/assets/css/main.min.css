@@ -7566,8 +7566,14 @@ a:hover {
   filter: alpha(opacity=0);
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .navigation-outer .back-btn.slide-to-left {
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   visibility: visible;
   left: 85px;
   opacity: 1;
@@ -7722,9 +7728,9 @@ a:hover {
   top: 0;
   right: -100%;
   visibility: hidden;
-  -webkit-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
 @media (max-width: 480px) {
   .navigation-outer ul li ul.sub-menu {
@@ -7732,9 +7738,9 @@ a:hover {
   }
 }
 .navigation-outer ul li ul.sub-menu.slide-to-right {
-  -webkit-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
   right: 0;
   visibility: visible;
   z-index: 1;
