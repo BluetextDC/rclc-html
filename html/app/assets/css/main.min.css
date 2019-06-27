@@ -7618,7 +7618,7 @@ a:hover {
 }
 @media (max-width: 480px) {
   .navigation-outer ul {
-    min-height: 350px;
+    min-height: 320px;
     overflow: hidden;
     overflow-y: auto;
   }
