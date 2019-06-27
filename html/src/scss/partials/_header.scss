@@ -197,12 +197,19 @@
       }
     }
   }
+  @media(max-width: $screen-xs-min){
+    padding: 50px 20px;  
+  }
 
   ul {
     padding: 50px 0;
     position: relative;
     @media(max-width: $screen-sm-min) {
      padding: 30px 0;
+   }
+   @media(max-width: $screen-xs-min) {
+     min-height: 400px;
+     overflow-y:auto; 
    }
 
    li {
@@ -280,6 +287,9 @@
       right: -100%;
       visibility: hidden;
       @include transition(all 0.25s ease-in-out);
+      @media(max-width: $screen-xs-min) {
+        min-height: auto;
+      }
 
       &.slide-to-right {
         @include transition(all 0.25s ease-in-out);
@@ -317,33 +327,39 @@
           width: 49%;
           display: inline-block;
           vertical-align: top;
+          @media(max-width: $screen-xs-min){
+            width: 100%;
+            display: block;
+          }
 
           .sub-menu {
             position: inherit;
             padding: 0 0 10px;
+            @media(max-width: $screen-xs-min) {
+              min-height: auto; 
+           }
 
-            li {
+           li {
+            a {
+              text-shadow: none;
+              padding: 5px 0;
+              font-weight: $light;
+              @media(max-width: $screen-sm-min){
+                font-size: $font-sm;
+                line-height: 20px;
+              }
+            }
+
+            &:first-child {
+              margin-bottom: 0;
+
               a {
-                text-shadow: none;
+                font-size: $font-md;
+                line-height: 25px;
                 padding: 5px 0;
-                font-weight: $light;
                 @media(max-width: $screen-sm-min){
                   font-size: $font-sm;
                   line-height: 20px;
-                }
-              }
-
-              &:first-child {
-                margin-bottom: 0;
-
-                a {
-                  font-size: $font-md;
-                  line-height: 25px;
-                  padding: 5px 0;
-                  @media(max-width: $screen-sm-min){
-                    font-size: $font-sm;
-                    line-height: 20px;
-                  }
                 }
               }
             }
@@ -352,6 +368,7 @@
       }
     }
   }
+}
 }
 }
 
