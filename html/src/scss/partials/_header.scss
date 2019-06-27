@@ -34,7 +34,8 @@
       display: block;
       @include size(40px, 3px);
       background-color: $white;
-      position: relative;
+      position: absolute;
+      right: 0;
 
       @media(max-width: $screen-sm-min) {
         background-color: $black;
@@ -156,16 +157,17 @@
   .back-btn {
     position: absolute;
     left: 0;
-    top: 57px;
+    top: 58px;
     font-size: $font-md;
     color: $black;
     font-weight: $semibold;
     @include opacity(0);
     visibility: hidden;
-    @include transition(all 0.25s ease-in-out);
+    opacity: 0;
+    // @include transition(all 0.25s ease-in-out);
 
     &.slide-to-left {
-      @include transition(all 0.25s ease-in-out);
+      // @include transition(all 0.25s ease-in-out);
       visibility: visible;
       left: 85px;
       @include opacity(1);
@@ -240,7 +242,8 @@
         text-shadow: 0 0 0 $black;
         cursor: pointer;
         outline: none;
-        &:focus{
+
+        &:focus {
           outline: none;
         }
 
@@ -342,15 +345,40 @@
             line-height: 25px;
             text-shadow: 0 0 0 $black;
             font-weight: $regular;
-
-            @media(max-width: $screen-sm-min) {
-              // text-shadow: none;
-              // font-weight: $light;
-            }
+            position: relative;
+            display: inline-block;
 
             &:before,
             &:after {
               display: none;
+            }
+
+            @media(min-width: $screen-sm-min) {
+              &:before {
+                content: '';
+                position: absolute;
+                @include size(0, 1px);
+                @include transition(all 0.25s ease-in-out);
+                background-color: $black;
+                @include opacity(0);
+                visibility: hidden;
+                display: block;
+                left: 0;
+                bottom: 0;
+                top: inherit;
+              }
+
+              &:hover:before {
+                width: 100%;
+                @include opacity(1);
+                visibility: visible;
+              }
+            }
+
+
+            @media(max-width: $screen-sm-min) {
+              // text-shadow: none;
+              // font-weight: $light;
             }
           }
 
@@ -434,7 +462,8 @@
     bottom: 10px;
     background-color: $white;
   }
-   @media(max-width: $screen-sm-min) {
+
+  @media(max-width: $screen-sm-min) {
     padding: 20px;
   }
 
@@ -484,3 +513,147 @@
     }
   }
 }
+
+.navigation-outer ul li ul.sub-menu li:first-child a:before,
+.navigation-outer ul li ul.sub-menu li.menu-item-has-children a:before {
+  display: none;
+}
+
+.navigation-outer ul li ul.sub-menu li.menu-item-has-children .sub-menu li a:before,
+.navigation-outer ul li ul.sub-menu li a:before {
+  display: block;
+}
+
+// menu animation
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight
+}
+
+.navigation-outer {
+  ul.main-menu>li {
+    opacity: 0;
+    visibility: hidden;
+
+    >a {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.opacity-none>a {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &.active {
+    ul.main-menu>li {
+      &:nth-child(1) {
+        -webkit-animation: 1s ease 0s normal forwards 1 fadeInRight;
+        -moz-animation: 1s ease 0s normal forwards 1 fadeInRight;
+        -o-animation: 1s ease 0s normal forwards 1 fadeInRight;
+        animation: 1s ease 0s normal forwards 1 fadeInRight;
+      }
+
+      &:nth-child(2) {
+        -webkit-animation: 1s ease 0.1s normal forwards 1 fadeInRight;
+        -moz-animation: 1s ease 0.1s normal forwards 1 fadeInRight;
+        -o-animation: 1s ease 0.1s normal forwards 1 fadeInRight;
+        animation: 1s ease 0.1s normal forwards 1 fadeInRight;
+      }
+
+      &:nth-child(3) {
+        -webkit-animation: 1s ease 0.2s normal forwards 1 fadeInRight;
+        -moz-animation: 1s ease 0.2s normal forwards 1 fadeInRight;
+        -o-animation: 1s ease 0.2s normal forwards 1 fadeInRight;
+        animation: 1s ease 0.2s normal forwards 1 fadeInRight;
+      }
+
+      &:nth-child(4) {
+        -webkit-animation: 1s ease 0.3s normal forwards 1 fadeInRight;
+        -moz-animation: 1s ease 0.3s normal forwards 1 fadeInRight;
+        -o-animation: 1s ease 0.3s normal forwards 1 fadeInRight;
+        animation: 1s ease 0.3s normal forwards 1 fadeInRight;
+      }
+
+      &:nth-child(5) {
+        -webkit-animation: 1s ease 0.4s normal forwards 1 fadeInRight;
+        -moz-animation: 1s ease 0.4s normal forwards 1 fadeInRight;
+        -o-animation: 1s ease 0.4s normal forwards 1 fadeInRight;
+        animation: 1s ease 0.4s normal forwards 1 fadeInRight;
+      }
+
+      &:nth-child(6) {
+        -webkit-animation: 1s ease 0.5s normal forwards 1 fadeInRight;
+        -moz-animation: 1s ease 0.5s normal forwards 1 fadeInRight;
+        -o-animation: 1s ease 0.5s normal forwards 1 fadeInRight;
+        animation: 1s ease 0.5s normal forwards 1 fadeInRight;
+      }
+
+      &:nth-child(7) {
+        -webkit-animation: 1s ease 0.6s normal forwards 1 fadeInRight;
+        -moz-animation: 1s ease 0.6s normal forwards 1 fadeInRight;
+        -o-animation: 1s ease 0.6s normal forwards 1 fadeInRight;
+        animation: 1s ease 0.6s normal forwards 1 fadeInRight;
+      }
+
+      &:nth-child(8) {
+        -webkit-animation: 1s ease 0.7s normal forwards 1 fadeInRight;
+        -moz-animation: 1s ease 0.7s normal forwards 1 fadeInRight;
+        -o-animation: 1s ease 0.7s normal forwards 1 fadeInRight;
+        animation: 1s ease 0.7s normal forwards 1 fadeInRight;
+      }
+
+      &:nth-child(9) {
+        -webkit-animation: 1s ease 0.8s normal forwards 1 fadeInRight;
+        -moz-animation: 1s ease 0.8s normal forwards 1 fadeInRight;
+        -o-animation: 1s ease 0.8s normal forwards 1 fadeInRight;
+        animation: 1s ease 0.8s normal forwards 1 fadeInRight;
+      }
+
+      &:nth-child(10) {
+        -webkit-animation: 1s ease 0.9s normal forwards 1 fadeInRight;
+        -moz-animation: 1s ease 0.9s normal forwards 1 fadeInRight;
+        -o-animation: 1s ease 0.9s normal forwards 1 fadeInRight;
+        animation: 1s ease 0.9s normal forwards 1 fadeInRight;
+      }
+    }
+  }
+}
+.navigation-outer ul.main-menu li>ul.sub-menu.slide-to-right{
+  -webkit-animation: 1s ease 0s normal forwards 1 fadeInRight;
+  -moz-animation: 1s ease 0s normal forwards 1 fadeInRight;
+  -o-animation: 1s ease 0s normal forwards 1 fadeInRight;
+  animation: 1s ease 0s normal forwards 1 fadeInRight;
+}
+// menu animation

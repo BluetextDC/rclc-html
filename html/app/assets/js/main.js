@@ -92,12 +92,14 @@
 
   // Click for show submenu
   $('.main-menu .menu-item-has-children').on('click', function() {
+    $(this).parent().parent().find('.main-menu>.menu-item-has-children').addClass('opacity-none');
     $(this).find('ul.sub-menu').addClass('slide-to-right');
     $(this).parent().prev('.back-btn').addClass('slide-to-left');
   });
 
   // Back to main menu trigger
   $('.back-btn').on('click', function() {
+     $('.main-menu>.menu-item-has-children').removeClass('opacity-none');
     $(this).removeClass('slide-to-left');
     $('.main-menu .menu-item-has-children ul.sub-menu').removeClass('slide-to-right');
   });
