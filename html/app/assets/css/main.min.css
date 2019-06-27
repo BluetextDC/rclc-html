@@ -7593,7 +7593,7 @@ a:hover {
     font-size: 20px;
   }
   .navigation-outer .back-btn {
-    top: 35px;
+    top: 30px;
     z-index: 3;
   }
   .navigation-outer .back-btn.slide-to-left {
