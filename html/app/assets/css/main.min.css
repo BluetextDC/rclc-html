@@ -7476,9 +7476,10 @@ a:hover {
 }
 .header.dark-bg a.brand-logo {
   height: 65px;
+  max-width: 120px;
 }
 .header.dark-bg a.brand-logo img {
-  max-width: 120px;
+  width: 100%;
   -webkit-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -7507,9 +7508,10 @@ a:hover {
   }
   .header a.brand-logo {
     height: 65px;
+    max-width: 120px;
   }
   .header a.brand-logo img {
-    max-width: 120px;
+    width: 100%;
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
@@ -7638,6 +7640,10 @@ a:hover {
   display: block;
   text-shadow: 0 0 0 #000000;
   cursor: pointer;
+  outline: none;
+}
+.navigation-outer ul li a:focus {
+  outline: none;
 }
 .navigation-outer ul li a:before, .navigation-outer ul li a:after {
   content: '\e906';

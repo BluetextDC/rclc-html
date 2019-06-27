@@ -71,9 +71,10 @@
 
     a.brand-logo {
       height: 65px;
+      max-width: 120px;
 
       img {
-        max-width: 120px;
+        width: 100%;
         @include transition(all 0.25s ease);
 
         &.img-white {
@@ -104,9 +105,10 @@
 
     a.brand-logo {
       height: 65px;
+      max-width: 120px;
 
       img {
-        max-width: 120px;
+        width: 100%;
         @include transition(all 0.25s ease);
 
         &.img-white {
@@ -237,6 +239,10 @@
         display: block;
         text-shadow: 0 0 0 $black;
         cursor: pointer;
+        outline: none;
+        &:focus{
+          outline: none;
+        }
 
         &:before,
         &:after {
