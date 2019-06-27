@@ -177,7 +177,7 @@
   }
 
   @media(max-width: $screen-sm-min) {
-    padding: 50px 30px 50px 50px;
+    padding: 80px 30px 50px 50px;
 
     .close-btn {
       right: 30px;
@@ -199,7 +199,7 @@
   }
 
   @media(max-width: $screen-xs-min) {
-    padding: 50px 20px;
+    padding: 80px 20px 50px;
 
     .back-btn {
       &.slide-to-left {
