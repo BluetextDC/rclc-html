@@ -7728,9 +7728,9 @@ a:hover {
   top: 0;
   right: -100%;
   visibility: hidden;
-  -webkit-transition: all 0.25s ease-out;
-  -o-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 @media (max-width: 480px) {
   .navigation-outer ul li ul.sub-menu {
@@ -7738,9 +7738,9 @@ a:hover {
   }
 }
 .navigation-outer ul li ul.sub-menu.slide-to-right {
-  -webkit-transition: all 0.25s ease-out;
-  -o-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
   right: 0;
   visibility: visible;
   z-index: 1;
@@ -7884,8 +7884,9 @@ a:hover {
 }
 .search-outer form .search-field .search-input:focus {
   outline: none;
-  box-shadow: none;
-  border-color: #000000;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(32, 33, 36, 0.28);
+  box-shadow: 0 1px 10px 0 rgba(32, 33, 36, 0.28);
+  border-color: transparent;
 }
 .search-outer form .search-field .search-action {
   right: 30px;
