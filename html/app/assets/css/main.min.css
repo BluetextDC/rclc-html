@@ -7726,11 +7726,11 @@ a:hover {
   height: 100%;
   background: #ffffff;
   top: 0;
-  right: -100%;
+  right: -120%;
   visibility: hidden;
-  -webkit-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 @media (max-width: 480px) {
   .navigation-outer ul li ul.sub-menu {
@@ -7738,9 +7738,9 @@ a:hover {
   }
 }
 .navigation-outer ul li ul.sub-menu.slide-to-right {
-  -webkit-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   right: 0;
   visibility: visible;
   z-index: 1;
@@ -8027,18 +8027,19 @@ a:hover {
   animation: 1s ease 0s normal forwards 1 fadeInRight;
 }
 
-.navigation-outer ul.main-menu:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 65px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(56%, white));
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 56%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
-  z-index: 1;
+@media (max-width: 767px) {
+  .navigation-outer ul.main-menu:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(56%, white));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 56%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    z-index: 1;
+  }
 }
-
 .hero-zone {
   min-height: 650px;
   position: relative;

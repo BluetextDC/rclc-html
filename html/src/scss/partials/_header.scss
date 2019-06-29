@@ -324,16 +324,16 @@
         @include square(100%);
         background: $white;
         top: 0;
-        right: -100%;
+        right: -120%;
         visibility: hidden;
-        @include transition(all 0.25s ease);
+        @include transition(all 0.40s ease);
 
         @media(max-width: $screen-xs-min) {
           min-height: auto;
         }
 
         &.slide-to-right {
-          @include transition(all 0.25s ease);
+          @include transition(all 0.40s ease);
           right: 0;
           visibility: visible;
           z-index: 1;
@@ -491,7 +491,7 @@
         &:focus {
           outline: none;
           @include box-shadow(0 1px 10px 0 rgba(32, 33, 36, .28));
-          border-color:transparent;
+          border-color: transparent;
         }
       }
 
@@ -514,7 +514,8 @@
   }
 }
 
-@media(min-width: $screen-sm-min){
+@media(min-width: $screen-sm-min) {
+
   .navigation-outer ul li ul.sub-menu li:first-child a:before,
   .navigation-outer ul li ul.sub-menu li.menu-item-has-children a:before {
     display: none;
@@ -652,20 +653,25 @@
     }
   }
 }
-.navigation-outer ul.main-menu li>ul.sub-menu.slide-to-right{
+
+.navigation-outer ul.main-menu li>ul.sub-menu.slide-to-right {
   -webkit-animation: 1s ease 0s normal forwards 1 fadeInRight;
   -moz-animation: 1s ease 0s normal forwards 1 fadeInRight;
   -o-animation: 1s ease 0s normal forwards 1 fadeInRight;
   animation: 1s ease 0s normal forwards 1 fadeInRight;
 }
-.navigation-outer ul.main-menu:before{
-  content:'';
-  position: absolute;
-  bottom: 0;
-  @include size(100%, 65px);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(56%, white));
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 56%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
-  z-index: 1;
+
+@media(max-width: $screen-sm-min) {
+  .navigation-outer ul.main-menu:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    @include size(100%, 65px);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(56%, white));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 56%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    z-index: 1;
+  }
 }
+
 // menu animation
