@@ -23,11 +23,11 @@ get_header();
  while (have_rows('components')): the_row();
   get_template_part ( 'components/component', 'wysiwyg-block' );  
   get_template_part ( 'components/component', 'promo-slider' );
+  get_template_part ( 'components/component', 'vertical-resource-ladder' );
 endwhile; endif; ?>
 
 <?php  
 get_template_part ( 'components/component', 'promo-cards' );
-get_template_part ( 'components/component', 'vertical-resource-ladder' );
 get_template_part ( 'components/component', 'cta-block' );
 get_template_part ( 'components/component', 'image-content-promo' );
 get_template_part ( 'components/component', 'content-block' );
