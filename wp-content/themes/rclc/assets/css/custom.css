@@ -35,8 +35,7 @@ span.wpcf7-not-valid-tip {
 
 div.wpcf7-validation-errors,
 div.wpcf7-acceptance-missing,
-div.wpcf7-mail-sent-ok,
-div.wpcf7-response-output {
+div.wpcf7-mail-sent-ok {
   display: block;
   font-size: 16px;
   background: #ff0000;
@@ -77,8 +76,7 @@ div.wpcf7-mail-sent-ok{
   div.wpcf7-validation-errors,
   div.wpcf7-acceptance-missing,
   span.wpcf7-not-valid-tip,
-  div.wpcf7-mail-sent-ok,
-  div.wpcf7-response-output {
+  div.wpcf7-mail-sent-ok{
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
