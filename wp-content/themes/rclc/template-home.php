@@ -48,7 +48,7 @@ get_header();
                 $link_title = $link['title'];
                 $link_target = $link['target'] ? $link['target'] : '_self';
                 ?>
-                <a  href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
               <?php endif;?>
             </div>
           <?php endif; endwhile; ?>
@@ -59,10 +59,13 @@ get_header();
 <?php endwhile; ?>  
 <?php endif; ?>
 <!-- Hero Zone -->
-<?php 
-get_template_part ( 'components/component', 'vertical-resource-ladder' ); 
-get_template_part ( 'components/component', 'banner-cta' ); 
-?>
-
+<!-- Component listing -->
+<?php if (have_rows('components')): 
+ while (have_rows('components')): the_row();
+  get_template_part ( 'components/component', 'vertical-resource-ladder' );
+  get_template_part ( 'components/component', 'banner-cta' ); 
+  get_template_part ( 'components/component', 'cta-block' ); 
+endwhile; endif; ?>
+<!-- Component listing -->
 <?php
 get_footer();

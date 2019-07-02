@@ -1,24 +1,24 @@
 <!-- banner-cta section -->
-<section class="banner-cta relative">
-  <div class="bg-img"></div>
-  <div class="container">
-    <div class="row flex-container padding-lg">
-      <div class="col-md-4">
-        <div class="content">
-          <h3>H3 26 Customer <br>Experience: A Child’s Ballet</h3>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="content">
-          <h3>H3 26 John’s <br>Perspective: Determine Your Currency</h3>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="content">
-          <h3>H3 26 Customer <br>Experience: Car Rental Company</h3>
-        </div>
-      </div>
+<?php if (get_row_layout() == 'banner_cta'): ?>
+  <section class="banner-cta relative">
+    <div class="bg-img" style="background-image: url('<?php the_sub_field('background_image');?>');"></div>
+    <div class="container">
+      <?php if (have_rows('listing')): ?>
+        <div class="row flex-container padding-lg">
+         <?php while (have_rows('listing')): the_row();?>
+          <?php if (get_row_layout() == 'item'): ?>
+            <?php if(get_sub_field('content')): ?>
+            <div class="col-md-4">
+              <div class="content">
+                <h3><?php the_sub_field('content');?></h3>
+              </div>
+            </div>
+          <?php endif; ?>
+        <?php endif; ?>
+      <?php endwhile;?>
     </div>
-  </div>
+  <?php endif; ?>
+</div>
 </section>
+<?php endif; ?>
 <!-- banner-cta section -->
