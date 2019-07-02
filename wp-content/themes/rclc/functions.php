@@ -122,6 +122,16 @@ add_action( 'widgets_init', 'rclc_widgets_init' );
 function rclc_scripts() {
 	wp_enqueue_style( 'rclc-style', get_stylesheet_uri() );
 
+	wp_enqueue_style('rclc-css', get_template_directory_uri() . '/assets/css/main.min.css');
+
+	wp_enqueue_script('rclc-jquery-js', get_template_directory_uri() . '/assets/js/vendor/jquery.min.js', array(), '20151215', true);
+
+	wp_enqueue_script('rclc-jquery-slick', get_template_directory_uri() . '/assets/js/vendor/slick.min.js', array(), '20151215', true);
+	
+	wp_enqueue_script('rclc-jquery-bootstrap', get_template_directory_uri() . '/assets/js/vendor/bootstrap.min.js', array(), '20151215', true);
+	
+	wp_enqueue_script('rclc-jquery-main', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true);
+
 	wp_enqueue_script( 'rclc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'rclc-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
