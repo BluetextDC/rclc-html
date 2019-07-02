@@ -1,29 +1,34 @@
 <!-- promo cards -->
-<section class="blog-cards">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="card">
-          <span class="category">blog</span>
-          <h3>Customer Experience: A Child’s Ballet</h3>
-          <a class="btn link-btn">read more</a>
+<?php if (get_row_layout() == 'promo_cards'): ?>
+  <section class="blog-cards">
+    <div class="container">
+      <?php if (have_rows('card_listing')): ?> 
+        <div class="row">
+          <?php while (have_rows('card_listing')): the_row();?>
+            <?php if (get_row_layout() == 'list_item'): ?>
+              <div class="col-sm-4">
+                <div class="card">
+                  <?php if(get_sub_field('category')): ?>
+                    <span class="category"><?php the_sub_field('category'); ?></span>
+                  <?php endif; ?>
+                  <?php if(get_sub_field('title')): ?>
+                    <h3><?php the_sub_field('title'); ?></h3>
+                  <?php endif; ?>
+                  <?php $link = get_sub_field('cta');
+                  if( $link ): 
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                    <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" class="btn link-btn"><?php echo esc_html($link_title); ?></a>
+                  <?php endif;?>
+                </div>
+              </div>
+            <?php endif; ?>
+          <?php endwhile;?>
         </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <span class="category">Vertical / Industry</span>
-          <h3>Gold Standard solutions across many industries</h3>
-          <a class="btn link-btn">all industries</a>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <span class="category">Courses</span>
-          <h3>Enrichment courses immersed in The Ritz-Carlton ambience</h3>
-          <a class="btn link-btn">course calendar</a>
-        </div>
-      </div>
+      <?php endif; ?>
     </div>
-  </div>
-</section>
+  </section>
+<?php endif; ?>
 <!-- promo cards -->

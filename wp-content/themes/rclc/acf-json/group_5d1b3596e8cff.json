@@ -383,7 +383,7 @@
                             },
                             "button_label": "Add Row",
                             "min": "",
-                            "max": ""
+                            "max": 3
                         }
                     ],
                     "min": "",
@@ -534,5 +534,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1562072268
+    "modified": 1562074590
 }
