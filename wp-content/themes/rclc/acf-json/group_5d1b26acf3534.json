@@ -8,7 +8,7 @@
             "name": "hero_zone",
             "type": "group",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -418,5 +418,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1562067925
+    "modified": 1562070766
 }
