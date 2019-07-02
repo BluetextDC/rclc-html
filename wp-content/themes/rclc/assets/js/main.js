@@ -94,7 +94,7 @@
   $('.main-menu .menu-item-has-children').on('click', function() {
     $(this).parent().parent().find('.main-menu>.menu-item-has-children').addClass('opacity-none');
     $(this).find('ul.sub-menu').addClass('slide-to-right');
-    $(this).parent().prev('.back-btn').addClass('slide-to-left');
+    $(this).parent().parent().prev('.back-btn').addClass('slide-to-left');
   });
 
   // Back to main menu trigger
