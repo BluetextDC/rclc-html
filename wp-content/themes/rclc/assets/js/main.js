@@ -27,11 +27,11 @@
 
   // Form field float js
   $(".form-control").focus(function() {
-    $(this).parent().addClass("label-float");
+    $(this).parent().parent().addClass("label-float");
   }).blur(function() {
     var inputValue = $(this).val();
     if (inputValue.length == 0) {
-      $(this).parent().removeClass("label-float");
+      $(this).parent().parent().removeClass("label-float");
     }
   });
 
