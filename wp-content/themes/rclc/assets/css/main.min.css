@@ -9592,27 +9592,27 @@ ul.social-links li a:hover i {
   }
 }
 
-ul.footer-menu {
+.footer-menu {
   position: relative;
 }
-ul.footer-menu li {
+.footer-menu li {
   margin-bottom: 15px;
 }
-ul.footer-menu li:last-child {
+.footer-menu li:last-child {
   margin-bottom: 0;
 }
-ul.footer-menu li a {
+.footer-menu li a {
   color: #000000;
   font-size: 18px;
   text-transform: capitalize;
   font-family: "Helvetica";
 }
 @media (max-width: 992px) {
-  ul.footer-menu li a {
+  .footer-menu li a {
     color: #484848;
   }
 }
-ul.footer-menu li a:hover {
+.footer-menu li a:hover {
   color: #ff0000;
 }
 
@@ -9621,7 +9621,7 @@ ul.footer-menu li a:hover {
     padding: 30px 0 30px;
     border-bottom: 2px solid #e8e8e8;
   }
-  .footer-center ul.footer-menu.first li:last-child {
+  .footer-center .footer-menu.first li:last-child {
     margin-bottom: 15px;
   }
 }

@@ -40,18 +40,36 @@
 			<!-- footer social media -->
 			<div class="col-md-4 align-self-end">
 				<div class="footer-left">
-					<ul class="social-list">
-						<li><a href="javascript:void(0)" target="_blank"><i class="icon-linkedin-button-logo"></i></a></li>
-						<li><a href="javascript:void(0)" target="_blank"><i class="icon-instagram-logo"></i></a></li>
-						<li><a href="javascript:void(0)" target="_blank"><i class="icon-twitter-logo-silhouette"></i></a></li>
-						<li><a href="javascript:void(0)" target="_blank"><i class="icon-facebook-app-symbol"></i></a></li>
-					</ul>
+					<?php if( have_rows('social_links', 'options') ): 
+						while( have_rows('social_links', 'options') ): the_row();?>
+							<ul class="social-list">
+								<?php if(get_sub_field('linkdin_url', 'options')): ?>
+									<li><a href="<?php the_sub_field('linkdin_url', 'options'); ?>" target="_blank"><i class="icon-linkedin-button-logo"></i></a></li>
+								<?php endif; ?>
+								<?php if(get_sub_field('instagram_url', 'options')): ?>
+									<li><a href="<?php the_sub_field('instagram_url', 'options'); ?>" target="_blank"><i class="icon-instagram-logo"></i></a></li>
+								<?php endif; ?>
+								<?php if(get_sub_field('twitter_url', 'options')): ?>
+									<li><a href="<?php the_sub_field('twitter_url', 'options'); ?>" target="_blank"><i class="icon-twitter-logo-silhouette"></i></a></li>
+								<?php endif; ?>
+								<?php if(get_sub_field('facebook_url', 'options')): ?>
+									<li><a href="<?php the_sub_field('facebook_url', 'options'); ?>" target="_blank"><i class="icon-facebook-app-symbol"></i></a></li>
+								<?php endif; ?>
+							</ul>
+						<?php endwhile; ?>	
+					<?php endif; ?>
 					<ul class="footer-info">
-						<li><a href="mailto:dummy@gmail.com">Email Us</a></li>
-						<li><a href="tel:301.380.9570">301.380.9570</a></li>
-						<li>
-							<p>Mon - Fri 8 AM - 5 PM</p>
-						</li>
+						<?php if(get_field('email', 'options')): ?>
+							<li><a href="mailto:<?php the_field('email', 'options'); ?>">Email Us</a></li>
+						<?php endif; ?>
+						<?php if(get_field('phone_no', 'options')): ?>
+							<li><a href="tel:<?php the_field('phone_no', 'options'); ?>"><?php the_field('phone_no', 'options'); ?></a></li>
+						<?php endif; ?>
+						<?php if(get_field('time_description', 'options')): ?>
+							<li>
+								<p><?php the_field('time_description', 'options'); ?></p>
+							</li>
+						<?php endif; ?>
 					</ul>
 				</div>
 			</div>
@@ -61,20 +79,18 @@
 				<div class="footer-center">
 					<div class="row">
 						<div class="col-md-6">
-							<ul class="footer-menu first">
-								<li><a href="javascript:void(0)" target="_blank">Cources</a></li>
-								<li><a href="javascript:void(0)" target="_blank">Services</a></li>
-								<li><a href="javascript:void(0)" target="_blank">Symposium</a></li>
-								<li><a href="javascript:void(0)" target="_blank">blog</a></li>
-							</ul>
+							<?php if (is_active_sidebar('footer-1')): ?>
+								<div class="footer-menu first">
+									<?php dynamic_sidebar('footer-1');?>
+								</div>
+							<?php endif;?>
 						</div>
 						<div class="col-md-6">
-							<ul class="footer-menu">
-								<li><a href="javascript:void(0)" target="_blank">About Us</a></li>
-								<li><a href="javascript:void(0)" target="_blank">Contact Us</a></li>
-								<li><a href="javascript:void(0)" target="_blank">Our Leadership</a></li>
-								<li><a href="javascript:void(0)" target="_blank">Awards</a></li>
-							</ul>
+							<?php if (is_active_sidebar('footer-2')): ?>
+								<div class="footer-menu">
+									<?php dynamic_sidebar('footer-2');?>
+								</div>
+							<?php endif;?>
 						</div>
 					</div>
 				</div>
@@ -96,9 +112,11 @@
 							<p>Privacy and Cookie Statment</p>
 						</li>
 					</ul>
+					<?php if(get_field('copyright_description', 'options')): ?>
 					<div class="copyright">
-						<p>&copy; 2019 The-Ritz-Carlton Leadership Center. <span>All rights reserved</span></p>
+						<p><?php the_field('copyright_description', 'options'); ?></p>
 					</div>
+					<?php endif; ?>
 				</div>
 			</div>
 			<!-- footer website information -->

@@ -115,6 +115,31 @@ function rclc_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'rclc_widgets_init' );
+function rclc_widgets_footer1() {
+	register_sidebar(array(
+		'name' => esc_html__('Footer 1', 'rclc'),
+		'id' => 'footer-1',
+		'description' => esc_html__('Add widgets here.', 'rclc'),
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+}
+add_action('widgets_init', 'rclc_widgets_footer1');
+
+function rclc_widgets_footer2() {
+	register_sidebar(array(
+		'name' => esc_html__('Footer 2', 'rclc'),
+		'id' => 'footer-2',
+		'description' => esc_html__('Add widgets here.', 'rclc'),
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+}
+add_action('widgets_init', 'rclc_widgets_footer2');
 
 /**
  * Enqueue scripts and styles.
@@ -123,6 +148,8 @@ function rclc_scripts() {
 	wp_enqueue_style( 'rclc-style', get_stylesheet_uri() );
 
 	wp_enqueue_style('rclc-css', get_template_directory_uri() . '/assets/css/main.min.css');
+
+	wp_enqueue_style('rclc-custom-css', get_template_directory_uri() . '/assets/css/custom.css');
 
 	wp_enqueue_script('rclc-jquery-js', get_template_directory_uri() . '/assets/js/vendor/jquery.min.js', array(), '20151215', true);
 

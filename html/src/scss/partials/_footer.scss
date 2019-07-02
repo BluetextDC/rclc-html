@@ -129,7 +129,7 @@
 // Footer info
 
 // footer-menu
-ul.footer-menu {
+.footer-menu {
   position: relative;
 
   li {
@@ -161,7 +161,7 @@ ul.footer-menu {
     padding: 30px 0 30px;
     border-bottom: 2px solid $footer_border;
 
-    ul.footer-menu.first {
+    .footer-menu.first {
       li:last-child {
         margin-bottom: 15px;
       }
