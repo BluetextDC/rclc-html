@@ -26,7 +26,7 @@
 		<div class="container">
 			<div class="row flex-container">
 				<div class="col-xs-6">
-					<a href="index.html" class="brand-logo">
+					<a href="<?php echo esc_url(home_url('/')); ?>" class="brand-logo">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" class="img-white" alt="RCLC">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-black.svg" class="img-black" alt="RCLC">
 					</a>
