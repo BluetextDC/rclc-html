@@ -104,28 +104,36 @@
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-footer.png" alt="RCLC">
 						</a>
 					</div>
-					<ul>
-						<li>
-							<p>Hotel Site</p>
-						</li>
-						<li>
-							<p>Privacy and Cookie Statment</p>
-						</li>
-					</ul>
-					<?php if(get_field('copyright_description', 'options')): ?>
-					<div class="copyright">
-						<p><?php the_field('copyright_description', 'options'); ?></p>
+					<?php if( have_rows('other_urls', 'options') ):?>
+						<ul>
+							<?php while ( have_rows('other_urls', 'options') ) : the_row(); ?>
+								<?php $link = get_sub_field('cta');
+								if( $link ): 
+									$link_url = $link['url'];
+									$link_title = $link['title'];
+									$link_target = $link['target'] ? $link['target'] : '_self';
+									?>
+									<li>
+										<a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+									</li>
+								<?php endif;?>
+							<?php endwhile;?>
+						</ul>
+						<?php else : endif; ?>
+						<?php if(get_field('copyright_description', 'options')): ?>
+							<div class="copyright">
+								<p><?php the_field('copyright_description', 'options'); ?></p>
+							</div>
+						<?php endif; ?>
 					</div>
-					<?php endif; ?>
 				</div>
+				<!-- footer website information -->
 			</div>
-			<!-- footer website information -->
 		</div>
-	</div>
-</footer>
-<!-- Main Footer -->
+	</footer>
+	<!-- Main Footer -->
 
-<?php wp_footer(); ?>
+	<?php wp_footer(); ?>
 
 </body>
 </html>

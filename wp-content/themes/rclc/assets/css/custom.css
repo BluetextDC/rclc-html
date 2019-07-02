@@ -1,3 +1,21 @@
-.footer-menu .widget-title{
-  display: none;
+.footer-menu .widget-title {
+    display: none;
+}
+
+.footer-right ul li a {
+    font-size: 12px;
+    font-family: "Helvetica";
+    color: #000000;
+}
+
+.footer-right ul li a:hover,
+.footer-right ul li a:focus {
+    color: #000000;
+    text-decoration: underline;
+}
+
+@media(max-width: 992px) {
+    .footer-right ul li a {
+        color: #484848;
+    }
 }
