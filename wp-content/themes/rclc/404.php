@@ -9,52 +9,33 @@
 
 get_header();
 ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'rclc' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'rclc' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'rclc' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$rclc_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'rclc' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$rclc_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+<section class="hero-zone generic-landing error-page-banner">
+	<div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/generic-hero.jpg');"></div>
+	<div class="container">
+		<div class="row">
+			<?php if(get_sub_field('content')): ?>
+				<div class="content">
+					<h1>404 not found</h1>
+				</div>
+			<?php endif; ?>
+		</div>
+	</div>
+</section>
+<section class="error-page padding-md">
+	<div class="container">
+		<div class="row">
+			<div class="message-box">
+				<img class="error-right" src="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" alt="RCLC-Logo">
+				<h1 class="ft-dark-gold">404</h1>
+				<h2>Oops!Page Note Found</h2>
+				<p>The page you were looking for could not be found.</p>
+				<div class="btn-outer">
+					<a href="<?php echo home_url('/'); ?>" class="btn btn-default">Back To Home</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</section>
 <?php
 get_footer();

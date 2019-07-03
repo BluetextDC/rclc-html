@@ -70,7 +70,7 @@
 		));
 		?>
 		<div class="search-outer">
-			<form role="search" method="get" class="search-form" action="">
+			<form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
 				<div class="search-field">
 					<input type="search" class="search-input" placeholder="I’m searching for…." value="" name="s" autocomplete="off">
 					<button class="search-action v-center"><i class="icon-search"></i></button>

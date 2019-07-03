@@ -1,123 +1,183 @@
 .footer-menu .widget-title {
-  display: none;
+    display: none;
 }
 
 .footer-right ul li a {
-  font-size: 12px;
-  font-family: "Helvetica";
-  color: #000000;
+    font-size: 12px;
+    font-family: "Helvetica";
+    color: #000000;
 }
 
 .footer-right ul li a:hover,
 .footer-right ul li a:focus {
-  color: #000000;
-  text-decoration: underline;
+    color: #000000;
+    text-decoration: underline;
 }
 
 .form-control,
 .submit-btn {
-  font-family: "ProximaNova";
+    font-family: "ProximaNova";
 }
 
 .newslatter-form .btn-outer {
-  bottom: 6px;
-  right: -24px;
+    bottom: 6px;
+    right: -24px;
 }
 
 span.wpcf7-not-valid-tip {
-  position: absolute;
-  font-size: 14px;
-  width: 300px;
-  text-align: left;
-  bottom: -23px;
-  font-family: "ProximaNova";
+    position: absolute;
+    font-size: 14px;
+    width: 300px;
+    text-align: left;
+    bottom: -23px;
+    font-family: "ProximaNova";
 }
 
 div.wpcf7-validation-errors,
 div.wpcf7-acceptance-missing,
 div.wpcf7-mail-sent-ok {
-  display: block;
-  font-size: 16px;
-  background: #ff0000;
-  border-color: #ff0000;
-  padding: 5px 10px;
-  color: #fff;
-  position: absolute;
-  left: 15px;
-  margin: 0;
-  bottom: -50px;
-  font-family: "ProximaNova";
-}
-div.wpcf7-mail-sent-ok{
-  border-color: #398f14;
-  background-color:#398f14; 
-}
-.custom-accordian .panel .panel-body h2{
-  text-align: left;
+    display: block;
+    font-size: 16px;
+    background: #ff0000;
+    border-color: #ff0000;
+    padding: 5px 10px;
+    color: #fff;
+    position: absolute;
+    left: 15px;
+    margin: 0;
+    bottom: -50px;
+    font-family: "ProximaNova";
 }
 
-.blog-cards .card a.btn{
-  position: relative;
-  padding:3px 0; 
+div.wpcf7-mail-sent-ok {
+    border-color: #398f14;
+    background-color: #398f14;
 }
-.blog-cards .card a.btn:before{
-  content:'';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  background-color:#000;
-  left: 0;
-  bottom:0; 
-  transition: 0.25s ease-in-out;
+
+.custom-accordian .panel .panel-body h2 {
+    text-align: left;
 }
-.blog-cards .card a.btn:hover{
-  text-decoration: none;
+
+.blog-cards .card a.btn {
+    position: relative;
+    padding: 3px 0;
 }
-.blog-cards .card a.btn:hover:before{
-  width: 100%;
+
+.blog-cards .card a.btn:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #000;
+    left: 0;
+    bottom: 0;
+    transition: 0.25s ease-in-out;
+}
+
+.blog-cards .card a.btn:hover {
+    text-decoration: none;
+}
+
+.blog-cards .card a.btn:hover:before {
+    width: 100%;
+}
+
+/*error page css*/
+.error-page-banner .container {
+    min-height: 300px;
+}
+
+.error-page {
+    background-color: #ffffff;
+    position: relative;
+}
+
+.error-page .error-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-height: 400px;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.message-box h1,
+.message-box h2 {
+    font-family: inherit;
+}
+
+.error-page .message-box {
+    max-width: 950px;
+    padding: 80px 30px;
+    margin: auto;
+    background-color: #ffffff;
+    -webkit-box-shadow: 3px 6px 21px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 6px 21px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    margin: 0 15px;
+}
+
+.error-page .message-box h1 {
+    color: #ae9b63;
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+.error-page .message-box .btn-outer {
+    padding-top: 10px;
 }
 
 @media(min-width: 767px) {
-  .newslatter-form .form-control {
-    padding-right: 98px;
-  }
+    .newslatter-form .form-control {
+        padding-right: 98px;
+    }
 }
 
 @media(max-width: 992px) {
-  .footer-right ul li a {
-    color: #484848;
-  }
+    .footer-right ul li a {
+        color: #484848;
+    }
+
+    .error-page .message-box {
+        padding: 50px 0;
+    }
 }
 
 @media(max-width: 767px) {
-  .newslatter-form .btn-outer {
-    right: 0;
-  }
+    .newslatter-form .btn-outer {
+        right: 0;
+    }
 
-  div.wpcf7-validation-errors,
-  div.wpcf7-acceptance-missing,
-  span.wpcf7-not-valid-tip,
-  div.wpcf7-mail-sent-ok{
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 450px;
-    font-size: 14px;
-  }
+    div.wpcf7-validation-errors,
+    div.wpcf7-acceptance-missing,
+    span.wpcf7-not-valid-tip,
+    div.wpcf7-mail-sent-ok {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 450px;
+        font-size: 14px;
+    }
 
-  span.wpcf7-not-valid-tip {
-    width: 300px;
-    text-align: center;
-  }
-  .custom-accordian .panel .panel-body h2{
-    font-size: 18px;
-  }
+    span.wpcf7-not-valid-tip {
+        width: 300px;
+        text-align: center;
+    }
+
+    .custom-accordian .panel .panel-body h2 {
+        font-size: 18px;
+    }
+
+    .error-page .error-right {
+        display: none;
+    }
 }
 
 @media(max-width: 480px) {
 
-  div.wpcf7-validation-errors,
-  div.wpcf7-acceptance-missing {
-    max-width: 300px;
-  }
+    div.wpcf7-validation-errors,
+    div.wpcf7-acceptance-missing {
+        max-width: 300px;
+    }
 }
