@@ -10,26 +10,22 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			rclc_posted_on();
-			rclc_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php rclc_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php rclc_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	<?php if ( 'post' === get_post_type() ) : ?>
+		<div class="media course-item">
+			<div class="media-left">
+				<div class="course-info vh-center">
+					<span><?php echo get_the_date('M Y'); ?></span>
+					<b><?php echo get_the_date('d'); ?></b>
+					<span class="full-date"><?php echo get_the_date('M d, Y'); ?></span>
+				</div>
+			</div>
+			<div class="media-body">
+				<?php the_title( sprintf( '<h4><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
+				<p><?php echo get_the_excerpt(); ?></p>
+				<div class="btn-outer">
+					<a href="<?php the_permalink($post_object->ID); ?>" class="btn submit-btn vh-center">Learn more</a>
+				</div>
+			</div>
+		</div>
+	<?php endif; ?>
+</article>

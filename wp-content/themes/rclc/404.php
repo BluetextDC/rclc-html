@@ -13,11 +13,9 @@ get_header();
 	<div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/generic-hero.jpg');"></div>
 	<div class="container">
 		<div class="row">
-			<?php if(get_sub_field('content')): ?>
-				<div class="content">
-					<h1>404 not found</h1>
-				</div>
-			<?php endif; ?>
+			<div class="content">
+				<h1>404 not found</h1>
+			</div>
 		</div>
 	</div>
 </section>

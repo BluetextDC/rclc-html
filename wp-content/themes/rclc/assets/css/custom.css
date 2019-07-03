@@ -127,6 +127,10 @@ div.wpcf7-mail-sent-ok {
 .error-page .message-box .btn-outer {
     padding-top: 10px;
 }
+.search-page-box .search-outer{
+  position: inherit;
+  padding:50px 0 0; 
+}
 
 @media(min-width: 767px) {
     .newslatter-form .form-control {

@@ -10,24 +10,46 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<section id="primary" class="content-area">
+	<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'rclc' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			<section class="hero-zone generic-landing">
+				<div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/building-img.jpg');"></div>
+				<div class="container">
+					<div class="row">
+						<div class="content">
+							<h1><?php echo $wp_query->found_posts.' Search Results for';?></h1>
+							<?php
+							/* translators: %s: search query. */
+					// printf( esc_html__( 'Search Results for: %s', 'ati-website' ), '<span>' . get_search_query() . '</span>' );
+							printf( esc_html__( ' %s', 'rclc' ), '<h1 class="milky-color-text">' . get_search_query() . '</h1>' );
+							?>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="search-page-box">
+				<div class="container">
+					<div class="row">
+						<div class="search-outer">
+							<form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
+								<div class="search-field">
+									<input type="search" class="search-input" placeholder="I’m searching for…." value="" name="s" autocomplete="off">
+									<button class="search-action v-center"><i class="icon-search"></i></button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="course-listing padding-global">
+				<div class="container">
+					<div class="row">
+						<?php
+						/* Start the Loop */
+						while ( have_posts() ) :
+							the_post();
 
 				/**
 				 * Run the loop for the search to output the results.
@@ -38,18 +60,28 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			// the_posts_navigation();
+			?>
+			<div class="pagination">
+				<?php $args = array( 
+					'total' => $wp_query->max_num_pages, 
+					'current' => max( 1, get_query_var('paged') ),
+					'prev_next' => true, 
+					'prev_text' => __('<i class="icon-left-arrow1"></i>'), 
+					'next_text' => __('<i class="icon-right-arrow1"></i>')
+				); 
+				echo paginate_links( $args ); 
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+			else :
+				get_template_part( 'template-parts/content', 'none' );
+			endif;
+			?>
+		</div>
+	</div>
+</div>
+</section>
+</main><!-- #main -->
+</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
