@@ -1,5 +1,8 @@
 (function($) {
 
+  if ($(window).width() > 768) {
+    $('.my-paroller').paroller();
+  }
   // Banner slider
   $('.slider').slick({
     dots: true,
@@ -99,7 +102,7 @@
 
   // Back to main menu trigger
   $('.back-btn').on('click', function() {
-     $('.main-menu>.menu-item-has-children').removeClass('opacity-none');
+    $('.main-menu>.menu-item-has-children').removeClass('opacity-none');
     $(this).removeClass('slide-to-left');
     $('.main-menu .menu-item-has-children ul.sub-menu').removeClass('slide-to-right');
   });

@@ -56,6 +56,27 @@ div.wpcf7-mail-sent-ok{
   text-align: left;
 }
 
+.blog-cards .card a.btn{
+  position: relative;
+  padding:3px 0; 
+}
+.blog-cards .card a.btn:before{
+  content:'';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color:#000;
+  left: 0;
+  bottom:0; 
+  transition: 0.25s ease-in-out;
+}
+.blog-cards .card a.btn:hover{
+  text-decoration: none;
+}
+.blog-cards .card a.btn:hover:before{
+  width: 100%;
+}
+
 @media(min-width: 767px) {
   .newslatter-form .form-control {
     padding-right: 98px;
