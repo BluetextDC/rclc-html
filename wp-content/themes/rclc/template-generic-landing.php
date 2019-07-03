@@ -27,11 +27,8 @@ get_header();
 		get_template_part ( 'components/component', 'promo-cards' );
 		get_template_part ( 'components/component', 'cta-block' );
 		get_template_part ( 'components/component', 'image-content-promo' );
+		get_template_part ( 'components/component', 'content-block' ); 
 	endwhile; endif; ?>
-
-	<?php
-	get_template_part ( 'components/component', 'content-block' );
-	?>
 
 	<?php
 	get_footer();
