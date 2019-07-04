@@ -138,6 +138,12 @@
           $(this).parent().parent().parent().parent().find('.counter').hide();
         }
       });
+  });
 
+  // Contact form js
+  // user click on contact cta open contact form
+  $('.cta-section .cta-outer a').on('click', function(){
+     $(this).hide();
+     $(this).parent().parent().find('.contact-form').fadeIn();
   });
 })(jQuery);
