@@ -363,6 +363,7 @@ div.wpcf7-mail-sent-ok {
       bottom: 0;
       left: 0;
       transform: none;
+      max-width: 100%;
     }
 
     .contact-form form span.wpcf7-not-valid-tip {
