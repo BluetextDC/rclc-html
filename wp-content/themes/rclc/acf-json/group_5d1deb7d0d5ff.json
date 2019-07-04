@@ -1,45 +1,9 @@
 {
-    "key": "group_5d1b360033e62",
-    "title": "Course Listing Template",
+    "key": "group_5d1deb7d0d5ff",
+    "title": "Blog Listing Template",
     "fields": [
         {
-            "key": "field_5d1b361771fa6",
-            "label": "Hero Zone",
-            "name": "hero_zone",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "row",
-            "sub_fields": [
-                {
-                    "key": "field_5d1b362471fa7",
-                    "label": "Content",
-                    "name": "content",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
-                }
-            ]
-        },
-        {
-            "key": "field_5d1deb39de3e9",
+            "key": "field_5d1deb9574808",
             "label": "Component List",
             "name": "",
             "type": "accordion",
@@ -56,7 +20,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5d1deb43de3ea",
+            "key": "field_5d1deb9f74809",
             "label": "Components",
             "name": "components",
             "type": "flexible_content",
@@ -69,14 +33,14 @@
                 "id": ""
             },
             "layouts": {
-                "layout_5d1deb49da9df": {
-                    "key": "layout_5d1deb49da9df",
+                "layout_5d1deba5a99be": {
+                    "key": "layout_5d1deba5a99be",
                     "name": "cta_block",
                     "label": "CTA Block",
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5d1deb57de3eb",
+                            "key": "field_5d1debb17480a",
                             "label": "Title",
                             "name": "title",
                             "type": "text",
@@ -95,7 +59,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5d1deb5dde3ec",
+                            "key": "field_5d1debb77480b",
                             "label": "Form ID",
                             "name": "form_id",
                             "type": "wysiwyg",
@@ -128,7 +92,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-course-listing.php"
+                "value": "template-blog-listing.php"
             }
         ]
     ],
@@ -137,10 +101,8 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1562241898
+    "modified": 1562241986
 }
