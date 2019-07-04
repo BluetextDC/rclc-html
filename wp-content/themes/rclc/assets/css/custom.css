@@ -305,6 +305,7 @@ div.wpcf7-mail-sent-ok {
   }
   .thankyou-div{
     display: none;
+    color:#398f14;
   }
 
   @media(min-width: 767px) {
