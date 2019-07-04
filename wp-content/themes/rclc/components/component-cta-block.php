@@ -15,7 +15,6 @@
 					<?php if(get_sub_field('form_id')): ?>
 						<?php the_sub_field('form_id'); ?>
 					<?php endif; ?>
-					<h3 class="thankyou">thanks for</h3>
 				</div>
 			</div>
 		</div>
