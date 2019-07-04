@@ -111,6 +111,12 @@
 		</div>
 	</footer>
 	<!-- Main Footer -->
+	<script>
+		document.addEventListener( 'wpcf7mailsent', function( event ) {
+			alert( "Fire!" );
+			$(this).hide();
+		}, false );
+	</script>
 
 	<?php wp_footer(); ?>
 
