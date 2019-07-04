@@ -24,7 +24,11 @@ get_header();
           <div class="filter-block">
             <form>
               <div class="dropdown">
-                <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">Filter by</a>
+                <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">
+                  <span class="first-text">Filter by</span>
+                  <span class="counter"></span>
+                  <span class="selected-text">item selected</span>
+                </a>
                 <ul class="dropdown-menu dropdown-style" id="cate-check">
                   <li>
                     <label class="checkbox-container">cat-1<input type="checkbox" class="alm-checkbox" value="cat-1">
