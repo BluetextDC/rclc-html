@@ -113,7 +113,7 @@
 	<!-- Main Footer -->
 	<script>
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
-			$('.wpcf7-form.sent').hide();
+			$('.contact-form .wpcf7-form.sent').hide();
 			$('.thankyou-div').fadeIn();
 		}, false );
 	</script>
