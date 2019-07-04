@@ -150,4 +150,7 @@
      $(this).parent().parent().find('.contact-form').fadeIn();
   });
 
+  // Contact form JSON
+  $('span.wpcf7-not-valid-tip').parent().parent().addClass('error');
+
 })(jQuery);

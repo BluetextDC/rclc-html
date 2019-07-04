@@ -188,9 +188,9 @@
                     "sub_fields": [
                         {
                             "key": "field_5d1b5294d4fc8",
-                            "label": "CTA",
-                            "name": "cta",
-                            "type": "link",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -199,7 +199,30 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5d1ddbed65f09",
+                            "label": "Form ID",
+                            "name": "form_id",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -534,5 +557,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1562074590
+    "modified": 1562237945
 }

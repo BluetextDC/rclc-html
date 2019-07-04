@@ -153,8 +153,8 @@ div.wpcf7-mail-sent-ok {
 }
 
 .link-btn:before,
-.course-listing .media.course-item .media-body a.submit-btn:before ,
-.wysiwyg-block .content.blog-detail ul.taglist li a:before{
+.course-listing .media.course-item .media-body a.submit-btn:before,
+.wysiwyg-block .content.blog-detail ul.taglist li a:before {
   content: '';
   position: absolute;
   width: 0;
@@ -164,8 +164,9 @@ div.wpcf7-mail-sent-ok {
   bottom: 0;
   transition: 0.25s ease-in-out;
 }
-.wysiwyg-block .content.blog-detail ul.taglist li a:before{
-  background-color:#6c6c6c; 
+
+.wysiwyg-block .content.blog-detail ul.taglist li a:before {
+  background-color: #6c6c6c;
 }
 
 .course-listing .media.course-item .media-body a.submit-btn:hover {
@@ -178,66 +179,80 @@ div.wpcf7-mail-sent-ok {
   width: 100%;
 }
 
-.pagination-outer .pagination a.page-numbers{
+.pagination-outer .pagination a.page-numbers {
   -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
   -ms-transition: all .25s ease;
   -o-transition: all .25s ease;
   transition: all .25s ease;
 }
-.pagination-outer .pagination a.page-numbers:hover{
-  color:#6c6c6c;
+
+.pagination-outer .pagination a.page-numbers:hover {
+  color: #6c6c6c;
   text-decoration: underline;
 }
+
 .footer-menu li a:hover,
-.social-list li a:hover i{
-  color:#6c6c6c;
+.social-list li a:hover i {
+  color: #6c6c6c;
 }
-.wysiwyg-block .content.blog-detail ul.taglist{
-  padding:0; 
+
+.wysiwyg-block .content.blog-detail ul.taglist {
+  padding: 0;
 }
-.wysiwyg-block .content.blog-detail ul.taglist li{
+
+.wysiwyg-block .content.blog-detail ul.taglist li {
   display: inline-block;
-  padding:0; 
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
-.wysiwyg-block .content.blog-detail ul.taglist li a{
-  color:#6c6c6c;
+
+.wysiwyg-block .content.blog-detail ul.taglist li a {
+  color: #6c6c6c;
   padding-bottom: 2px;
   position: relative;
 }
 
-.wysiwyg-block .content.blog-detail ul.taglist li:before{
+.wysiwyg-block .content.blog-detail ul.taglist li:before {
   display: none;
 }
-.checkbox-container.clicked{
-  color:#6c6c6c;
+
+.checkbox-container.clicked {
+  color: #6c6c6c;
 }
-.checkbox-container.clicked .checkmark:after{
-  color:#000;
+
+.checkbox-container.clicked .checkmark:after {
+  color: #000;
 }
-.checkbox-container.clicked:hover{
-  color:#fff;
+
+.checkbox-container.clicked:hover {
+  color: #fff;
 }
-.checkbox-container.clicked:hover .checkmark:after{
-  color:#fff;
+
+.checkbox-container.clicked:hover .checkmark:after {
+  color: #fff;
 }
+
 .selected-text,
-.selected-text.last{
-  display: none;  
+.selected-text.last {
+  display: none;
 }
-.selected-text b{
- font-weight: 300;
- margin-right: 5px;
+
+.selected-text b {
+  font-weight: 300;
+  margin-right: 5px;
 }
-.bdf{
-  border-color:#cbcbcb;
+
+.bdf {
+  border-color: #cbcbcb;
 }
-.dropdown.open{
+
+.dropdown.open {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   box-shadow: inset 0 0 0 1px #cbcbcb;
 }
+
 /*.dropdown.open:before{
     position: absolute;
     content: '';
@@ -247,72 +262,120 @@ div.wpcf7-mail-sent-ok {
     top:0;
     background-color: #cbcbcb;
     }*/
-    .dropdown .dropdown-style{
+    .dropdown .dropdown-style {
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
-      border:1px solid #cbcbcb;
-      border-top:none;
+      border: 1px solid #cbcbcb;
+      border-top: none;
       margin-top: -1px;
     }
-    .course-listing .media.course-item:hover .media-body a.submit-btn:before{
+
+    .course-listing .media.course-item:hover .media-body a.submit-btn:before {
       width: 100%;
     }
 
-    @media(min-width: 767px) {
-      .newslatter-form .form-control {
-        padding-right: 98px;
-      }
-
-      .blog-listing li .item-inner:hover .blog-content h4,
-      .blog-listing-hero .blog-item .blog-item-inner:hover .blog-content h4 {
-        text-decoration: underline;
-      }
+    .contact-form .field-outer textarea {
+      height: 120px;
     }
 
-    @media(max-width: 992px) {
-      .footer-right ul li a {
-        color: #484848;
-      }
-
-      .error-page .message-box {
-        padding: 50px 0;
-      }
+    .contact-form form {
+      position: relative;
     }
 
-    @media(max-width: 767px) {
-      .newslatter-form .btn-outer {
-        right: 0;
-      }
+    .contact-form div.wpcf7-validation-errors {
+      position: absolute;
+      bottom: 0;
+      left: 40px;
+    }
+    .contact-form form span.wpcf7-not-valid-tip[role="alert"]{
+     font-style: italic;
+     right: 0;
+     width: 100%;
+     text-align: right;
+     position: absolute!important;
+   }
 
-      div.wpcf7-validation-errors,
-      div.wpcf7-acceptance-missing,
-      span.wpcf7-not-valid-tip,
-      div.wpcf7-mail-sent-ok {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 450px;
-        font-size: 14px;
-      }
+   .contact-form .submit-outer .ajax-loader {
+    position: absolute;
+    top: 5px;
+  }
 
-      span.wpcf7-not-valid-tip {
-        width: 300px;
-        text-align: center;
-      }
-
-      .custom-accordian .panel .panel-body h2 {
-        font-size: 18px;
-      }
-
-      .error-page .error-right {
-        display: none;
-      }
+  @media(min-width: 767px) {
+    .newslatter-form .form-control {
+      padding-right: 98px;
     }
 
-    @media(max-width: 480px) {
-
-      div.wpcf7-validation-errors,
-      div.wpcf7-acceptance-missing {
-        max-width: 300px;
-      }
+    .blog-listing li .item-inner:hover .blog-content h4,
+    .blog-listing-hero .blog-item .blog-item-inner:hover .blog-content h4 {
+      text-decoration: underline;
     }
+  }
+
+  @media(max-width: 992px) {
+    .footer-right ul li a {
+      color: #484848;
+    }
+
+    .error-page .message-box {
+      padding: 50px 0;
+    }
+
+    .contact-form div.wpcf7-validation-errors {
+      left: 10px;
+    }
+  }
+
+  @media(max-width: 767px) {
+    .newslatter-form .btn-outer {
+      right: 0;
+    }
+
+    div.wpcf7-validation-errors,
+    div.wpcf7-acceptance-missing,
+    span.wpcf7-not-valid-tip,
+    div.wpcf7-mail-sent-ok {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 450px;
+      font-size: 14px;
+    }
+
+    span.wpcf7-not-valid-tip {
+      width: 300px;
+      text-align: center;
+    }
+
+    .custom-accordian .panel .panel-body h2 {
+      font-size: 18px;
+    }
+
+    .error-page .error-right {
+      display: none;
+    }
+
+    .contact-form div.wpcf7-validation-errors {
+      position: inherit;
+      bottom: 0;
+      left: 0;
+      transform: none;
+    }
+
+    .contact-form form span.wpcf7-not-valid-tip {
+      width: 100%;
+      left: inherit;
+      display: block;
+      transform: none;
+      position: inherit;
+      text-align: right;
+      max-width: 100%;
+    }
+  }
+
+  @media(max-width: 480px) {
+
+    div.wpcf7-validation-errors,
+    div.wpcf7-acceptance-missing {
+      max-width: 300px;
+    }
+  }
