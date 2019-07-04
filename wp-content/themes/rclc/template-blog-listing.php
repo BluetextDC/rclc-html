@@ -15,42 +15,42 @@
 get_header();
 ?>
 <!-- Hero Zone -->
-  <section class="blog-listing-hero">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="hero-content">
-            <h1>Listing header optional header lorem ipsom site message</h1>
-            <div class="filter-block">
-              <form>
-                <div class="dropdown">
-                  <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">Filter by</a>
-                  <ul class="dropdown-menu dropdown-style" id="cate-check">
-                    <li>
-                      <label class="checkbox-container">cat-1<input type="checkbox" class="alm-checkbox" value="cat-1">
-                        <span class="checkmark"></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="checkbox-container">cat-2<input type="checkbox" class="alm-checkbox" value="cat-1">
-                        <span class="checkmark"></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="checkbox-container">cat-3<input type="checkbox" class="alm-checkbox" value="cat-1">
-                        <span class="checkmark"></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="checkbox-container">cat-4<input type="checkbox" class="alm-checkbox" value="cat-1">
-                        <span class="checkmark"></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="checkbox-container">cat-5<input type="checkbox" class="alm-checkbox" value="cat-1">
-                        <span class="checkmark"></span>
-                      </label>
-                    </li>
+<section class="blog-listing-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="hero-content">
+          <h1>Listing header optional header lorem ipsom site message</h1>
+          <div class="filter-block">
+            <form>
+              <div class="dropdown">
+                <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">Filter by</a>
+                <ul class="dropdown-menu dropdown-style" id="cate-check">
+                  <li>
+                    <label class="checkbox-container">cat-1<input type="checkbox" class="alm-checkbox" value="cat-1">
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-container">cat-2<input type="checkbox" class="alm-checkbox" value="cat-1">
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-container">cat-3<input type="checkbox" class="alm-checkbox" value="cat-1">
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-container">cat-4<input type="checkbox" class="alm-checkbox" value="cat-1">
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-container">cat-5<input type="checkbox" class="alm-checkbox" value="cat-1">
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
                     <!-- <li class="filter-btns">
                       <button class="clearCheckBox" id="clear-all-category">clear all</button>
                       <button class="right-btn apply-filter-category">apply</button>
@@ -221,6 +221,9 @@ get_header();
       </div>
     </div>
   </section>
- <?php get_template_part ( 'components/component', 'cta-block' ); ?>
-<?php
-get_footer();
+  <?php if (have_rows('components')): 
+    while (have_rows('components')): the_row();
+     get_template_part ( 'components/component', 'cta-block' ); 
+   endwhile; endif; ?>
+   <?php
+   get_footer();
