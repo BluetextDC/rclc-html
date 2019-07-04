@@ -299,6 +299,10 @@ div.wpcf7-mail-sent-ok {
     position: absolute;
     top: 5px;
   }
+  .cta-section h2,
+  .cta-section .h2{
+    text-transform: capitalize;
+  }
 
   @media(min-width: 767px) {
     .newslatter-form .form-control {
