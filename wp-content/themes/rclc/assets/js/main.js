@@ -152,5 +152,9 @@
 
   // Contact form JSON
   $('span.wpcf7-not-valid-tip').parent().parent().addClass('error');
+  $('.contact-form form.wpcf7-form.sent').each(function(){
+    $(this).hide();
+    $('.thankyou').fadeIn();
+  });
 
 })(jQuery);
