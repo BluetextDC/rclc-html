@@ -230,6 +230,31 @@ div.wpcf7-mail-sent-ok {
    font-weight: 300;
    margin-right: 5px;
 }
+.bdf{
+    border-color:#cbcbcb;
+}
+.dropdown.open{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    /*border:1px solid #cbcbcb;
+    border-bottom:none;*/
+    box-shadow: inset 1px 1px 1px 0 #cbcbcb;
+}
+/*.dropdown.open:before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 1px;
+    right: 0;
+    top:0;
+    background-color: #cbcbcb;
+}*/
+.dropdown .dropdown-style{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border:1px solid #cbcbcb;
+    border-top:none;
+}
 
 @media(min-width: 767px) {
   .newslatter-form .form-control {
