@@ -33,7 +33,11 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-
+	<script>
+		document.addEventListener( 'wpcf7mailsent', function( event ) {
+			alert( "Fire!" );
+		}, false );
+	</script>
 	<?php wp_head(); ?>
 </head>
 
