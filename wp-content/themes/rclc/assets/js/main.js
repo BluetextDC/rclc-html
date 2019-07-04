@@ -107,4 +107,47 @@
     $('.main-menu .menu-item-has-children ul.sub-menu').removeClass('slide-to-right');
   });
 
+  // Category counter and other functionality
+  $(document).ready(function(){
+    // category selected addClass
+    $('#cate-check li .alm-checkbox').click(function(){
+      if($(this).prop("checked") == true){
+        $(this).parent().addClass('clicked');
+      }
+      else if($(this).prop("checked") == false){
+        $(this).parent().removeClass('clicked');
+      }
+    });
+
+    // caltegory selected counter
+    var $checkboxes = $('#cate-check li .alm-checkbox');
+    $checkboxes.change(function(){
+      var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
+        $('.counter').text(countCheckedCheckboxes);
+         // caltegory selected hide show elements
+        if($checkboxes.filter(':checked').length == 1){
+          $(this).parent().parent().parent().parent().find('.first-text').hide();
+          $(this).parent().parent().parent().parent().find('.counter').show();
+          $(this).parent().parent().parent().parent().find('.selected-text').show();
+          $(this).parent().parent().parent().parent().find('.selected-text').text('item selected');
+        }else if($checkboxes.filter(':checked').length >= 2){
+          $(this).parent().parent().parent().parent().find('.first-text').hide();
+          $(this).parent().parent().parent().parent().find('.counter').show();
+          $(this).parent().parent().parent().parent().find('.selected-text').show();
+          $(this).parent().parent().parent().parent().find('.selected-text').text('items selected');
+        }else{
+          $(this).parent().parent().parent().parent().find('.first-text').show();
+          $(this).parent().parent().parent().parent().find('.selected-text').hide();
+          $(this).parent().parent().parent().parent().find('.counter').hide();
+        }
+      });
+  });
+
+  // Contact form js
+  // user click on contact cta open contact form
+  $('.cta-section .cta-outer a').on('click', function(){
+     $(this).hide();
+     $(this).parent().parent().find('.contact-form').fadeIn();
+  });
+
 })(jQuery);

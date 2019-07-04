@@ -1,187 +1,318 @@
 .footer-menu .widget-title {
-    display: none;
+  display: none;
 }
 
 .footer-right ul li a {
-    font-size: 12px;
-    font-family: "Helvetica";
-    color: #000000;
+  font-size: 12px;
+  font-family: "Helvetica";
+  color: #000000;
 }
 
 .footer-right ul li a:hover,
 .footer-right ul li a:focus {
-    color: #000000;
-    text-decoration: underline;
+  color: #000000;
+  text-decoration: underline;
 }
 
 .form-control,
 .submit-btn {
-    font-family: "ProximaNova";
+  font-family: "ProximaNova";
 }
 
 .newslatter-form .btn-outer {
-    bottom: 6px;
-    right: -24px;
+  bottom: 6px;
+  right: -24px;
 }
 
 span.wpcf7-not-valid-tip {
-    position: absolute;
-    font-size: 14px;
-    width: 300px;
-    text-align: left;
-    bottom: -23px;
-    font-family: "ProximaNova";
+  position: absolute;
+  font-size: 14px;
+  width: 300px;
+  text-align: left;
+  bottom: -23px;
+  font-family: "ProximaNova";
 }
 
 div.wpcf7-validation-errors,
 div.wpcf7-acceptance-missing,
 div.wpcf7-mail-sent-ok {
-    display: block;
-    font-size: 16px;
-    background: #ff0000;
-    border-color: #ff0000;
-    padding: 5px 10px;
-    color: #fff;
-    position: absolute;
-    left: 15px;
-    margin: 0;
-    bottom: -50px;
-    font-family: "ProximaNova";
+  display: block;
+  font-size: 16px;
+  background: #ff0000;
+  border-color: #ff0000;
+  padding: 5px 10px;
+  color: #fff;
+  position: absolute;
+  left: 15px;
+  margin: 0;
+  bottom: -50px;
+  font-family: "ProximaNova";
 }
 
 div.wpcf7-mail-sent-ok {
-    border-color: #398f14;
-    background-color: #398f14;
+  border-color: #398f14;
+  background-color: #398f14;
 }
 
 .custom-accordian .panel .panel-body h2 {
-    text-align: left;
+  text-align: left;
 }
 
 .blog-cards .card a.btn {
-    position: relative;
-    padding: 3px 0;
+  position: relative;
+  padding: 3px 0;
 }
 
 .blog-cards .card a.btn:before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    background-color: #000;
-    left: 0;
-    bottom: 0;
-    transition: 0.25s ease-in-out;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  left: 0;
+  bottom: 0;
+  transition: 0.25s ease-in-out;
 }
 
 .blog-cards .card a.btn:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .blog-cards .card a.btn:hover:before {
-    width: 100%;
+  width: 100%;
 }
 
 /*error page css*/
 .error-page-banner .container {
-    min-height: 300px;
+  min-height: 300px;
 }
 
 .error-page {
-    background-color: #ffffff;
-    position: relative;
+  background-color: #ffffff;
+  position: relative;
 }
 
 .error-page .error-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    max-height: 400px;
-    height: 100%;
-    opacity: 0.1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-height: 400px;
+  height: 100%;
+  opacity: 0.1;
 }
 
 .message-box h1,
 .message-box h2 {
-    font-family: inherit;
+  font-family: inherit;
 }
 
 .error-page .message-box {
-    max-width: 950px;
-    padding: 80px 30px;
-    margin: auto;
-    background-color: #ffffff;
-    -webkit-box-shadow: 3px 6px 21px rgba(0, 0, 0, 0.2);
-    box-shadow: 3px 6px 21px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    position: relative;
-    margin: 0 15px;
+  max-width: 950px;
+  padding: 80px 30px;
+  margin: auto;
+  background-color: #ffffff;
+  -webkit-box-shadow: 3px 6px 21px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 6px 21px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  margin: 0 15px;
 }
 
 .error-page .message-box h1 {
-    color: #ae9b63;
-    font-size: 60px;
-    margin-bottom: 0;
+  color: #ae9b63;
+  font-size: 60px;
+  margin-bottom: 0;
 }
 
 .error-page .message-box .btn-outer {
-    padding-top: 10px;
+  padding-top: 10px;
 }
-.search-page-box .search-outer{
+
+.search-page-box .search-outer {
   position: inherit;
-  padding:50px 0 0; 
+  padding: 50px 0 0;
 }
 
-@media(min-width: 767px) {
-    .newslatter-form .form-control {
+.banner-cta .content h3 a {
+  color: #fff;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.banner-cta .content h3 a:hover {
+  text-decoration: underline;
+}
+
+.link-btn {
+  position: relative;
+  display: inline-block;
+  padding: 3px 0;
+}
+
+.link-btn:before,
+.course-listing .media.course-item .media-body a.submit-btn:before ,
+.wysiwyg-block .content.blog-detail ul.taglist li a:before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  left: 0;
+  bottom: 0;
+  transition: 0.25s ease-in-out;
+}
+.wysiwyg-block .content.blog-detail ul.taglist li a:before{
+  background-color:#6c6c6c; 
+}
+
+.course-listing .media.course-item .media-body a.submit-btn:hover {
+  text-decoration: none;
+}
+
+.link-btn:hover:before,
+.course-listing .media.course-item .media-body a.submit-btn:hover:before,
+.wysiwyg-block .content.blog-detail ul.taglist li a:hover:before {
+  width: 100%;
+}
+
+.pagination-outer .pagination a.page-numbers{
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+.pagination-outer .pagination a.page-numbers:hover{
+  color:#6c6c6c;
+  text-decoration: underline;
+}
+.footer-menu li a:hover,
+.social-list li a:hover i{
+  color:#6c6c6c;
+}
+.wysiwyg-block .content.blog-detail ul.taglist{
+  padding:0; 
+}
+.wysiwyg-block .content.blog-detail ul.taglist li{
+  display: inline-block;
+  padding:0; 
+  margin:0;
+}
+.wysiwyg-block .content.blog-detail ul.taglist li a{
+  color:#6c6c6c;
+  padding-bottom: 2px;
+  position: relative;
+}
+
+.wysiwyg-block .content.blog-detail ul.taglist li:before{
+  display: none;
+}
+.checkbox-container.clicked{
+  color:#6c6c6c;
+}
+.checkbox-container.clicked .checkmark:after{
+  color:#000;
+}
+.checkbox-container.clicked:hover{
+  color:#fff;
+}
+.checkbox-container.clicked:hover .checkmark:after{
+  color:#fff;
+}
+.selected-text,
+.selected-text.last{
+  display: none;  
+}
+.selected-text b{
+ font-weight: 300;
+ margin-right: 5px;
+}
+.bdf{
+  border-color:#cbcbcb;
+}
+.dropdown.open{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: inset 0 0 0 1px #cbcbcb;
+}
+/*.dropdown.open:before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 1px;
+    right: 0;
+    top:0;
+    background-color: #cbcbcb;
+    }*/
+    .dropdown .dropdown-style{
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border:1px solid #cbcbcb;
+      border-top:none;
+      margin-top: -1px;
+    }
+    .course-listing .media.course-item:hover .media-body a.submit-btn:before{
+      width: 100%;
+    }
+
+    @media(min-width: 767px) {
+      .newslatter-form .form-control {
         padding-right: 98px;
-    }
-}
+      }
 
-@media(max-width: 992px) {
-    .footer-right ul li a {
+      .blog-listing li .item-inner:hover .blog-content h4,
+      .blog-listing-hero .blog-item .blog-item-inner:hover .blog-content h4 {
+        text-decoration: underline;
+      }
+    }
+
+    @media(max-width: 992px) {
+      .footer-right ul li a {
         color: #484848;
-    }
+      }
 
-    .error-page .message-box {
+      .error-page .message-box {
         padding: 50px 0;
+      }
     }
-}
 
-@media(max-width: 767px) {
-    .newslatter-form .btn-outer {
+    @media(max-width: 767px) {
+      .newslatter-form .btn-outer {
         right: 0;
-    }
+      }
 
-    div.wpcf7-validation-errors,
-    div.wpcf7-acceptance-missing,
-    span.wpcf7-not-valid-tip,
-    div.wpcf7-mail-sent-ok {
+      div.wpcf7-validation-errors,
+      div.wpcf7-acceptance-missing,
+      span.wpcf7-not-valid-tip,
+      div.wpcf7-mail-sent-ok {
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
         max-width: 450px;
         font-size: 14px;
-    }
+      }
 
-    span.wpcf7-not-valid-tip {
+      span.wpcf7-not-valid-tip {
         width: 300px;
         text-align: center;
-    }
+      }
 
-    .custom-accordian .panel .panel-body h2 {
+      .custom-accordian .panel .panel-body h2 {
         font-size: 18px;
-    }
+      }
 
-    .error-page .error-right {
+      .error-page .error-right {
         display: none;
+      }
     }
-}
 
-@media(max-width: 480px) {
+    @media(max-width: 480px) {
 
-    div.wpcf7-validation-errors,
-    div.wpcf7-acceptance-missing {
+      div.wpcf7-validation-errors,
+      div.wpcf7-acceptance-missing {
         max-width: 300px;
+      }
     }
-}
