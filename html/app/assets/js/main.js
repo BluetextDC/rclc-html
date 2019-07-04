@@ -124,10 +124,12 @@
          // caltegory selected hide show elements
         if($checkboxes.filter(':checked').length == 1){
           $(this).parent().parent().parent().parent().find('.first-text').hide();
+          $(this).parent().parent().parent().parent().find('.counter').show();
           $(this).parent().parent().parent().parent().find('.selected-text').show();
           $(this).parent().parent().parent().parent().find('.selected-text').text('item selected');
         }else if($checkboxes.filter(':checked').length >= 2){
           $(this).parent().parent().parent().parent().find('.first-text').hide();
+          $(this).parent().parent().parent().parent().find('.counter').show();
           $(this).parent().parent().parent().parent().find('.selected-text').show();
           $(this).parent().parent().parent().parent().find('.selected-text').text('items selected');
         }else{
