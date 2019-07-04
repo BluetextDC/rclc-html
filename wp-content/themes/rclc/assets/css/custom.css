@@ -385,6 +385,9 @@ div.wpcf7-mail-sent-ok {
     .contact-form .field-outer {
         height: 50px;
     }
+    .cta-section .cta-outer a{
+      font-size: 30px;
+    }
 }
 
 @media(max-width: 480px) {
