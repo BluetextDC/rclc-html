@@ -10,6 +10,15 @@
               <?php $j = 1;while (have_rows('tab_listing')): the_row();?>
               <?php if (get_row_layout() == 'item'): ?>
                 <div id="c-<?php echo $row_id; ?>-<?php echo get_row_index(); ?>" class="tab-pane fade in content <?php echo $j == 1 ? 'active' : ''; ?>">
+                  <?php $link = get_sub_field('cta');
+
+                  if( $link ): 
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                    <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" class="outer_link"></a>
+                  <?php endif;?>
                   <?php if(get_sub_field('title')): ?>
                     <h2><?php the_sub_field('title'); ?></h2>
                   <?php endif; ?>

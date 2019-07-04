@@ -72,39 +72,46 @@
   .content {
     padding: 0 30px;
     text-align: center;
-
-    h2 {
-      margin-bottom: 20px;
-    }
-
-    p {
-      line-height: 1.4;
-      margin-bottom: 15px;
-      font-family: $proxima_font;
-      font-size: $font-md;
-    }
-
-    span {
-      font-family: $proxima_font;
-      font-size: $font-md;
-    }
-
-    a.btn {
-      text-transform: $uppercase;
-      font-size: $font-sm;
-      font-family: $proxima_font;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: $ACaslonPro_fonts;
-      font-weight: $semibold;
+    position: relative;
+    @media(min-width: $screen-md-min){
+     &:hover{
+      .link-btn:before{
+        width: 100%;
+      }
     }
   }
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    line-height: 1.4;
+    margin-bottom: 15px;
+    font-family: $proxima_font;
+    font-size: $font-md;
+  }
+
+  span {
+    font-family: $proxima_font;
+    font-size: $font-md;
+  }
+
+  a.btn {
+    text-transform: $uppercase;
+    font-size: $font-sm;
+    font-family: $proxima_font;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $ACaslonPro_fonts;
+    font-weight: $semibold;
+  }
+}
 }
 
 .custom-accordian {
@@ -488,51 +495,81 @@
 
   .card {
     background-color: $white;
-    @include box-shadow(6px 6px 26px rgba(0, 0, 0, 0.08));
     padding: 65px 40px;
-
-    @media(max-width: $screen-sm-min) {
-      margin-bottom: 20px;
-      padding: 60px 40px;
+    @include transition(all 0.25s ease);
+    position: relative;
+    a.outer_link{
+      z-index: 3;
     }
-
-    .category {
-      font-size: $heading5;
-      font-family: $proxima_font;
-      text-transform: $capitalize;
-      font-weight: $light;
-      display: block;
-      margin-bottom: 50px;
-      color: $light_black;
-      text-shadow: 0 0 0 $light_black;
+    &:before{
+      content: '';
+      position: absolute;
+      @include square(100%);
+      @include box-shadow(6px 6px 26px rgba(0, 0, 0, 0.08));
+      background-color:$white; 
+      top:0;
+      left: 0;
+      @include transition(all 0.25s ease);
     }
-
-    h3 {
-      font-family: $proxima_font;
-      font-weight: $medium;
-      min-height: 170px;
-      line-height: 36px;
-      margin-bottom: 20px;
-      color: $light_black;
-
-      @media(max-width: $screen-sm-min) {
-        min-height: 100px;
-      }
-    }
-
-    a.btn {
-      font-size: $font-sm;
-      text-transform: $uppercase;
-      font-weight: $bold;
-      color: $gray;
-      letter-spacing: 1.8px;
-
-      &:hover {
-        text-decoration: underline;
-        color: $black;
-      }
+    @media(min-width:$screen-sm-min){
+     &:hover{
+      &:before{
+       @include transform(scale(1.01));
+       @include transition(all 0.25s ease);
+     }
+     cursor: pointer;
+     .btn:before{
+      width: 100%;
     }
   }
+}
+.inner{
+  position: relative;
+  z-index: 2;
+}
+
+@media(max-width: $screen-sm-min) {
+  margin-bottom: 20px;
+  padding: 60px 40px;
+}
+
+.category {
+  font-size: $heading5;
+  font-family: $proxima_font;
+  text-transform: $capitalize;
+  font-weight: $light;
+  display: block;
+  margin-bottom: 50px;
+  color: $light_black;
+  text-shadow: 0 0 0 $light_black;
+}
+
+h3 {
+  font-family: $proxima_font;
+  font-weight: $medium;
+  min-height: 170px;
+  line-height: 36px;
+  margin-bottom: 20px;
+  color: $light_black;
+
+  @media(max-width: $screen-sm-min) {
+    min-height: 100px;
+  }
+}
+
+a.btn {
+  font-size: $font-sm;
+  text-transform: $uppercase;
+  font-weight: $bold;
+  color: $gray;
+  letter-spacing: 1.8px;
+
+  &:hover {
+    text-decoration: underline;
+    color: $black;
+  }
+}
+}
 }
 
 // half-block
@@ -661,7 +698,30 @@
   .media.course-item {
     background-color: $white;
     margin-bottom: 20px;
-    @include box-shadow(7px 7px 16px rgba(82, 33, 33, 0.12));
+    position: relative;
+    overflow:visible; 
+    cursor: pointer;
+    &:before{
+      content: '';
+      position: absolute;
+      @include box-shadow(7px 7px 16px rgba(82, 33, 33, 0.12));
+      @include square(100%);
+      background-color:$white; 
+      left: 0;
+      top:0;
+      @include transition(all 0.25s ease);
+    }
+    @media(min-width: $screen-sm-min){
+      &:hover{
+        &:before{
+          @include transform(scale(1.01));
+          @include transition(all 0.25s ease);
+        }
+        .btn:before{
+          width: 100%;
+        }
+      }
+    }
 
     .media-left {
       position: relative;
