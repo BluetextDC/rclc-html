@@ -6744,7 +6744,13 @@ h6,
 
 h1,
 .h1 {
-  font-size: 40px;
+  font-size: 45px;
+}
+@media (max-width: 991px) {
+  h1,
+  .h1 {
+    font-size: 30px;
+  }
 }
 
 h2,
@@ -6761,6 +6767,8 @@ h2,
 h3,
 .h3 {
   font-size: 26px;
+  font-family: "ProximaNova";
+  font-weight: 500;
 }
 @media (max-width: 991px) {
   h3,
@@ -6772,6 +6780,8 @@ h3,
 h4,
 .h4 {
   font-size: 22px;
+  font-family: "ProximaNova";
+  font-weight: 500;
 }
 @media (max-width: 991px) {
   h4,
@@ -9230,7 +9240,7 @@ ul.social-links li a:hover i {
 .course-listing .media.course-item .media-left .course-info b {
   font-family: "ACaslonPro";
   color: #292929;
-  font-size: 40px;
+  font-size: 45px;
   display: block;
 }
 .course-listing .media.course-item .media-left .course-info .full-date {
@@ -9550,6 +9560,77 @@ ul.social-links li a:hover i {
   .single-img .bg-img {
     min-height: 215px;
   }
+}
+
+.contact-form {
+  display: none;
+}
+.contact-form h2 {
+  font-weight: 600;
+  padding-bottom: 45px;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .contact-form h2 {
+    padding-bottom: 25px;
+  }
+}
+.contact-form .side-spacer {
+  padding: 0 50px;
+}
+@media (max-width: 992px) {
+  .contact-form .side-spacer {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-form .side-spacer {
+    padding: 0;
+  }
+}
+.contact-form .field-outer {
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .contact-form .field-outer {
+    margin-bottom: 25px;
+  }
+}
+.contact-form .field-outer label {
+  font-size: 18px;
+  position: absolute;
+  top: 13px;
+  left: 0;
+}
+.contact-form .field-outer textarea {
+  min-height: 96px;
+}
+.contact-form .field-outer.label-float label {
+  display: none;
+}
+.contact-form .submit-btn {
+  font-size: 18px;
+  padding-bottom: 3px;
+  position: relative;
+}
+.contact-form .submit-outer {
+  display: inline-block;
+  position: relative;
+}
+.contact-form .submit-outer:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+  left: 0;
+  bottom: 3px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.contact-form .submit-outer:hover:before {
+  width: 100%;
 }
 
 .footer {

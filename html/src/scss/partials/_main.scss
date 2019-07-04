@@ -1102,3 +1102,66 @@ a.btn {
     }
   }
 }
+.contact-form{
+  display: none;
+  h2{
+    font-weight: $semibold;
+    padding-bottom: 45px;
+    margin:0; 
+    @media(max-width: $screen-sm-min){
+      padding-bottom: 25px; 
+    }
+  }
+  .side-spacer{
+    padding:0 50px; 
+    @media(max-width: $screen-md-min){
+      padding:0 10px; 
+    }
+    @media(max-width: $screen-sm-min){
+      padding:0; 
+    }
+  }
+  .field-outer{
+    margin-bottom: 40px;
+    @media(max-width: $screen-sm-min){
+       margin-bottom: 25px;
+    }
+    label{
+      font-size: $font-md;
+      position: absolute;
+      top:13px;
+      left: 0;
+    }
+    textarea{
+      min-height: 96px;
+    }
+    &.label-float{
+      label{
+        display: none;
+      }
+    }
+  }
+  .submit-btn{
+    font-size: $font-md;
+    padding-bottom: 3px;
+    position: relative;
+  }
+  .submit-outer{
+    display: inline-block;
+    position: relative;
+    &:before{
+      content:'';
+      position: absolute;
+      @include size(0, 1px);
+      background-color:$black;
+      left:0;
+      bottom:3px; 
+      @include transition(all 0.25s ease);
+    }
+    &:hover{
+      &:before{
+        width: 100%;
+      }
+    }
+  }
+}
