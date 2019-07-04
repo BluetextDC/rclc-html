@@ -115,6 +115,7 @@
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
 			alert( "Fire!" );
 			$('.wpcf7-form.sent').hide();
+			$('thankyou-div').fadeIn();
 		}, false );
 	</script>
 

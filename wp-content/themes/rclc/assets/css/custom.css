@@ -303,6 +303,9 @@ div.wpcf7-mail-sent-ok {
   .cta-section .h2{
     text-transform: capitalize;
   }
+  .thankyou-div{
+    display: none;
+  }
 
   @media(min-width: 767px) {
     .newslatter-form .form-control {
