@@ -99,9 +99,37 @@
 
   // Back to main menu trigger
   $('.back-btn').on('click', function() {
-     $('.main-menu>.menu-item-has-children').removeClass('opacity-none');
+    $('.main-menu>.menu-item-has-children').removeClass('opacity-none');
     $(this).removeClass('slide-to-left');
     $('.main-menu .menu-item-has-children ul.sub-menu').removeClass('slide-to-right');
   });
 
+// Category counter and other functionality
+  $(document).ready(function(){
+    // category selected addClass
+    $('#cate-check li .alm-checkbox').click(function(){
+      if($(this).prop("checked") == true){
+        $(this).parent().addClass('clicked');
+      }
+      else if($(this).prop("checked") == false){
+        $(this).parent().removeClass('clicked');
+      }
+    });
+
+    // caltegory selected counter
+    var $checkboxes = $('#cate-check li .alm-checkbox');
+    $checkboxes.change(function(){
+      var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
+        $('.selected-text b').text(countCheckedCheckboxes);
+         // caltegory selected hide show elements
+        if($checkboxes.filter(':checked').length >= 1){
+          $(this).parent().parent().parent().parent().find('.first-text').hide();
+          $(this).parent().parent().parent().parent().find('.selected-text').show();
+        }else{
+          $(this).parent().parent().parent().parent().find('.first-text').show();
+          $(this).parent().parent().parent().parent().find('.selected-text').hide();
+        }
+      });
+
+  });
 })(jQuery);

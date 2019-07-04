@@ -63,7 +63,7 @@ get_header();
 <?php if (have_rows('components')): 
  while (have_rows('components')): the_row();
   get_template_part ( 'components/component', 'vertical-resource-ladder' );
-  get_template_part ( 'components/component', 'banner-cta' ); 
+  get_template_part ( 'components/component', 'three-column-full-width-cta' ); 
   get_template_part ( 'components/component', 'cta-block' ); 
 endwhile; endif; ?>
 <!-- Component listing -->

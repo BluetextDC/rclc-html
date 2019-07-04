@@ -288,8 +288,8 @@
                 },
                 "layout_5d1b3de8bb5a7": {
                     "key": "layout_5d1b3de8bb5a7",
-                    "name": "banner_cta",
-                    "label": "Banner CTA",
+                    "name": "three_column_full-width_cta",
+                    "label": "Three Column Full-Width CTA",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -318,8 +318,8 @@
                         },
                         {
                             "key": "field_5d1b3dfebb5a8",
-                            "label": "Listing",
-                            "name": "listing",
+                            "label": "CTA Listing",
+                            "name": "cta_listing",
                             "type": "flexible_content",
                             "instructions": "",
                             "required": 0,
@@ -338,9 +338,9 @@
                                     "sub_fields": [
                                         {
                                             "key": "field_5d1b3e0fbb5a9",
-                                            "label": "Content",
-                                            "name": "content",
-                                            "type": "textarea",
+                                            "label": "CTA",
+                                            "name": "cta",
+                                            "type": "link",
                                             "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
@@ -349,11 +349,7 @@
                                                 "class": "",
                                                 "id": ""
                                             },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "maxlength": "",
-                                            "rows": "",
-                                            "new_lines": ""
+                                            "return_format": "array"
                                         }
                                     ],
                                     "min": "",
@@ -362,7 +358,7 @@
                             },
                             "button_label": "Add Row",
                             "min": "",
-                            "max": ""
+                            "max": 3
                         }
                     ],
                     "min": "",
@@ -418,5 +414,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1562071751
+    "modified": 1562217966
 }

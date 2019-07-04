@@ -7262,7 +7262,7 @@ a:hover {
   background-color: transparent;
 }
 .checkbox-container:hover {
-  background-color: #999999;
+  background-color: #000000;
   color: #ffffff;
 }
 .checkbox-container:hover .checkmark {
