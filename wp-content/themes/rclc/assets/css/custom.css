@@ -313,7 +313,19 @@ div.wpcf7-mail-sent-ok {
     textarea{
       resize:none;
     }
-
+    .slider-sec .single-img .bg-img{
+      min-height: 570px;
+    }
+    .only-image .slick-track,
+    .only-image .slick-track .bg-img{
+      width: 100%!important;
+    }
+    .only-image .slick-dots{
+      display: none;
+    }
+    .slick-slide{
+      outline: none;
+    }
     @media(min-width: 767px) {
       .newslatter-form .form-control {
         padding-right: 98px;

@@ -152,4 +152,7 @@
 
   // Contact form JSON
 
+  // Image Block js
+  $('.single-slide.slick-active').parent().parent().parent().addClass('only-image');
+  // Image Block js
 })(jQuery);
