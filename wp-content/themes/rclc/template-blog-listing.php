@@ -130,7 +130,7 @@ get_header();
             <div class="blog-content">
               <h4><?php the_title(); ?></h4>
               <p><?php the_excerpt(); ?></p>
-              <span>December 13th, 2018</span>
+              <span><?php echo date("F dS, Y"); ?></span>
             </div>
           </div>
         </div>
