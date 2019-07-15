@@ -326,6 +326,13 @@ div.wpcf7-mail-sent-ok {
     .slick-slide{
       outline: none;
     }
+    .slider-sec.first-slide .slider .slick-track,
+    .slider-sec.first-slide .slider .slick-track .bg-img{
+      width: 100%!important;
+    }
+    .slider-sec.first-slide .slick-dots{
+      display: none;
+    }
     @media(min-width: 767px) {
       .newslatter-form .form-control {
         padding-right: 98px;
