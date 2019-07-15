@@ -68,90 +68,6 @@
             ]
         },
         {
-            "key": "field_5d1deb9574808",
-            "label": "Component List",
-            "name": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_5d1deb9f74809",
-            "label": "Components",
-            "name": "components",
-            "type": "flexible_content",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layouts": {
-                "layout_5d1deba5a99be": {
-                    "key": "layout_5d1deba5a99be",
-                    "name": "cta_block",
-                    "label": "CTA Block",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5d1debb17480a",
-                            "label": "Title",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5d1debb77480b",
-                            "label": "Form ID",
-                            "name": "form_id",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                }
-            },
-            "button_label": "Add Row",
-            "min": "",
-            "max": ""
-        },
-        {
             "key": "field_5d2c64bfb8abb",
             "label": "Footer",
             "name": "",
@@ -234,5 +150,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563190539
+    "modified": 1563191560
 }
