@@ -41,7 +41,7 @@ get_header();
             <div class="course-info vh-center">
               <?php  
               // get raw date
-              $dateBegins = get_field('date_course_begins', false, false);
+              $date = get_field('date_course_begins', false, false);
               // make date object
               $date = new DateTime($date);?>
               <span><?php echo $date->format('F Y'); ?></span>
