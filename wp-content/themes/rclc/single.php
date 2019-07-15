@@ -11,7 +11,7 @@ get_header();
 ?>
 <!-- Hero Zone -->
 <section class="hero-zone generic-landing blog-details">
-	<div class="bg-img" style="background-image: url('assets/img/details-bg.jpg');"></div>
+	<div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/details-bg.jpg');"></div>
 	<div class="container">
 		<div class="row">
 			<div class="content details-page">
@@ -82,7 +82,7 @@ get_header();
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <div class="bg-img" style="background-image: url('assets/img/single-img.jpg');">
+            <div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/single-img.jpg');">
             </div>
           </div>
         </div>

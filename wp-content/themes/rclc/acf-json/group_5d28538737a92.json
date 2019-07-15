@@ -242,7 +242,7 @@
                 "id": ""
             },
             "choices": {
-                "yes": "Yes"
+                "block": "Yes"
             },
             "allow_custom": 0,
             "default_value": [],
@@ -265,7 +265,7 @@
                 "id": ""
             },
             "choices": {
-                "yes": "Yes"
+                "block": "Yes"
             },
             "allow_custom": 0,
             "default_value": [],
@@ -294,5 +294,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563181893
+    "modified": 1563191169
 }
