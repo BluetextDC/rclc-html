@@ -18,10 +18,34 @@
             "layout": "row",
             "sub_fields": [
                 {
+                    "key": "field_5d2c0f91d1aeb",
+                    "label": "Hero Image",
+                    "name": "hero_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
                     "key": "field_5d1b35e03b842",
-                    "label": "Content",
-                    "name": "content",
-                    "type": "textarea",
+                    "label": "Hero Text",
+                    "name": "hero_text",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -32,9 +56,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -549,5 +573,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1562914697
+    "modified": 1563168683
 }
