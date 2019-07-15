@@ -3,6 +3,112 @@
     "title": "Course CPT",
     "fields": [
         {
+            "key": "field_5d2c11ff5b4c5",
+            "label": "Course Information",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d2c12245b4c6",
+            "label": "Course Location",
+            "name": "course_location",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d2c122f5b4c7",
+            "label": "Date Course Begins",
+            "name": "date_course_begins",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "d",
+            "first_day": 1
+        },
+        {
+            "key": "field_5d2c12455b4c8",
+            "label": "Date Course Ends",
+            "name": "date_course_ends",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "d",
+            "first_day": 1
+        },
+        {
+            "key": "field_5d2c12635b4c9",
+            "label": "Course Preview Text",
+            "name": "course_preview_text",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d2c17ffa0411",
+            "label": "Component List",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_5d2853ab00de7",
             "label": "Components",
             "name": "components",
@@ -104,6 +210,69 @@
             "button_label": "Add Row",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "field_5d2c12825b4ca",
+            "label": "Footer",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d2c12915b4cb",
+            "label": "Display Contact Form",
+            "name": "display_contact_form",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5d2c12c95b4cc",
+            "label": "Display Subscribe Form",
+            "name": "display_subscribe_form",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         }
     ],
     "location": [
@@ -111,7 +280,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "course"
             }
         ]
     ],
@@ -120,8 +289,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1562924066
+    "modified": 1563181893
 }

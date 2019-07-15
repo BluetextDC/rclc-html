@@ -31,111 +31,41 @@ get_header();
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <div class="media course-item">
+        <?php
+        $args = array( 'post_type' => 'course', 'posts_per_page' => -1 );
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+         <div class="media course-item">
+          <a href="<?php the_permalink(); ?>" class="outer_link"></a>
           <div class="media-left">
             <div class="course-info vh-center">
-              <span>MARCH 2019</span>
-              <b>27-28</b>
-              <span class="full-date">MARCH 27-18, 2019</span>
+              <?php  
+              // get raw date
+              $dateBegins = get_field('date_course_begins', false, false);
+              // make date object
+              $date = new DateTime($date);?>
+              <span><?php echo $date->format('F Y'); ?></span>
+              <b><?php the_field('date_course_begins'); ?>-<?php the_field('date_course_ends'); ?></b>
+              <span class="full-date"><?php echo $date->format('F'); ?> <?php the_field('date_course_begins'); ?>-<?php the_field('date_course_ends'); ?>, <?php echo $date->format('Y'); ?></span>
             </div>
           </div>
           <div class="media-body">
-            <h4>Service Excellence Culture</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Is eirne awek qkwnasd iasndkj aiksnda.</p>
-            <span>The Ritz-Carlton, Tyson Corner in McLean, VA</span>
+            <h4><?php the_title(); ?></h4>
+            <?php if(get_field('course_preview_text')): ?>
+              <p><?php the_field('course_preview_text'); ?></p>
+            <?php endif; ?>
+            <?php if(get_field('course_location')): ?>
+              <span><?php the_field('course_location'); ?></span>
+            <?php endif; ?>
             <div class="btn-outer">
-              <a href="javascript:void(0)" class="btn submit-btn vh-center">REGISTER</a>
+              <a href="<?php the_permalink(); ?>" class="btn submit-btn vh-center">REGISTER</a>
             </div>
           </div>
         </div>
-        <div class="media course-item">
-          <div class="media-left">
-            <div class="course-info vh-center">
-              <span>MARCH 2019</span>
-              <b>27-28</b>
-              <span class="full-date">MARCH 27-18, 2019</span>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4>Service Excellence Culture</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Is eirne awek qkwnasd iasndkj aiksnda.</p>
-            <span>The Ritz-Carlton, Tyson Corner in McLean, VA</span>
-            <div class="btn-outer">
-              <a href="javascript:void(0)" class="btn submit-btn vh-center">REGISTER</a>
-            </div>
-          </div>
-        </div>
-        <div class="media course-item">
-          <div class="media-left">
-            <div class="course-info vh-center">
-              <span>MARCH 2019</span>
-              <b>27-28</b>
-              <span class="full-date">MARCH 27-18, 2019</span>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4>Service Excellence Culture</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Is eirne awek qkwnasd iasndkj aiksnda.</p>
-            <span>The Ritz-Carlton, Tyson Corner in McLean, VA</span>
-            <div class="btn-outer">
-              <a href="javascript:void(0)" class="btn submit-btn vh-center">REGISTER</a>
-            </div>
-          </div>
-        </div>
-        <div class="media course-item">
-          <div class="media-left">
-            <div class="course-info vh-center">
-              <span>MARCH 2019</span>
-              <b>27-28</b>
-              <span class="full-date">MARCH 27-18, 2019</span>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4>Service Excellence Culture</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Is eirne awek qkwnasd iasndkj aiksnda.</p>
-            <span>The Ritz-Carlton, Tyson Corner in McLean, VA</span>
-            <div class="btn-outer">
-              <a href="javascript:void(0)" class="btn submit-btn vh-center">REGISTER</a>
-            </div>
-          </div>
-        </div>
-        <div class="media course-item">
-          <div class="media-left">
-            <div class="course-info vh-center">
-              <span>MARCH 2019</span>
-              <b>27-28</b>
-              <span class="full-date">MARCH 27-18, 2019</span>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4>Service Excellence Culture</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Is eirne awek qkwnasd iasndkj aiksnda.</p>
-            <span>The Ritz-Carlton, Tyson Corner in McLean, VA</span>
-            <div class="btn-outer">
-              <a href="javascript:void(0)" class="btn submit-btn vh-center">REGISTER</a>
-            </div>
-          </div>
-        </div>
-        <div class="media course-item">
-          <div class="media-left">
-            <div class="course-info vh-center">
-              <span>MARCH 2019</span>
-              <b>27-28</b>
-              <span class="full-date">MARCH 27-18, 2019</span>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4>Service Excellence Culture</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Is eirne awek qkwnasd iasndkj aiksnda.</p>
-            <span>The Ritz-Carlton, Tyson Corner in McLean, VA</span>
-            <div class="btn-outer">
-              <a href="javascript:void(0)" class="btn submit-btn vh-center">REGISTER</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <?php endwhile; ?>
     </div>
   </div>
+</div>
 </section>  
 <?php if (have_rows('components')): 
   while (have_rows('components')): the_row();
