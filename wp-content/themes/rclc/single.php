@@ -20,20 +20,27 @@ get_header();
   <div class="row">
    <div class="content details-page">
     <h1><?php the_title(); ?></h1>
-    <ul class="blog-info">
-     <li>
-      <p><?php echo get_the_date('F dS, Y'); ?></p>
-    </li>
-    <li>
-      <p>By: adasdads</p>
-    </li>
-  </ul>
+    <?php
+    if ( have_posts() ) :
+      while ( have_posts() ) : the_post(); ?>
+        <ul class="blog-info">
+         <li>
+          <p><?php echo get_the_date('F dS, Y'); ?></p>
+        </li>
+        <li>
+          <p><?php echo $author = get_the_author(); ?></p>
+        </li>
+      </ul>
+    <?php endwhile; ?>
+  <?php endif; ?>
+  <?php  wp_reset_query(); ?>
   <ul class="social-links">
-   <li class="item"><a href="javascript:void(0)"><i class="icon-linkedin-button-logo"></i></a></li>
-   <li class="item"><a href="javascript:void(0)"><i class="icon-instagram-logo"></i></a></li>
-   <li class="item"><a href="javascript:void(0)"><i class="icon-twitter-logo-silhouette"></i></a></li>
-   <li class="item"><a href="javascript:void(0)"><i class="icon-facebook-app-symbol"></i></a></li>
- </ul>
+    <?php echo do_shortcode('[addtoany buttons="linkedin,instagram,twitter,facebook"]'); ?>
+    <!-- <li class="item"><a href="javascript:void(0)"><i class="icon-linkedin-button-logo"></i></a></li>
+    <li class="item"><a href="javascript:void(0)"><i class="icon-instagram-logo"></i></a></li>
+    <li class="item"><a href="javascript:void(0)"><i class="icon-twitter-logo-silhouette"></i></a></li>
+    <li class="item"><a href="javascript:void(0)"><i class="icon-facebook-app-symbol"></i></a></li> -->
+  </ul>
 </div>
 </div>
 </div>

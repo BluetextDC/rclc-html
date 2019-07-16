@@ -364,6 +364,16 @@ div.wpcf7-mail-sent-ok {
       border-left: 1px solid #000;
       padding-left: 25px;
     }
+    .a2a_kit .a2a_svg{
+      background-color:transparent!important; 
+    }
+    .addtoany_list.a2a_kit_size_32 a:not(.addtoany_special_service)>span{
+      width: 26px!important;
+      height: 26px!important;
+    }
+    .addtoany_share_save.addtoany_share{
+      display: none!important;
+    }
     @media(min-width: 767px) {
       .newslatter-form .form-control {
         padding-right: 98px;
