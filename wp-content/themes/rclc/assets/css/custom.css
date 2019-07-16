@@ -333,6 +333,36 @@ div.wpcf7-mail-sent-ok {
     .slider-sec.first-slide .slick-dots{
       display: none;
     }
+    .dropdown .dropdown-style li.filter-btns{
+      padding: 10px 18px;
+    }
+    .dropdown .dropdown-style li button {
+      display: inline-block;
+      width: 49%;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #000;
+      background: 0 0;
+      box-shadow: none;
+      border: none;
+      text-align: left;
+      padding: 5px 0;
+      -webkit-transition: all .25s;
+      -moz-transition: all .25s;
+      -ms-transition: all .25s;
+      -o-transition: all .25s;
+      transition: all .25s;
+      outline: 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .dropdown .dropdown-style li button:hover{
+      text-decoration: underline;
+    }
+    .dropdown .dropdown-style li button.right-btn {
+      border-left: 1px solid #000;
+      padding-left: 25px;
+    }
     @media(min-width: 767px) {
       .newslatter-form .form-control {
         padding-right: 98px;

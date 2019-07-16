@@ -26,91 +26,90 @@ get_header();
                 <h1><?php the_sub_field('hero_text'); ?></h1>
               <?php endif; ?>
               <div class="filter-block">
-                <form>
-                  <div class="dropdown">
-                    <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">
-                      <span class="first-text">Filter by</span>
-                      <span class="counter"></span>
-                      <span class="selected-text">item selected</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-style" id="cate-check">
-                      <li>
-                        <label class="checkbox-container">cat-1<input type="checkbox" class="alm-checkbox" value="cat-1">
-                          <span class="checkmark"></span>
-                        </label>
+                <form id="filter-form">
+                  <input type="hidden" id="categories" value="<?php echo isset($_GET['categories']) ? $_GET['categories']: ''?>" name="categories">
+                  <input type="hidden" id="tags" value="<?php echo isset($_GET['tags']) ? $_GET['tags']: ''?>" name="tags">
+                  <?php 
+                  $categories = get_categories(); {?>
+                    <?php if($categories) :?>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">
+                          <span class="first-text">Filter by categories</span>
+                          <span class="counter"></span>
+                          <span class="selected-text">item selected</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-style" id="cate-check">
+                          <?php foreach($categories as $category) {?>
+                            <li>
+                              <label class="checkbox-container"><?php echo $category->name; ?><input type="checkbox" class="alm-checkbox" value="<?php echo $category->slug; ?>" <?php if(isset($_GET['categories']) && in_array($key, explode(",", $_GET['categories']))){ ?> <?php }?>>
+                                <span class="checkmark"></span>
+                              </label>
+                            </li>
+                          <?php }?>
+                          <li class="filter-btns">
+                            <button class="clearCheckBox" id="clear-all-category">clear all</button>
+                            <button class="right-btn apply-filter-category">apply</button>
+                          </li>
+                        </ul>
+                      </div>
+                    <?php endif; ?>
+                  <?php }?>
+                  <?php
+                  $args = array( 
+                    'order' => 'DESC',
+                    'post_type' => 'post', 
+                    'posts_per_page' => -1,
+                  );
+                  ?>
+                  <?php 
+                  $aval_tags = [];
+                  $loop = new WP_Query( $args );
+                  while ( $loop->have_posts() ) : $loop->the_post(); 
+                    $t = wp_get_post_tags($post->ID);
+                    foreach ($t as $key => $value) {
+                      $aval_tags[$value->slug]=$value;
+                    }
+                  endwhile;?>
+                  <?php if($aval_tags): ?>
+                    <div class="dropdown">
+                      <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">Filter by tags</a>
+                      <ul class="dropdown-menu dropdown-style" id="tag-check">
+                       <?php foreach ($aval_tags as $key=>$value) { ?>
+                        <li>
+                          <label class="checkbox-container"><?php echo $value->name; ?><input type="checkbox" class="alm-checkbox" value="<?php echo $key; ?>" <?php if(isset($_GET['tags']) && in_array($key, explode(",", $_GET['tags']))){ ?> <?php }?>>
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                      <?php }?>
+                      <li class="filter-btns">
+                        <button class="clearCheckBox" id="clear-all-category">clear all</button>
+                        <button class="right-btn apply-filter-tag">apply</button>
                       </li>
-                      <li>
-                        <label class="checkbox-container">cat-2<input type="checkbox" class="alm-checkbox" value="cat-1">
-                          <span class="checkmark"></span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="checkbox-container">cat-3<input type="checkbox" class="alm-checkbox" value="cat-1">
-                          <span class="checkmark"></span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="checkbox-container">cat-4<input type="checkbox" class="alm-checkbox" value="cat-1">
-                          <span class="checkmark"></span>
-                        </label>
-                      </li>
-                      <li>
-                        <label class="checkbox-container">cat-5<input type="checkbox" class="alm-checkbox" value="cat-1">
-                          <span class="checkmark"></span>
-                        </label>
-                      </li>
-                    <!-- <li class="filter-btns">
-                      <button class="clearCheckBox" id="clear-all-category">clear all</button>
-                      <button class="right-btn apply-filter-category">apply</button>
-                    </li> -->
-                  </ul>
-                </div>
-                <div class="dropdown">
-                  <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">Filter by</a>
-                  <ul class="dropdown-menu dropdown-style" id="cate-check">
-                    <li>
-                      <label class="checkbox-container">cat-1<input type="checkbox" class="alm-checkbox" value="cat-1">
-                        <span class="checkmark"></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="checkbox-container">cat-2<input type="checkbox" class="alm-checkbox" value="cat-1">
-                        <span class="checkmark"></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="checkbox-container">cat-3<input type="checkbox" class="alm-checkbox" value="cat-1">
-                        <span class="checkmark"></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="checkbox-container">cat-4<input type="checkbox" class="alm-checkbox" value="cat-1">
-                        <span class="checkmark"></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="checkbox-container">cat-5<input type="checkbox" class="alm-checkbox" value="cat-1">
-                        <span class="checkmark"></span>
-                      </label>
-                    </li>
-                    <!-- <li class="filter-btns">
-                      <button class="clearCheckBox" id="clear-all-category">clear all</button>
-                      <button class="right-btn apply-filter-category">apply</button>
-                    </li> -->
-                  </ul>
-                </div>
+                    </ul>
+                  </div>
+                <?php endif; ?>
               </form>
-              <div class="taglist-outer">
-                <div id="filter-added" class="filter-added filter-blog-added">
-                  <!-- <a class="btn btn-default link  filter-clear" id="clear-blog-tags">Clear All</a> -->
-                  <ul class="tag-list">
-                    <li>tag</li>
-                    <li>tag</li>
-                    <li class="clear-all"><a>clear all tags</a></li>
-                  </ul>
+              <?php if((isset($_GET['categories']) && $_GET['categories']!="") || (isset($_GET['tags']) && $_GET['tags']!="")){?>
+                <div class="taglist-outer">
+                  <div id="filter-added" class="filter-added filter-blog-added">
+                    <!-- <a class="btn btn-default link  filter-clear" id="clear-blog-tags">Clear All</a> -->
+                    <ul class="tag-list">
+                      <?php foreach($categories as $category) { ?>
+                        <?php if(isset($_GET['categories']) && in_array($category->slug, explode(",", $_GET['categories']))){ ?>
+                          <li data-type="categories" data-slug="<?php echo $category->slug; ?>"><?php echo $category->name; ?></li>
+                        <?php }?>
+                      <?php } ?>
+                      <?php foreach ($aval_tags as $key=>$value) { ?>
+                        <?php if(isset($_GET['tags']) && in_array($key, explode(",", $_GET['tags']))){ ?>
+                          <li data-type="tags" data-slug="<?php echo $key; ?>"><?php echo $value->name; ?></li>
+                        <?php }?>
+                      <?php } ?>
+                      <li class="clear-all"><a id="clear-post-tags">clear all tags</a></li>
+                    </ul>
+                  </div>
+                  <div class="clearfix"></div>
                 </div>
-                <div class="clearfix"></div>
-              </div>
+              <?php }?>
             </div>
           </div>
         </div>
@@ -130,117 +129,113 @@ get_header();
             <div class="blog-content">
               <h4><?php the_title(); ?></h4>
               <p><?php the_excerpt(); ?></p>
-              <span><?php echo date("F dS, Y"); ?></span>
+              <span><?php the_date("F dS, Y"); ?></span>
             </div>
           </div>
         </div>
       <?php endforeach; ?>
       <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
     <?php endif; ?>
-
   </section>
 <?php endwhile; ?>  
 <?php endif; ?>
 <!-- Hero Zone -->
+<?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array( 
+  'post_type' => 'post',
+  'posts_per_page' => 6,
+  'orderby' => 'DESC',
+  'paged' => $paged,
+);
+if(isset($_GET['keyword']) && trim($_GET['keyword']) != ""){
+  $args['s'] = $_GET['keyword']; 
+}
+if(isset($_GET['categories']) && trim($_GET['categories']) != ""){
+  $args['category_name'] = $_GET['categories']; 
+}
+if(isset($_GET['tags']) && trim($_GET['tags']) != ""){
+  $args['tag'] = $_GET['tags']; 
+}
+?>
 <section class="listing-outer">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 padding-none">
-        <ul class="blog-listing">
-          <li class="item">
+ <div class="container">
+  <div class="row">
+    <div class="col-sm-12 padding-none">
+      <ul class="blog-listing">
+        <?php
+        $loop = new WP_Query( $args );
+        if ($loop->have_posts()) :
+          while ( $loop->have_posts() ) : $loop->the_post(); ?>
+           <li class="item">
             <div class="item-inner">
-              <a href="blog-details.html" class="outer_link"></a>
-              <div class="bg-img"></div>
+              <a href="<?php the_permalink(); ?>" class="outer_link"></a>
+              <?php if(has_post_thumbnail()){ ?>
+                <div class="bg-img" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+              <?php } else {?>
+                <div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/blog-thumb.jpg');"></div>
+              <?php }?>
               <div class="blog-content">
-                <h4>Tips For Giving Effective Constructive Feedback Lorem Ipsum Dolor Review</h4>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum….</p>
-                <span>December 13th, 2018</span>
+                <h4><?php the_title(); ?></h4>
+                <p><?php the_excerpt(); ?></p>
+                <span><?php echo get_the_date('F dS, Y'); ?></span>
               </div>
             </div>
           </li>
-          <li class="item">
-            <div class="item-inner">
-              <a href="blog-details.html" class="outer_link"></a>
-              <div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/slide-2.jpg');"></div>
-              <div class="blog-content">
-                <h4>Tips For Giving Effective Constructive Feedback Lorem Ipsum Dolor Review</h4>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum….</p>
-                <span>December 13th, 2018</span>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="item-inner">
-              <a href="blog-details.html" class="outer_link"></a>
-              <div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/blog-1.jpg');"></div>
-              <div class="blog-content">
-                <h4>Tips For Giving Effective Constructive Feedback Lorem Ipsum Dolor Review</h4>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum….</p>
-                <span>December 13th, 2018</span>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="item-inner">
-              <a href="blog-details.html" class="outer_link"></a>
-              <div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/blog-2.jpg');"></div>
-              <div class="blog-content">
-                <h4>Tips For Giving Effective Constructive Feedback Lorem Ipsum Dolor Review</h4>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum….</p>
-                <span>December 13th, 2018</span>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="item-inner">
-              <a href="blog-details.html" class="outer_link"></a>
-              <div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/blog-3.jpg');"></div>
-              <div class="blog-content">
-                <h4>Tips For Giving Effective Constructive Feedback Lorem Ipsum Dolor Review</h4>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum….</p>
-                <span>December 13th, 2018</span>
-              </div>
-            </div>
-          </li>
-          <li class="item">
-            <div class="item-inner">
-              <a href="blog-details.html" class="outer_link"></a>
-              <div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/blog-4.jpg');"></div>
-              <div class="blog-content">
-                <h4>Tips For Giving Effective Constructive Feedback Lorem Ipsum Dolor Review</h4>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum….</p>
-                <span>December 13th, 2018</span>
-              </div>
-            </div>
-          </li>
-          <div class="clearfix"></div>
-        </ul>
-      </div>
-    </div>
-    <div class="row pagination-outer pagination-visible">
-      <div class="col-sm-5 center">
-        <p>Showing <b>1-8</b> of 700 results</p>
-      </div>
-      <div class="col-sm-7 text-right center">
-        <div class="pagination hidden-xs">
-          <span aria-current="page" class="page-numbers current">1</span>
-          <a class="page-numbers" href="javascript:void(0)">2</a>
-          <a class="page-numbers" href="javascript:void(0)">3</a>
-          <a class="page-numbers" href="javascript:void(0)">4</a>
-          <a class="page-numbers" href="javascript:void(0)">5</a>
-          <a class="page-numbers" href="javascript:void(0)">6</a>
-          <a class="page-numbers" href="javascript:void(0)">7</a>
-        </div>
-        <div class="pagination-mobile pagination visible-xs">
-          <a class="prev page-numbers" href="javascript:void(0)"><i class="icon-left"></i></a>
-          <span aria-current="page" class="page-numbers current">1</span> <b>/</b> 
-          <a class="page-numbers" href="javascript:void(0)">10</a>
-          <a class="next page-numbers" href="javascript:void(0)"><i class="icon-left"></i></a>
-        </div>
-      </div>
-    </div>
+        <?php endwhile; wp_reset_postdata(); ?>
+        <?php else : ?>
+         <div class="no-post">
+           <p>Posts not found</p>
+         </div>
+       <?php endif; ?>
+       <div class="clearfix"></div>
+     </ul>
+   </div>
+ </div>
+ <div class="row pagination-outer pagination-visible">
+  <div class="col-sm-5 center">
+    <?php
+    $args = array(
+     'total' => $loop->max_num_pages,
+     'current' => max(1, get_query_var('paged')),
+   );
+    
+   ?>
+   <!-- <?php
+   $count_posts = wp_count_posts();
+   $published_posts = $count_posts->publish;
+   $current_page = $args['current'];
+   ?>
+   <?php echo $current_page; ?>
+   <p>Showing <b> <?php echo ($current_page == 1) ? 1: $current_page*6; ?> - <?php echo $current_page * 6 ?></b> of <?php echo $published_posts ?> results</p> -->
+ </div>
+ <div class="col-sm-7 text-right center">
+  <div class="pagination hidden-xs">
+    <?php
+    $args = array(
+     'total' => $loop->max_num_pages,
+     'current' => max(1, get_query_var('paged')),
+   );
+    echo paginate_links($args);
+    ?>
   </div>
+  <div class="pagination-mobile pagination visible-xs">
+    <?php
+    $args = array(
+     'total' => $loop->max_num_pages,
+     'current' => max(1, get_query_var('paged')),
+     'prev_next' => true,
+     'prev_text' => __('<i class="icon-left"></i>'),
+     'next_text' => __('<i class="icon-left"></i>'),
+   );
+    echo paginate_links($args);
+    ?>
+  </div>
+</div>
+</div>
+</div>
 </section>
+
 <?php 
 get_template_part ( 'components/component', 'cta-block' ); 
 ?>

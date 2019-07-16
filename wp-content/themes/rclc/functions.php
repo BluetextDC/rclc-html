@@ -159,6 +159,8 @@ function rclc_scripts() {
 	
 	wp_enqueue_script('rclc-bootstrap', get_template_directory_uri() . '/assets/js/vendor/bootstrap.min.js', array(), '20151215', true);
 
+	wp_enqueue_script('rclc-filter', get_template_directory_uri() . '/assets/js/vendor/filter.js', array(), '20151215', true);
+
 	wp_enqueue_script('rclc-main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true);
 
 	wp_enqueue_script( 'rclc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
