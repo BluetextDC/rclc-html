@@ -356,7 +356,8 @@ div.wpcf7-mail-sent-ok {
       font-weight: 600;
       letter-spacing: 1px;
     }
-    .dropdown .dropdown-style li button:hover{
+    .dropdown .dropdown-style li button:hover,
+    .taglist-outer .tag-list li:hover{
       text-decoration: underline;
     }
     .dropdown .dropdown-style li button.right-btn {

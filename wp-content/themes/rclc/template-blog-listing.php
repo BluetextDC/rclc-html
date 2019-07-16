@@ -104,7 +104,7 @@ get_header();
                           <li data-type="tags" data-slug="<?php echo $key; ?>"><?php echo $value->name; ?></li>
                         <?php }?>
                       <?php } ?>
-                      <li class="clear-all"><a id="clear-post-tags">clear all tags</a></li>
+                      <li class="clear-all"><a id="clear-post-tags">clear all</a></li>
                     </ul>
                   </div>
                   <div class="clearfix"></div>
