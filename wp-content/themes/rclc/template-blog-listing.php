@@ -158,8 +158,10 @@ if(isset($_GET['tags']) && trim($_GET['tags']) != ""){
   $args['tag'] = $_GET['tags']; 
 }
 ?>
+
 <section class="listing-outer">
  <div class="container">
+  <!-- Post listing -->
   <div class="row">
     <div class="col-sm-12 padding-none">
       <ul class="blog-listing">
@@ -196,36 +198,33 @@ if(isset($_GET['tags']) && trim($_GET['tags']) != ""){
      </ul>
    </div>
  </div>
-
+ <!-- Post listing -->
+ <!-- pagination block -->
  <div class="row pagination-outer pagination-visible">
   <div class="col-sm-5 center">
    <p>Showing <b><?php echo $from?>-<?php echo $to?></b> of <?php echo $of?> results</p>
  </div>
 
- <div class="col-sm-7 text-right center">
-  <div class="pagination hidden-xs">
-    <?php
-    $args = array(
-     'total' => $loop->max_num_pages,
-     'current' => max(1, get_query_var('paged')),
-   );
-    echo paginate_links($args);
-    ?>
+ <!-- Pagination pages counting -->
+ <?php
+ $args = array(
+   'total' => $loop->max_num_pages,
+   'current' => max(1, get_query_var('paged')),
+   'prev_next' => true,
+   'prev_text' => __('<i class="icon-left"></i>'),
+   'next_text' => __('<i class="icon-left"></i>'),
+ ); { ?>
+   <div class="col-sm-7 text-right center">
+    <div class="pagination hidden-xs">
+      <?php echo paginate_links($args); ?>
+    </div>
+    <div class="pagination-mobile pagination visible-xs">
+      <?php echo paginate_links($args); ?>
+    </div>
   </div>
-  <div class="pagination-mobile pagination visible-xs">
-    <?php
-    $args = array(
-     'total' => $loop->max_num_pages,
-     'current' => max(1, get_query_var('paged')),
-     'prev_next' => true,
-     'prev_text' => __('<i class="icon-left"></i>'),
-     'next_text' => __('<i class="icon-left"></i>'),
-   );
-    echo paginate_links($args);
-    ?>
-  </div>
+<?php }?>
 </div>
-</div>
+<!-- pagination block -->
 </div>
 </section>
 
