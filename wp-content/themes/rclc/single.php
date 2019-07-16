@@ -11,28 +11,32 @@ get_header();
 ?>
 <!-- Hero Zone -->
 <section class="hero-zone generic-landing blog-details">
-	<div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/details-bg.jpg');"></div>
-	<div class="container">
-		<div class="row">
-			<div class="content details-page">
-				<h1><?php the_title(); ?></h1>
-				<ul class="blog-info">
-					<li>
-						<p><?php echo get_the_date('F dS, Y'); ?></p>
-					</li>
-					<li>
-            <p>By: adasdads</p>
-          </li>
-        </ul>
-        <ul class="social-links">
-         <li class="item"><a href="javascript:void(0)"><i class="icon-linkedin-button-logo"></i></a></li>
-         <li class="item"><a href="javascript:void(0)"><i class="icon-instagram-logo"></i></a></li>
-         <li class="item"><a href="javascript:void(0)"><i class="icon-twitter-logo-silhouette"></i></a></li>
-         <li class="item"><a href="javascript:void(0)"><i class="icon-facebook-app-symbol"></i></a></li>
-       </ul>
-     </div>
-   </div>
- </div>
+ <?php if(has_post_thumbnail()){ ?>
+   <div class="bg-img" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+ <?php } else {?>
+  <div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/details-bg.jpg');"></div>
+<?php }?>
+<div class="container">
+  <div class="row">
+   <div class="content details-page">
+    <h1><?php the_title(); ?></h1>
+    <ul class="blog-info">
+     <li>
+      <p><?php echo get_the_date('F dS, Y'); ?></p>
+    </li>
+    <li>
+      <p>By: adasdads</p>
+    </li>
+  </ul>
+  <ul class="social-links">
+   <li class="item"><a href="javascript:void(0)"><i class="icon-linkedin-button-logo"></i></a></li>
+   <li class="item"><a href="javascript:void(0)"><i class="icon-instagram-logo"></i></a></li>
+   <li class="item"><a href="javascript:void(0)"><i class="icon-twitter-logo-silhouette"></i></a></li>
+   <li class="item"><a href="javascript:void(0)"><i class="icon-facebook-app-symbol"></i></a></li>
+ </ul>
+</div>
+</div>
+</div>
 </section>
 <!-- Hero Zone -->
 <!-- wysiwyg-block -->
