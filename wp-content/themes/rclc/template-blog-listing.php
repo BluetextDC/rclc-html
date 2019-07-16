@@ -166,6 +166,10 @@ if(isset($_GET['tags']) && trim($_GET['tags']) != ""){
         <?php
         $loop = new WP_Query( $args );
         if ($loop->have_posts()) :
+          $prev_posts = ( $paged - 1 ) * 6;
+          $from = 1 + $prev_posts;
+          $to = count( $loop->posts ) + $prev_posts;
+          $of = $loop->found_posts;
           while ( $loop->have_posts() ) : $loop->the_post(); ?>
            <li class="item">
             <div class="item-inner">
@@ -192,23 +196,12 @@ if(isset($_GET['tags']) && trim($_GET['tags']) != ""){
      </ul>
    </div>
  </div>
+
  <div class="row pagination-outer pagination-visible">
   <div class="col-sm-5 center">
-    <?php
-    $args = array(
-     'total' => $loop->max_num_pages,
-     'current' => max(1, get_query_var('paged')),
-   );
-    
-   ?>
-   <!-- <?php
-   $count_posts = wp_count_posts();
-   $published_posts = $count_posts->publish;
-   $current_page = $args['current'];
-   ?>
-   <?php echo $current_page; ?>
-   <p>Showing <b> <?php echo ($current_page == 1) ? 1: $current_page*6; ?> - <?php echo $current_page * 6 ?></b> of <?php echo $published_posts ?> results</p> -->
+   <p>Showing <b><?php echo $from?>-<?php echo $to?></b> of <?php echo $of?> results</p>
  </div>
+
  <div class="col-sm-7 text-right center">
   <div class="pagination hidden-xs">
     <?php
