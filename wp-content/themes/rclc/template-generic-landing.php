@@ -24,7 +24,7 @@ get_header();
 		get_template_part ( 'components/component', 'wysiwyg-block' );  
 		get_template_part ( 'components/component', 'image-block' );
 		get_template_part ( 'components/component', 'vertical-resource-ladder' );
-		get_template_part ( 'components/component', 'promo-cards' );
+		get_template_part ( 'components/component', '3-column_listing' );
 		get_template_part ( 'components/component', 'cta-block' );
 		get_template_part ( 'components/component', 'image-content-promo' );
 		get_template_part ( 'components/component', 'content-block' ); 

@@ -495,6 +495,129 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d2eb85086e20": {
+                    "key": "layout_5d2eb85086e20",
+                    "name": "3-column_listing",
+                    "label": "3-Column Listing",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d2eb86086e21",
+                            "label": "Content Display Mode",
+                            "name": "content_display_mode",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "select_pages": "Select Pages",
+                                "display_by_taxonomy": "Display by Taxonomy"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5d2eb8ba86e22",
+                            "label": "Limit Items to 3 Total",
+                            "name": "limit_items_to_3_total",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Enabled",
+                            "ui_off_text": "Disabled"
+                        },
+                        {
+                            "key": "field_5d2eb8f786e23",
+                            "label": "Page Select",
+                            "name": "page_select",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d2eb86086e21",
+                                        "operator": "==",
+                                        "value": "select_pages"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post",
+                                "page",
+                                "course"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": 1,
+                            "max": 3,
+                            "return_format": "object"
+                        },
+                        {
+                            "key": "field_5d2eb93386e24",
+                            "label": "Taxonomy Select",
+                            "name": "taxonomy_select",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d2eb86086e21",
+                                        "operator": "==",
+                                        "value": "display_by_taxonomy"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "min": 1,
+                            "max": "",
+                            "return_format": "object"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -521,5 +644,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1562923887
+    "modified": 1563351350
 }
