@@ -57,15 +57,18 @@ div.wpcf7-mail-sent-ok {
 .custom-accordian .panel .panel-body h2 {
     text-align: left;
 }
-.blog-cards{
+
+.blog-cards {
     padding-bottom: 35px;
 }
-.blog-cards.limite-th .col-sm-4{
+
+.blog-cards.limite-th .col-sm-4 {
     display: none;
 }
+
 .blog-cards.limite-th .col-sm-4:nth-child(1),
 .blog-cards.limite-th .col-sm-4:nth-child(2),
-.blog-cards.limite-th .col-sm-4:nth-child(3){
+.blog-cards.limite-th .col-sm-4:nth-child(3) {
     display: block;
 }
 
@@ -405,9 +408,20 @@ textarea {
 .newslatter-sec div.wpcf7-mail-sent-ok {
     bottom: -65px;
 }
-.blog-cards .card{
+
+.blog-cards .card {
     margin-bottom: 15px;
 }
+
+.course-single {
+    padding-top: 75px;
+}
+
+.course-single h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
 
 @media(min-width: 767px) {
     .newslatter-form .form-control {
@@ -487,6 +501,10 @@ textarea {
 
     .cta-section .cta-outer a {
         font-size: 30px;
+    }
+
+    .course-single {
+        padding-top: 50px;
     }
 }
 

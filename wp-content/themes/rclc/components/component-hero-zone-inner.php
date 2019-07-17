@@ -14,5 +14,24 @@
         </div>
       </div>
     </section>
+    <?php if(is_single()){?>
+      <div class="course-single">
+        <div class="container container-sm">
+          <div class="row">
+            <div class="col-sm-12">
+              <?php if(get_field('course_location')): ?>
+                <h2><?php the_field('course_location'); ?></h2>
+              <?php endif; ?>
+              <?php  
+              // get raw date
+              $date = get_field('date_course_begins', false, false);
+              // make date object
+              $date = new DateTime($date);?>
+              <h3><?php echo $date->format('F'); ?> <?php the_field('date_course_begins'); ?>-<?php the_field('date_course_ends'); ?>, <?php echo $date->format('Y'); ?></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php }?>
   <?php endwhile; ?>  
   <?php endif; ?>
