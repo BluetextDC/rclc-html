@@ -1,6 +1,6 @@
 <!-- newslatter   -->
 <?php if ( is_page_template( array( 'template-blog-listing.php', 'single.php' ) ) ) {?>
-	<section class="newslatter-sec padding-global light_gray-bg text-center hidden<?php if(get_field('display_subscribe_form')): ?><?php the_field('display_subscribe_form'); ?><?php endif;?>">
+	<section class="newslatter-sec padding-global light_gray-bg text-center hidden <?php if(get_field('display_subscribe_form')): ?><?php the_field('display_subscribe_form'); ?><?php endif;?>">
 		<div class="container container-sm">
 			<div class="row">
 				<div class="col-sm-12">
@@ -11,7 +11,7 @@
 		</div>
 	</section>
 <?php } else if(is_single()){?>
-	<section class="newslatter-sec padding-global light_gray-bg text-center hidden<?php if(get_field('display_subscribe_form')): ?><?php the_field('display_subscribe_form'); ?><?php endif;?>">
+	<section class="newslatter-sec padding-global light_gray-bg text-center hidden <?php if(get_field('display_subscribe_form')): ?><?php the_field('display_subscribe_form'); ?><?php endif;?>">
 		<div class="container container-sm">
 			<div class="row">
 				<div class="col-sm-12">

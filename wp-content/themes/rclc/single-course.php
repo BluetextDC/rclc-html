@@ -19,5 +19,6 @@ get_header();
     get_template_part ( 'components/component', 'image-block' );
     get_template_part ( 'components/component', '3-column_listing' );
   endwhile; endif; ?>
-<?php
-get_footer();
+  <?php get_template_part ( 'components/component', 'cta-block' ); ?>
+  <?php
+  get_footer();

@@ -1,6 +1,6 @@
 <!-- Cta Section -->
 <?php if ( is_page_template( 'template-blog-listing.php' ) ) { ?>
-	<section class="cta-section text-center hidden<?php if(get_field('display_contact_form')): ?><?php the_field('display_contact_form'); ?><?php endif;?>">
+	<section class="cta-section text-center hidden <?php if(get_field('display_contact_form')): ?><?php the_field('display_contact_form'); ?><?php endif;?>">
 		<div class="container">
 			<div class="row">
 				<div class="cta-outer">
@@ -15,7 +15,7 @@
 		</div>
 	</section>
 <?php } else if(is_single()){?>
-	<section class="cta-section text-center hidden<?php if(get_field('display_contact_form')): ?><?php the_field('display_contact_form'); ?><?php endif;?>">
+	<section class="cta-section text-center hidden <?php if(get_field('display_contact_form')): ?><?php the_field('display_contact_form'); ?><?php endif;?>">
 		<div class="container">
 			<div class="row">
 				<div class="cta-outer">

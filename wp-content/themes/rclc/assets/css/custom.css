@@ -421,6 +421,10 @@ textarea {
     font-weight: 600;
     margin-bottom: 20px;
 }
+.newslatter-sec.block,
+.cta-section.block{
+        display: block!important;
+}
 
 
 @media(min-width: 767px) {
