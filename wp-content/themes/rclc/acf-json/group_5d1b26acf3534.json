@@ -610,7 +610,9 @@
                                 "search",
                                 "taxonomy"
                             ],
-                            "elements": "",
+                            "elements": [
+                                "featured_image"
+                            ],
                             "min": 1,
                             "max": "",
                             "return_format": "object"
@@ -644,5 +646,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563351350
+    "modified": 1563360365
 }

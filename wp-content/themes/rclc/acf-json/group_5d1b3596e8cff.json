@@ -336,98 +336,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5d1b53e5cab18": {
-                    "key": "layout_5d1b53e5cab18",
-                    "name": "promo_cards",
-                    "label": "Promo Cards",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5d1b53f0cab19",
-                            "label": "Card Listing",
-                            "name": "card_listing",
-                            "type": "flexible_content",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layouts": {
-                                "layout_5d1b53fa432b7": {
-                                    "key": "layout_5d1b53fa432b7",
-                                    "name": "list_item",
-                                    "label": "List Item",
-                                    "display": "row",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_5d1b5402cab1a",
-                                            "label": "Category",
-                                            "name": "category",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        },
-                                        {
-                                            "key": "field_5d1b541ecab1b",
-                                            "label": "Title",
-                                            "name": "title",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        },
-                                        {
-                                            "key": "field_5d1b5428cab1c",
-                                            "label": "CTA",
-                                            "name": "cta",
-                                            "type": "link",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "return_format": "array"
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": ""
-                                }
-                            },
-                            "button_label": "Add Row",
-                            "min": "",
-                            "max": 3
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5d1b5446cab1d": {
                     "key": "layout_5d1b5446cab1d",
                     "name": "image_content_promo",
@@ -547,6 +455,132 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d2f07ac8db0f": {
+                    "key": "layout_5d2f07ac8db0f",
+                    "name": "3-column_listing",
+                    "label": "3-Column Listing",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d2f07b58db10",
+                            "label": "Content Display Mode",
+                            "name": "content_display_mode",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "select_pages": "Select Pages",
+                                "display_by_taxonomy": "Display by Taxonomy"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5d2f07d38db11",
+                            "label": "Limit Items to 3 Total",
+                            "name": "limit_items_to_3_total",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Enabled",
+                            "ui_off_text": "Disabled"
+                        },
+                        {
+                            "key": "field_5d2f07ee8db12",
+                            "label": "Page Select",
+                            "name": "page_select",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d2f07b58db10",
+                                        "operator": "==",
+                                        "value": "select_pages"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post",
+                                "page",
+                                "course"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": -1,
+                            "max": "",
+                            "return_format": "object"
+                        },
+                        {
+                            "key": "field_5d2f08258db13",
+                            "label": "Taxonomy Select",
+                            "name": "taxonomy_select",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d2f07b58db10",
+                                        "operator": "==",
+                                        "value": "display_by_taxonomy"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": 1,
+                            "max": "",
+                            "return_format": "object"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -573,5 +607,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563168683
+    "modified": 1563363415
 }

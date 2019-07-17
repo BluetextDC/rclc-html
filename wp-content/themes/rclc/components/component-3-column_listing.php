@@ -12,14 +12,8 @@
                 <div class="card">
                   <a href="<?php the_permalink(); ?>" class="outer_link"></a>
                   <div class="inner">
-                    <?php $texonomy_terms = get_the_terms($post->ID, 'content_type');?>
-                    <?php if($texonomy_terms): ?>
-                      <span class="category">
-                        <?php foreach ($texonomy_terms as $key=>$value) { ?>
-                          <?php echo $value->slug; ?>
-                        <?php }?>
-                      </span>
-                    <?php endif; ?>
+                    <span class="category">Blog
+                    </span>
                     <h3><?php the_title(); ?></h3>
                     <a href="<?php the_permalink(); ?>" target="" class="btn link-btn">Read more</a>
                   </div>
@@ -39,7 +33,7 @@
                 <div class="card">
                   <a href="<?php the_permalink(); ?>" target="" class="outer_link"></a>
                   <div class="inner">
-                    <span class="category"></span>
+                    <span class="category">Post</span>
                     <h3><?php the_title(); ?></h3>
                     <a href="<?php the_permalink(); ?>" class="btn link-btn">Read more</a>
                   </div>
