@@ -185,54 +185,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5d1b5291d4fc7": {
-                    "key": "layout_5d1b5291d4fc7",
-                    "name": "cta_block",
-                    "label": "CTA Block",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5d1b5294d4fc8",
-                            "label": "Title",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5d1ddbed65f09",
-                            "label": "Form ID",
-                            "name": "form_id",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5d1b5314cab13": {
                     "key": "layout_5d1b5314cab13",
                     "name": "wysiwyg_block",
@@ -582,6 +534,69 @@
             "button_label": "Add Row",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "field_5d3022262dde0",
+            "label": "Footer",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d3022312dde1",
+            "label": "Display Contact Form",
+            "name": "display_contact_form",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "block": "Yes"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5d3022452dde2",
+            "label": "Display Subscribe Form",
+            "name": "display_subscribe_form",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "block": "Yes"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         }
     ],
     "location": [
@@ -603,5 +618,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563434748
+    "modified": 1563435623
 }
