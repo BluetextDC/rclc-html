@@ -425,7 +425,10 @@ textarea {
 .cta-section.block{
         display: block!important;
 }
-.single-promo .content .btn-outer{
+
+/*18/07/19*/
+.single-promo .content .btn-outer,
+.half-block .content .btn-outer{
     padding-top:20px;
 }
 
@@ -438,6 +441,13 @@ textarea {
     .blog-listing li .item-inner:hover .blog-content h4,
     .blog-listing-hero .blog-item .blog-item-inner:hover .blog-content h4 {
         text-decoration: underline;
+    }
+    .half-block.image-left .bg-img{
+        left: 0;
+        right: inherit;
+    }
+    .half-block.image-left .right{
+        float: right;
     }
 }
 

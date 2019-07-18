@@ -9074,7 +9074,7 @@ ul.social-links li a:hover i {
 }
 .half-block .bg-img {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 50%;
   height: 100%;
@@ -9088,7 +9088,6 @@ ul.social-links li a:hover i {
   }
 }
 .half-block .right {
-  float: right;
   min-height: 500px;
 }
 @media (max-width: 767px) {
