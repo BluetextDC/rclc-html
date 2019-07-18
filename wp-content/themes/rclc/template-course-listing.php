@@ -56,12 +56,39 @@ get_header();
             <div class="course-info vh-center">
               <?php  
               // get raw date
-              $date = get_field('date_course_begins', false, false);
+              $date_course_begins = get_field('date_course_begins', false, false);
               // make date object
-              $date = new DateTime($date);?>
-              <span><?php echo $date->format('F Y'); ?></span>
-              <b><?php the_field('date_course_begins'); ?>-<?php the_field('date_course_ends'); ?></b>
-              <span class="full-date"><?php echo $date->format('F'); ?> <?php the_field('date_course_begins'); ?>-<?php the_field('date_course_ends'); ?>, <?php echo $date->format('Y'); ?></span>
+              $date_begins = new DateTime($date_course_begins);
+              // get raw date
+              $date_course_ends = get_field('date_course_ends', false, false);
+              // make date object
+              $date_ends = new DateTime($date_course_ends);?>
+
+              <!-- Years will be same but months are not -->
+              <?php if( $date_begins->format('M') != $date_ends->format('M') && $date_begins->format('Y') == $date_ends->format('Y') ) { ?>
+                <span><?php echo $date_begins->format('M'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('Y'); ?></span>
+                <!-- for mobile -->
+                <span class="full-date"><?php echo $date_begins->format('M'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?>, <?php echo $date_begins->format('Y'); ?></span>
+              <?php } ?>
+              <!-- Years will be same but months are not -->
+
+              <!-- Month will be same but years are not -->
+              <?php if( $date_begins->format('Y') != $date_ends->format('Y') ) { ?>
+                <span><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('Y'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('Y'); ?></span>
+                <!-- for mobile -->
+                <span class="full-date"><?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?>, <?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('Y'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('Y'); ?></span>
+              <?php } ?>
+              <!-- Month will be same but years are not -->
+
+              <!-- Months and years will be same -->
+              <?php if( $date_begins->format('M') == $date_ends->format('M') && $date_begins->format('Y') == $date_ends->format('Y') ) { ?>
+                <span><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('Y'); ?></span>
+                <!-- for mobile -->
+                <span class="full-date"><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?>, <?php echo $date_begins->format('Y'); ?></span>
+                <!-- Months and years will be same -->
+
+              <?php } ?>
+              <b><?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?></b>              
             </div>
           </div>
           <div class="media-body">

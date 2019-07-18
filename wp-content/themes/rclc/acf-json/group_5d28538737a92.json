@@ -112,7 +112,7 @@
                 "id": ""
             },
             "display_format": "F j, Y",
-            "return_format": "d",
+            "return_format": "F j, Y",
             "first_day": 1
         },
         {
@@ -129,7 +129,7 @@
                 "id": ""
             },
             "display_format": "F j, Y",
-            "return_format": "d",
+            "return_format": "F j, Y",
             "first_day": 1
         },
         {
@@ -787,5 +787,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563448942
+    "modified": 1563450349
 }
