@@ -27,9 +27,9 @@ get_header();
               <?php endif; ?>
               <div class="filter-block">
                 <form id="filter-form">
-                  <input type="hidden" id="categories" value="<?php echo isset($_GET['categories']) ? $_GET['categories']: ''?>" name="categories">
+                  <!-- <input type="hidden" id="categories" value="<?php echo isset($_GET['categories']) ? $_GET['categories']: ''?>" name="categories"> -->
                   <input type="hidden" id="tags" value="<?php echo isset($_GET['tags']) ? $_GET['tags']: ''?>" name="tags">
-                  <?php 
+                 <!--  <?php 
                   $categories = get_categories(); {?>
                     <?php if($categories) :?>
                       <div class="dropdown">
@@ -53,7 +53,7 @@ get_header();
                         </ul>
                       </div>
                     <?php endif; ?>
-                  <?php }?>
+                  <?php }?> -->
                   <?php
                   $args = array( 
                     'order' => 'DESC',
@@ -72,7 +72,7 @@ get_header();
                   endwhile;?>
                   <?php if($aval_tags): ?>
                     <div class="dropdown">
-                      <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">Filter by tags</a>
+                      <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">Filter by</a>
                       <ul class="dropdown-menu dropdown-style" id="tag-check">
                        <?php foreach ($aval_tags as $key=>$value) { ?>
                         <li>
@@ -104,7 +104,7 @@ get_header();
                           <li data-type="tags" data-slug="<?php echo $key; ?>"><?php echo $value->name; ?></li>
                         <?php }?>
                       <?php } ?>
-                      <li class="clear-all"><a id="clear-post-tags">clear all</a></li>
+                      <li class="clear-all"><a id="clear-post-tags">clear all tags</a></li>
                     </ul>
                   </div>
                   <div class="clearfix"></div>
