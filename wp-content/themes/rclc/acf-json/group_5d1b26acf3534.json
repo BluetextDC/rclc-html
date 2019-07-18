@@ -498,7 +498,8 @@
                             },
                             "choices": {
                                 "select_pages": "Select Pages",
-                                "display_by_taxonomy": "Display by Taxonomy"
+                                "select_course_cpt": "Select Course CPT",
+                                "select_post": "Select Posts"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -508,28 +509,9 @@
                             "save_other_choice": 0
                         },
                         {
-                            "key": "field_5d2eb8ba86e22",
-                            "label": "Limit Items to 3 Total",
-                            "name": "limit_items_to_3_total",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "Enabled",
-                            "ui_off_text": "Disabled"
-                        },
-                        {
                             "key": "field_5d2eb8f786e23",
-                            "label": "Page Select",
-                            "name": "page_select",
+                            "label": "Select Page",
+                            "name": "select_page",
                             "type": "relationship",
                             "instructions": "",
                             "required": 0,
@@ -548,9 +530,7 @@
                                 "id": ""
                             },
                             "post_type": [
-                                "post",
-                                "page",
-                                "course"
+                                "page"
                             ],
                             "taxonomy": "",
                             "filters": [
@@ -565,9 +545,9 @@
                             "return_format": "object"
                         },
                         {
-                            "key": "field_5d2eb93386e24",
-                            "label": "Taxonomy Select",
-                            "name": "taxonomy_select",
+                            "key": "field_5d30428daae89",
+                            "label": "Select Course CPT",
+                            "name": "select_course_cpt",
                             "type": "relationship",
                             "instructions": "",
                             "required": 0,
@@ -576,7 +556,7 @@
                                     {
                                         "field": "field_5d2eb86086e21",
                                         "operator": "==",
-                                        "value": "display_by_taxonomy"
+                                        "value": "select_course_cpt"
                                     }
                                 ]
                             ],
@@ -585,7 +565,9 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "post_type": "",
+                            "post_type": [
+                                "course"
+                            ],
                             "taxonomy": "",
                             "filters": [
                                 "search",
@@ -595,7 +577,66 @@
                                 "featured_image"
                             ],
                             "min": 1,
-                            "max": "",
+                            "max": 3,
+                            "return_format": "object"
+                        },
+                        {
+                            "key": "field_5d304e1295d08",
+                            "label": "Course Calendar CTA",
+                            "name": "course_calendar_cta",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d2eb86086e21",
+                                        "operator": "==",
+                                        "value": "select_course_cpt"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_5d2eb93386e24",
+                            "label": "Select Posts",
+                            "name": "select_posts",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d2eb86086e21",
+                                        "operator": "==",
+                                        "value": "select_post"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": 1,
+                            "max": 3,
                             "return_format": "object"
                         }
                     ],
@@ -802,5 +843,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563437867
+    "modified": 1563447163
 }
