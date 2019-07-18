@@ -1,5 +1,5 @@
 <!-- Cta Section -->
-<?php if ( is_page_template( array( 'template-blog-listing.php', 'template-generic-landing.php' ) ) ){ ?>
+<?php if ( is_page_template( array( 'template-blog-listing.php', 'template-generic-landing.php', 'template-course-listing.php' ) ) ){ ?>
 	<section class="cta-section text-center hidden <?php if(get_field('display_contact_form')): ?><?php the_field('display_contact_form'); ?><?php endif;?>">
 		<div class="container">
 			<div class="row">

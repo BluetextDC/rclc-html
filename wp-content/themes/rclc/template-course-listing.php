@@ -19,16 +19,31 @@ get_header();
 <?php get_template_part ( 'components/component', 'hero-zone-inner' ); ?>
 <!-- Hero Zone -->
 
-<?php get_template_part ( 'components/component', 'wysiwyg-block' ); ?>
+<!-- Body -->
+<?php if(get_field('listing_description')):?>
+  <section class="wysiwyg-block padding-md">
+    <div class="container container-sm">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="content">
+           <?php the_field('listing_description'); ?>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+<?php endif; ?>
 <section class="course-listing padding-global">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2 class="heading text-left">
-          Upcoming Courses
-        </h2>
+    <?php if(get_field('listing_heading')): ?>
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="heading text-left">
+            <?php the_field('listing_heading'); ?>
+          </h2>
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
     <div class="row">
       <div class="col-sm-12">
         <?php
@@ -62,15 +77,15 @@ get_header();
             </div>
           </div>
         </div>
-      <?php endwhile; ?>
+      <?php endwhile; wp_reset_postdata(); ?>
     </div>
   </div>
 </div>
-</section>  
-<?php if (have_rows('components')): 
-  while (have_rows('components')): the_row();
-   get_template_part ( 'components/component', 'cta-block' ); 
- endwhile; endif; ?>
+</section>
+<!-- Body -->
 
- <?php
- get_footer();
+<!-- footer  -->
+<?php get_template_part ( 'components/component', 'cta-block' ); ?>
+<!-- footer  -->
+<?php
+get_footer();
