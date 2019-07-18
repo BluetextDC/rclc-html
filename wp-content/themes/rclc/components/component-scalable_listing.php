@@ -1,5 +1,5 @@
 <!-- Tab Section -->
-<?php if (get_row_layout() == 'vertical_resource_ladder'): ?>
+<?php if (get_row_layout() == 'scalable_listing'): ?>
   <?php $row_id =  get_row_index(); ?>
   <section class="custom-tab padding-lg">
     <div class="container">
@@ -19,8 +19,8 @@
                     ?>
                     <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" class="outer_link"></a>
                   <?php endif;?>
-                  <?php if(get_sub_field('title')): ?>
-                    <h2><?php the_sub_field('title'); ?></h2>
+                  <?php if(get_sub_field('heading')): ?>
+                    <h2><?php the_sub_field('heading'); ?></h2>
                   <?php endif; ?>
                   <?php if(get_sub_field('description')): ?>
                     <?php the_sub_field('description'); ?>
@@ -44,8 +44,8 @@
               <?php if (have_rows('tab_listing')): ?>
                 <?php $i = 1;while (have_rows('tab_listing')): the_row();?>
                 <?php if (get_row_layout() == 'item'): ?>
-                  <?php if (get_sub_field('headline')): ?>
-                    <li class="<?php echo $i == 1 ? 'active' : ''; ?>"><a data-toggle="tab" href="#c-<?php echo $row_id; ?>-<?php echo get_row_index(); ?>"><?php the_sub_field('headline');?></a></li>
+                  <?php if (get_sub_field('heading')): ?>
+                    <li class="<?php echo $i == 1 ? 'active' : ''; ?>"><a data-toggle="tab" href="#c-<?php echo $row_id; ?>-<?php echo get_row_index(); ?>"><?php the_sub_field('heading');?></a></li>
                   <?php endif;?>
                 <?php endif;?>
                 <?php $i++;endwhile;endif;?>
@@ -59,17 +59,17 @@
                 <?php $k = 1;while (have_rows('tab_listing')): the_row();?>
                 <?php if (get_row_layout() == 'item'): ?>
                   <div class="panel">
-                    <?php if (get_sub_field('headline')): ?>
+                    <?php if (get_sub_field('heading')): ?>
                       <div class="panel-heading">
                         <h4 class="panel-title">
-                          <a data-toggle="collapse" data-parent="#accordion-<?php echo $row_id; ?>" href="#m-<?php echo $row_id; ?>-<?php echo get_row_index(); ?>" class="collapsed"><?php the_sub_field('headline'); ?></a>
+                          <a data-toggle="collapse" data-parent="#accordion-<?php echo $row_id; ?>" href="#m-<?php echo $row_id; ?>-<?php echo get_row_index(); ?>" class="collapsed"><?php the_sub_field('heading'); ?></a>
                         </h4>
                       </div>
                     <?php endif; ?>
                     <div id="m-<?php echo $row_id; ?>-<?php echo get_row_index(); ?>" class="panel-collapse collapse">
                       <div class="panel-body">
-                        <?php if(get_sub_field('title')): ?>
-                          <h2><?php the_sub_field('title'); ?></h2>
+                        <?php if(get_sub_field('heading')): ?>
+                          <h2><?php the_sub_field('heading'); ?></h2>
                         <?php endif; ?>
                         <?php if (get_sub_field('description')): ?>
                           <?php the_sub_field('description');?>

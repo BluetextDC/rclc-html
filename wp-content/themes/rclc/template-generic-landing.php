@@ -23,7 +23,7 @@ get_header();
 	while (have_rows('components')): the_row();
 		get_template_part ( 'components/component', 'wysiwyg-block' );  
 		get_template_part ( 'components/component', 'image-block' );
-		get_template_part ( 'components/component', 'vertical-resource-ladder' );
+		get_template_part ( 'components/component', 'scalable_listing' );
 		get_template_part ( 'components/component', '3-column_listing' );
 		get_template_part ( 'components/component', 'cta-block' );
 		get_template_part ( 'components/component', 'image-content-promo' );

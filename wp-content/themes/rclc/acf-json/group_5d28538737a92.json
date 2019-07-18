@@ -453,6 +453,98 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d301e3122633": {
+                    "key": "layout_5d301e3122633",
+                    "name": "scalable_listing",
+                    "label": "Scalable Listing",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d301e3a22634",
+                            "label": "Tab Listing",
+                            "name": "tab_listing",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_5d301e43584e8": {
+                                    "key": "layout_5d301e43584e8",
+                                    "name": "item",
+                                    "label": "Item",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5d301e4f22635",
+                                            "label": "Heading",
+                                            "name": "heading",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_5d301e5722636",
+                                            "label": "Description",
+                                            "name": "description",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "delay": 0
+                                        },
+                                        {
+                                            "key": "field_5d301e6322637",
+                                            "label": "CTA",
+                                            "name": "cta",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "button_label": "Add Row",
+                            "min": 1,
+                            "max": 5
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -542,5 +634,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563433211
+    "modified": 1563434716
 }

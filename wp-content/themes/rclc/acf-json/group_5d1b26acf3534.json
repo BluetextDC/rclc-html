@@ -177,8 +177,8 @@
             "layouts": {
                 "layout_5d1b3ca18d243": {
                     "key": "layout_5d1b3ca18d243",
-                    "name": "vertical_resource_ladder",
-                    "label": "Vertical Resource Ladder",
+                    "name": "scalable_listing",
+                    "label": "Scalable Listing",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -203,27 +203,8 @@
                                     "sub_fields": [
                                         {
                                             "key": "field_5d1b3d7772afc",
-                                            "label": "Headline",
-                                            "name": "headline",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        },
-                                        {
-                                            "key": "field_5d1b3d7c72afd",
-                                            "label": "Title",
-                                            "name": "title",
+                                            "label": "Heading",
+                                            "name": "heading",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 0,
@@ -279,8 +260,8 @@
                                 }
                             },
                             "button_label": "Add Row",
-                            "min": "",
-                            "max": ""
+                            "min": 1,
+                            "max": 5
                         }
                     ],
                     "min": "",
@@ -709,5 +690,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563433235
+    "modified": 1563434735
 }
