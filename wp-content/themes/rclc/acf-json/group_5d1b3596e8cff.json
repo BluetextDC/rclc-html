@@ -410,8 +410,8 @@
                 },
                 "layout_5d1b548acab21": {
                     "key": "layout_5d1b548acab21",
-                    "name": "content_block",
-                    "label": "Content Block",
+                    "name": "full-width_text_cta",
+                    "label": "Full-Width Text CTA",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -451,6 +451,21 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 0
+                        },
+                        {
+                            "key": "field_5d30177920b89",
+                            "label": "CTA",
+                            "name": "cta",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
                         }
                     ],
                     "min": "",
@@ -607,5 +622,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563363415
+    "modified": 1563433230
 }

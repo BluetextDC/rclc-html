@@ -425,6 +425,9 @@ textarea {
 .cta-section.block{
         display: block!important;
 }
+.single-promo .content .btn-outer{
+    padding-top:20px;
+}
 
 
 @media(min-width: 767px) {
