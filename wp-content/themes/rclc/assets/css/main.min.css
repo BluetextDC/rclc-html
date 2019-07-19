@@ -708,6 +708,7 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
+  margin-bottom: 15px;
 }
 h1 small,
 h1 .small, h2 small,
@@ -732,7 +733,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 h1 small,
 h1 .small, .h1 small,
@@ -6725,7 +6726,8 @@ body {
 h1,
 .h1 {
   color: #000000;
-  font-family: "BigCaslon";
+  font-family: "ACaslonPro";
+  line-height: 58px;
 }
 
 h2,
@@ -6750,17 +6752,20 @@ h1,
   h1,
   .h1 {
     font-size: 30px;
+    line-height: 42px;
   }
 }
 
 h2,
 .h2 {
   font-size: 30px;
+  line-height: 41px;
 }
 @media (max-width: 991px) {
   h2,
   .h2 {
-    font-size: 22px;
+    font-size: 26px;
+    line-height: 37px;
   }
 }
 
@@ -6769,11 +6774,13 @@ h3,
   font-size: 26px;
   font-family: "ProximaNova";
   font-weight: 500;
+  line-height: 36px;
 }
 @media (max-width: 991px) {
   h3,
   .h3 {
     font-size: 22px;
+    line-height: 32px;
   }
 }
 
@@ -6782,11 +6789,13 @@ h4,
   font-size: 22px;
   font-family: "ProximaNova";
   font-weight: 500;
+  line-height: 32px;
 }
 @media (max-width: 991px) {
   h4,
   .h4 {
     font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -8870,7 +8879,6 @@ ul.social-links li a:hover i {
   color: #292929;
   font-weight: 500;
   font-family: "ProximaNova";
-  margin-top: 28px;
   text-shadow: 0 0 0 #292929;
 }
 @media (max-width: 767px) {
