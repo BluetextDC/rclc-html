@@ -6760,6 +6760,7 @@ h2,
 .h2 {
   font-size: 30px;
   line-height: 41px;
+  font-weight: 600;
 }
 @media (max-width: 991px) {
   h2,
@@ -8863,11 +8864,10 @@ ul.social-links li a:hover i {
   background-color: #ffffff;
 }
 .wysiwyg-block .content h2 {
-  font-family: ACaslonPro_fonts;
   line-height: 41px;
   color: #292929;
   font-weight: 500;
-  text-shadow: 0 0 0 #292929;
+  /*text-shadow: 0 0 0 #292929;*/
 }
 .wysiwyg-block .content p {
   color: #646464;
