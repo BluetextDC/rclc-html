@@ -76,7 +76,7 @@ get_header();
               <?php if( $date_begins->format('Y') != $date_ends->format('Y') ) { ?>
                 <span><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('Y'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('Y'); ?></span>
                 <!-- for mobile -->
-                <span class="full-date"><?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?>, <?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('Y'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('Y'); ?></span>
+                <span class="full-date"><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('d'); ?>, <?php echo $date_begins->format('Y'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('d'); ?>, <?php echo $date_ends->format('Y'); ?></span>
               <?php } ?>
               <!-- Month will be same but years are not -->
 
