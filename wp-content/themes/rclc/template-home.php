@@ -18,7 +18,9 @@ get_header();
 <?php if( have_rows('hero_zone') ): 
   while( have_rows('hero_zone') ): the_row();?>
     <section class="hero-zone home">
-      <div class="bg-img"></div>
+      <?php if(get_sub_field('background_image')): ?>
+        <div class="bg-img" style="background-image: url('<?php  the_sub_field('background_image'); ?>');"></div>
+      <?php endif; ?>
       <div class="container">
         <div class="row v-center wd-100">
           <div class="upper-content">
