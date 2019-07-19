@@ -24,10 +24,29 @@
               <?php endif; ?>
               <?php  
               // get raw date
-              $date = get_field('date_course_begins', false, false);
+              $date_course_begins = get_field('date_course_begins', false, false);
               // make date object
-              $date = new DateTime($date);?>
-              <h3><?php echo $date->format('F'); ?> <?php the_field('date_course_begins'); ?>-<?php the_field('date_course_ends'); ?>, <?php echo $date->format('Y'); ?></h3>
+              $date_begins = new DateTime($date_course_begins);
+              // get raw date
+              $date_course_ends = get_field('date_course_ends', false, false);
+              // make date object
+              $date_ends = new DateTime($date_course_ends);?>
+              <!-- Years will be same but months are not -->
+              <?php if( $date_begins->format('M') != $date_ends->format('M') && $date_begins->format('Y') == $date_ends->format('Y') ) { ?>
+                <h3><?php echo $date_begins->format('M'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?>, <?php echo $date_begins->format('Y'); ?></h3>
+              <?php } ?>
+              <!-- Years will be same but months are not -->
+              <!-- Month will be same but years are not -->
+              <?php if( $date_begins->format('Y') != $date_ends->format('Y') ) { ?>
+                <h3 class="full-date"><?php echo $date_begins->format('d'); ?> <?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('Y'); ?> - <?php echo $date_ends->format('d'); ?> <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('Y'); ?></h3>
+              <?php } ?>
+              <!-- Month will be same but years are not -->
+
+              <!-- Months and years will be same -->
+              <?php if( $date_begins->format('M') == $date_ends->format('M') && $date_begins->format('Y') == $date_ends->format('Y') ) { ?>
+                <h3 class="full-date"><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?>, <?php echo $date_begins->format('Y'); ?></h3>
+                <!-- Months and years will be same -->
+              <?php } ?>
             </div>
           </div>
         </div>

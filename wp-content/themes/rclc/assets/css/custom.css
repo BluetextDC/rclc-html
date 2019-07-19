@@ -554,7 +554,10 @@ div.wpcf7-mail-sent-ok {
         .course-single {
             padding-top: 50px;
         }
-        .wysiwyg-block .content p{
+        .wysiwyg-block .content p,
+        ul.custom li,
+        .wysiwyg-block ul li,
+        ol li {
             font-size: 16px;
             line-height: 24px;
         }
