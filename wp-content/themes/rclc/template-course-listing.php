@@ -47,9 +47,19 @@ get_header();
     <div class="row">
       <div class="col-sm-12">
         <?php
-        $args = array( 'post_type' => 'course', 'posts_per_page' => -1 );
+
+
+        $args = array( 
+          'post_type' => 'course', 'posts_per_page' => -1 
+        );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+
+
+
+          <?php if(strtotime(get_field('date_course_ends')) >= strtotime(date('Y-m-d')) ){ ?>
+
          <div class="media course-item">
           <a href="<?php the_permalink(); ?>" class="outer_link"></a>
           <div class="media-left">
@@ -104,6 +114,8 @@ get_header();
             </div>
           </div>
         </div>
+        <?php } ?>
+
       <?php endwhile; wp_reset_postdata(); ?>
     </div>
   </div>

@@ -204,3 +204,30 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if (function_exists('acf_add_options_page')) {
 	acf_add_options_page();
 }
+
+
+// custom function
+
+function my_acf_load_value( $value, $post_id, $field ) {
+	
+	// vars
+	$order = array();
+	// bail early if no value
+	if( empty($value) ) {
+		return $value;		
+	}
+	// populate order
+	foreach( $value as $i => $row ) {
+		$order[ $i ] = $row['field_5d282ddb94945'];		
+	}
+	
+	// multisort
+	array_multisort( $order, SORT_DESC, $value );
+	
+	
+	// return	
+	return $value;
+	
+}
+
+add_filter('acf/load_value/name=slider', 'my_acf_load_value', 10, 3);

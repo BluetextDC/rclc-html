@@ -8940,7 +8940,7 @@ ul.social-links li a:hover i {
   top: 0;
   height: 570px;
   z-index: 1;
-  width: 18.2%;
+  width: 16.66%;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
@@ -9242,6 +9242,7 @@ ul.social-links li a:hover i {
   font-weight: 300;
   display: block;
   color: #292929;
+  text-transform: uppercase;
 }
 .course-listing .media.course-item .media-left .course-info b {
   font-family: "ACaslonPro";

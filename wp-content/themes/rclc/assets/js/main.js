@@ -6,13 +6,13 @@
   // Banner slider
   $('.slider').slick({
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 1500,
     autoplay: true,
     arrows: true,
     prevArrow: '<div class="prev"><span>previous</span></div>',
     nextArrow: '<div class="next"><span>Next</span></div>',
-    slidesToShow: 1.1,
+    slidesToShow: 1.2,
     slidesToScroll: 1,
     responsive: [{
       breakpoint: 993,
