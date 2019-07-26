@@ -298,48 +298,100 @@
                             "mime_types": ""
                         },
                         {
-                            "key": "field_5d1b3dfebb5a8",
-                            "label": "CTA Listing",
-                            "name": "cta_listing",
-                            "type": "flexible_content",
+                            "key": "field_5d3af1cfe08a1",
+                            "label": "CTA Content Display Mode",
+                            "name": "cta_content_display_mode",
+                            "type": "radio",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "layouts": {
-                                "layout_5d1b3e06df436": {
-                                    "key": "layout_5d1b3e06df436",
-                                    "name": "item",
-                                    "label": "Item",
-                                    "display": "row",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_5d1b3e0fbb5a9",
-                                            "label": "CTA",
-                                            "name": "cta",
-                                            "type": "link",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "return_format": "array"
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": ""
-                                }
+                            "choices": {
+                                "select_pages": "Select Pages",
+                                "select_post": "Select Posts"
                             },
-                            "button_label": "Add Row",
-                            "min": "",
-                            "max": 3
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5d3af212e08a2",
+                            "label": "Select Pages",
+                            "name": "select_pages",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d3af1cfe08a1",
+                                        "operator": "==",
+                                        "value": "select_pages"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": 1,
+                            "max": 3,
+                            "return_format": "object"
+                        },
+                        {
+                            "key": "field_5d3af249e08a3",
+                            "label": "Select Post",
+                            "name": "select_post",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d3af1cfe08a1",
+                                        "operator": "==",
+                                        "value": "select_post"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": 1,
+                            "max": 3,
+                            "return_format": "object"
                         }
                     ],
                     "min": "",
@@ -498,7 +550,6 @@
                             },
                             "choices": {
                                 "select_pages": "Select Pages",
-                                "select_course_cpt": "Select Course CPT",
                                 "select_post": "Select Posts"
                             },
                             "allow_null": 0,
@@ -843,5 +894,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563447163
+    "modified": 1564144682
 }
