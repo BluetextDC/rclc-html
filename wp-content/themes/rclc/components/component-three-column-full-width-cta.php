@@ -1,4 +1,4 @@
-<!-- banner-cta section -->
+banner-cta section -->
 <?php if (get_row_layout() == 'three_column_full-width_cta'): ?>
   <section class="banner-cta relative">
     <div class="bg-img" style="background-image: url('<?php the_sub_field('background_image');?>');"></div>
@@ -16,7 +16,7 @@
                     <?php $texonomy_terms = get_the_terms($post->ID, 'content_type');?>
                     <?php if($texonomy_terms){ ?>
                     <?php } else { ?>
-                      <span class="category">Page</span>
+                      <!-- <span class="category">Page</span> -->
                     <?php }?>
                     <h3> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 </div>
@@ -50,4 +50,4 @@
   </div>
 </section>
 <?php endif; ?>
-<!-- banner-cta section -->
+<!-- banner-cta section
