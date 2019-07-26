@@ -47,16 +47,23 @@ get_header();
     <div class="row">
       <div class="col-sm-12">
         <?php
-
-
+        $today = current_time('Ymd');
         $args = array( 
-          'post_type' => 'course', 'posts_per_page' => -1 
+          'post_type' => 'course',
+          'posts_per_page' => -1,    
+          'order' => 'ASC',
+          'orderby' => 'meta_value',
+          'meta_key'  => 'date_course_ends',
+          'meta_query' => array(
+            array(
+                  'key'   => 'date_course_ends',
+                  'compare' => '>=',
+                  'value'   => $today,
+              ),
+          ),
         );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-
-
 
           <?php if(strtotime(get_field('date_course_ends')) >= strtotime(date('Y-m-d')) ){ ?>
 
