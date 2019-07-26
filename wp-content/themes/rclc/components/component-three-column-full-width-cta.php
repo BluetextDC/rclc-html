@@ -1,4 +1,4 @@
-banner-cta section -->
+<!-- banner-cta section -->
 <?php if (get_row_layout() == 'three_column_full-width_cta'): ?>
   <section class="banner-cta relative">
     <div class="bg-img" style="background-image: url('<?php the_sub_field('background_image');?>');"></div>
@@ -50,4 +50,4 @@ banner-cta section -->
   </div>
 </section>
 <?php endif; ?>
-<!-- banner-cta section
+<!-- banner-cta section -->
