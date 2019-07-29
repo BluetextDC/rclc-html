@@ -1,4 +1,4 @@
-<!-- promo cards -->
+promo cards -->
 <?php if (get_row_layout() == '3-column_listing'): ?>
   <section class="blog-cards">
     <div class="container">
@@ -47,6 +47,7 @@
             <?php setup_postdata($post); ?>
             <div class="col-md-4">
               <div class="card course">
+                  <a href="<?php the_permalink(); ?>" class="outer_link"></a>
                 <div class="inner">
                   <span class="category">Courses</span>
                   <h3><?php the_title(); ?></h3>
@@ -100,4 +101,4 @@
   </div>
 </section>
 <?php endif; ?>
-<!-- promo cards -->
+<!-- promo cards

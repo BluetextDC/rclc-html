@@ -440,7 +440,7 @@ div.wpcf7-mail-sent-ok {
         min-height: 70px;
     }
     .blog-cards .card.course:hover a.btn:before{
-        width: 0;
+        /*width: 0;*/
     }
     .blog-cards .card a.btn{
 
