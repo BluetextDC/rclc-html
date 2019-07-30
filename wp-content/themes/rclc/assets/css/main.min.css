@@ -8264,7 +8264,7 @@ ul li.title-link {
     border: 1px solid #D3D3D3;
     padding: 10px 60px 10px 30px;
     position: relative;
-    color: #ffffff;
+    /*color: #ffffff;*/
     font-size: 21px;
     border-radius: 27px;
     display: block;
