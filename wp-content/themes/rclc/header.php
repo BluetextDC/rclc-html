@@ -48,16 +48,50 @@
 					</a>
 				</div>
 				<div class="col-xs-6 text-right">
-					<div class="trigger-outer">
+					<div class="trigger-outer hidden-md visible-md visible-xs">
 						<a class="trigger-btn v-center"></a>
 					</div>
+
+				<button class="c-hamburger c-hamburger--htx hidden-xs">
+				  <span>toggle menu</span>
+				</button>
+
 				</div>
 			</div>
+			<div class="ds-main-menu open hidden-xs">
+		<?php
+		wp_nav_menu(array(
+			'theme_location' => 'menu-1',
+			'container_class' => '',
+			'container_id' => '',
+			'menu_class' => 'desktop-main-menu',
+		));
+		?>
+		<button class="search-action-expand"><i class="icon-search"></i></button>
+		<div class="search-outer" id="desktop-search">
+			<form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
+				<div class="search-field">
+					<input type="search" class="search-input" placeholder="I’m searching for…." value="" name="s" autocomplete="off">
+					<button class="search-action v-center"><i class="icon-search"></i></button>
+				</div>
+			</form>
+			<span class="close-search-box">Close Search</span>
+		</div>
+		</div>
 		</div>
 	</header>
+
+
+
+
+
+
 	<!-- Header strip -->
 	<!-- navigation css -->
 	<div class="navigation-outer">
+			<a href="<?php echo esc_url(home_url('/')); ?>" class="brand-logo mobile-logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" class="img-white" alt="RCLC">
+			</a>
 		<a class="close-btn"><i class="icon-close"></i></a>
 		<a class="back-btn"><i class="icon-left"></i>back</a>
 		<?php

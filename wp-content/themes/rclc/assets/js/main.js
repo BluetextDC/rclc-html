@@ -1,5 +1,46 @@
 (function($) {
 
+// desktop menu slide effects start
+
+var toggles = document.querySelectorAll(".c-hamburger");
+
+for (var i = toggles.length - 1; i >= 0; i--) {
+  var toggle = toggles[i];
+  toggleHandler(toggle);
+};
+
+function toggleHandler(toggle) {
+  toggle.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (this.classList.contains("is-active") === true) {
+      this.classList.remove("is-active");
+      $('.open').removeClass('oppenned');
+    } else {
+      this.classList.add("is-active");
+      $(".open").addClass('oppenned');
+    }
+  });
+}
+// $(".sub-menu li a").click(function(event) {
+//   $(".open").removeClass('oppenned');
+//   $(".c-hamburger").removeClass('is-active');
+// });
+
+// desktop menu slide effects end
+
+
+$(".search-action-expand").click(function(){
+  $("#desktop-search").addClass('show-search');
+});
+
+$(".close-search-box").click(function(){
+  $("#desktop-search").removeClass('show-search');
+});
+$(".c-hamburger").click(function(){
+  $("#desktop-search").removeClass('show-search');
+});
+
+
   if ($(window).width() > 768) {
     $('.my-paroller').paroller();
   }
@@ -60,7 +101,7 @@
   });
 
   // on scroll js
-  if ($(window).width() > 768) {
+  if ($(window).width() > 320) {
     $(window).scroll(function() {
       var scroll = $(window).scrollTop();
       if (scroll >= 200) {
