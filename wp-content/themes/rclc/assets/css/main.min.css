@@ -7595,13 +7595,19 @@ button.search-action-expand i {
   visibility: visible;
 }
 #desktop-search .close-search-box {
-  display:block;
-  color:#fff;
-  text-align:right;
-  z-index:9;
-  cursor: pointer;
-  position: relative;
-  top: 10px;
+    display: block;
+    color: #fff;
+    text-align: right;
+    z-index: 9;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+    padding-right: 20px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+#desktop-search.search-outer form .search-field .search-input {
+    background: white;
 }
 /*header saerch style*/
 
