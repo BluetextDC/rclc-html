@@ -32,23 +32,28 @@
               // make date object
               $date_ends = new DateTime($date_course_ends);?>
 
-              <!-- Years will be same but months are not -->
+              <h3><?php the_field('date_course_begins'); ?> - <?php the_field('date_course_ends'); ?></h3>
+
+
+
+<!--               Years will be same but months are not
               <?php if( $date_begins->format('M') != $date_ends->format('M') && $date_begins->format('Y') == $date_ends->format('Y') ) { ?>
                 <h3><?php echo $date_begins->format('M'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?>, <?php echo $date_begins->format('Y'); ?></h3>
               <?php } ?>
-              <!-- Years will be same but months are not -->
+              Years will be same but months are not
 
-              <!-- Month will be same but years are not -->
+              Month will be same but years are not
               <?php if( $date_begins->format('Y') != $date_ends->format('Y') ) { ?>
                 <h3 class="full-date"><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('d'); ?>, <?php echo $date_begins->format('Y'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('d'); ?>, <?php echo $date_ends->format('Y'); ?></h3>
               <?php } ?>
-              <!-- Month will be same but years are not -->
+              Month will be same but years are not
 
-              <!-- Months and years will be same -->
+              Months and years will be same
               <?php if( $date_begins->format('M') == $date_ends->format('M') && $date_begins->format('Y') == $date_ends->format('Y') ) { ?>
                 <h3 class="full-date"><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?>, <?php echo $date_begins->format('Y'); ?></h3>
-                <!-- Months and years will be same -->
-              <?php } ?>
+                Months and years will be same
+              <?php } ?> -->
+
             </div>
           </div>
         </div>
