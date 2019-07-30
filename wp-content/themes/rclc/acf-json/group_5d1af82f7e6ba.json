@@ -75,7 +75,7 @@
         },
         {
             "key": "field_5d1af8f663820",
-            "label": "Social Links",
+            "label": "Sub Social Links",
             "name": "social_links",
             "type": "group",
             "instructions": "",
@@ -232,7 +232,7 @@
         },
         {
             "key": "field_5d1af9d263828",
-            "label": "Other URLs",
+            "label": "Sub Logo Links",
             "name": "other_urls",
             "type": "repeater",
             "instructions": "",
@@ -284,5 +284,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1562060264
+    "modified": 1564468157
 }

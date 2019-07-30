@@ -57,17 +57,10 @@
 			<div class="col-md-4 align-self-end">
 				<div class="footer-center">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-12">
 							<?php if (is_active_sidebar('footer-1')): ?>
 								<div class="footer-menu first">
 									<?php dynamic_sidebar('footer-1');?>
-								</div>
-							<?php endif;?>
-						</div>
-						<div class="col-md-6">
-							<?php if (is_active_sidebar('footer-2')): ?>
-								<div class="footer-menu">
-									<?php dynamic_sidebar('footer-2');?>
 								</div>
 							<?php endif;?>
 						</div>

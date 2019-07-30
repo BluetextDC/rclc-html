@@ -9761,7 +9761,9 @@ ul.social-links li a:hover i {
   position: relative;
 }
 .footer-menu li {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 49%;
 }
 .footer-menu li:last-child {
   margin-bottom: 0;
@@ -10288,6 +10290,12 @@ small {
 .user-thumb {
   display: inline-block;
   position: relative;
+}
+
+@media (max-width: 767px) {
+    .footer-menu li {
+    width: 100%;
+}
 }
 
 /*# sourceMappingURL=main.min.css.map */
