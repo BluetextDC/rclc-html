@@ -19,6 +19,7 @@ get_header();
 <?php get_template_part ( 'components/component', 'hero-zone-inner' ); ?>
 <!-- Hero Zone -->
 
+
 <!-- Body -->
 <?php if(get_field('listing_description')):?>
   <section class="wysiwyg-block padding-md">
