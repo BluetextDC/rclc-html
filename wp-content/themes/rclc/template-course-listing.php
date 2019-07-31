@@ -54,7 +54,7 @@ get_header();
           'posts_per_page' => -1,    
           'order' => 'ASC',
           'orderby' => 'meta_value',
-          'meta_key'  => 'date_course_ends',
+          'meta_key'  => 'date_course_begins',
           'meta_query' => array(
             array(
                   'key'   => 'date_course_ends',
