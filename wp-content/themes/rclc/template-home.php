@@ -75,8 +75,8 @@ get_header();
 endwhile; endif; ?>
 <!-- Component listing -->
 
-
-  <section class="newslatter-sec padding-global text-center bg-white hidden <?php if(get_field('display_contact_form')): ?><?php the_field('display_contact_form'); ?><?php endif;?>">
+<?php if(get_field('display_contact_form')): ?>
+  <section class="newslatter-sec padding-global text-center bg-white hidden <?php the_field('display_contact_form'); ?>">
     <div class="container contact-form" style="display: block;">
       <div class="row">
         <div class="col-sm-12">
@@ -86,8 +86,10 @@ endwhile; endif; ?>
       </div>
     </div>
   </section>
+  <?php endif;?>
 
-  <section class="newslatter-sec padding-global light_gray-bg text-center bg-white hidden <?php if(get_field('display_subscribe_form')): ?><?php the_field('display_subscribe_form'); ?><?php endif;?>">
+<?php if(get_field('display_subscribe_form')): ?>
+  <section class="newslatter-sec padding-global light_gray-bg text-center bg-white hidden <?php the_field('display_subscribe_form'); ?>">
     <div class="container container-sm">
       <div class="row">
         <div class="col-sm-12">
@@ -97,6 +99,7 @@ endwhile; endif; ?>
       </div>
     </div>
   </section>
+  <?php endif;?>
 
 
 
