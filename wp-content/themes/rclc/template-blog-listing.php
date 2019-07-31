@@ -74,6 +74,10 @@ get_header();
                     <div class="dropdown">
                       <a class="dropdown-toggle dropdown-trigger" data-toggle="dropdown">Filter by</a>
                       <ul class="dropdown-menu dropdown-style" id="tag-check">
+                       <li class="filter-btns">
+                        <button class="clearCheckBox" id="clear-all-category">clear all</button>
+                        <button class="right-btn apply-filter-tag">apply</button>
+                      </li>
                        <?php foreach ($aval_tags as $key=>$value) { ?>
                         <li>
                           <label class="checkbox-container"><?php echo $value->name; ?><input type="checkbox" class="alm-checkbox" value="<?php echo $key; ?>" <?php if(isset($_GET['tags']) && in_array($key, explode(",", $_GET['tags']))){ ?> <?php }?>>
@@ -81,10 +85,6 @@ get_header();
                           </label>
                         </li>
                       <?php }?>
-                      <li class="filter-btns">
-                        <button class="clearCheckBox" id="clear-all-category">clear all</button>
-                        <button class="right-btn apply-filter-tag">apply</button>
-                      </li>
                     </ul>
                   </div>
                 <?php endif; ?>
