@@ -74,5 +74,36 @@ get_header();
   get_template_part ( 'components/component', 'full-width_text_cta' );
 endwhile; endif; ?>
 <!-- Component listing -->
+
+
+  <section class="newslatter-sec padding-global text-center bg-white hidden <?php if(get_field('display_contact_form')): ?><?php the_field('display_contact_form'); ?><?php endif;?>">
+    <div class="container contact-form" style="display: block;">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="heading">Contact</h2>
+          <?php echo do_shortcode( '[contact-form-7 id="152" title="Contact form 1"]' ); ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newslatter-sec padding-global light_gray-bg text-center bg-white hidden <?php if(get_field('display_subscribe_form')): ?><?php the_field('display_subscribe_form'); ?><?php endif;?>">
+    <div class="container container-sm">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="heading">Subscribe to Our Email Newsletter</h2>
+          <?php echo do_shortcode( '[contact-form-7 id="73" title="Contact form 1"]' ); ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
 <?php
 get_footer();

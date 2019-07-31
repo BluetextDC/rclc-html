@@ -9958,6 +9958,10 @@ ul.social-links li a:hover i {
   }
 }
 
+.bg-white {
+  background: #fff !important;
+}
+
 .contact-form {
   display: none;
 }
