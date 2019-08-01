@@ -73,8 +73,46 @@
     <!-- Select Course CPT -->
 
     <!-- Select Posts -->
+
+    <?php if (get_sub_field('limit_to_three_content_blocks')) {?>
     <?php if(get_sub_field('content_display_mode') == 'select_post'){?>
-      <?php $posts = get_sub_field('select_posts');
+        <?php 
+          $postselect = get_sub_field('select_posts_limited');
+          if ($postselect) {
+            if (is_array($postselect)) {
+              $postselect = array($postselect);
+            }
+              $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 3,
+                'orderby' => 'ASC',
+                'category__in' => $postselect,
+              );
+                  $quote_query = new WP_Query($args);
+                  if ($quote_query->have_posts()) {
+                    while($quote_query->have_posts()): $quote_query->the_post(); ?>
+                           <div class="col-md-4">
+                            <div class="card">
+                              <a href="<?php the_permalink(); ?>" class="outer_link"></a>
+                              <div class="inner">
+                                <span class="category">Blogs</span>
+                                <h3><?php the_title(); ?></h3>
+                                <div class="btn-outer">
+                                  <a href="<?php the_permalink(); ?>" class="btn link-btn">all industries</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  <?php endwhile;
+                   }
+                  }
+                  wp_reset_postdata();
+              ?>
+      <?php }?>
+
+    <?php }else {?>
+      <?php if(get_sub_field('content_display_mode') == 'select_post'){?>
+      <?php $posts = get_sub_field('select_posts_unlimited');
       if( $posts ): ?>
         <div class="row">
           <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
@@ -96,9 +134,12 @@
         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
       <?php endif; ?>
     <?php }?>
+    <?php }?>
     <!-- Select Posts -->
 
   </div>
 </section>
+
+
 <?php endif; ?>
 <!-- promo cards -->

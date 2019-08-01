@@ -635,10 +635,10 @@
                         },
                         {
                             "key": "field_5d3055839c6d7",
-                            "label": "Select Posts",
-                            "name": "select_posts",
-                            "type": "relationship",
-                            "instructions": "",
+                            "label": "Select Posts Limited",
+                            "name": "select_posts_limited",
+                            "type": "taxonomy",
+                            "instructions": "Display only three posts of Taxonomy",
                             "required": 0,
                             "conditional_logic": [
                                 [
@@ -646,6 +646,46 @@
                                         "field": "field_5d2f07b58db10",
                                         "operator": "==",
                                         "value": "select_post"
+                                    },
+                                    {
+                                        "field": "field_5d427e841635b",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "select",
+                            "allow_null": 0,
+                            "add_term": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_5d428d308db6d",
+                            "label": "Select Posts Unlimited",
+                            "name": "select_posts_unlimited",
+                            "type": "relationship",
+                            "instructions": "Select unlimited posts",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d2f07b58db10",
+                                        "operator": "==",
+                                        "value": "select_post"
+                                    },
+                                    {
+                                        "field": "field_5d427e841635b",
+                                        "operator": "!=",
+                                        "value": "1"
                                     }
                                 ]
                             ],
@@ -666,8 +706,27 @@
                                 "featured_image"
                             ],
                             "min": 1,
-                            "max": 3,
+                            "max": "",
                             "return_format": "object"
+                        },
+                        {
+                            "key": "field_5d427e841635b",
+                            "label": "Limit to Three Content Blocks",
+                            "name": "limit_to_three_content_blocks",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "Enabled",
+                            "ui_off_text": "Disabled"
                         }
                     ],
                     "min": "",
@@ -826,5 +885,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1564145145
+    "modified": 1564652089
 }

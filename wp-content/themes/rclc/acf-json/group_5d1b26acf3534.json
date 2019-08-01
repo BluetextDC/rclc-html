@@ -312,7 +312,8 @@
                             },
                             "choices": {
                                 "select_pages": "Select Pages",
-                                "select_post": "Select Posts"
+                                "select_post": "Select Posts",
+                                "select_taxonomy": "Select Taxonomy"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -392,6 +393,36 @@
                             "min": 1,
                             "max": 3,
                             "return_format": "object"
+                        },
+                        {
+                            "key": "field_5d41359731e98",
+                            "label": "Select Taxonomy",
+                            "name": "select_taxonomy",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d3af1cfe08a1",
+                                        "operator": "==",
+                                        "value": "select_taxonomy"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "select",
+                            "allow_null": 0,
+                            "add_term": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
                         }
                     ],
                     "min": "",
@@ -550,6 +581,7 @@
                             },
                             "choices": {
                                 "select_pages": "Select Pages",
+                                "select_course_cpt": "Select Course CPT",
                                 "select_post": "Select Posts"
                             },
                             "allow_null": 0,
@@ -629,7 +661,7 @@
                             ],
                             "min": 1,
                             "max": 3,
-                            "return_format": "object"
+                            "return_format": "id"
                         },
                         {
                             "key": "field_5d304e1295d08",
@@ -656,10 +688,10 @@
                         },
                         {
                             "key": "field_5d2eb93386e24",
-                            "label": "Select Posts",
-                            "name": "select_posts",
-                            "type": "relationship",
-                            "instructions": "",
+                            "label": "Select Posts Limited",
+                            "name": "select_posts_limited",
+                            "type": "taxonomy",
+                            "instructions": "Display only three posts of Taxonomy",
                             "required": 0,
                             "conditional_logic": [
                                 [
@@ -667,6 +699,46 @@
                                         "field": "field_5d2eb86086e21",
                                         "operator": "==",
                                         "value": "select_post"
+                                    },
+                                    {
+                                        "field": "field_5d42b0be13282",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "select",
+                            "allow_null": 0,
+                            "add_term": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_5d42b0e113283",
+                            "label": "Select Posts Unlimited",
+                            "name": "select_posts_unlimited",
+                            "type": "relationship",
+                            "instructions": "Select unlimited posts",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d2eb86086e21",
+                                        "operator": "==",
+                                        "value": "select_post"
+                                    },
+                                    {
+                                        "field": "field_5d42b0be13282",
+                                        "operator": "!=",
+                                        "value": "1"
                                     }
                                 ]
                             ],
@@ -687,8 +759,27 @@
                                 "featured_image"
                             ],
                             "min": 1,
-                            "max": 3,
+                            "max": "",
                             "return_format": "object"
+                        },
+                        {
+                            "key": "field_5d42b0be13282",
+                            "label": "Limit to Three Content Blocks",
+                            "name": "limit_to_three_content_blocks",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "Enabled",
+                            "ui_off_text": "Disabled"
                         }
                     ],
                     "min": "",
@@ -957,5 +1048,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1564549538
+    "modified": 1564652715
 }
