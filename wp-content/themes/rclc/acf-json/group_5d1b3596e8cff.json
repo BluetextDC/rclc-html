@@ -3,69 +3,6 @@
     "title": "Generic Landing Template",
     "fields": [
         {
-            "key": "field_5d3022262dde0",
-            "label": "Footer",
-            "name": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_5d3022312dde1",
-            "label": "Display Contact Form",
-            "name": "display_contact_form",
-            "type": "checkbox",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "block": "Yes"
-            },
-            "allow_custom": 0,
-            "default_value": [],
-            "layout": "vertical",
-            "toggle": 0,
-            "return_format": "value",
-            "save_custom": 0
-        },
-        {
-            "key": "field_5d3022452dde2",
-            "label": "Display Subscribe Form",
-            "name": "display_subscribe_form",
-            "type": "checkbox",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "block": "Yes"
-            },
-            "allow_custom": 0,
-            "default_value": [],
-            "layout": "vertical",
-            "toggle": 0,
-            "return_format": "value",
-            "save_custom": 0
-        },
-        {
             "key": "field_5d1b35c23b841",
             "label": "Hero Zone",
             "name": "hero_zone",
@@ -863,6 +800,69 @@
             "button_label": "Add Row",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "field_5d3022262dde0",
+            "label": "Footer",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d3022312dde1",
+            "label": "Display Contact Form",
+            "name": "display_contact_form",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "block": "Yes"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5d3022452dde2",
+            "label": "Display Subscribe Form",
+            "name": "display_subscribe_form",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "block": "Yes"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         }
     ],
     "location": [
@@ -884,5 +884,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1564725112
+    "modified": 1564730723
 }
