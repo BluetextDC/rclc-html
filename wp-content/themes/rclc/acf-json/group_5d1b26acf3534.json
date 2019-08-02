@@ -689,9 +689,9 @@
                         },
                         {
                             "key": "field_5d2eb93386e24",
-                            "label": "Select Posts Limited",
-                            "name": "select_posts_limited",
-                            "type": "taxonomy",
+                            "label": "Select Posts",
+                            "name": "select_posts",
+                            "type": "relationship",
                             "instructions": "Display only three posts of Taxonomy",
                             "required": 0,
                             "conditional_logic": [
@@ -700,46 +700,6 @@
                                         "field": "field_5d2eb86086e21",
                                         "operator": "==",
                                         "value": "select_post"
-                                    },
-                                    {
-                                        "field": "field_5d42b0be13282",
-                                        "operator": "==",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "taxonomy": "category",
-                            "field_type": "select",
-                            "allow_null": 0,
-                            "add_term": 1,
-                            "save_terms": 0,
-                            "load_terms": 0,
-                            "return_format": "id",
-                            "multiple": 0
-                        },
-                        {
-                            "key": "field_5d42b0e113283",
-                            "label": "Select Posts Unlimited",
-                            "name": "select_posts_unlimited",
-                            "type": "relationship",
-                            "instructions": "Select unlimited posts",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_5d2eb86086e21",
-                                        "operator": "==",
-                                        "value": "select_post"
-                                    },
-                                    {
-                                        "field": "field_5d42b0be13282",
-                                        "operator": "!=",
-                                        "value": "1"
                                     }
                                 ]
                             ],
@@ -756,11 +716,9 @@
                                 "search",
                                 "taxonomy"
                             ],
-                            "elements": [
-                                "featured_image"
-                            ],
+                            "elements": "",
                             "min": 1,
-                            "max": "",
+                            "max": 3,
                             "return_format": "object"
                         },
                         {
@@ -800,7 +758,15 @@
                             "type": "true_false",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d2eb86086e21",
+                                        "operator": "==",
+                                        "value": "select_taxonomy"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1079,5 +1045,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1564656982
+    "modified": 1564725563
 }

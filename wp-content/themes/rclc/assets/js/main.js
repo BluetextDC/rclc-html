@@ -29,6 +29,18 @@ function toggleHandler(toggle) {
 // desktop menu slide effects end
 
 
+// course link hover remove
+          jQuery( ".course a.cc-link-btn" )
+          .mouseenter(function() {  
+            jQuery('.course .btn-outer .btn').addClass("remove_hover");
+          })
+          .mouseleave(function() {
+            jQuery('.course .btn-outer .btn').removeClass("remove_hover");
+          });
+// course link hover remove
+
+
+
 $(".search-action-expand").click(function(){
   $("#desktop-search").addClass('show-search');
 });

@@ -9385,7 +9385,7 @@ ul.social-links li a:hover i {
   position: relative;
 }
 .blog-cards .card a.outer_link {
-  z-index: 3;
+  z-index: 1;
 }
 .blog-cards .card:before {
   content: '';
@@ -9418,6 +9418,12 @@ ul.social-links li a:hover i {
   .blog-cards .card:hover .btn:before {
     width: 100%;
   }
+  .course .link-btn {
+    z-index: 0;
+}
+  .course .link-btn:hover:before {
+    width:100%;
+}
 }
 .blog-cards .card .inner {
   position: relative;
@@ -9452,7 +9458,8 @@ ul.social-links li a:hover i {
     min-height: 100px;
   }
 }
-.blog-cards .card a.btn {
+.blog-cards .card a.btn,
+.course .link-btn {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;

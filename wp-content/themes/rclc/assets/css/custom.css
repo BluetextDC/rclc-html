@@ -96,6 +96,10 @@ div.wpcf7-mail-sent-ok {
     width: 100%;
 }
 
+.remove_hover:before {
+    width: 0 !important;
+}
+
 /*error page css*/
 .error-page-banner .container {
     min-height: 300px;
