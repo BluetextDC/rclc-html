@@ -47,6 +47,43 @@
     <?php }?>
     <!-- Select Posts -->
 
+
+        <!-- Select Taxonomy -->
+
+
+    <?php if(get_sub_field('cta_content_display_mode') == 'select_taxonomy'){?>
+      <div class="row flex-container padding-lg">
+        <?php 
+          $postselect = get_sub_field('select_taxonomy');
+          if ($postselect) {
+            if (is_array($postselect)) {
+              $postselect = array($postselect);
+            }
+              $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 3,
+                'orderby' => 'ASC',
+                'category__in' => $postselect,
+              );
+                  $quote_query = new WP_Query($args);
+                  if ($quote_query->have_posts()) {
+                    while($quote_query->have_posts()): $quote_query->the_post(); ?>
+                      <div class="col-md-4">
+                        <div class="content">
+                            <h3> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        </div>
+                      </div>
+                  <?php endwhile;
+                   }
+                  }
+                  wp_reset_postdata();
+              ?>
+            </div>
+      <?php }?>
+
+
+    <!-- Select Taxonomy -->
+
   </div>
 </section>
 <?php endif; ?>

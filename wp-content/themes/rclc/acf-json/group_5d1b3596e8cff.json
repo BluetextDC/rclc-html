@@ -713,7 +713,8 @@
                             },
                             "choices": {
                                 "select_pages": "Select Pages",
-                                "select_post": "Select Posts"
+                                "select_post": "Select Posts",
+                                "select_taxonomy": "Select Taxonomy"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -791,6 +792,36 @@
                             "min": 1,
                             "max": 3,
                             "return_format": "object"
+                        },
+                        {
+                            "key": "field_5d4400d7f436e",
+                            "label": "Select Taxonomy",
+                            "name": "select_taxonomy",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d3af57914596",
+                                        "operator": "==",
+                                        "value": "select_taxonomy"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "field_type": "select",
+                            "allow_null": 0,
+                            "add_term": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
                         }
                     ],
                     "min": "",
@@ -884,5 +915,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1564730723
+    "modified": 1564737863
 }
