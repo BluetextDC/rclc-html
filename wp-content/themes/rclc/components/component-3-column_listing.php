@@ -18,7 +18,7 @@
                     <?php if($texonomy_terms){ ?>
                       <span class="category">
                         <?php foreach ($texonomy_terms as $key=>$value) { ?>
-                          <?php echo $value->slug; ?>
+                          <?php echo $value->name; ?>
                         <?php }?>
                       </span>
                     <?php } else { ?>
