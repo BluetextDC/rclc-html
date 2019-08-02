@@ -49,7 +49,7 @@ function addfilters() {
     text += "<li>" + selectfilters[i] + "</li>";
   }
   text += "</ul>";
-  document.getElementById("filter-added").innerHTML = text;
+  // document.getElementById("filter-added").innerHTML = text;
 }
 
 function filterme() {
@@ -127,15 +127,16 @@ $('.filter-added ul.tag-list li').on('click', function(){
           $("#filter-form").submit();
         });
 
-        $('#clear-all-category').on('click', function(){
+        $('#clear-all-category').on('click', function(e){
+          e.preventDefault();
           $('#categories').val('');
-          $("#filter-form").submit();
+          // $("#filter-form").submit();
         });
 
         // category clear
 
-        $('.clearCheckBox').on('click', function(){
-
+        $('.clearCheckBox').on('click', function(e){
+          e.preventDefault();
           $('#cate-check li .alm-checkbox').each(function(){
             $(this).prop("checked", false);
           });

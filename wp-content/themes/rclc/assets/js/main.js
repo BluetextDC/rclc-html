@@ -40,6 +40,17 @@ function toggleHandler(toggle) {
 // course link hover remove
 
 
+      $('#clear-all-category').click(function() {
+             var uri = window.location.toString();
+              var clean_uri = uri.substring(0, uri.indexOf("?"));
+              if (uri.indexOf("?") > 0) {
+                  window.location.replace(clean_uri);
+              }
+              else {
+                window.location.replace(clean_uri);
+              }
+          });
+
 
 $(".search-action-expand").click(function(){
   $("#desktop-search").addClass('show-search');
