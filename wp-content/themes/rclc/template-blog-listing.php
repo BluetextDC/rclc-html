@@ -80,7 +80,8 @@ get_header();
                       </li>
                        <?php foreach ($aval_tags as $key=>$value) { ?>
                         <li>
-                          <label class="checkbox-container"><?php echo $value->name; ?><input type="checkbox" class="alm-checkbox" value="<?php echo $key; ?>" <?php if(isset($_GET['tags']) && in_array($key, explode(",", $_GET['tags']))){ ?> <?php }?>>
+                          <label class="checkbox-container <?php if(isset($_GET['tags']) && in_array($key, explode(",", $_GET['tags']))) {  echo 'selected-posts'; } ?>"><?php echo $value->name; ?><input type="checkbox" 
+                            class="alm-checkbox" value="<?php echo $key; ?>" <?php if(isset($_GET['tags']) && in_array($key, explode(",", $_GET['tags']))){ ?> <?php }?>>
                             <span class="checkmark"></span>
                           </label>
                         </li>

@@ -7290,6 +7290,23 @@ a:hover {
   background-color: transparent;
 }
 
+ .selected-posts .checkmark:before {
+    content: "\e907";
+    font-family: "icomoon";
+    position: absolute;
+    display: block;
+    left: 2px;
+    top: 1px;
+    font-size: 9px;
+    font-weight: 600;    
+}
+ .selected-posts {
+   user-select:none;
+   pointer-events:none;
+   opacity:0.6;
+ }
+
+
 .dropdown-style::-webkit-scrollbar {
   width: 5px;
 }
