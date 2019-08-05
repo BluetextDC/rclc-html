@@ -552,7 +552,7 @@
                             "key": "field_5d3055519c6d6",
                             "label": "Course Calendar CTA",
                             "name": "course_calendar_cta",
-                            "type": "link",
+                            "type": "url",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": [
@@ -569,7 +569,8 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "default_value": "",
+                            "placeholder": ""
                         },
                         {
                             "key": "field_5d3055839c6d7",
@@ -915,5 +916,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1564737863
+    "modified": 1564983870
 }
