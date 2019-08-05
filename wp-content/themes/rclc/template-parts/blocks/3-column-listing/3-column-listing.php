@@ -43,7 +43,7 @@ if( !empty($block['align']) ) {
                 <div class="card">
                   <a href="<?php echo get_post_permalink($post->ID); ?>" class="outer_link"></a>
                   <div class="inner">
-                    <?php $texonomy_terms = get_the_terms($post->ID, 'new_data');?>
+                    <?php $texonomy_terms = get_the_terms($post->ID, 'content_type');?>
                     <?php if($texonomy_terms){ ?>
                       <span class="category">
                         <?php foreach ($texonomy_terms as $key=>$value) { ?>
