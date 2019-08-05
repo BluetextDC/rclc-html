@@ -9422,6 +9422,11 @@ ul.social-links li a:hover i {
 .blog-cards .card a.outer_link {
   z-index: 1;
 }
+
+.gutenberg-block.blog-cards .card a.outer_link {
+  z-index: 2;
+}
+
 .blog-cards .card:before {
   content: '';
   position: absolute;
@@ -9462,7 +9467,10 @@ ul.social-links li a:hover i {
 }
 .blog-cards .card .inner {
   position: relative;
-  z-index: 2;
+  /*z-index: 2;*/
+}
+.blog-cards.gutenberg-block .card h3 {
+    font-family: "ProximaNova";
 }
 @media (max-width: 767px) {
   .blog-cards .card {

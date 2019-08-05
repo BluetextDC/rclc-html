@@ -225,6 +225,9 @@ div.wpcf7-mail-sent-ok {
 
 .wysiwyg-block .content.blog-detail ul.taglist {
     padding: 0;
+    display: block;
+    float: left;
+    width: 100%;
 }
 
 .wysiwyg-block .content.blog-detail ul.taglist li {
@@ -451,6 +454,8 @@ div.wpcf7-mail-sent-ok {
     }
     .blog-cards .card .btn-outer{
         min-height: 70px;
+        position: relative;
+        z-index: 3;
     }
     .blog-cards .card.course:hover a.btn:before{
         /*width: 0;*/

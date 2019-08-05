@@ -231,3 +231,23 @@ function my_acf_load_value( $value, $post_id, $field ) {
 }
 
 add_filter('acf/load_value/name=slider', 'my_acf_load_value', 10, 3);
+
+
+function register_acf_block_types() {
+
+    // register a testimonial block.
+    acf_register_block_type(array(
+        'name'              => 'testimonial',
+        'title'             => __('3-Column Listing'),
+        'description'       => __('A custom 3-Column Listing block.'),
+        'render_template'   => 'template-parts/blocks/3-column-listing/3-column-listing.php',
+        'category'          => 'formatting',
+        'icon'              => 'editor-insertmore',
+        'keywords'          => array( 'testimonial', 'quote' ),
+    ));
+}
+
+// Check if function exists and hook into setup.
+if( function_exists('acf_register_block_type') ) {
+    add_action('acf/init', 'register_acf_block_types');
+}
