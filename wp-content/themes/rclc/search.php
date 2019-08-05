@@ -43,7 +43,7 @@ get_header();
 					</div>
 				</div>
 			</section>
-			<section class="course-listing padding-global">
+			<section class="course-listing padding-global search-box-listing">
 				<div class="container">
 					<div class="row">
 						<?php
@@ -62,7 +62,8 @@ get_header();
 
 			// the_posts_navigation();
 			?>
-			<div class="pagination">
+		<div class="pagination row col-sm-12">
+			<div class="row text-right">
 				<?php $args = array( 
 					'total' => $wp_query->max_num_pages, 
 					'current' => max( 1, get_query_var('paged') ),
@@ -77,6 +78,9 @@ get_header();
 			endif;
 			?>
 		</div>
+	</div>
+
+
 	</div>
 </div>
 </section>

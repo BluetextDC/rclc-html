@@ -28,14 +28,15 @@ get_header();
           <p><?php echo get_the_date('F dS, Y'); ?></p>
         </li>
         <li>
-          <p><?php echo $author = get_the_author(); ?></p>
+          <!-- <p><?php echo $author = get_the_author(); ?></p> -->
+          <p><?php the_field('author_name'); ?></p>
         </li>
       </ul>
     <?php endwhile; ?>
   <?php endif; ?>
   <?php  wp_reset_query(); ?>
   <ul class="social-links">
-    <?php echo do_shortcode('[addtoany buttons="linkedin,instagram,twitter,facebook"]'); ?>
+    <!-- <?php echo do_shortcode('[addtoany buttons="linkedin,instagram,twitter,facebook"]'); ?> -->
     <!-- <li class="item"><a href="javascript:void(0)"><i class="icon-linkedin-button-logo"></i></a></li>
     <li class="item"><a href="javascript:void(0)"><i class="icon-instagram-logo"></i></a></li>
     <li class="item"><a href="javascript:void(0)"><i class="icon-twitter-logo-silhouette"></i></a></li>
@@ -52,27 +53,8 @@ get_header();
     <div class="row">
       <div class="col-sm-12">
         <div class="content blog-detail content-limit-block">
-          <h2>Luxury shoppers expect a personalized, elevated retail experience</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. aute irure dolor in reprehenderit in voluptate velit.</p>
-          <p>A busy executive decided she was going to invest some of her precious leisure time (and a sizable financial investment) in a lovely new French designer purse. As she was looking forward to enjoying the thrill of the shopping experience, she decided to head to her favorite designer’s retail boutique. Upon arriving inside the boutique, she was completely ignored by all the sales associates. While she had an idea of what kind of handbag she wanted to buy, she still required some assistance in viewing multiple styles, so initiated a conversation with one associate. Though the boutique was not crowded, the associate’s body language demonstrated annoyance that the executive was attempting to engage with her.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. aute irure dolor in reprehenderit in voluptate velit.</p>
-          <h3>Sub Heading</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-          <ul>
-            <li>
-              Based on the product price point, the executive had the expectation that the retail shopping experience would include high-touch, elegant service.
-            </li>
-            <li>The retail boutique (and subsequently the brand) lost credibility and loyalty when the shopping experience expectation collided with disengaged and lackluster sales associates.</li>
-            <li>Even though the executive wanted to buy a purse and had the means to do so, the poor customer experience pushed her to not purchase during her boutique visit.</li>
-            <li>As the desire for the luxury product did not subside, but the memory of the dismal experience remained, the executive simply purchased through a different channel and from a competitor.</li>
-          </ul>
-          <ol>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</li>
-            <li>Consectetur adipisicing elit, sed do eiusmod.</li>
-            <li>Lorem ipsum dolor sit amet nisi ut aliquip.</li>
-          </ol>
-          <p>Learn how The Ritz-Carlton has created a culture of exceptional customer experience and how to apply it to your organization at one of our upcoming enrichment courses.</p>
-          <ul class="taglist">
+          <?php the_content(); ?>
+            <ul class="taglist">
             <?php $tags = get_tags();if (!empty($tags)) {?>
               <?php if (get_the_tag_list()) {?>
                 <li>
@@ -86,6 +68,7 @@ get_header();
             <li><a href="javascript:void(0)">Tag</a></li>,
             <li><a href="javascript:void(0)">New Tag</a></li> -->
           </ul>
+
           <div class="show-content-block visible-xs">
             <button class="btn submit-btn">Read More</button>
           </div>
@@ -96,7 +79,7 @@ get_header();
 </section>
 <!-- wysiwyg-block -->
 <!-- Single image  -->
-<section class="single-img">
+<!-- <section class="single-img">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -105,10 +88,10 @@ get_header();
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- Single image  -->
 <!-- Blog Cards -->
-<section class="blog-cards">
+<!-- <section class="blog-cards">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
@@ -143,9 +126,10 @@ get_header();
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- Blog Cards -->
 <!-- Cta Section -->
+
 <?php 
 get_template_part ( 'components/component', 'cta-block' ); 
 ?>

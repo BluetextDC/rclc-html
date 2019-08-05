@@ -10,17 +10,37 @@
 get_header();
 ?>
 
+
+
+    <section class="hero-zone generic-landing">
+       <div class="bg-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/details-bg.jpg');"></div>
+      <div class="container">
+        <div class="row">
+            <div class="content">
+              <?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+<!-- 			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
+			</header> -->
+
+
+<section class="course-listing padding-global">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
 
 			<?php
 			/* Start the Loop */
@@ -45,9 +65,16 @@ get_header();
 		endif;
 		?>
 
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

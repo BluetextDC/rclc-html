@@ -3,6 +3,25 @@
     "title": "Blog Posts",
     "fields": [
         {
+            "key": "field_5d47cc4af5b50",
+            "label": "Author Name",
+            "name": "author_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d2d9eeccd664",
             "label": "Display Contact Form",
             "name": "display_contact_form",
@@ -59,12 +78,12 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
-    "label_placement": "top",
+    "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1563270943
+    "modified": 1564986594
 }

@@ -15,27 +15,46 @@
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			// the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
 				<?php
-				rclc_posted_on();
-				rclc_posted_by();
+				// rclc_posted_on();
+				// rclc_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php rclc_post_thumbnail(); ?>
+	<!-- <?php rclc_post_thumbnail(); ?> -->
 
-	<div class="entry-content">
+
+        <div class="media course-item">
+          <a href="<?php the_permalink(); ?>" class="outer_link"></a>
+          <div class="media-left">
+            <div class="course-info vh-center">
+              <span><?php echo get_the_date('F, Y'); ?></span>
+              <b><?php echo get_the_date('dS'); ?></b>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4><?php the_title(); ?></h4>
+              <p><?php the_excerpt();?></p>
+            <div class="btn-outer">
+              <a href="<?php the_permalink(); ?>" class="btn submit-btn vh-center">Read More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+<!-- 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
 				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'rclc' ),
 				array(
 					'span' => array(
@@ -51,9 +70,11 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+	</div> -->
+
+	<!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php rclc_entry_footer(); ?>
+		<!-- <?php rclc_entry_footer(); ?> -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
