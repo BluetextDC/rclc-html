@@ -53,14 +53,9 @@
                   <h3><?php the_title(); ?></h3>
                   <div class="btn-outer">
                     <a href="<?php the_permalink(); ?>" class="btn link-btn">class description</a><br>
-                    <?php $link = get_sub_field('course_calendar_cta');
-                    if( $link ): 
-                      $link_url = $link['url'];
-                      $link_title = $link['title'];
-                      $link_target = $link['target'] ? $link['target'] : '_self';
-                      ?>
-                      <a href="<?php echo esc_url($link_url); ?>" class="link-btn cc-link-btn" target="<?php echo esc_attr($link_target); ?>">course calendar</a>
-                    <?php endif;?>
+                    <?php if (get_sub_field('course_calendar_cta')) { ?>
+                    <a href="<?php the_sub_field('course_calendar_cta'); ?>" class="link-btn cc-link-btn">course calendar</a>
+                    <?php } ?>
                   </div>
                 </div>
               </div>
