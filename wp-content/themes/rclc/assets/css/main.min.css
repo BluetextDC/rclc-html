@@ -9374,7 +9374,8 @@ ul.social-links li a:hover i {
   margin-right:auto;
 }
 .wysiwyg-block .content.blog-detail p,
-.wysiwyg-block .content.blog-detail ul {
+.wysiwyg-block .content.blog-detail ul,
+.wysiwyg-block .content.blog-detail ol {
   max-width:950px;
   margin-left:auto;
   margin-right:auto;
