@@ -27,10 +27,11 @@ get_header();
          <li>
           <p><?php echo get_the_date('F dS, Y'); ?></p>
         </li>
+        <?php if( get_field('author_name') ): ?>
         <li>
-          <!-- <p><?php echo $author = get_the_author(); ?></p> -->
           <p><?php the_field('author_name'); ?></p>
         </li>
+        <?php endif; ?>
       </ul>
     <?php endwhile; ?>
   <?php endif; ?>
