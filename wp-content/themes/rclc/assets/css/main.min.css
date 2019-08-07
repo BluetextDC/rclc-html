@@ -9363,6 +9363,25 @@ ul.social-links li a:hover i {
   color: #292929;
   text-shadow: 0 0 0 #292929;
 }
+.wysiwyg-block .content.blog-detail h1,
+.wysiwyg-block .content.blog-detail h2,
+.wysiwyg-block .content.blog-detail h3,
+.wysiwyg-block .content.blog-detail h4,
+.wysiwyg-block .content.blog-detail h5,
+.wysiwyg-block .content.blog-detail h6 {
+  max-width:950px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.wysiwyg-block .content.blog-detail p,
+.wysiwyg-block .content.blog-detail ul {
+  max-width:950px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.single .wysiwyg-block .content.blog-detail ul.taglist {
+  float: none;
+}
 .wysiwyg-block .content.blog-detail p {
   color: #313131;
   font-weight: 400;
