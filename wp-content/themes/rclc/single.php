@@ -50,7 +50,8 @@ get_header();
 <!-- Hero Zone -->
 <!-- wysiwyg-block -->
 <section class="wysiwyg-block padding-md">
-  <div class="container container-md">
+  <!-- <div class="container container-md"> -->
+  <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="content blog-detail content-limit-block">
