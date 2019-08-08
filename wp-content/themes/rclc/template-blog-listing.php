@@ -129,7 +129,9 @@ get_header();
             <?php }?>
             <div class="blog-content">
               <h4><?php the_title(); ?></h4>
-              <p><?php the_excerpt(); ?></p>
+              <p>
+                    <?php echo wp_trim_words(get_the_content(), 30, ' [...]'); ?>
+              </p>
               <span><?php the_date("F dS, Y"); ?></span>
             </div>
           </div>
@@ -184,7 +186,10 @@ if(isset($_GET['tags']) && trim($_GET['tags']) != ""){
               <?php }?>
               <div class="blog-content">
                 <h4><?php the_title(); ?></h4>
-                <p><?php the_excerpt(); ?></p>
+                <!-- <p><?php the_excerpt(); ?></p> -->
+                  <p>
+                    <?php echo wp_trim_words(get_the_content(), 20, ' (...)'); ?>
+                  </p>
                 <span><?php echo get_the_date('F dS, Y'); ?></span>
               </div>
             </div>
