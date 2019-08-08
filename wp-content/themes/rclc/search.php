@@ -19,12 +19,10 @@ get_header();
 				<div class="container">
 					<div class="row">
 						<div class="content">
-							<h1><?php echo $wp_query->found_posts.' Search Results for';?></h1>
-							<?php
-							/* translators: %s: search query. */
-					// printf( esc_html__( 'Search Results for: %s', 'ati-website' ), '<span>' . get_search_query() . '</span>' );
-							printf( esc_html__( ' %s', 'rclc' ), '<h1 class="milky-color-text">' . get_search_query() . '</h1>' );
-							?>
+							<!-- <h1><?php echo $wp_query->found_posts.' Search Results for';?></h1> -->
+							<h1>Search results for <?php
+							printf( esc_html__( ' %s', 'rclc' ), ''. get_search_query(). '' );
+							?></h1>							
 						</div>
 					</div>
 				</div>
