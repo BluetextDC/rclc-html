@@ -130,7 +130,7 @@ get_header();
             <div class="blog-content">
               <h4><?php the_title(); ?></h4>
               <p>
-                    <?php echo wp_trim_words(get_the_content(), 30, ' [...]'); ?>
+                    <?php echo wp_trim_words(get_the_content(), 30, ' (...)'); ?>
               </p>
               <span><?php the_date("F dS, Y"); ?></span>
             </div>
