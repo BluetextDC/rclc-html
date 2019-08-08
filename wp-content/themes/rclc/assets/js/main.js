@@ -70,13 +70,14 @@ $(".c-hamburger").click(function(){
   // Banner slider
   $('.slider').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 1500,
     autoplay: true,
+    initialSlide : 1,
     arrows: true,
     prevArrow: '<div class="prev"><span>previous</span></div>',
     nextArrow: '<div class="next"><span>Next</span></div>',
-    slidesToShow: 1.2,
+    slidesToShow: 1.1,
     slidesToScroll: 1,
     responsive: [{
       breakpoint: 993,
