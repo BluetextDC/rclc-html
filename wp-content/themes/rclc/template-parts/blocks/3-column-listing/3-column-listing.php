@@ -112,7 +112,7 @@ if( !empty($block['align']) ) {
                   <span class="category">Blogs</span>
                   <h3><?php echo get_the_title($post->ID); ?></h3>
                   <div class="btn-outer">
-                    <a href="<?php echo get_post_permalink($post->ID); ?>" class="btn link-btn">all industries</a>
+                    <a href="<?php echo get_post_permalink($post->ID); ?>" class="btn link-btn">Read More</a>
                   </div>
                 </div>
               </div>
