@@ -105,10 +105,23 @@
 	</footer>
 	<!-- Main Footer -->
 	<script>
-		document.addEventListener( 'wpcf7mailsent', function( event ) {
+		
+			document.addEventListener( 'wpcf7mailsent', function( event ) {
+		    if(event.detail.contactFormId == '151') {
 			$('.contact-form .wpcf7-form.sent').hide();
 			$('.thankyou-div').fadeIn();
-		}, false );
+		    }
+			}, false );
+
+			document.addEventListener( 'wpcf7mailsent', function( event ) {
+		    if(event.detail.contactFormId == '69') {
+			$('.newsletter-sections .wpcf7-form.sent').hide();
+			$('.thankyou-div-text').fadeIn();
+		    }
+			}, false );
+
+
+
 	</script>
 
 	<?php wp_footer(); ?>

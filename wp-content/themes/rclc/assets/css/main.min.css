@@ -10072,6 +10072,20 @@ ul.social-links li a:hover i {
   background: #fff !important;
 }
 
+#wpcf7-f73-o2 .sent .newslatter-form,
+#wpcf7-f73-o2 .sent .wpcf7-mail-sent-ok {
+    display:none !important;
+}
+
+.thank-you-text {
+  display: none;
+}
+
+.sent .thank-you-text {
+  display: block;
+  text-align: center;
+}
+
 .contact-form {
   display: none;
 }

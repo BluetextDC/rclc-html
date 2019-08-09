@@ -341,6 +341,15 @@ div.wpcf7-mail-sent-ok {
         color: #398f14;
     }
 
+
+   .thankyou-div-text {
+        display: none;
+        color: #398f14;
+    }
+
+
+    
+
     textarea {
         resize: none;
     }
@@ -422,8 +431,12 @@ div.wpcf7-mail-sent-ok {
     .newslatter-sec div.wpcf7-validation-errors,
     .newslatter-sec div.wpcf7-acceptance-missing,
     .newslatter-sec div.wpcf7-mail-sent-ok {
-        bottom: -65px;
+        bottom: -80px;
     }
+
+    .newslatter-sec span.wpcf7-not-valid-tip {
+    bottom: -40px;
+}
 
     .blog-cards .card {
         margin-bottom: 35px;
@@ -590,4 +603,12 @@ div.wpcf7-mail-sent-ok {
         .blog-cards .card {
             padding: 35px 25px;
         }
+        .newslatter-sec div.wpcf7-validation-errors, .newslatter-sec div.wpcf7-acceptance-missing, .newslatter-sec div.wpcf7-mail-sent-ok {
+    bottom: 0;
+    line-height: 1.6;
+    position: relative;
+}
+.newslatter-sec span.wpcf7-not-valid-tip {
+    bottom: -35px;
+}
     }
