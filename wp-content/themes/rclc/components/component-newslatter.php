@@ -6,7 +6,7 @@
 				<div class="col-sm-12 newsletter-sections">
 					<h2 class="heading">Subscribe to Our Email Newsletter</h2>
 					<?php echo do_shortcode( '[contact-form-7 id="69" title="Contact form 1"]' ); ?>
-					<h4 class="thankyou-div-text">Thank you for your message. It has been sent.</h4>
+					<h4 class="thankyou-div-text">Thank you for your submission</h4>
 				</div>
 			</div>
 		</div>
@@ -18,7 +18,7 @@
 				<div class="col-sm-12 newsletter-sections">
 					<h2 class="heading">Subscribe to Our Email Newsletter</h2>
 					<?php echo do_shortcode( '[contact-form-7 id="69" title="Contact form 1"]' ); ?>
-					<h4 class="thankyou-div-text">Thank you for your message. It has been sent.</h4>
+					<h4 class="thankyou-div-text">Thank you for your submission</h4>
 				</div>
 			</div>
 		</div>
