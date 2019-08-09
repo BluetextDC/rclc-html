@@ -89,7 +89,7 @@ endwhile; endif; ?>
   </section>
   <?php endif;?>
 
-<?php if(get_field('display_subscribe_form')): ?>
+<!-- <?php if(get_field('display_subscribe_form')): ?>
   <section class="newslatter-sec padding-global light_gray-bg text-center bg-white hidden <?php the_field('display_subscribe_form'); ?>">
     <div class="container container-sm">
       <div class="row">
@@ -101,7 +101,7 @@ endwhile; endif; ?>
       </div>
     </div>
   </section>
-  <?php endif;?>
+  <?php endif;?> -->
 
 
 
