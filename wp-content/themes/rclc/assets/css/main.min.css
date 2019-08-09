@@ -10848,6 +10848,9 @@ button.search-action-expand {
     padding: 22px 10px 10px;
 }
 
+}
+
+@media (min-width:768px) and (max-width: 1199px) {
 
 .hero-zone .bottom-stripe {
     display: flex;
@@ -10890,6 +10893,5 @@ button.search-action-expand {
 }
 
 }
-
 
 /*# sourceMappingURL=main.min.css.map */
