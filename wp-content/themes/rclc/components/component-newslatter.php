@@ -1,5 +1,5 @@
 <!-- newslatter   -->
-<?php if ( is_page_template( array( 'template-blog-listing.php', 'template-generic-landing.php', 'template-course-listing.php' ) ) ) {?>
+<?php if ( is_page_template( array( 'template-home.php', 'template-blog-listing.php', 'template-generic-landing.php', 'template-course-listing.php' ) ) ) {?>
 	<section class="newslatter-sec padding-global light_gray-bg text-center hidden <?php if(get_field('display_subscribe_form')): ?><?php the_field('display_subscribe_form'); ?><?php endif;?>">
 		<div class="container container-sm">
 			<div class="row">
