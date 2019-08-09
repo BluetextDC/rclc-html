@@ -434,6 +434,13 @@ div.wpcf7-mail-sent-ok {
         bottom: -80px;
     }
 
+     .newslatter-sec .contact-form  div.wpcf7-validation-errors,
+    .newslatter-sec .contact-form  div.wpcf7-acceptance-missing,
+    .newslatter-sec .contact-form  div.wpcf7-mail-sent-ok {
+        bottom: -50px;
+    }
+
+
     .newslatter-sec span.wpcf7-not-valid-tip {
     bottom: -40px;
 }
@@ -611,4 +618,9 @@ div.wpcf7-mail-sent-ok {
 .newslatter-sec span.wpcf7-not-valid-tip {
     bottom: -35px;
 }
+     .newslatter-sec .contact-form  div.wpcf7-validation-errors,
+    .newslatter-sec .contact-form  div.wpcf7-acceptance-missing,
+    .newslatter-sec .contact-form  div.wpcf7-mail-sent-ok {
+        bottom: -20px;
+    }
     }
