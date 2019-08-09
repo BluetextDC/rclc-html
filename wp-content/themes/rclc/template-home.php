@@ -82,6 +82,7 @@ endwhile; endif; ?>
         <div class="col-sm-12">
           <h2 class="heading">Contact</h2>
           <?php echo do_shortcode( '[contact-form-7 id="151" title="Contact form 1"]' ); ?>
+          <h3 class="thankyou-div">Thank you for your message. It has been sent.</h3>
         </div>
       </div>
     </div>
@@ -95,6 +96,7 @@ endwhile; endif; ?>
         <div class="col-sm-12">
           <h2 class="heading">Subscribe to Our Email Newsletter</h2>
           <?php echo do_shortcode( '[contact-form-7 id="69" title="Contact form 1"]' ); ?>
+          <h4 class="thankyou-div-text">Thank you for your message. It has been sent.</h4>
         </div>
       </div>
     </div>
