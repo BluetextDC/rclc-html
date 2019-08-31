@@ -52,6 +52,15 @@ function toggleHandler(toggle) {
           });
 
 
+
+          $(document).on('click', 'a[href^="#"]', function(event) {
+              event.preventDefault();
+              $('html, body').animate({
+                  scrollTop: $($.attr(this, 'href')).offset().top-100
+              }, 500);
+          });
+
+
 $(".search-action-expand").click(function(){
   $("#desktop-search").addClass('show-search');
 });
