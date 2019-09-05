@@ -9333,6 +9333,11 @@ ul.social-links li a:hover i {
   margin-top: 30px;
   /*text-shadow: 0 0 0 #292929;*/
 }
+.wysiwyg-block .content h3,
+.wysiwyg-block .content h4,
+.wysiwyg-block .content h5 {
+  margin-top: 30px;
+}
 .wysiwyg-block .content p {
   color: #646464;
   line-height: 25px;
