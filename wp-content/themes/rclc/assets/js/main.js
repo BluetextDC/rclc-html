@@ -53,7 +53,7 @@ function toggleHandler(toggle) {
 
 
 
-          $(document).on('click', 'a[href^="#"]', function(event) {
+          $(document).on('click', '.wysiwyg-block a[href^="#"]', function(event) {
               event.preventDefault();
               $('html, body').animate({
                   scrollTop: $($.attr(this, 'href')).offset().top-100

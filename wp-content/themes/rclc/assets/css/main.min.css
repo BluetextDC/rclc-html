@@ -9330,6 +9330,7 @@ ul.social-links li a:hover i {
 .wysiwyg-block .content h2 {
   line-height: 41px;
   color: #292929;
+  margin-top: 30px;
   /*text-shadow: 0 0 0 #292929;*/
 }
 .wysiwyg-block .content p {
