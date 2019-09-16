@@ -38,17 +38,17 @@
 						<?php endwhile; ?>	
 					<?php endif; ?>
 					<ul class="footer-info">
-						<?php if(get_field('email', 'options')): ?>
-							<li><a href="mailto:<?php the_field('email', 'options'); ?>">Email Us</a></li>
-						<?php endif; ?>
+						<!-- <?php //if(get_field('email', 'options')): ?>
+							<li><a href="mailto:<?php //the_field('email', 'options'); ?>">Email Us</a></li>
+						<?php //endif; ?> -->
 						<?php if(get_field('phone_no', 'options')): ?>
 							<li><a href="tel:<?php the_field('phone_no', 'options'); ?>"><?php the_field('phone_no', 'options'); ?></a></li>
 						<?php endif; ?>
-						<?php if(get_field('time_description', 'options')): ?>
+						<!-- <?php //if(get_field('time_description', 'options')): ?>
 							<li>
-								<p><?php the_field('time_description', 'options'); ?></p>
+								<p><?php //the_field('time_description', 'options'); ?></p>
 							</li>
-						<?php endif; ?>
+						<?php //endif; ?> -->
 					</ul>
 				</div>
 			</div>
