@@ -34,9 +34,18 @@ get_header();
               <span class="h1"><?php the_sub_field('second_heading'); ?></span>
             <?php endif; ?> -->
             <div class="banner-text-slider">
-              <span class="h1">Culture</span>
-              <span class="h1">Service</span>
-              <span class="h1">Experience</span>
+              <?php if(get_sub_field('second_heading')): ?>
+                <span class="h1"><?php the_sub_field('second_heading'); ?></span>
+              <?php endif; ?>
+              <?php if(get_sub_field('third_heading')): ?>
+                <span class="h1"><?php the_sub_field('third_heading'); ?></span>
+              <?php endif; ?>
+              <?php if(get_sub_field('fourth_heading')): ?>
+                <span class="h1"><?php the_sub_field('fourth_heading'); ?></span>
+              <?php endif; ?>
+              <?php if(get_sub_field('fifth_heading')): ?>
+                <span class="h1"><?php the_sub_field('fifth_heading'); ?></span>
+              <?php endif; ?>
             </div>
             <?php if(get_sub_field('content')): ?>
               <div class="content">

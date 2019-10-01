@@ -113,11 +113,12 @@ $(".c-hamburger").click(function(){
     $('.banner-text-slider').slick({
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 800,
     autoplaySpeed: 3000,
     autoplay: true,
     initialSlide : 1,
     arrows: false,
+    draggable: false,
     pauseOnHover: false,
     fade: true,
     slidesToShow: 1,

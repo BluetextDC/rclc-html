@@ -80,6 +80,63 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5d93454cc114a",
+                    "label": "Third Heading",
+                    "name": "third_heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d934566c114b",
+                    "label": "Fourth Heading",
+                    "name": "fourth_heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d934572c114c",
+                    "label": "Fifth Heading",
+                    "name": "fifth_heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5d1b2711fe706",
                     "label": "Content",
                     "name": "content",
@@ -1065,5 +1122,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1569929961
+    "modified": 1569937646
 }
