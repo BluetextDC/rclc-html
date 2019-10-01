@@ -38,7 +38,20 @@
 
 <body <?php body_class(); ?>>
 	<!-- Header strip -->
-	<header class="header">
+ 	<?php 
+ 	$toggle_gref = '';
+ 	if( have_rows('hero_zone') ): 
+	  while( have_rows('hero_zone') ): the_row();
+	  $toggle_gref = get_sub_field('homepage_desktop_menu_gradient');
+	  endwhile; endif; ?>
+	  <?php 
+		if (is_front_page()) { ?>
+		<header class="header <?php echo ($toggle_gref) ? 'home-header': ''; ?>">
+		<?php } else { ?>
+		<header class="header">
+		<?php }
+		?>
+
 		<div class="container">
 			<div class="row flex-container">
 				<div class="col-xs-6">

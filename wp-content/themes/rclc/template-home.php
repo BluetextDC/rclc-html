@@ -25,15 +25,24 @@ get_header();
         <div class="row v-center wd-100">
           <div class="upper-content">
             <?php if(get_sub_field('first_heading')): ?>
-              <h1><?php the_sub_field('first_heading'); ?></h1>
+              <div class="top_heading">
+                <h1 class="top-heading"><?php the_sub_field('first_heading'); ?></h1>
+              </div>
             <?php endif; ?>
             <div class="bottom">
-             <?php if(get_sub_field('second_heading')): ?>
+<!--              <?php if(get_sub_field('second_heading')): ?>
               <span class="h1"><?php the_sub_field('second_heading'); ?></span>
-            <?php endif; ?>
+            <?php endif; ?> -->
+            <div class="banner-text-slider">
+              <span class="h1">Culture</span>
+              <span class="h1">Service</span>
+              <span class="h1">Experience</span>
+            </div>
             <?php if(get_sub_field('content')): ?>
               <div class="content">
+              <div class="banner-para">
                <?php the_sub_field('content'); ?>
+             </div>
              </div>
            <?php endif; ?>
          </div>

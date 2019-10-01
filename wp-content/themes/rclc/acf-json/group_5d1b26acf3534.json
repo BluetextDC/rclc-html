@@ -141,6 +141,25 @@
                     "button_label": "Add Row",
                     "min": "",
                     "max": 3
+                },
+                {
+                    "key": "field_5d933a749cb8b",
+                    "label": "Homepage Desktop Menu Gradient",
+                    "name": "homepage_desktop_menu_gradient",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "ON",
+                    "ui_off_text": "OFF"
                 }
             ]
         },
@@ -1046,5 +1065,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1564982255
+    "modified": 1569929961
 }

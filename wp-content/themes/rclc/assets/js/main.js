@@ -2,6 +2,12 @@
 
 // desktop menu slide effects start
 
+new WOW().init();
+
+
+
+
+
 var toggles = document.querySelectorAll(".c-hamburger");
 
 for (var i = toggles.length - 1; i >= 0; i--) {
@@ -101,6 +107,41 @@ $(".c-hamburger").click(function(){
     }
     ]
   });
+
+// banner text slider
+  
+    $('.banner-text-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    autoplay: true,
+    initialSlide : 1,
+    arrows: false,
+    pauseOnHover: false,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 993,
+      settings: {
+        arrows: false,
+        dots: false,
+      }
+    }
+    ]
+  });
+
+$('.banner-para').delay(3000).queue(function(){
+  $(this).addClass("opacity_full");
+});
+$('.top-heading').delay(2000).queue(function(){
+  $(this).addClass("opacity_full");
+});
+$('.banner-text-slider').delay(2000).queue(function(){
+  $(this).addClass("opacity_full");
+});
+
 
   // Form field float js
   $(".form-control").focus(function() {

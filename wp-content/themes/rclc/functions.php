@@ -151,7 +151,11 @@ function rclc_scripts() {
 
 	wp_enqueue_style('rclc-custom-css', get_template_directory_uri() . '/assets/css/custom.css');
 
+	wp_enqueue_style('rclc-animated-css', get_template_directory_uri() . '/assets/css/animate.min.css');
+
 	wp_enqueue_script('rclc-jquery-js', get_template_directory_uri() . '/assets/js/vendor/jquery.min.js', array(), '20151215', true);
+
+	wp_enqueue_script('rclc-wow-js', get_template_directory_uri() . '/assets/js/wow.min.js', array(), '20151215', true);
 
 	wp_enqueue_script('rclc-slick', get_template_directory_uri() . '/assets/js/vendor/slick.min.js', array(), '20151215', true);
 	

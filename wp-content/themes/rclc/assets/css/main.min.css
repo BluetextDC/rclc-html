@@ -7466,6 +7466,87 @@ a:hover {
   -o-transition: all 0.25s;
   transition: all 0.25s;
 }
+@media (min-width: 768px) {
+  header.home-header:before {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1d1820+0,1d1820+74,1d1820+100&1+0,0.6+74,0+100 */
+  background: -moz-linear-gradient(top,  rgba(29,24,32,1) 0%, rgba(29,24,32,0.6) 74%, rgba(29,24,32,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(29,24,32,1) 0%,rgba(29,24,32,0.6) 74%,rgba(29,24,32,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(29,24,32,1) 0%,rgba(29,24,32,0.6) 74%,rgba(29,24,32,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1820', endColorstr='#001d1820',GradientType=0 ); /* IE6-9 */
+      content:'';
+      height:200px;
+      width:100%;
+      position:absolute;
+      top:0;
+      left:0;
+  }
+  .dark-bg.home-header:before {
+      display:none;
+  }
+}
+
+h1.top-heading {
+  animation: right_to_left 1s cubic-bezier(0.43, 0.41, 0.74, 0.74);
+  animation-delay: 2s;
+  position: relative;
+  opacity: 0;
+}
+
+.banner-para {
+  animation: right_to_leftpara 1s cubic-bezier(0.43, 0.41, 0.74, 0.74);
+  animation-delay: 3s;
+  position: relative;
+  opacity: 0;
+}
+
+.banner-text-slider {
+    animation: left_to_right 1s cubic-bezier(0.43, 0.41, 0.74, 0.74);
+    animation-delay: 2s;
+    display: block;
+    max-width: 430px;
+    float: right;
+    opacity: 0;
+}
+.banner-text-slider span {
+      line-height: 1.2;
+}
+.opacity_full {
+  opacity: 1 !important;
+}
+
+@keyframes right_to_leftpara {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes right_to_left {
+  0% {
+    transform: translateX(-5px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes left_to_right {
+  0% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .header a.brand-logo {
   position: relative;
   height: 91px;
