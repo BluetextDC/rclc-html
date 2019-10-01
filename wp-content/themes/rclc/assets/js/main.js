@@ -133,13 +133,13 @@ $(".c-hamburger").click(function(){
     ]
   });
 
-$('.banner-para').delay(3000).queue(function(){
+$('.banner-para').delay(3500).queue(function(){
   $(this).addClass("opacity_full");
 });
-$('.top-heading').delay(2000).queue(function(){
+$('.top-heading').delay(2500).queue(function(){
   $(this).addClass("opacity_full");
 });
-$('.banner-text-slider').delay(2000).queue(function(){
+$('.banner-text-slider').delay(2500).queue(function(){
   $(this).addClass("opacity_full");
 });
 
