@@ -19,6 +19,7 @@
 			<!-- footer social media -->
 			<div class="col-md-4 align-self-end">
 				<div class="footer-left">
+					<h2>Connect with Us</h2>
 					<?php if( have_rows('social_links', 'options') ): 
 						while( have_rows('social_links', 'options') ): the_row();?>
 							<ul class="social-list">
