@@ -7487,28 +7487,32 @@ a:hover {
 
 h1.top-heading {
   animation: right_to_left 1s cubic-bezier(0.43, 0.41, 0.74, 0.74);
-  animation-delay: 2s;
+  animation-delay: 1s;
   position: relative;
   opacity: 0;
 }
 
 .banner-para {
   animation: right_to_leftpara 1s cubic-bezier(0.43, 0.41, 0.74, 0.74);
-  animation-delay: 3s;
+  animation-delay: 1s;
   position: relative;
   opacity: 0;
 }
 
 .banner-text-slider {
     animation: left_to_right 1s cubic-bezier(0.43, 0.41, 0.74, 0.74);
-    animation-delay: 2s;
+    animation-delay: 1s;
     display: block;
     max-width: 430px;
     float: right;
     opacity: 0;
+    max-height: 78px;
+    overflow: hidden;
 }
 .banner-text-slider span {
       line-height: 1.2;
+      display: inline-block !important
+      opacity:1 !important;
 }
 .opacity_full {
   opacity: 1 !important;
