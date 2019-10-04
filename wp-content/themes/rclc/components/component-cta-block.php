@@ -32,10 +32,11 @@
 <?php } else {?>
 	<?php if (get_row_layout() == 'cta_block'): ?>
 		<section class="cta-section text-center">
+			<?php if (get_sub_field('pick_contenturl') == 'pcform'): ?>
 			<div class="container">
 				<div class="row">
 					<?php if(get_sub_field('title')): ?>
-						<div class="cta-outer">
+						<div class="cta-outer show-form-btn">
 							<a href="javascript:void(0)" class="h2"><span><?php the_sub_field('title'); ?></span></a>
 						</div>
 					<?php endif; ?>
@@ -50,6 +51,19 @@
 					</div>
 				</div>
 			</div>
+			<?php endif; ?>
+
+			<?php if (get_sub_field('pick_contenturl') == 'hyperlink'): ?>
+			<div class="container">
+				<div class="row">
+					<?php if(get_sub_field('title')): ?>
+						<div class="cta-outer">
+							<a href="<?php the_sub_field('cta_block_url'); ?>" class="h2"><span><?php the_sub_field('title'); ?></span></a>
+						</div>
+					<?php endif; ?>
+				</div>
+			</div>
+			<?php endif; ?>
 		</section>
 	<?php endif; ?>
 <?php }?>

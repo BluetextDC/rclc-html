@@ -288,7 +288,7 @@ $('.banner-text-slider').delay(1500).queue(function(){
 
   // Contact form js
   // user click on contact cta open contact form
-  $('.cta-section .cta-outer a').on('click', function(){
+  $('.cta-section .cta-outer.show-form-btn a').on('click', function(){
     $(this).hide();
     $(this).parent().parent().find('.contact-form').fadeIn();
   });
