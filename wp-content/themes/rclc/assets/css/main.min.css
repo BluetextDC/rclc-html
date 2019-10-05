@@ -10229,7 +10229,7 @@ ul.social-links li a:hover i {
   }
 }
 .contact-form .field-outer {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 @media (max-width: 767px) {
   .contact-form .field-outer {
@@ -10238,15 +10238,21 @@ ul.social-links li a:hover i {
 }
 .contact-form .field-outer label {
   font-size: 18px;
-  position: absolute;
-  top: 13px;
-  left: 0;
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
+.contact-form .side-spacer p{
+    text-align: left;
+}
+.contact-form .side-spacer h3{
+  text-align: left;
 }
 .contact-form .field-outer textarea {
   min-height: 96px;
 }
 .contact-form .field-outer.label-float label {
-  display: none;
+  /*display: none;*/
 }
 .contact-form .submit-btn {
   font-size: 18px;
@@ -11028,6 +11034,7 @@ button.search-action-expand {
 .form-submt-btn{
     display: inline-block;
     position:relative;
+    margin-top: 30px;
 }
 .form-submt-btn input {
     background-color: transparent;
@@ -11060,5 +11067,23 @@ button.search-action-expand {
     width: 100%;
     display: block;
 }
-
+.side-spacer .field-outer select{
+    position: relative;
+    -webkit-appearance: none;
+}
+.select-option {
+    position: relative;
+}
+.select-option:before{
+    content:"";
+    position:absolute;
+    width: 8px;
+    height: 8px;
+    border-color: #666;
+    border-style: solid;
+    border-width: 0px 0px 1px 1px;
+    transform: rotate(-45deg);
+    right: 15px;
+    top: 18px;
+}
 /*# sourceMappingURL=main.min.css.map */
