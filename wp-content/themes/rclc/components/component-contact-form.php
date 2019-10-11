@@ -1,6 +1,6 @@
 <!-- Slider section -->
 <?php if (get_row_layout() == 'contact_form'): ?>
-	<section class="contact-form-section text-center">
+	<section class="contact-form-section text-center padding-global">
 		<?php
 			if( get_sub_field('cf_select_form') == 'main_contact_form' ) { ?>
 			<div class="container">
