@@ -827,6 +827,60 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5da0546c2b35e": {
+                    "key": "layout_5da0546c2b35e",
+                    "name": "contact_form",
+                    "label": "Contact Form",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5da054772b35f",
+                            "label": "Heading",
+                            "name": "cf_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5da0549d2b360",
+                            "label": "Select Form",
+                            "name": "cf_select_form",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "main_contact_form": "Main Contact Form",
+                                "course_enrollment_form": "Course Enrollment Form"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -916,5 +970,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1564983870
+    "modified": 1570788541
 }

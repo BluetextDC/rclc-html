@@ -58,9 +58,15 @@
 				<div class="row">
 					<?php if(get_sub_field('title')): ?>
 						<div class="cta-outer">
-							<a href="<?php the_sub_field('cta_block_url'); ?>" class="h2"><span><?php the_sub_field('title'); ?></span></a>
-						</div>
-					<?php endif; ?>
+		                  <?php $link = get_sub_field('cta_block_url');
+		                  if( $link ): 
+		                    $link_url = $link['url'];
+		                    $link_target = $link['target'] ? $link['target'] : '_self';
+		                    ?>
+		                    <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" class="h2"><span><?php the_sub_field('title'); ?></span></a>
+		                  <?php endif;?>
+								</div>
+							<?php endif; ?>
 				</div>
 			</div>
 			<?php endif; ?>

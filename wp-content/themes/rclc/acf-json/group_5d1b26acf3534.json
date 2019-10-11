@@ -584,7 +584,7 @@
                             "key": "field_5d9740a63ffa5",
                             "label": "URL",
                             "name": "cta_block_url",
-                            "type": "url",
+                            "type": "link",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": [
@@ -601,8 +601,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": ""
+                            "return_format": "array"
                         }
                     ],
                     "min": "",
@@ -1089,6 +1088,60 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5da03400ed9ca": {
+                    "key": "layout_5da03400ed9ca",
+                    "name": "contact_form",
+                    "label": "Contact Form",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5da03480ed9cb",
+                            "label": "Heading",
+                            "name": "cf_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5da0355eed9cc",
+                            "label": "Select Form",
+                            "name": "cf_select_form",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "main_contact_form": "Main Contact Form",
+                                "course_enrollment_form": "Course Enrollment Form"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -1178,5 +1231,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1570193999
+    "modified": 1570780733
 }

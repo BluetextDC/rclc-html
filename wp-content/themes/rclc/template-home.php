@@ -90,6 +90,7 @@ get_header();
   get_template_part ( 'components/component', '3-column_listing' );
   get_template_part ( 'components/component', '50-50_cta' );
   get_template_part ( 'components/component', 'full-width_text_cta' );
+  get_template_part ( 'components/component', 'contact-form' );
 endwhile; endif; ?>
 <!-- Component listing -->
 

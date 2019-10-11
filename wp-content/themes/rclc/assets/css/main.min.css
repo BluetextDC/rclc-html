@@ -7166,6 +7166,22 @@ a:hover {
   width: 100%;
 }
 
+/*contact form section style start*/
+
+.contact-form.cf-form-container {
+    display:block;
+}
+.contact-form.cf-form-container .field-outer {
+    margin-bottom:0;
+}
+
+.cf-form-container select.form-control {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 300;
+}
+/*contact form section style start*/
+
 .dropdown {
   padding: 0 15px;
   margin-bottom: 25px;
