@@ -9,7 +9,6 @@
 				<?php endif; ?>
 				<div class="row">
 					<div class="contact-form cf-form-container">
-						<h3>It would be our pleasure to speak with you.</h3>
 						<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"><input name="oid" type="hidden" value="00D61000000dOgr" />
 						<input name="retURL" type="hidden" value="http://ritzcarltonleadershipcenter.com/thank-you/" />
 						<input name="recordType" type="hidden" value="01261000000SWNH" />
@@ -65,8 +64,7 @@
 						<div class="field-outer">
 						<div class="form-group">
 						<div class="select-option"><select id="00N6100000HUTOP" class="form-control" title="Lead Type" name="00N6100000HUTOP" required="true">
-						<option>What are you interested in learning more about?</option>
-						<option value="">--Please Select--</option>
+						<option>--What are you interested in learning more about?--</option>
 						<option value="Advisory Consulting Services">I am interested in exploring a consulting engagement</option>
 						<option value="Onsite Presentations &amp; Facilitation">I am seeking a speaker for one or several meetings or conferences</option>
 						<option value="Enrichment Courses &amp; Learning Services">I want to attend a course at a Ritz-Carlton Hotel</option>
@@ -78,8 +76,7 @@
 						<div class="field-outer">
 						<div class="form-group">
 						<div class="select-option"><select id="industry" class="form-control" name="industry" required="true">
-						<option>Industry</option>
-						<option value="">--Please Select--</option>
+						<option>--Industry--</option>
 						<option value="Aerospace &amp; Defense">Aerospace &amp; Defense</option>
 						<option value="Automotive">Automotive</option>
 						<option value="Aviation">Aviation &amp; Airlines</option>
@@ -214,8 +211,7 @@
 							<div class="form-group">
 							<div class="select-option">
 								<select id="industry" name="industry" required="" class="form-control">
-								<option>Industry</option>
-								<option value="">--None--</option>
+								<option>--Industry--</option>
 								<option value="Automotive">Automotive</option>
 								<option value="Aviation">Aviation &amp; Airlines</option>
 								<option value="Consulting &amp; Legal">Consulting &amp; Legal</option>
@@ -239,8 +235,7 @@
 							<div class="form-group">
 								<div class="select-option">
 									<select id="00N6100000IJquk" title="Approximate Number of Attendees" name="00N6100000IJquk" class="form-control">
-										<option>Approximate Number of Attendees</option>
-										<option value="">--None--</option>
+										<option>--Approximate Number of Attendees--</option>
 										<option value="1">1</option>
 										<option value="2-19">2-19</option>
 										<option value="20+">20-50</option>
