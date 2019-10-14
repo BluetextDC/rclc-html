@@ -7711,6 +7711,10 @@ header .container {
 }
 
 /*header saerch style*/
+
+
+
+
 .ds-main-menu .search-outer {
     position: absolute;
     bottom: -9px;
@@ -7784,6 +7788,51 @@ button.search-action-expand i {
     -webkit-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+@media (min-width: 1200px) {
+    header .container {
+    width: 90%;
+  }
+      footer .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1850px) and (max-width: 1920px) {
+.ds-main-menu {
+    width: 53%;
+}
+}
+@media (min-width: 1720px) and (max-width: 1850px) {
+.ds-main-menu {
+    width: 57%;
+}
+}
+@media (min-width: 1600px) and (max-width: 1720px) {
+.ds-main-menu {
+    width:61%;
+}
+}
+@media (min-width: 1500px) and (max-width: 1600px) {
+.ds-main-menu {
+    width:65%;
+}
+}
+@media (min-width: 1378px) and (max-width: 1500px) {
+.ds-main-menu {
+    width:70%;
+}
+}
+@media (min-width: 1240px) and (max-width: 1378px) {
+.ds-main-menu {
+    width:76%;
+}
+}
+@media (min-width: 1200px) and (max-width: 1240px) {
+.ds-main-menu {
+    width:80%;
+}
 }
 
 .dark-bg .ds-main-menu {
