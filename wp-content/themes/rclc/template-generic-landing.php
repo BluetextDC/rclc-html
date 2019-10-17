@@ -29,6 +29,7 @@ get_header();
 		get_template_part ( 'components/component', 'full-width_text_cta' ); 
 		get_template_part ( 'components/component', 'three-column-full-width-cta' );   
 	    get_template_part ( 'components/component', 'contact-form' );
+	    get_template_part ( 'components/component', 'accrodian-listing' );
 	endwhile; endif; ?>
 	<?php get_template_part ( 'components/component', 'cta-block' ); ?>
 	<?php

@@ -6409,6 +6409,90 @@ button.close {
     bottom: 20px;
   }
 }
+
+
+/*Accordion Listing start*/
+
+.accordion-listing .panel,
+.accordion-listing .panel-body {
+    box-shadow: none;
+    border-bottom: 1px solid #cfcfcf;
+}
+.accordion-listing .panel:last-child,
+.accordion-listing .panel:last-child .panel-body {
+    border-bottom: none;
+}
+
+.accordion-listing .panel-group .panel-heading {
+  padding: 0;
+}
+
+.accordion-listing .panel-group .panel-heading a {
+    display: block;
+    padding: 10px 50px 10px 0;
+    text-decoration: none;
+    position: relative;
+}
+.accordion-listing .panel-title {
+  font-size: 22px;
+  font-weight: 400;
+  display: block;
+  padding: 15px 0;
+  color: #292929;
+}
+.accordion-listing .panel-group .panel-heading a:hover {
+  color: #292929;  
+}
+.accordion-listing .panel-group .panel-heading a:after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  font-weight: 600;
+  width: 22px;
+  height: 3px;
+  background-color: #000;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.accordion-listing .panel-group .panel-heading a.collapsed:before {
+  content: '';
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  font-weight: 600;
+  height: 22px;
+  width: 3px;
+  background-color:#333;
+   -webkit-transition: -webkit-transform 0.6s ease-in-out;
+   -moz-transition: -moz-transform 0.6s ease-in-out;
+   -o-transition: -o-transform 0.6s ease-in-out;
+   transition: transform 0.6s ease-in-out;
+  transform: translateY(-50%);
+}
+/* .accordion-listing .panel-group .panel-heading a.collapsed:after */
+.accordion-listing .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border: none;
+}
+.accordion-listing .panel-body {
+    padding: 0 0 20px;
+}
+.accordion-listing .panel-body p {
+    font-size: 16px;  
+}
+.accordion-listing .link-btn {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    margin-top: 10px;
+}
+/*Accordion Listing end*/
+
+
+
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
