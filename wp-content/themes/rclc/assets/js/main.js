@@ -161,10 +161,10 @@ $s.slick({
 $('.banner-para').delay(1500).queue(function(){
   $(this).addClass("opacity_full");
 });
-$('.top-heading').delay(1500).queue(function(){
+$('.top-heading').delay(500).queue(function(){
   $(this).addClass("opacity_full");
 });
-$('.banner-text-slider').delay(1500).queue(function(){
+$('.banner-text-slider').delay(1000).queue(function(){
   $(this).addClass("opacity_full");
 });
 

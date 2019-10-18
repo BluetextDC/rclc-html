@@ -7587,14 +7587,14 @@ a:hover {
 
 h1.top-heading {
   animation: right_to_left 1s cubic-bezier(0.43, 0.41, 0.74, 0.74);
-  animation-delay: 1s;
+  animation-delay: 0.5s;
   position: relative;
   opacity: 0;
 }
 
 .banner-para {
   animation: right_to_leftpara 1s cubic-bezier(0.43, 0.41, 0.74, 0.74);
-  animation-delay: 1s;
+  animation-delay: 1.5s;
   position: relative;
   opacity: 0;
 }
@@ -7611,7 +7611,7 @@ h1.top-heading {
 }
 .banner-text-slider span {
       line-height: 1.2;
-      display: inline-block !important
+      display: inline-block !important;
       opacity:1 !important;
 }
 .opacity_full {
@@ -7619,12 +7619,12 @@ h1.top-heading {
 }
 .hero-zone span.h1 {
    opacity:0 !important;
-  -webkit-transform:translateX(20px) !important;
-  -moz-transform:translateX(20px) !important;
-  -ms-transform:translateX(20px) !important;
-  -webkit-transition:transform 0.6s cubic-bezier(0, 0, 0.74, 0.73), opacity 0.1s cubic-bezier(0, 0, 0.74, 0.73) !important;
-  -moz-transition:transform 0.6s cubic-bezier(0, 0, 0.74, 0.73), opacity 0.1s cubic-bezier(0, 0, 0.74, 0.73) !important;
-  -ms-transition:transform 0.6s cubic-bezier(0, 0, 0.74, 0.73), opacity 0.1s cubic-bezier(0, 0, 0.74, 0.73) !important;
+   -webkit-transform:translateX(15px) !important;
+   -moz-transform:translateX(15px) !important;
+   -ms-transform:translateX(15px) !important;
+   -webkit-transition: transform 1.5s cubic-bezier(0.55, 0.4, 0.4, 0.86), opacity 0.7s cubic-bezier(0.55, 0.4, 0.4, 0.86) !important;
+   -moz-transition:transform 1.5s cubic-bezier(0.55, 0.4, 0.4, 0.86), opacity 0.7s cubic-bezier(0.55, 0.4, 0.4, 0.86) !important;
+   -ms-transition:transform 1.5s cubic-bezier(0.55, 0.4, 0.4, 0.86), opacity 0.7s cubic-bezier(0.55, 0.4, 0.4, 0.86) !important;
 }
 .hero-zone span.slick-active {
   -webkit-transform:translateX(0) !important;
@@ -7635,7 +7635,7 @@ h1.top-heading {
 
 @keyframes right_to_leftpara {
   0% {
-    transform: translateX(-10px);
+    transform: translateX(-20px);
     opacity: 0;
   }
   100% {
@@ -7646,7 +7646,7 @@ h1.top-heading {
 
 @keyframes right_to_left {
   0% {
-    transform: translateX(-5px);
+    transform: translateX(-20px);
     opacity: 0;
   }
   100% {
@@ -7657,7 +7657,7 @@ h1.top-heading {
 
 @keyframes left_to_right {
   0% {
-    transform: translateX(10px);
+    transform: translateX(30px);
     opacity: 0;
   }
   100% {
