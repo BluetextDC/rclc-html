@@ -80,7 +80,17 @@
                   <div class="panel-body">
                     <?php echo get_sub_field('wysiwyg_block', $post->ID); ?>
                    <!-- <p><?php if (!has_excerpt()) {?><?php echo substr(get_the_content(), 0,250).'...'; ?><?php } else {the_excerpt();}?></p> -->
-  <p><?php if (!has_excerpt()) { echo substr(get_the_content(), 0,(int)get_sub_field("al_description_length")).'...'; } else {echo substr(get_the_excerpt(), 0,(int)get_sub_field("al_description_length")).'...';} ?></p>
+  <!-- <p><?php //if (!has_excerpt()) { echo substr(get_the_content(), 0,(int)get_sub_field("al_description_length")).'...'; } else {echo substr(get_the_excerpt(), 0,(int)get_sub_field("al_description_length")).'...';} ?></p> -->
+              <?php
+                while(the_flexible_field("components")): ?>
+                  <?php if(get_row_layout() == "wysiwyg_block"): // layout: Content ?>
+                    <p>
+                      <?php the_sub_field("content"); ?>
+                    </p>
+                    <?php endif; ?>
+                <?php endwhile; ?>
+
+
                   <div class="button-container-box">
                       <a href="<?php the_permalink(); ?>" class="btn link-btn">
                         <?php
