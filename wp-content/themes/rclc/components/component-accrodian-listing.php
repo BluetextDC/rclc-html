@@ -35,6 +35,7 @@
                         <div id="post-pagelisting-<?php echo get_the_ID(); ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo get_the_ID(); ?>">
                           <div class="panel-body">
                               <p><?php if (!has_excerpt()) { echo substr(get_the_content(), 0,(int)get_sub_field("al_description_length")).'...'; } else {echo substr(get_the_excerpt(), 0,(int)get_sub_field("al_description_length")).'...';} ?></p>
+                            <div class="button-container-box">
                             <a href="<?php the_permalink(); ?>" class="btn link-btn">
                               <?php
                                 $value = get_sub_field( "cta_text" );
@@ -45,6 +46,7 @@
                                 } 
                                ?>
                             </a>
+                          </div>
                           </div>
                         </div>
                       </div>
@@ -62,7 +64,10 @@
       if( $posts ): ?>
         <div class="panel-group" id="accordionGroupClosed" role="tablist" aria-multiselectable="true">
           <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-            <?php setup_postdata($post); ?>
+            <?php setup_postdata($post); 
+              // var_dump(get_post_meta($post->ID));
+            ?>
+
               <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="heading<?php echo get_the_ID(); ?>">
                   <h3 class="panel-title">
@@ -73,19 +78,21 @@
                 </div>
                 <div id="taxonomy-listing-<?php echo get_the_ID(); ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo get_the_ID(); ?>">
                   <div class="panel-body">
+                    <?php echo get_sub_field('wysiwyg_block', $post->ID); ?>
                    <!-- <p><?php if (!has_excerpt()) {?><?php echo substr(get_the_content(), 0,250).'...'; ?><?php } else {the_excerpt();}?></p> -->
   <p><?php if (!has_excerpt()) { echo substr(get_the_content(), 0,(int)get_sub_field("al_description_length")).'...'; } else {echo substr(get_the_excerpt(), 0,(int)get_sub_field("al_description_length")).'...';} ?></p>
-
-                    <a href="<?php the_permalink(); ?>" class="btn link-btn">
-                      <?php
-                        $value = get_sub_field( "cta_text" );
-                        if( $value ) {
-                            echo $value;
-                        } else {
-                            echo 'Learn More';
-                        } 
-                       ?>
+                  <div class="button-container-box">
+                      <a href="<?php the_permalink(); ?>" class="btn link-btn">
+                        <?php
+                          $value = get_sub_field( "cta_text" );
+                          if( $value ) {
+                              echo $value;
+                          } else {
+                              echo 'Learn More';
+                          } 
+                         ?>
                   </a>
+                 </div>
                   </div>
                 </div>
               </div>

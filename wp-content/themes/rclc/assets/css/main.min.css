@@ -6479,8 +6479,16 @@ button.close {
 .accordion-listing .panel-body {
     padding: 0 0 20px;
 }
-.accordion-listing .panel-body p {
+.accordion-listing .panel-body p,
+.accordion-listing .panel-body h1,
+.accordion-listing .panel-body h2,
+.accordion-listing .panel-body h3,
+.accordion-listing .panel-body h4,
+.accordion-listing .panel-body h5,
+.accordion-listing .panel-body h5 {
     font-size: 16px;  
+    display:inline-block;
+    font-family: "ProximaNova";
 }
 .accordion-listing .link-btn {
     font-size: 16px;
