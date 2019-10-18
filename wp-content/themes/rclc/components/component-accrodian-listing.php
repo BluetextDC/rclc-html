@@ -83,9 +83,7 @@
               <?php
                 while(the_flexible_field("components")): ?>
                   <?php if(get_row_layout() == "wysiwyg_block"): // layout: Content ?>
-                    <p>
-                      <?php the_sub_field("content"); ?>
-                    </p>
+                      <?php echo the_sub_field("content"); ?>
                     <?php endif; ?>
                 <?php endwhile; ?>
 
