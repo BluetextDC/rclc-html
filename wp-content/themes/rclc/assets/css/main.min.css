@@ -6487,7 +6487,7 @@ button.close {
 .accordion-listing .panel-body h5,
 .accordion-listing .panel-body h6 {
     font-size: 16px;  
-    display:inline-block;
+    display:inline;
     font-family: "ProximaNova";
 }
 .button-container-box {
