@@ -81,9 +81,13 @@
                     <?php echo get_sub_field('wysiwyg_block', $post->ID); ?>
   <!-- <p><?php //if (!has_excerpt()) { echo substr(get_the_content(), 0,(int)get_sub_field("al_description_length")).'...'; } else {echo substr(get_the_excerpt(), 0,(int)get_sub_field("al_description_length")).'...';} ?></p> -->
               <?php
+                $valuess = get_sub_field('al_description_length');
+                // var_dump($valuess);
+              ?>
+              <?php
                 while(the_flexible_field("components")): ?>
-                  <?php if(get_row_layout() == "wysiwyg_block"): // layout: Content ?>
-                      <?php echo the_sub_field("content"); ?>
+                  <?php if(get_row_layout() == "wysiwyg_block"): // layout: Content ?>   
+                      <?php echo substr( get_sub_field('content'), 0, $valuess).'...'; ?>
                     <?php endif; ?>
                 <?php endwhile; ?>
 
