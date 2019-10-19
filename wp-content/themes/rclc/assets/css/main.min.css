@@ -7629,13 +7629,14 @@ h1.top-heading {
   opacity: 1 !important;
 }
 .hero-zone span.h1 {
+  padding-right:10px;
    opacity:0 !important;
    -webkit-transform:translateX(15px) !important;
    -moz-transform:translateX(15px) !important;
    -ms-transform:translateX(15px) !important;
-   -webkit-transition: transform 1.5s cubic-bezier(0.55, 0.4, 0.4, 0.86), opacity 0.7s cubic-bezier(0.55, 0.4, 0.4, 0.86) !important;
-   -moz-transition:transform 1.5s cubic-bezier(0.55, 0.4, 0.4, 0.86), opacity 0.7s cubic-bezier(0.55, 0.4, 0.4, 0.86) !important;
-   -ms-transition:transform 1.5s cubic-bezier(0.55, 0.4, 0.4, 0.86), opacity 0.7s cubic-bezier(0.55, 0.4, 0.4, 0.86) !important;
+   -webkit-transition: transform 1.5s cubic-bezier(0.55, 0.4, 0.4, 0.86), opacity 0.4s cubic-bezier(0.55, 0.4, 0.4, 0.86) !important;
+   -moz-transition:transform 1.5s cubic-bezier(0.55, 0.4, 0.4, 0.86), opacity 0.4s cubic-bezier(0.55, 0.4, 0.4, 0.86) !important;
+   -ms-transition:transform 1.5s cubic-bezier(0.55, 0.4, 0.4, 0.86), opacity 0.4s cubic-bezier(0.55, 0.4, 0.4, 0.86) !important;
 }
 .hero-zone span.slick-active {
   -webkit-transform:translateX(0) !important;
