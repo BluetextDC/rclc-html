@@ -7611,6 +7611,7 @@ h1.top-heading {
 }
 
 .banner-text-slider {
+    margin-right:-15px;
     animation: left_to_right 1s cubic-bezier(0.43, 0.41, 0.74, 0.74);
     animation-delay: 1s;
     display: block;
