@@ -7629,7 +7629,7 @@ h1.top-heading {
   opacity: 1 !important;
 }
 .hero-zone span.h1 {
-  padding-right:10px;
+  padding-right:15px;
    opacity:0 !important;
    -webkit-transform:translateX(15px) !important;
    -moz-transform:translateX(15px) !important;
