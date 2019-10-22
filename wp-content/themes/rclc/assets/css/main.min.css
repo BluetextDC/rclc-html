@@ -7980,7 +7980,7 @@ button.search-action-expand i {
     margin-left: -6%;
     padding: 20px;
     border-radius: 5px;
-    min-width: 250px;
+    min-width: 300px;
     opacity: 0;
     visibility: hidden;
     transition:all 0.3s ease-in-out;
@@ -8022,11 +8022,13 @@ button.search-action-expand i {
 }
 .menu-item-has-children ul li > a {
     color:#000;
-    font-weight:600;
+    font-weight:300;
     padding:0;
     font-size:16px;
 }
-
+.menu-item-has-children ul .menu-item-has-children > a {
+    font-weight:600;
+}
 
 .menu-item-has-children ul li > a:hover {
     color:#000;
