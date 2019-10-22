@@ -6480,22 +6480,42 @@ button.close {
 .accordion-listing .panel-body {
     padding: 0 0 20px;
 }
-.accordion-listing .panel-body p,
-.accordion-listing .panel-body h1,
-.accordion-listing .panel-body h2,
-.accordion-listing .panel-body h3,
-.accordion-listing .panel-body h4,
-.accordion-listing .panel-body h5,
-.accordion-listing .panel-body h6,
-.accordion-listing .panel-body ul,
-.accordion-listing .panel-body li {
-    font-size: 16px;
-    display:inline;
-    line-height: 1.7;
+.accordion-listing .panel-body p {
+    color: #646464;
+    line-height: 25px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.accordion-listing .panel-body h3 {
+    color: #292929;
+    font-weight: 500;
     font-family: "ProximaNova";
+    text-shadow: 0 0 0 #292929;
 }
 .accordion-listing .panel-body ul {
-  margin-bottom:0;
+  position: relative;
+  margin-bottom: 10px;
+}
+.accordion-listing .panel-body li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 8px;
+  font-family: "ProximaNova";
+}
+.accordion-listing .panel-body li:last-child,
+.accordion-listing .panel-body li:last-child {
+  margin-bottom: 0;
+}
+.accordion-listing .panel-body li:before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #4D4D4D;
+  left: 0;
+  top: 9px;
 }
 .button-container-box {
   display: block;
