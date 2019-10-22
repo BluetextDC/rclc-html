@@ -6485,10 +6485,16 @@ button.close {
 .accordion-listing .panel-body h3,
 .accordion-listing .panel-body h4,
 .accordion-listing .panel-body h5,
-.accordion-listing .panel-body h6 {
-    font-size: 16px;  
+.accordion-listing .panel-body h6,
+.accordion-listing .panel-body ul,
+.accordion-listing .panel-body li {
+    font-size: 16px;
     display:inline;
+    line-height: 1.7;
     font-family: "ProximaNova";
+}
+.accordion-listing .panel-body ul {
+  margin-bottom:0;
 }
 .button-container-box {
   display: block;
