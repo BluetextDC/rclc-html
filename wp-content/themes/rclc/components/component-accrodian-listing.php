@@ -1,6 +1,6 @@
 
 <?php if (get_row_layout() == 'accordion_listing'): ?>
-<section class="accordion-listing relative padding-global">
+<section class="accordion-listing relative padding-global padding-top-0">
   <div class="container">
       <?php if(get_sub_field('ac_title')): ?>
         <h2><?php the_sub_field('ac_title'); ?></h2>

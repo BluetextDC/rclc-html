@@ -6413,6 +6413,10 @@ button.close {
 
 /*Accordion Listing start*/
 
+.padding-top-0 {
+  padding-top: 0;
+}
+
 .accordion-listing .panel,
 .accordion-listing .panel-body {
     box-shadow: none;
