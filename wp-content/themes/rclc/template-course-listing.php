@@ -67,7 +67,13 @@ get_header();
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
           <?php if(strtotime(get_field('date_course_ends')) >= strtotime(date('Y-m-d')) ){ ?>
-
+          <?php 
+            $link = get_field('listing_cta');
+            if( $link ): 
+                $link_url = $link['url'];
+                $link_title = $link['title'];
+                $link_target = $link['target'] ? $link['target'] : '_self';
+                ?>
          <div class="media course-item">
           <a href="<?php the_permalink(); ?>" class="outer_link"></a>
           <div class="media-left">
@@ -118,9 +124,11 @@ get_header();
               <span><?php the_field('course_location'); ?></span>
             <?php endif; ?>
             <div class="btn-outer">
-              <a href="<?php the_permalink(); ?>" class="btn submit-btn vh-center">REGISTER</a>
+              <!-- <a href="<?php the_permalink(); ?>" class="btn submit-btn vh-center">REGISTER</a> -->
+                <a class="btn submit-btn vh-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
             </div>
           </div>
+          <?php endif; ?>
         </div>
         <?php } ?>
 
