@@ -17,7 +17,7 @@
 	<div class="container">
 		<div class="row d-flex">
 			<!-- footer social media -->
-			<div class="col-md-4 align-self-end">
+			<div class="col-md-3 align-self-end">
 				<div class="footer-left">
 					<h2>Connect with Us</h2>
 					<?php if( have_rows('social_links', 'options') ): 
@@ -55,7 +55,7 @@
 			</div>
 			<!-- footer social media -->
 			<!-- footer menu for navigate page -->
-			<div class="col-md-4 align-self-end">
+			<div class="col-md-5 align-self-end">
 				<div class="footer-center">
 					<div class="row">
 						<div class="col-md-12">

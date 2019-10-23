@@ -10603,9 +10603,19 @@ ul.social-links li a:hover i {
 }
 .footer-menu li a {
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: capitalize;
   font-family: "Helvetica";
+}
+@media (max-width: 1280px) and (min-width: 1024px) {
+.footer-menu li a {
+  font-size: 14px;
+}
+}
+@media (max-width: 1024px) and (min-width: 1280px) {
+  .footer-menu li {
+    white-space: nowrap;
+  }
 }
 @media (max-width: 992px) {
   .footer-menu li a {
