@@ -311,7 +311,7 @@
 							</div>
 							</div>
 							<div class="side-spacer">
-							<div class="g-recaptcha" data-sitekey="6Lf_B74UAAAAAI3vanaTs-c-0i81Yk8KaRsKsxuf">&nbsp;</div>
+							<div class="g-recaptcha" id="g-recaptcha-response"  data-sitekey="6Lf_B74UAAAAAI3vanaTs-c-0i81Yk8KaRsKsxuf"></div>
 							</div>
 							</div>
 						<div class="col-sm-12">
