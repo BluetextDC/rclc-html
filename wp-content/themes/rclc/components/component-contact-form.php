@@ -206,6 +206,123 @@
 				</div>
 			</div>
 		</div>
+						<?php }
+
+			if( get_sub_field('cf_select_form') == 'course_enrollment_form' ) { ?>
+			<div class="container">
+				<?php if(get_sub_field('cf_heading')): ?>
+					<h2><?php the_sub_field('cf_heading'); ?></h2>
+				<?php endif; ?>
+				<div class="row">
+				<div class="contact-form cf-form-container">
+						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+						<script>function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);</script>
+
+				    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+						<input name="oid" type="hidden" value="00D61000000dOgr">
+						<input name="retURL" type="hidden" value="http://ritzcarltonleadershipcenter.com/thank-you/">
+						<input name="recordType" type="hidden" value="01261000000SWNH">
+							<div class="col-md-6">
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group"><input id="last_name" class="form-control" maxlength="40" name="first_name" required="true" size="50" type="text" placeholder="First Name" /></div>
+							</div>
+							</div>
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group"><input class="form-control" id="last_name" maxlength="40" name="last_name" required="" size="20" type="text" placeholder="Last Name" /></div>
+							</div>
+							</div>
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group"><input id="email" class="form-control" maxlength="40" name="email" required="" size="20" type="text"placeholder="Email"></div>
+							</div>
+							</div>
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group"><input id="phone" maxlength="40" name="phone" required="true" size="20" type="text" placeholder="Phone" class="form-control"></div>
+							</div>
+							</div>
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group"><input id="company" maxlength="40" name="company" required="" size="20" type="text" placeholder="Company" class="form-control"></div>
+							</div>
+							</div>
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group"><input id="Title" maxlength="40" name="title" required="" size="20" type="text" placeholder="Company" class="form-control"></div>
+							</div>
+							</div>
+							</div>
+							<div class="col-md-6">
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group"><input id="city" maxlength="40" name="city" required="" size="20" type="text" placeholder="City" class="form-control"></div>
+							</div>
+							</div>
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group"><input id="state" maxlength="20" name="state" required="" size="20" type="text" placeholder="State/Province" class="form-control"></div>
+							</div>
+							</div>
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group"><input id="country" maxlength="40" name="country" required="" size="20" type="text" placeholder="Country or Region" class="form-control"></div>
+							</div>
+							</div>
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group">
+							<div class="select-option">
+								<select id="industry" name="industry" required="" class="form-control">
+								<option>--Industry--</option>
+								<option value="Automotive">Automotive</option>
+								<option value="Aviation">Aviation &amp; Airlines</option>
+								<option value="Consulting &amp; Legal">Consulting &amp; Legal</option>
+								<option value="Consumer Goods &amp; Retail">Consumer Goods &amp; Retail</option>
+								<option value="Education &amp; Non-Profit">Education, Non-Profit, &amp; Government</option>
+								<option value="Entertainment &amp; Media">Entertainment &amp; Media</option>
+								<option value="Finance">Finance</option>
+								<option value="Healthcare">Healthcare</option>
+								<option value="Insurance">Insurance</option>
+								<option value="Other">Other</option>
+								<option value="Real Estate &amp; Facilities Management">Real Estate &amp; Facilities Management</option>
+								<option value="Senior Living &amp; Managed Care">Senior Living &amp; Managed Care</option>
+								<option value="Sports &amp; Clubs">Sports &amp; Clubs</option>
+								</select>
+							</div>
+							</div>
+							</div>
+							</div>
+							<div class="side-spacer">
+							<div class="field-outer">
+							<div class="form-group">
+								<div class="select-option">
+									<select id="00N6100000IJquk" title="Approximate Number of Attendees" name="00N6100000IJquk" class="form-control">
+										<option>--Approximate Number of Attendees--</option>
+										<option value="1">1</option>
+										<option value="2-19">2-19</option>
+										<option value="20+">20-50</option>
+										<option value="51-100">51-100</option>
+										<option value="101-200">101-200</option>
+										<option value="201-300">201-300</option>
+										<option value="300+">300+</option>
+										</select>
+								</div>
+							</div>
+							</div>
+							</div>
+							<div class="side-spacer">
+							<div class="g-recaptcha" data-sitekey="6LeoOLUUAAAAACh00XgVBpSnqQLoBipdcjkUwLF2">&nbsp;</div>
+							</div>
+							</div>
+						<div class="col-sm-12">
+						<div class="form-submt-btn"><input class="button" name="submit" type="submit" /></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 			<?php }
 		?>
 	</section>
