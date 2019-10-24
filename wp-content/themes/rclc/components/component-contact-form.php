@@ -181,7 +181,7 @@
 								<div class="field-outer">
 									<div class="form-group">
 										<label for="description">Goals</label>
-										<textarea class="form-control" name="description"></textarea>
+										<textarea placholder="Goals" class="form-control" name="description"></textarea>
 									</div>
 								</div>
 							</div>
@@ -192,11 +192,12 @@
 							<h3>Employment</h3>
 							<p>Please note that all questions about employment at The Ritz-Carlton and The Ritz-Carlton Leadership Center are handled through The Ritz-Carlton <a title="Careers at The Ritz-Carlton" href="http://www.marriott.com/ritz-carlton-careers/default.mi?stop_mobi=yes" target="_blank" rel="noopener noreferrer">Careers</a> website.</p>
 						</div>
+						<sup style="color: red;">*</sup><font style="color: red;">This confirmation is required</font>
+						<div class="g-recaptcha" id="g-recaptcha-response"  data-sitekey="6Lf_B74UAAAAAI3vanaTs-c-0i81Yk8KaRsKsxuf"></div>						
+
 					</div>
 					</div><!-- end -->
 					<div class="col-sm-12">
-						<sup style="color: red;">*</sup><font style="color: red;">This confirmation is required</font>
-						<div class="g-recaptcha" id="g-recaptcha-response"  data-sitekey="6Lf_B74UAAAAAI3vanaTs-c-0i81Yk8KaRsKsxuf"></div>						
 						<div class="form-submt-btn"><input type="submit" name="submit">
 						</div>
 					</div>
