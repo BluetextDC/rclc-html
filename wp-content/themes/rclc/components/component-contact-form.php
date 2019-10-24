@@ -9,15 +9,11 @@
 				<?php endif; ?>
 				<div class="row">
 					<div class="contact-form cf-form-container">
-						<script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-          'sitekey' : '6LexL78UAAAAALxr3jnnRn-Ah84ob1F2bleAjXWb'
-        });
-      };
-    </script>
+						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 						<script>function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);</script>
 						<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"><input name="oid" type="hidden" value="00D61000000dOgr" />
+							      <div class="g-recaptcha" data-sitekey="6LexL78UAAAAALxr3jnnRn-Ah84ob1F2bleAjXWb"></div>
+
 						<input name="retURL" type="hidden" value="http://ritzcarltonleadershipcenter.com/thank-you/" />
 						<input name="recordType" type="hidden" value="01261000000SWNH" />
 						<div class="col-md-6">
@@ -150,9 +146,6 @@
 						<div class="form-submt-btn"><input class="button" name="submit" type="submit" /></div>
 						</div>
 						</form>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
 				</div>
 			</div>
 		</div>
