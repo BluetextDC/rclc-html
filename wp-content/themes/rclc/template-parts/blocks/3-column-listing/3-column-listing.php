@@ -109,7 +109,16 @@ if( !empty($block['align']) ) {
               <div class="card">
                 <a href="<?php echo get_post_permalink($post->ID); ?>" class="outer_link"></a>
                 <div class="inner">
-                  <span class="category">Blogs</span>
+                  <!-- <span class="category">Blogs</span> -->
+                    <span class="category">
+                    <?php 
+                         $cat = [];
+                         foreach((get_the_category()) as $category){
+                           $cat[] = $category->name;
+                          }
+                          echo implode (', ',$cat); 
+                      ?>
+                      </span>
                   <h3><?php echo get_the_title($post->ID); ?></h3>
                   <div class="btn-outer">
                     <a href="<?php echo get_post_permalink($post->ID); ?>" class="btn link-btn">Read More</a>
