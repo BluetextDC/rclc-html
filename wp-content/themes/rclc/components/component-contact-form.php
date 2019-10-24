@@ -21,7 +21,9 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="salutation">Salutation</label>
+									<div class="select-option">
 									<select id="salutation" name="salutation"><option value="">--None--</option><option value="Mr.">Mr.</option><option value="Ms.">Ms.</option><option value="Mrs.">Mrs.</option><option value="Dr.">Dr.</option><option value="Prof.">Prof.</option></select>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -29,7 +31,7 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="first_name">First Name</label> 
-									<input id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true">
+									<input class="form-control" id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true">
 								</div>
 							</div>
 						</div>
@@ -37,7 +39,7 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="last_name">Last Name</label>
-									<input id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true">
+									<input class="form-control" id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true">
 								</div>
 							</div>
 						</div>
@@ -45,7 +47,7 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="title">Title</label> 
-									<input id="title" maxlength="40" name="title" size="20" type="text">
+									<input class="form-control" id="title" maxlength="40" name="title" size="20" type="text">
 								</div>
 							</div>
 							</div>
@@ -53,7 +55,7 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="company">Company</label> 
-									<input id="company" maxlength="40" name="company" size="20" type="text" required="true">
+									<input class="form-control" id="company" maxlength="40" name="company" size="20" type="text" required="true">
 								</div>
 							</div>
 						</div>	
@@ -61,7 +63,7 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="email">Email</label>
-									<input id="email" maxlength="80" name="email" size="20" type="text" required="true">
+									<input class="form-control" id="email" maxlength="80" name="email" size="20" type="text" required="true">
 								</div>
 							</div>
 						</div>											
@@ -69,14 +71,14 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="phone">Phone</label>
-									<input id="phone" maxlength="40" name="phone" size="20" type="text">
+									<input class="form-control" id="phone" maxlength="40" name="phone" size="20" type="text">
 								</div>
 							</div>
 						</div>	
 						<div class="side-spacer">
 							<div class="field-outer">
 								<div class="form-group">
-									<label for="street">Street</label>
+									<label class="form-control" for="street">Street</label>
 									<textarea name="street"></textarea>
 								</div>
 							</div>
@@ -85,7 +87,7 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="city">City</label>
-									<input id="city" maxlength="40" name="city" size="20" type="text">
+									<input class="form-control" id="city" maxlength="40" name="city" size="20" type="text">
 								</div>
 							</div>
 						</div>
@@ -93,7 +95,7 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="state">State/Province</label>
-									<input id="state" maxlength="20" name="state" size="20" type="text">
+									<input class="form-control" id="state" maxlength="20" name="state" size="20" type="text">
 								</div>
 							</div>
 						</div>	
@@ -101,7 +103,7 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="country">Country</label>
-									<input id="country" maxlength="40" name="country" size="20" type="text" required="true">
+									<input class="form-control" id="country" maxlength="40" name="country" size="20" type="text" required="true">
 								</div>
 							</div>
 						</div>
@@ -109,57 +111,99 @@
 							
 						</div>
 						<div class="col-md-6">	
-						<table>
-						<tbody>						
-							<tr>
-							<td style="width: 235px;"><label style="white-space: nowrap;" for="00N6100000HUTOP">What are you interested in learning more about?</label> <sup style="color: red;">*</sup></td>
-								<td><select id="00N6100000HUTOP" style="max-width: 318px;" title="Lead Type" name="00N6100000HUTOP" required="true">
-							<option value="">--Please Select--</option>
-							<option value="Advisory Consulting Services">I am interested in exploring a consulting engagement</option>
-							<option value="Onsite Presentations &amp; Facilitation">I am seeking a speaker for one or several meetings or conferences</option>
-							<option value="Enrichment Courses &amp; Learning Services">I want to attend a course at a Ritz-Carlton Hotel</option>
-							</select></td>
-							</tr>
-							<tr>
-							<td><label for="industry">Industry</label> <sup style="color: red;">*</sup></td>
-							<td><select id="industry" name="industry" required="true">
-							<option value="">--Please Select--</option>
-							<option value="Aerospace &amp; Defense">Aerospace &amp; Defense</option>
-							<option value="Automotive">Automotive</option>
-							<option value="Aviation">Aviation &amp; Airlines</option>
-							<option value="Consulting &amp; Legal">Consulting &amp; Legal</option>
-							<option value="Consumer Goods &amp; Retail">Consumer Goods &amp; Retail</option>
-							<option value="Education &amp; Non-Profit">Education, Non-Profit, &amp; Government</option>
-							<option value="Entertainment &amp; Media">Entertainment &amp; Media</option>
-							<option value="Finance">Finance</option>
-							<option value="Healthcare">Healthcare</option>
-							<option value="Insurance">Insurance</option>
-							<option value="Other">Other</option>
-							<option value="Real Estate &amp; Facilities Management">Real Estate &amp; Facilities Management</option>
-							<option value="Senior Living &amp; Managed Care">Senior Living &amp; Managed Care</option>
-							<option value="Sports &amp; Clubs">Sports &amp; Clubs</option>
-							</select></td>
-							</tr>
-							<tr>
-							<td><label for="approximate_number_of_attendees_c">Approximate number of attendees anticipated</label> <sup style="color: red;">*</sup></td>
-							<td><select id="00N6100000IJquk" style="width: 150px;" title="Approximate Number of Attendees" name="00N6100000IJquk" required="false">
-							<option value="">--Please Select--</option>
-							<option value="1">1</option>
-							<option value="2-19">2-19</option>
-							<option value="20+">20-50</option>
-							<option value="51-100">51-100</option>
-							<option value="101-200">101-200</option>
-							<option value="201-300">201-300</option>
-							<option value="300+">300+</option>
-							</select></td>
-							</tr>
-						<tr>
-							<td><label for="description">Goals</label></td>
-							<td><textarea name="description"></textarea></td>
-						</tr>
-												
-						</tbody>
-					</table>
+							<div class="side-spacer">
+								<div class="field-outer">
+								<div class="form-group">
+								<div class="select-option">
+									<label style="white-space: nowrap;" for="00N6100000HUTOP">What are you interested in learning more about?</label>
+
+									<select id="00N6100000HUTOP" style="max-width: 318px;" title="Lead Type" name="00N6100000HUTOP" required="true">
+									<option value="">--Please Select--</option>
+									<option value="Advisory Consulting Services">I am interested in exploring a consulting engagement</option>
+									<option value="Onsite Presentations &amp; Facilitation">I am seeking a speaker for one or several meetings or conferences</option>
+									<option value="Enrichment Courses &amp; Learning Services">I want to attend a course at a Ritz-Carlton Hotel</option>
+									</select>
+								</div>
+								</div>
+								</div>
+							</div>
+							<div class="side-spacer">
+								<div class="field-outer">
+								<div class="form-group">
+								<div class="select-option">
+									<label for="industry">Industry</label>
+									
+									<select id="industry" name="industry" required="true">
+									<option value="">--Please Select--</option>
+									<option value="Aerospace &amp; Defense">Aerospace &amp; Defense</option>
+									<option value="Automotive">Automotive</option>
+									<option value="Aviation">Aviation &amp; Airlines</option>
+									<option value="Consulting &amp; Legal">Consulting &amp; Legal</option>
+									<option value="Consumer Goods &amp; Retail">Consumer Goods &amp; Retail</option>
+									<option value="Education &amp; Non-Profit">Education, Non-Profit, &amp; Government</option>
+									<option value="Entertainment &amp; Media">Entertainment &amp; Media</option>
+									<option value="Finance">Finance</option>
+									<option value="Healthcare">Healthcare</option>
+									<option value="Insurance">Insurance</option>
+									<option value="Other">Other</option>
+									<option value="Real Estate &amp; Facilities Management">Real Estate &amp; Facilities Management</option>
+									<option value="Senior Living &amp; Managed Care">Senior Living &amp; Managed Care</option>
+									<option value="Sports &amp; Clubs">Sports &amp; Clubs</option>
+									</select>
+								</div>
+								</div>
+								</div>
+							</div>
+							<div class="side-spacer">
+								<div class="field-outer">
+								<div class="form-group">
+								<div class="select-option">
+									<label for="approximate_number_of_attendees_c">Approximate number of attendees anticipated</label>
+									
+									<select id="00N6100000IJquk" style="width: 150px;" title="Approximate Number of Attendees" name="00N6100000IJquk" required="false">
+									<option value="">--Please Select--</option>
+									<option value="1">1</option>
+									<option value="2-19">2-19</option>
+									<option value="20+">20-50</option>
+									<option value="51-100">51-100</option>
+									<option value="101-200">101-200</option>
+									<option value="201-300">201-300</option>
+									<option value="300+">300+</option>
+									</select>
+								</div>
+								</div>
+								</div>
+							</div>
+							<div class="side-spacer">
+								<div class="field-outer">
+								<div class="form-group">
+								<div class="select-option">
+									<label for="approximate_number_of_attendees_c">Approximate number of attendees anticipated</label>
+									
+									<select id="00N6100000IJquk" style="width: 150px;" title="Approximate Number of Attendees" name="00N6100000IJquk" required="false">
+									<option value="">--Please Select--</option>
+									<option value="1">1</option>
+									<option value="2-19">2-19</option>
+									<option value="20+">20-50</option>
+									<option value="51-100">51-100</option>
+									<option value="101-200">101-200</option>
+									<option value="201-300">201-300</option>
+									<option value="300+">300+</option>
+									</select>
+								</div>
+								</div>
+								</div>
+							</div>
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="description">Goals</label>
+										<textarea name="description"></textarea>
+									</div>
+								</div>
+							</div>
+
+
 					<div class="side-spacer">
 						<div class="form-group">
 							<h3>Employment</h3>
