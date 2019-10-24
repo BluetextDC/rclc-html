@@ -7131,6 +7131,7 @@ ol {
   list-style: none;
   counter-reset: my-awesome-counter;
   margin-bottom: 10px;
+  padding-left: 30px;
 }
 ol li {
   counter-increment: my-awesome-counter;
@@ -7150,6 +7151,7 @@ ol li:before {
   font-weight: 400;
   font-family: "ProximaNova";
   margin-right: 10px;
+  position: absolute;
 }
 
 a {
@@ -10006,7 +10008,7 @@ ul.social-links li a:hover i {
   margin-bottom: 20px;
   position: relative;
   overflow: visible;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 .course-listing .media.course-item:before {
   content: '';
@@ -10062,6 +10064,32 @@ ul.social-links li a:hover i {
 .course-listing .media.course-item .media-left .course-info .full-date {
   display: none;
 }
+.course-listing .media.course-item .media-left {
+    position: relative;
+    min-width: 200px;
+    padding: 30px 0 30px 0;
+    text-align: center;
+    margin-right: 0;
+}
+
+.course-listing .media.course-item .media-left .course-info {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.course-listing .media.course-item .media-body {
+    padding: 30px 200px 30px 40px;
+    position: relative;
+}
+
+.course-listing .media.course-item .media-left .course-info span {
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    color: #292929;
+    text-transform: uppercase;
+}
+
 @media (max-width: 767px) {
   .course-listing .media.course-item .media-left {
     display: block;
