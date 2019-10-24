@@ -146,7 +146,16 @@ if( !empty($block['align']) ) {
                             <div class="card">
                               <a href="<?php the_permalink(); ?>" class="outer_link"></a>
                               <div class="inner">
-                                <span class="category">Blogs</span>
+                                <!-- <span class="category">Blogs</span> -->
+                                <span class="category">
+                                <?php 
+                                     $cat = [];
+                                     foreach((get_the_category()) as $category){
+                                       $cat[] = $category->name;
+                                      }
+                                      echo implode (', ',$cat); 
+                                  ?>
+                                  </span>
                                 <h3><?php the_title(); ?></h3>
                                 <div class="btn-outer">
                                   <a href="<?php the_permalink(); ?>" class="btn link-btn">all industries</a>
@@ -182,7 +191,16 @@ if( !empty($block['align']) ) {
                             <div class="card">
                               <a href="<?php the_permalink(); ?>" class="outer_link"></a>
                               <div class="inner">
-                                <span class="category">Blogs</span>
+                                <!-- <span class="category">Blogs</span> -->
+                                <span class="category">
+                                <?php 
+                                     $cat = [];
+                                     foreach((get_the_category()) as $category){
+                                       $cat[] = $category->name;
+                                      }
+                                      echo implode (', ',$cat); 
+                                  ?>
+                                  </span>
                                 <h3><?php the_title(); ?></h3>
                                 <div class="btn-outer">
                                   <a href="<?php the_permalink(); ?>" class="btn link-btn">all industries</a>
