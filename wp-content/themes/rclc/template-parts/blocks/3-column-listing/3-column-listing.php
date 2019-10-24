@@ -110,13 +110,14 @@ if( !empty($block['align']) ) {
                 <a href="<?php echo get_post_permalink($post->ID); ?>" class="outer_link"></a>
                 <div class="inner">
                   <!-- <span class="category">Blogs</span> -->
-                    <span class="category">
+                  <span class="category">
                     <?php 
-                         $cat = [];
-                         foreach((get_the_category()) as $category){
-                           $cat[] = $category->name;
+                         $catss = [];
+                         foreach((get_the_category($post->ID)) as $categoryy){
+                           $catss[] = $categoryy->cat_name;
+                           
                           }
-                          echo implode (', ',$cat); 
+                          echo implode (', ',$catss); 
                       ?>
                       </span>
                   <h3><?php echo get_the_title($post->ID); ?></h3>
@@ -160,6 +161,7 @@ if( !empty($block['align']) ) {
                                 <?php 
                                      $cat = [];
                                      foreach((get_the_category()) as $category){
+                                      // var_dump($category);
                                        $cat[] = $category->name;
                                       }
                                       echo implode (', ',$cat); 
@@ -201,7 +203,7 @@ if( !empty($block['align']) ) {
                               <a href="<?php the_permalink(); ?>" class="outer_link"></a>
                               <div class="inner">
                                 <!-- <span class="category">Blogs</span> -->
-                                <span class="category">
+<!--                                 <span class="category">
                                 <?php 
                                      $cat = [];
                                      foreach((get_the_category()) as $category){
@@ -209,7 +211,7 @@ if( !empty($block['align']) ) {
                                       }
                                       echo implode (', ',$cat); 
                                   ?>
-                                  </span>
+                                  </span> -->
                                 <h3><?php the_title(); ?></h3>
                                 <div class="btn-outer">
                                   <a href="<?php the_permalink(); ?>" class="btn link-btn">all industries</a>
