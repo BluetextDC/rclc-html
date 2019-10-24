@@ -20,10 +20,10 @@
 							<div class="side-spacer">
 								<div class="field-outer">
 								<div class="form-group">
-									<label for="approximate_number_of_attendees_c">Approximate number of attendees anticipated</label>
+									<label for="salutation">Salutation</label>
 									<div class="select-option">
 										
-										<select id="salutation" class="form-control" name="salutation"><option value="">--None--</option><option value="Mr.">Mr.</option><option value="Ms.">Ms.</option><option value="Mrs.">Mrs.</option><option value="Dr.">Dr.</option><option value="Prof.">Prof.</option></select>
+										<select id="salutation" class="form-control" name="salutation"><option value="">--Salutation--</option><option value="Mr.">Mr.</option><option value="Ms.">Ms.</option><option value="Mrs.">Mrs.</option><option value="Dr.">Dr.</option><option value="Prof.">Prof.</option></select>
 									</div>
 								</div>
 								</div>
@@ -73,7 +73,7 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="phone">Phone</label>
-									<input class="form-control" placeholder="phonetitle"  id="phone" maxlength="40" name="phone" size="20" type="text">
+									<input class="form-control" placeholder="phone"  id="phone" maxlength="40" name="phone" size="20" type="text">
 								</div>
 							</div>
 						</div>	
@@ -81,7 +81,8 @@
 							<div class="field-outer">
 								<div class="form-group">
 									<label for="street">Street</label>
-									<textarea class="form-control" name="street"></textarea>
+									<input class="form-control" placeholder="street"   name="street"  id="street" maxlength="40" size="20" type="text">
+						
 								</div>
 							</div>
 						</div>	
