@@ -10124,6 +10124,12 @@ ul.social-links li a:hover i {
   font-weight: 500;
   line-height: 32px;
 }
+.course-listing .media.course-item .media-body h4 a {
+  color:#3C3C3C;
+}
+.course-listing .media.course-item .media-body h4 a:hover {
+  color:#c3d6ee;
+}
 .course-listing .media.course-item .media-body p {
   font-size: 16px;
   color: #3C3C3C;
@@ -11318,4 +11324,3 @@ button.search-action-expand {
     right: 15px;
     top: 18px;
 }
-/*# sourceMappingURL=main.min.css.map */

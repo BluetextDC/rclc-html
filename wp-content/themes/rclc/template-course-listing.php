@@ -66,19 +66,8 @@ get_header();
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <?php if(strtotime(get_field('date_course_ends')) >= strtotime(date('Y-m-d')) ){ ?>
-        <?php 
-          $link = get_field('listing_cta');
-          if( $link !== NULL){ 
-              $link_url = $link['url'];
-              $link_title = $link['title'];
-              $link_target = $link['target'] ? $link['target'] : '_self';
-              }  else {
-              $link_url = get_permalink();
-              $link_title = 'Register';
-              $link_target = '';
-        } ?>
          <div class="media course-item">
-          <a href="<?php echo $link_url ?>" class="outer_link"></a>
+          <!-- <a href="<?php echo $link_url ?>" class="outer_link"></a> -->
           <div class="media-left">
             <div class="course-info vh-center">
               <?php  
@@ -95,7 +84,7 @@ get_header();
               <?php if( $date_begins->format('M') != $date_ends->format('M') && $date_begins->format('Y') == $date_ends->format('Y') ) { ?>
                 <span><?php echo $date_begins->format('M'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('Y'); ?></span>
                 <!-- for mobile -->
-                <span class="full-date"><?php echo $date_begins->format('M'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?>, <?php echo $date_begins->format('Y'); ?></span>
+                <span class="full-date"><?php echo $date_begins->format('M'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_begins->format('j'); ?>-<?php echo $date_ends->format('j'); ?>, <?php echo $date_begins->format('Y'); ?></span>
               <?php } ?>
               <!-- Years will be same but months are not -->
 
@@ -103,7 +92,7 @@ get_header();
               <?php if( $date_begins->format('Y') != $date_ends->format('Y') ) { ?>
                 <span><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('Y'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('Y'); ?></span>
                 <!-- for mobile -->
-                <span class="full-date"><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('d'); ?>, <?php echo $date_begins->format('Y'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('d'); ?>, <?php echo $date_ends->format('Y'); ?></span>
+                <span class="full-date"><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('j'); ?>, <?php echo $date_begins->format('Y'); ?> - <?php echo $date_ends->format('M'); ?> <?php echo $date_ends->format('j'); ?>, <?php echo $date_ends->format('Y'); ?></span>
               <?php } ?>
               <!-- Month will be same but years are not -->
 
@@ -111,28 +100,42 @@ get_header();
               <?php if( $date_begins->format('M') == $date_ends->format('M') && $date_begins->format('Y') == $date_ends->format('Y') ) { ?>
                 <span><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('Y'); ?></span>
                 <!-- for mobile -->
-                <span class="full-date"><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?>, <?php echo $date_begins->format('Y'); ?></span>
+                <span class="full-date"><?php echo $date_begins->format('M'); ?> <?php echo $date_begins->format('j'); ?>-<?php echo $date_ends->format('j'); ?>, <?php echo $date_begins->format('Y'); ?></span>
                 <!-- Months and years will be same -->
 
               <?php } ?>
-              <b><?php echo $date_begins->format('d'); ?>-<?php echo $date_ends->format('d'); ?></b>              
+              <b><?php echo $date_begins->format('j'); ?>-<?php echo $date_ends->format('j'); ?></b>              
             </div>
           </div>
           <div class="media-body">
-            <h4><?php the_title(); ?></h4>
-            <?php if(get_field('course_preview_text')): ?>
-              <p><?php the_field('course_preview_text'); ?></p>
-            <?php endif; ?>
+        <?php 
+          $headinglink = get_field('course_title_cta');
+          if( $headinglink !== NULL){ 
+              ?> 
+              <h4><a href="<?php echo $headinglink['url']; ?>"><?php the_title(); ?></a></h4>
+              <?php }  else {
+              ?>
+                <h4><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4>
+              <?php } ?>
             <?php if(get_field('course_location')): ?>
               <span><?php the_field('course_location'); ?></span>
             <?php endif; ?>
             <div class="btn-outer">
-              <!-- <a href="<?php the_permalink(); ?>" class="btn submit-btn vh-center">REGISTER</a> -->
-              <a class="btn submit-btn vh-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+        <?php 
+          $listinglink = get_field('listing_cta');
+          if( $listinglink == NULL || $listinglink == ''){ ?>
+              <a class="btn submit-btn vh-center" href="<?php echo get_permalink(); ?>">Register</a>
+              <?php }  else {
+                $link_url = $listinglink['url'];
+                $link_title = $listinglink['title'];
+                $link_target = $listinglink['target'] ? $listinglink['target'] : '_self';
+              ?>
+                 <a class="btn submit-btn vh-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+              <?php } ?>
             </div>
           </div>
         </div>
-        <?php } ?>
+        <!-- <?php } ?> -->
 
       <?php endwhile; wp_reset_postdata(); ?>
     </div>
