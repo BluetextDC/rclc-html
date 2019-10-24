@@ -12,9 +12,7 @@
 						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 						<script>function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);</script>
 					<h3>It would be our pleasure to speak with you.</h3>
-					<p>Thank you for your interest in The Ritz-Carlton Leadership Center.</p>
-					<p>For additional information or to speak with one of our Ladies or Gentlemen, <a href="mailto:leadershipcenter@ritzcarlton.com"><strong>please contact us</strong></a> and we would be delighted to learn more about your goals.</p>
-					<p>To provide additional detail or questions, you may also contact us by phone: 301.380.9570. Our mailing address is: The Ritz-Carlton Leadership Center, 10400 Fernwood Road, 117K, Bethesda, MD, 20817.</p>
+					
 					<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"><input name="captcha_settings" type="hidden" value='{"keyname":"reCaptcha","fallback":"true","orgId":"00D61000000dOgr","ts":""}'><input name="oid" type="hidden" value="00D61000000dOgr"><input name="retURL" type="hidden" value="http://ritzcarltonleadershipcenter.com/thank-you"><!--input type="hidden" name="debug" value="1"><input type="hidden" name="debugEmail" value="dkilcoyne@gmail.com"-->
 						<div class="col-md-6">
 							<div class="side-spacer">
