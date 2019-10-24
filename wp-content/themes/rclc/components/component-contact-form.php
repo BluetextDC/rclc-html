@@ -26,88 +26,88 @@
 								</div>
 								</div>
 							</div>
-						
-						<div class="side-spacer">
-							<div class="field-outer">
-								<div class="form-group">
-									<label for="first_name">First Name</label> 
-									<input class="form-control" placeholder="first name"  id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true">
+							
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="first_name">First Name</label> 
+										<input class="form-control" placeholder="first name"  id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true">
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="side-spacer">
-							<div class="field-outer">
-								<div class="form-group">
-									<label for="last_name">Last Name</label>
-									<input class="form-control" placeholder="last name"  id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true">
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="last_name">Last Name</label>
+										<input class="form-control" placeholder="last name"  id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true">
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="side-spacer">
-							<div class="field-outer">
-								<div class="form-group">
-									<label for="title">Title</label> 
-									<input class="form-control" placeholder="title" id="title" maxlength="40" name="title" size="20" type="text">
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="title">Title</label> 
+										<input class="form-control" placeholder="title" id="title" maxlength="40" name="title" size="20" type="text">
+									</div>
+								</div>
+								</div>
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="company">Company</label> 
+										<input class="form-control" placeholder="company"  id="company" maxlength="40" name="company" size="20" type="text" required="true">
+									</div>
+								</div>
+							</div>	
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="email">Email</label>
+										<input class="form-control" placeholder="email"  id="email" maxlength="80" name="email" size="20" type="text" required="true">
+									</div>
+								</div>
+							</div>											
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="phone">Phone</label>
+										<input class="form-control" placeholder="phone"  id="phone" maxlength="40" name="phone" size="20" type="text">
+									</div>
+								</div>
+							</div>	
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="street">Street</label>
+										<input class="form-control" placeholder="street"   name="street"  id="street" maxlength="40" size="20" type="text">
+							
+									</div>
+								</div>
+							</div>	
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="city">City</label>
+										<input class="form-control" placeholder="city"  id="city" maxlength="40" name="city" size="20" type="text">
+									</div>
 								</div>
 							</div>
-							</div>
-						<div class="side-spacer">
-							<div class="field-outer">
-								<div class="form-group">
-									<label for="company">Company</label> 
-									<input class="form-control" placeholder="company"  id="company" maxlength="40" name="company" size="20" type="text" required="true">
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="state">State/Province</label>
+										<input class="form-control" placeholder="state"  id="state" maxlength="20" name="state" size="20" type="text">
+									</div>
+								</div>
+							</div>	
+							<div class="side-spacer">
+								<div class="field-outer">
+									<div class="form-group">
+										<label for="country">Country</label>
+										<input class="form-control" placeholder="country"  id="country" maxlength="40" name="country" size="20" type="text" required="true">
+									</div>
 								</div>
 							</div>
-						</div>	
-						<div class="side-spacer">
-							<div class="field-outer">
-								<div class="form-group">
-									<label for="email">Email</label>
-									<input class="form-control" placeholder="email"  id="email" maxlength="80" name="email" size="20" type="text" required="true">
-								</div>
-							</div>
-						</div>											
-						<div class="side-spacer">
-							<div class="field-outer">
-								<div class="form-group">
-									<label for="phone">Phone</label>
-									<input class="form-control" placeholder="phone"  id="phone" maxlength="40" name="phone" size="20" type="text">
-								</div>
-							</div>
-						</div>	
-						<div class="side-spacer">
-							<div class="field-outer">
-								<div class="form-group">
-									<label for="street">Street</label>
-									<input class="form-control" placeholder="street"   name="street"  id="street" maxlength="40" size="20" type="text">
-						
-								</div>
-							</div>
-						</div>	
-						<div class="side-spacer">
-							<div class="field-outer">
-								<div class="form-group">
-									<label for="city">City</label>
-									<input class="form-control" placeholder="city"  id="city" maxlength="40" name="city" size="20" type="text">
-								</div>
-							</div>
-						</div>
-						<div class="side-spacer">
-							<div class="field-outer">
-								<div class="form-group">
-									<label for="state">State/Province</label>
-									<input class="form-control" placeholder="state"  id="state" maxlength="20" name="state" size="20" type="text">
-								</div>
-							</div>
-						</div>	
-						<div class="side-spacer">
-							<div class="field-outer">
-								<div class="form-group">
-									<label for="country">Country</label>
-									<input class="form-control" placeholder="country"  id="country" maxlength="40" name="country" size="20" type="text" required="true">
-								</div>
-							</div>
-						</div>
 
 							
 						</div>
@@ -183,24 +183,22 @@
 									</div>
 								</div>
 							</div>
+						<div class="side-spacer">
+							<div class="form-group">
+								<p>To provide additional detail or questions, you may also contact us by phone: 301.380.9570. Our mailing address is: The Ritz-Carlton Leadership Center, 10400 Fernwood Road, 117K, Bethesda, MD, 20817.</p>
 
+								<h3>Employment</h3>
+								<p>Please note that all questions about employment at The Ritz-Carlton and The Ritz-Carlton Leadership Center are handled through The Ritz-Carlton <a title="Careers at The Ritz-Carlton" href="http://www.marriott.com/ritz-carlton-careers/default.mi?stop_mobi=yes" target="_blank" rel="noopener noreferrer">Careers</a> website.</p>
+							</div>
+							<sup style="color: red;">*</sup><font style="color: red;">This confirmation is required</font>
+							<div class="g-recaptcha" id="g-recaptcha-response"  data-sitekey="6Lf_B74UAAAAAI3vanaTs-c-0i81Yk8KaRsKsxuf"></div>						
 
-					<div class="side-spacer">
-						<div class="form-group">
-							<p>To provide additional detail or questions, you may also contact us by phone: 301.380.9570. Our mailing address is: The Ritz-Carlton Leadership Center, 10400 Fernwood Road, 117K, Bethesda, MD, 20817.</p>
-
-							<h3>Employment</h3>
-							<p>Please note that all questions about employment at The Ritz-Carlton and The Ritz-Carlton Leadership Center are handled through The Ritz-Carlton <a title="Careers at The Ritz-Carlton" href="http://www.marriott.com/ritz-carlton-careers/default.mi?stop_mobi=yes" target="_blank" rel="noopener noreferrer">Careers</a> website.</p>
 						</div>
-						<sup style="color: red;">*</sup><font style="color: red;">This confirmation is required</font>
-						<div class="g-recaptcha" id="g-recaptcha-response"  data-sitekey="6Lf_B74UAAAAAI3vanaTs-c-0i81Yk8KaRsKsxuf"></div>						
-
-					</div>
-					</div><!-- end -->
-					<div class="col-sm-12">
-						<div class="form-submt-btn"><input type="submit" name="submit">
+						<div class="col-sm-12">
+							<div class="form-submt-btn"><input type="submit" name="submit">
+							</div>
 						</div>
-					</div>
+					</form><!-- end -->
 
 
 				</div>
