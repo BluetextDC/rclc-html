@@ -179,7 +179,7 @@
 								<div class="field-outer">
 									<div class="form-group">
 										<label for="description">Goals</label>
-										<textarea placholder="Goals" class="form-control" name="description"></textarea>
+										<textarea placholder="Please share a little more about your request" class="form-control" name="description"></textarea>
 									</div>
 								</div>
 							</div>
@@ -187,6 +187,8 @@
 
 					<div class="side-spacer">
 						<div class="form-group">
+							<p>To provide additional detail or questions, you may also contact us by phone: 301.380.9570. Our mailing address is: The Ritz-Carlton Leadership Center, 10400 Fernwood Road, 117K, Bethesda, MD, 20817.</p>
+							
 							<h3>Employment</h3>
 							<p>Please note that all questions about employment at The Ritz-Carlton and The Ritz-Carlton Leadership Center are handled through The Ritz-Carlton <a title="Careers at The Ritz-Carlton" href="http://www.marriott.com/ritz-carlton-careers/default.mi?stop_mobi=yes" target="_blank" rel="noopener noreferrer">Careers</a> website.</p>
 						</div>
