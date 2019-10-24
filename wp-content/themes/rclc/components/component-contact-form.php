@@ -8,7 +8,7 @@
 					<h2><?php the_sub_field('cf_heading'); ?></h2>
 				<?php endif; ?>
 				<div class="row">
-					<div class="contact-form cf-form-container">
+					<div class="contact-form cf-form-container recaptcha-form">
 						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 						<script>function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);</script>
 					<h3>It would be our pleasure to speak with you.</h3>
@@ -78,8 +78,11 @@
 						<div class="side-spacer">
 							<div class="field-outer">
 								<div class="form-group">
-									<label class="form-control" for="street">Street</label>
-									<textarea name="street"></textarea>
+									<label for="street">Street</label>
+									<textarea class="form-control" name="street"></textarea>
+									<textarea class="form-control" name="street"></textarea>
+									<textarea class="form-control" name="street"></textarea>
+									<textarea class="form-control" name="street"></textarea>
 								</div>
 							</div>
 						</div>	
@@ -117,7 +120,7 @@
 								<div class="select-option">
 									<label style="white-space: nowrap;" for="00N6100000HUTOP">What are you interested in learning more about?</label>
 
-									<select id="00N6100000HUTOP" style="max-width: 318px;" title="Lead Type" name="00N6100000HUTOP" required="true">
+									<select id="00N6100000HUTOP" class="form-control" title="Lead Type" name="00N6100000HUTOP" required="true">
 									<option value="">--Please Select--</option>
 									<option value="Advisory Consulting Services">I am interested in exploring a consulting engagement</option>
 									<option value="Onsite Presentations &amp; Facilitation">I am seeking a speaker for one or several meetings or conferences</option>
@@ -133,7 +136,7 @@
 								<div class="select-option">
 									<label for="industry">Industry</label>
 									
-									<select id="industry" name="industry" required="true">
+									<select id="industry" name="industry" required="true" class="form-control" >
 									<option value="">--Please Select--</option>
 									<option value="Aerospace &amp; Defense">Aerospace &amp; Defense</option>
 									<option value="Automotive">Automotive</option>
@@ -160,7 +163,7 @@
 								<div class="select-option">
 									<label for="approximate_number_of_attendees_c">Approximate number of attendees anticipated</label>
 									
-									<select id="00N6100000IJquk" style="width: 150px;" title="Approximate Number of Attendees" name="00N6100000IJquk" required="false">
+									<select id="00N6100000IJquk" class="form-control"  title="Approximate Number of Attendees" name="00N6100000IJquk" required="false">
 									<option value="">--Please Select--</option>
 									<option value="1">1</option>
 									<option value="2-19">2-19</option>
@@ -180,7 +183,7 @@
 								<div class="select-option">
 									<label for="approximate_number_of_attendees_c">Approximate number of attendees anticipated</label>
 									
-									<select id="00N6100000IJquk" style="width: 150px;" title="Approximate Number of Attendees" name="00N6100000IJquk" required="false">
+									<select id="00N6100000IJquk" class="form-control"  title="Approximate Number of Attendees" name="00N6100000IJquk" required="false">
 									<option value="">--Please Select--</option>
 									<option value="1">1</option>
 									<option value="2-19">2-19</option>
@@ -198,7 +201,7 @@
 								<div class="field-outer">
 									<div class="form-group">
 										<label for="description">Goals</label>
-										<textarea name="description"></textarea>
+										<textarea class="form-control" name="description"></textarea>
 									</div>
 								</div>
 							</div>
