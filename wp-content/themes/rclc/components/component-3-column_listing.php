@@ -1,4 +1,3 @@
-promo cards -->
 <?php if (get_row_layout() == '3-column_listing'): ?>
   <section class="blog-cards">
     <div class="container">
@@ -197,4 +196,3 @@ promo cards -->
 
 
 <?php endif; ?>
-<!-- promo cards
