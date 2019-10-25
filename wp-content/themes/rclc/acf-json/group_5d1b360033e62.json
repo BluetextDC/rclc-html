@@ -3,6 +3,25 @@
     "title": "Course Listing Template",
     "fields": [
         {
+            "key": "field_5d3039ddee56a",
+            "label": "Listing Heading",
+            "name": "listing_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d1b361771fa6",
             "label": "Hero Zone",
             "name": "hero_zone",
@@ -17,6 +36,25 @@
             },
             "layout": "row",
             "sub_fields": [
+                {
+                    "key": "field_5d1b362471fa7",
+                    "label": "Hero Text",
+                    "name": "hero_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
                 {
                     "key": "field_5d2c0e3a4ee8e",
                     "label": "Hero Image",
@@ -40,25 +78,6 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
-                },
-                {
-                    "key": "field_5d1b362471fa7",
-                    "label": "Hero Text",
-                    "name": "hero_text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
                 }
             ]
         },
@@ -99,25 +118,6 @@
             "delay": 0
         },
         {
-            "key": "field_5d3039ddee56a",
-            "label": "Listing Heading",
-            "name": "listing_heading",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5d3039e2ee56b",
             "label": "Footer",
             "name": "",
@@ -133,6 +133,21 @@
             "open": 0,
             "multi_expand": 0,
             "endpoint": 0
+        },
+        {
+            "key": "field_5db2e905a3ea8",
+            "label": "Contact Form CTA",
+            "name": "contact_form_cta",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         },
         {
             "key": "field_5d3039eeee56c",
@@ -200,5 +215,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563442168
+    "modified": 1572006164
 }

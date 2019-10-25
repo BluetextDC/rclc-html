@@ -14,6 +14,24 @@
 			</div>
 		</div>
 	</section>
+<?php 
+$link = get_field('contact_form_cta');
+if( $link ): 
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+    ?>
+<section class="cta-section text-center">
+	<div class="container">
+		<div class="row">
+				<div class="footer-cta-outer">
+			<a class="h2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><span><?php echo esc_html( $link_title ); ?></span></a>
+				</div>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
 <?php } else if(is_single()){?>
 	<section class="cta-section text-center hidden <?php if(get_field('display_contact_form')): ?><?php the_field('display_contact_form'); ?><?php endif;?>">
 		<div class="container">

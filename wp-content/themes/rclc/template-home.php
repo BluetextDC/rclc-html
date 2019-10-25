@@ -108,6 +108,25 @@ endwhile; endif; ?>
   </section>
   <?php endif;?>
 
+
+  <?php 
+$link = get_field('contact_form_cta');
+if( $link ): 
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+    ?>
+<section class="cta-section text-center">
+  <div class="container">
+    <div class="row">
+        <div class="footer-cta-outer">
+      <a class="h2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><span><?php echo esc_html( $link_title ); ?></span></a>
+        </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
 <!-- <?php if(get_field('display_subscribe_form')): ?>
   <section class="newslatter-sec padding-global light_gray-bg text-center bg-white hidden <?php the_field('display_subscribe_form'); ?>">
     <div class="container container-sm">

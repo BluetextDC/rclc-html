@@ -85,6 +85,21 @@
             "endpoint": 0
         },
         {
+            "key": "field_5db2e9e00b7ec",
+            "label": "Contact Form CTA",
+            "name": "contact_form_cta",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5d2c64cbb8abc",
             "label": "Display Contact Form",
             "name": "display_contact_form",
@@ -150,5 +165,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563191560
+    "modified": 1572006382
 }
