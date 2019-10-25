@@ -117,10 +117,12 @@ get_header();
       </div>
     </div>
     <?php 
+    $post_id = [];
     $posts = get_sub_field('highlighted_blog');
     if( $posts ): ?>
       <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-        <?php setup_postdata($post); ?>
+        <?php setup_postdata($post); $post_id[] = $post->ID;?>
+
         <div class="blog-item">
           <div class="blog-item-inner">
             <a href="<?php the_permalink(); ?>" class="outer_link"></a>
@@ -150,6 +152,7 @@ $args = array(
   'posts_per_page' => 6,
   'orderby' => 'DESC',
   'paged' => $paged,
+  'post__not_in' => $post_id
 );
 if(isset($_GET['keyword']) && trim($_GET['keyword']) != ""){
   $args['s'] = $_GET['keyword']; 
