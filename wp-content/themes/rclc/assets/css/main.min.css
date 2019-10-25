@@ -1173,6 +1173,28 @@ pre code {
     width: 1170px;
   }
 }
+.container-contact p{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@media (min-width: 767px) {
+  .container-contact {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container-contact {
+    width: 970px;
+    margin-left:  -110px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-contact {
+    width: 1170px;
+    margin-left: -210px;
+  }
+}
+
 
 .container-fluid {
   margin-right: auto;
@@ -9728,7 +9750,10 @@ ul.social-links li a:hover i {
   font-family: "ProximaNova";
   text-shadow: 0 0 0 #292929;
 }
-
+.wysiwyg-block .content .select-option .form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 @media (max-width: 767px) {
   .wysiwyg-block .content h2 {
     line-height: 30px;
