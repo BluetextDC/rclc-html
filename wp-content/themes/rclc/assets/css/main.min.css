@@ -7328,7 +7328,7 @@ a:hover {
   padding: 8px 20px 8px 0;
   position: relative;
   font-size: 27px;
-  color: rgba(142, 142, 142, 0.27);
+  color: #8e8e8e;
   font-weight: 300;
 }
 @media (max-width: 767px) {
