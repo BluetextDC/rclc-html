@@ -9728,6 +9728,7 @@ ul.social-links li a:hover i {
   font-family: "ProximaNova";
   text-shadow: 0 0 0 #292929;
 }
+
 @media (max-width: 767px) {
   .wysiwyg-block .content h2 {
     line-height: 30px;
@@ -11395,4 +11396,12 @@ button.search-action-expand {
     transform: rotate(-45deg);
     right: 15px;
     top: 18px;
+}
+.element-invisible {
+  position: absolute!important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
 }
