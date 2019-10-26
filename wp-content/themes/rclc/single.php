@@ -25,7 +25,7 @@ get_header();
       while ( have_posts() ) : the_post(); ?>
         <ul class="blog-info">
          <li>
-          <p><?php echo get_the_date('F dS, Y'); ?></p>
+          <p><?php echo get_the_date('F d, Y'); ?></p>
         </li>
         <?php if( get_field('author_name') ): ?>
         <li>
