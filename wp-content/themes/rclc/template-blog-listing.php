@@ -134,7 +134,7 @@ get_header();
               <p>
                     <?php echo wp_trim_words(get_the_content(), 30, ' (...)'); ?>
               </p>
-              <span><?php the_date("F jS, Y"); ?></span>
+              <span><?php the_date("F j, Y"); ?></span>
             </div>
           </div>
         </div>
@@ -193,7 +193,7 @@ if(isset($_GET['tags']) && trim($_GET['tags']) != ""){
                   <p>
                     <?php echo wp_trim_words(get_the_content(), 20, ' (...)'); ?>
                   </p>
-                <span><?php echo get_the_date('F jS, Y'); ?></span>
+                <span><?php echo get_the_date('F j, Y'); ?></span>
               </div>
             </div>
           </li>
