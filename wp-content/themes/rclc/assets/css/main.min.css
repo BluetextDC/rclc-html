@@ -1177,9 +1177,6 @@ pre code {
   margin-left: 10px;
   margin-right: 10px;
 }
-.container-contact .select-option:before{
-  top: 42px;
-}
 
 @media (min-width: 767px) {
   .container-contact {
