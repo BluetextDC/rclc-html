@@ -58,3 +58,7 @@ Thumbs.db
 .sass-cache
 html/node_modules/
 .htaccess
+
+# Localdev #
+############
+.lando.yml
