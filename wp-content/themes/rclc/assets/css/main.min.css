@@ -9255,6 +9255,9 @@ button.search-action-expand i {
 }
 
 @media (max-width:480px) {
+    .menu-main-menu-container {
+        z-index: 1;
+    }
     .navigation-outer ul {
         overflow: hidden;
         overflow-y: auto;
@@ -9529,6 +9532,12 @@ button.search-action-expand i {
     width: 100%;
     left: 0
 }
+@media (max-width:480px) {
+    .search-outer {
+        z-index: 100        
+    }
+}
+
 
 @media (max-width:767px) {
     .search-outer {
@@ -9617,7 +9626,7 @@ button.search-action-expand i {
         height: 28px;
         background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(100%, rgba(35, 25, 37, 1)));
         background: linear-gradient(to bottom, transparent 0, rgba(35, 25, 37, 1) 100%);
-        z-index: 100
+        z-index: 50
     }
     #menu-main-menu-1 {
         padding: 0 15px
