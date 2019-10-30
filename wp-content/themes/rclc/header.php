@@ -106,7 +106,6 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" class="img-white" alt="RCLC">
 			</a>
 		<a class="close-btn"><i class="icon-close"></i></a>
-		<a class="back-btn"><i class="icon-left"></i>back</a>
 		<div class="search-outer">
 			<form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
 				<div class="search-field">
@@ -115,6 +114,7 @@
 				</div>
 			</form>
 		</div>
+		<a class="back-btn"><i class="icon-left"></i>back</a>
 		<?php
 		wp_nav_menu(array(
 			'theme_location' => 'menu-1',
