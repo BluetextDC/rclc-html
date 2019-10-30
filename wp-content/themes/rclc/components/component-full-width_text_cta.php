@@ -1,6 +1,6 @@
 <!-- single-promo  -->
 <?php if (get_row_layout() == 'full-width_text_cta'): ?>
-  <section class="single-promo padding-lg white-bg">
+  <section class="single-promo padding-md white-bg">
     <div class="container container-sm">
       <div class="row">
         <div class="col-sm-12">

@@ -1,3 +1,6 @@
+.page-template-template-blog-listing .header a.brand-logo img.img-black {
+    display: block;
+}
 .footer-menu .widget-title {
     display: none;
 }
