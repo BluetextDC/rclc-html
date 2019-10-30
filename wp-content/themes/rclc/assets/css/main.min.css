@@ -9316,20 +9316,16 @@ button.search-action-expand i {
 .navigation-outer ul li a:after {
 /*  right: 30px;*/
   right: 0;
-  color: #fff;
+  color: #bebebe;
   opacity: 1;
   visibility: visible;
   font-size: 18px;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out
+  transition: all .3s ease-in-out;
 }
 
-.navigation-outer ul li.menu-link a:after,
-.navigation-outer ul li.menu-link a:before {
-  display: none
-}
-
+.navigation-outer ul li a:before,
 .navigation-outer ul li a:hover:before {
 /*  right: -25px;
   opacity: 0;
@@ -9341,6 +9337,7 @@ button.search-action-expand i {
 .navigation-outer ul li a:hover:after {
   right: 0;
   opacity: 1;
+  color: #fff;
   visibility: visible;
   font-size: 26px
 }
