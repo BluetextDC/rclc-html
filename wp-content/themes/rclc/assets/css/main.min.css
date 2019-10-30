@@ -9261,7 +9261,7 @@ button.search-action-expand i {
     .navigation-outer ul {
         overflow: hidden;
         overflow-y: auto;
-        height: 62vh
+        height: calc(100vh - 190px);
     }
 }
 
@@ -9269,7 +9269,6 @@ button.search-action-expand i {
     .navigation-outer ul {
         overflow: hidden;
         overflow-y: auto;
-        height: 50vh
     }
 }
 
@@ -9542,14 +9541,14 @@ button.search-action-expand i {
 @media (max-width:767px) {
     .search-outer {
         padding: 80px 30px 50px 20px;
-        bottom: 10px
+        top: 75px
     }
 }
 
 @media (max-width:767px) {
     .search-outer {
         padding: 20px;
-        z-index: 9
+        z-index: 1
     }
 }
 
@@ -9616,7 +9615,7 @@ button.search-action-expand i {
     .menu-main-menu-container {
         position: relative;
         padding-bottom: 90px;
-        padding-top: 60px
+        padding-top: 90px
     }
     #menu-main-menu-1:before {
         content: '';

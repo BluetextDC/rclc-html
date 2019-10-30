@@ -107,14 +107,6 @@
 			</a>
 		<a class="close-btn"><i class="icon-close"></i></a>
 		<a class="back-btn"><i class="icon-left"></i>back</a>
-		<?php
-		wp_nav_menu(array(
-			'theme_location' => 'menu-1',
-			'container_class' => '',
-			'container_id' => '',
-			'menu_class' => 'main-menu',
-		));
-		?>
 		<div class="search-outer">
 			<form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
 				<div class="search-field">
@@ -123,6 +115,14 @@
 				</div>
 			</form>
 		</div>
+		<?php
+		wp_nav_menu(array(
+			'theme_location' => 'menu-1',
+			'container_class' => '',
+			'container_id' => '',
+			'menu_class' => 'main-menu',
+		));
+		?>
 	</div>
 	<!-- navigation css -->
 	<div class="main-wrapper">
