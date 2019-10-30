@@ -9284,7 +9284,8 @@ button.search-action-expand i {
     position: relative;
     display: block;
     cursor: pointer;
-    outline: 0
+    outline: 0;
+    width: 100%;
 }
 
 .navigation-outer ul li a:focus {
@@ -9334,8 +9335,9 @@ button.search-action-expand i {
   display: none;
 }
 
+.navigation-outer ul li a:focus:after,
 .navigation-outer ul li a:hover:after {
-  right: 0;
+  right: -4px;
   opacity: 1;
   color: #fff;
   visibility: visible;

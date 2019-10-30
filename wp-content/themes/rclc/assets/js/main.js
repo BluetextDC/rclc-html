@@ -235,7 +235,7 @@ $('.banner-text-slider').delay(1000).queue(function(){
   });
 
   // Click for show submenu
-  $('.main-menu .menu-item-has-children').on('click', function() {
+  $('.main-menu .menu-item-has-children >a').on('click touchstart', function() {
     $(this).parent().parent().find('.main-menu>.menu-item-has-children').addClass('opacity-none');
     $(this).parent().parent().find('.main-menu>.menu-link').addClass('opacity-none');
     $(this).find('ul.sub-menu').addClass('slide-to-right');
