@@ -9130,7 +9130,7 @@ button.search-action-expand i {
     width: 100%;
     height: 100%;
     max-width: 655px;
-    background-color: rgba(35, 25, 37, .98);
+    background-color: rgba(35, 25, 37, 1);
     z-index: 999;
     padding: 90px 50px 50px 85px;
     -webkit-transition: all .4s ease-in-out;
@@ -9203,7 +9203,7 @@ button.search-action-expand i {
         font-size: 30px
     }
     .navigation-outer .back-btn {
-        top: 110px;
+        top: 165px;
         z-index: 3;
         color: #fff
     }
@@ -9615,7 +9615,7 @@ button.search-action-expand i {
     .menu-main-menu-container {
         position: relative;
         padding-bottom: 90px;
-        padding-top: 90px
+        padding-top: 100px
     }
     #menu-main-menu-1:before {
         content: '';
