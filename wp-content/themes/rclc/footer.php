@@ -73,7 +73,7 @@
 			<div class="col-md-4 align-self-end">
 				<div class="footer-right">
 					<div class="footer-logo">
-						<a href="<?php echo esc_url(home_url('/')); ?>">
+						<a href="https://www.ritzcarlton.com" target="_blank">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-footer.png" alt="RCLC">
 						</a>
 					</div>

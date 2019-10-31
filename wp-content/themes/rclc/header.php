@@ -106,6 +106,14 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" class="img-white" alt="RCLC">
 			</a>
 		<a class="close-btn"><i class="icon-close"></i></a>
+		<div class="search-outer">
+			<form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
+				<div class="search-field">
+					<input type="search" class="search-input" placeholder="I’m searching for…." value="" name="s" autocomplete="off">
+					<button class="search-action v-center"><i class="icon-search"></i></button>
+				</div>
+			</form>
+		</div>
 		<a class="back-btn"><i class="icon-left"></i>back</a>
 		<?php
 		wp_nav_menu(array(
@@ -115,14 +123,6 @@
 			'menu_class' => 'main-menu',
 		));
 		?>
-		<div class="search-outer">
-			<form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
-				<div class="search-field">
-					<input type="search" class="search-input" placeholder="I’m searching for…." value="" name="s" autocomplete="off">
-					<button class="search-action v-center"><i class="icon-search"></i></button>
-				</div>
-			</form>
-		</div>
 	</div>
 	<!-- navigation css -->
 	<div class="main-wrapper">
