@@ -8147,6 +8147,7 @@ a:hover {
     text-align: left;
     font-size: 14px;
     color: #000;
+    font-weight: 400;
 }
 .cf-form-container label.checkbox-container.custom-label a {
         color: #000;
@@ -8158,9 +8159,11 @@ a:hover {
 }
 .cf-form-container .checkbox-container .checkmark {
     left: 0;
-    top: 12px;
+    top: 20px;
     border-color: #000 !important;
-}
+}.cf-form-container .checkbox-container .checkmark:after {
+    top: -6px;
+    }
 .cf-form-container.recaptcha-form label {
     position: absolute!important;
     height: 1px;

@@ -287,4 +287,4 @@
 
 
 <?php endif; ?>
-<!-- promo cards
+<!-- promo cards -->

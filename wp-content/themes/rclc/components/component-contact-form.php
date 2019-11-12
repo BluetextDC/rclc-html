@@ -1,4 +1,4 @@
-Slider section -->
+<!-- Slider section -->
 <?php if (get_row_layout() == 'contact_form'): ?>
 	<section class="contact-form-section text-center padding-global">
 		<?php
@@ -330,4 +330,4 @@ Slider section -->
 		?>
 	</section>
 <?php endif; ?>
-<!-- Slider section
+<!-- Slider section -->
