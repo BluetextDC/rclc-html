@@ -1,4 +1,4 @@
-<!-- Slider section -->
+Slider section -->
 <?php if (get_row_layout() == 'contact_form'): ?>
 	<section class="contact-form-section text-center padding-global">
 		<?php
@@ -190,11 +190,11 @@
 								<h3>Employment</h3>
 								<p>Please note that all questions about employment at The Ritz-Carlton and The Ritz-Carlton Leadership Center are handled through The Ritz-Carlton <a title="Careers at The Ritz-Carlton" href="http://www.marriott.com/ritz-carlton-careers/default.mi?stop_mobi=yes" target="_blank" rel="noopener noreferrer">Careers</a> website.</p>
 							</div>
-							<div class="form-group">
+							<!-- <div class="form-group">
 								  <label class="checkbox-container custom-label"><div class="text-container-1">I consent to receive additional communications from The Ritz-Carlton Leadership Center via email. Please Review our <a href="#">privacy policy</a> for additional information.</div><input id="00N6100000IJw5H" name="00N6100000IJw5H" required="" type="checkbox" value="1">
 			                            <span class="checkmark"></span>
 		                          </label>
-							</div>
+							</div> -->
 							<sup style="color: red;">*</sup><font style="color: red;">This confirmation is required</font>
 							<div class="g-recaptcha" id="g-recaptcha-response"  data-sitekey="6Lf_B74UAAAAAI3vanaTs-c-0i81Yk8KaRsKsxuf"></div>						
 
@@ -330,4 +330,4 @@
 		?>
 	</section>
 <?php endif; ?>
-<!-- Slider section -->
+<!-- Slider section
