@@ -595,7 +595,8 @@ body {
     background-color: #fff;
     font-weight: 400;
     margin: 0;
-    padding: 0
+    padding: 0;
+    overflow-x:hidden;
 }
 
 button,
@@ -8135,7 +8136,31 @@ a:hover {
 .contact-form.cf-form-container .field-outer {
     margin-bottom: 0
 }
-
+.cf-form-container label.checkbox-container.custom-label {
+    position: relative!important;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    padding-left: 30px;
+    clip: auto;
+    white-space: normal;
+    text-align: left;
+    font-size: 14px;
+    color: #000;
+}
+.cf-form-container label.checkbox-container.custom-label a {
+        color: #000;
+        text-decoration: underline; 
+}
+.cf-form-container .checkbox-container:hover {
+    background-color: transparent;
+    color: #fff;
+}
+.cf-form-container .checkbox-container .checkmark {
+    left: 0;
+    top: 12px;
+    border-color: #000 !important;
+}
 .cf-form-container.recaptcha-form label {
     position: absolute!important;
     height: 1px;
