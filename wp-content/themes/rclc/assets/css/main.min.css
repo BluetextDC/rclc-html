@@ -8159,7 +8159,7 @@ a:hover {
 }
 .cf-form-container .checkbox-container .checkmark {
     left: 0;
-    top: 20px;
+    top: 22px;
     border-color: #000 !important;
 }.cf-form-container .checkbox-container .checkmark:after {
     top: -6px;
@@ -8372,24 +8372,24 @@ a:hover {
     border-color: #fff
 }
 
-.checkbox-container input:checked~.checkmark:after {
-    display: block
-}
 
-.checkbox-container .checkmark:after {
-    content: "\e907";
-    font-family: icomoon;
-    position: absolute;
+
+.checkbox-container input:checked~.checkmark:before {
     display: none;
-    left: 2px;
-    top: 1px;
-    font-size: 9px;
-    font-weight: 600;
-    -moz-transform: rotate(0);
-    -o-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -webkit-transform: rotate(0);
-    transform: rotate(0)
+  content:'';
+  position:absolute;
+  top:-7px;
+  left:6px;
+  height: 18px;
+  width: 7px;
+  border-bottom: 2px solid #333333;
+  border-right: 2px solid #333333;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.checkbox-container input:checked~.checkmark:before {
+    display: block
 }
 
 .checkbox-container.active:hover input:checked~.checkmark {
