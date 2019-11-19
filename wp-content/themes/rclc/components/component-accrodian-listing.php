@@ -1,4 +1,3 @@
-
 <?php if (get_row_layout() == 'accordion_listing'): ?>
 <section class="accordion-listing relative padding-global padding-top-0">
   <div class="container">
