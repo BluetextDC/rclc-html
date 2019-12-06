@@ -28,5 +28,13 @@
 				</div>
 			</div>
 		</div>
+		<?php else: ?>
+			<div class="media course-item">
+				<a href="<?php the_permalink(); ?>" class="outer_link"></a>
+				<div class="media-body">
+					<h4><?php the_title(); ?></h4>
+					<?php //the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
+				</div>
+			</div>
 	<?php endif; ?>
 </article>
