@@ -33,7 +33,9 @@
 				<a href="<?php the_permalink(); ?>" class="outer_link"></a>
 				<div class="media-body">
 					<h4><?php the_title(); ?></h4>
-					<?php //the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
+					<div class="btn-outer">
+						<a href="<?php the_permalink($post_object->ID); ?>" class="btn submit-btn vh-center">READ MORE</a>
+					</div>
 				</div>
 			</div>
 	<?php endif; ?>
