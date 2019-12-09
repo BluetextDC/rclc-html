@@ -33,6 +33,11 @@
 				<a href="<?php the_permalink(); ?>" class="outer_link"></a>
 				<div class="media-body">
 					<h4><?php the_title(); ?></h4>
+				      <?php 
+				        if (!has_excerpt()) {?><?php echo get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true); ?>
+					  <?php } 
+					  	else { echo wp_trim_words(get_the_excerpt(), 55, '[...]');
+					  }?>
 					<div class="btn-outer">
 						<a href="<?php the_permalink($post_object->ID); ?>" class="btn submit-btn vh-center">READ MORE</a>
 					</div>

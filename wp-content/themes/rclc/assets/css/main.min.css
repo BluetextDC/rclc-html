@@ -11140,6 +11140,12 @@ ul.social-links li a:hover i {
     position: relative
 }
 
+.course-listing .media.course-item .media-body mark {
+    background-color: transparent;
+    font-weight: 700;
+    padding: 0;
+}
+
 .course-listing .media.course-item .media-left .course-info span {
     font-size: 12px;
     font-weight: 700;
