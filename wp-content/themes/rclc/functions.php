@@ -141,6 +141,7 @@ function rclc_widgets_footer2() {
 }
 add_action('widgets_init', 'rclc_widgets_footer2');
 
+
 /**
  * Enqueue scripts and styles.
  */
@@ -255,3 +256,8 @@ function register_acf_block_types() {
 if( function_exists('acf_register_block_type') ) {
     add_action('acf/init', 'register_acf_block_types');
 }
+
+  add_action( 'init', 'wps_all_pages' );
+    function wps_all_pages() {
+        add_post_type_support( 'page', 'excerpt' );
+    }
