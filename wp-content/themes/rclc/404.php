@@ -25,7 +25,7 @@ get_header();
 			<div class="message-box">
 				<img class="error-right" src="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" alt="RCLC-Logo">
 				<h1 class="ft-dark-gold">404</h1>
-				<h2>Oops!Page Note Found</h2>
+				<h2>Oops! Page Not Found</h2>
 				<p>The page you were looking for could not be found.</p>
 				<div class="btn-outer">
 					<a href="<?php echo home_url('/'); ?>" class="btn btn-default">Back To Home</a>

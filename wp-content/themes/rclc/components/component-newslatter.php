@@ -26,20 +26,23 @@
 <?php } else {?>
 	<?php if( have_rows('newslatter', 'options') ): 
 		while( have_rows('newslatter', 'options') ): the_row();?>
-			<section class="newslatter-sec padding-global light_gray-bg text-center">
-				<div class="container container-sm">
-					<div class="row">
-						<div class="col-sm-12">
-							<?php if(get_sub_field('headline')): ?>
-								<h2 class="heading"><?php the_sub_field('headline'); ?></h2>
-							<?php endif; ?>
-							<?php if(get_sub_field('form_id')): ?>
-								<h2 class="heading"><?php the_sub_field('form_id'); ?></h2>
-							<?php endif; ?>
+			<?php if ( !is_404() && !is_search() ) {?>
+				<section class="newslatter-sec padding-global light_gray-bg text-center">
+					<div class="container container-sm">
+						<div class="row">
+							<div class="col-sm-12">
+								<?php if(get_sub_field('headline')): ?>
+									<h2 class="heading"><?php the_sub_field('headline'); ?></h2>
+								<?php endif; ?>
+								<?php if(get_sub_field('form_id')): ?>
+									<h2 class="heading"><?php the_sub_field('form_id'); ?></h2>
+								<?php endif; ?>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			<?php }?>
+
 		<?php endwhile; ?>	
 	<?php endif; ?>
 <?php }?>
