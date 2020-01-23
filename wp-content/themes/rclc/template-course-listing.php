@@ -104,7 +104,11 @@ get_header();
                 <!-- Months and years will be same -->
 
               <?php } ?>
-              <b><?php echo $date_begins->format('j'); ?>-<?php echo $date_ends->format('j'); ?></b>              
+	         <?php if ($date_begins->format('j') == $date_ends->format('j') && $date_begins->format('M') == $date_ends->format('M') && $date_begins->format('Y') == $date_ends->format('Y') ) { ?>
+		 <b><?php echo $date_ends->format('j'); ?></b>
+		 <?php } else { ?>	      
+		 <b><?php echo $date_begins->format('j'); ?>-<?php echo $date_ends->format('j'); ?> </b>
+		 <?php } ?>	      
             </div>
           </div>
           <div class="media-body">
