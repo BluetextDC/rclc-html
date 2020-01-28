@@ -5,6 +5,17 @@
     display: none;
 }
 
+.course-listing .media.course-item .media-body a.hash-url{
+   pointer-events: none; 
+}
+.course-listing .media.course-item .media-body a.hash-url:before{
+    display: none;
+}
+.course-listing .media.course-item .media-body a.submit-btn{
+    white-space: normal;
+    width: 145px;
+}
+
 .footer-right ul li a {
     font-size: 12px;
     font-family: "Helvetica";

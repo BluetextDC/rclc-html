@@ -116,7 +116,7 @@ get_header();
           $headinglink = get_field('course_title_cta');
           if( $headinglink !== NULL){ 
               ?> 
-              <h4><a <?php if($headinglink['url'] != "#") {?>href="<?php echo $headinglink['url']; ?>"<?php }?>><?php the_title(); ?></a></h4>
+              <h4><a <?php if($headinglink['url'] == "#") {?>class="hash-url"<?php }?> href="<?php echo $headinglink['url']; ?>"><?php the_title(); ?></a></h4>
               <?php }  else {
               ?>
                 <h4><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4>
@@ -134,7 +134,7 @@ get_header();
                 $link_title = $listinglink['title'];
                 $link_target = $listinglink['target'] ? $listinglink['target'] : '_self';
               ?>
-                 <a class="btn submit-btn vh-center" <?php if($link_url != "#") {?>href="<?php echo esc_url( $link_url ); ?>"<?php }?> target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                 <a class="btn submit-btn vh-center <?php if($link_url == "#") {?>hash-url<?php }?>" target="<?php echo esc_attr( $link_target ); ?>" href="<?php echo esc_url( $link_url ); ?>"><?php echo esc_html( $link_title ); ?></a>
               <?php } ?>
             </div>
           </div>
